@@ -25,26 +25,26 @@ func _ready() -> void:
 
 
 func _initialize_starting_party() -> void:
-	# Create the protagonist - Alexios
-	var alexios = CharacterData.new()
-	alexios.id = "alexios"
-	alexios.display_name = "Alexios"
-	alexios.character_class = "Memory Seeker"
-	alexios.level = 1
-	alexios.experience = 0
-	alexios.max_hp = 100
-	alexios.current_hp = 100
-	alexios.max_mp = 30
-	alexios.current_mp = 30
-	alexios.attack = 12
-	alexios.defense = 10
-	alexios.magic = 8
-	alexios.speed = 10
-	alexios.luck = 5
-	alexios.skills = ["basic_attack", "defend"]
-	alexios.skill_points = 0
+	# Create the protagonist - Alkmaeon
+	var alkmaeon = CharacterData.new()
+	alkmaeon.id = "alkmaeon"
+	alkmaeon.display_name = "Alkmaeon"
+	alkmaeon.character_class = "Memory Seeker"
+	alkmaeon.level = 1
+	alkmaeon.experience = 0
+	alkmaeon.max_hp = 100
+	alkmaeon.current_hp = 100
+	alkmaeon.max_mp = 30
+	alkmaeon.current_mp = 30
+	alkmaeon.attack = 12
+	alkmaeon.defense = 10
+	alkmaeon.magic = 8
+	alkmaeon.speed = 10
+	alkmaeon.luck = 5
+	alkmaeon.skills = ["basic_attack", "defend"]
+	alkmaeon.skill_points = 0
 	
-	add_to_party(alexios)
+	add_to_party(alkmaeon)
 
 
 ## Add a character to the active party

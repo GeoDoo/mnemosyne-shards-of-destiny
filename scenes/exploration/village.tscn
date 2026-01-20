@@ -31,7 +31,7 @@ position = Vector2(1100, 360)
 position = Vector2(500, 350)
 script = ExtResource("3_npc")
 npc_name = "Elder Theron"
-dialogue_lines = Array[String](["Welcome, young Alexios.", "The temple on the hill... it calls to you, does it not?", "I have seen that look before. Go, but be careful."])
+dialogue_lines = Array[String](["Welcome, young Alkmaeon.", "The temple on the hill... it calls to you, does it not?", "I have seen that look before. Go, but be careful."])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Villager1"]
 shape = SubResource("RectangleShape2D_collision")

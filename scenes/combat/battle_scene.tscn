@@ -129,7 +129,7 @@ offset_right = 100.0
 offset_bottom = 40.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 20
-text = "Turn: Alexios"
+text = "Turn: Alkmaeon"
 horizontal_alignment = 1
 
 [node name="DamageNumbers" type="Node2D" parent="."]

@@ -156,9 +156,9 @@ func _trigger_altar_vision() -> void:
 	await dialogue_box.line_finished
 	
 	# Unlock new skill
-	var alexios = PartyManager.get_character("alexios")
-	if alexios and not alexios.has_skill("memory_flash"):
-		alexios.skills.append("memory_flash")
+	var alkmaeon = PartyManager.get_character("alkmaeon")
+	if alkmaeon and not alkmaeon.has_skill("memory_flash"):
+		alkmaeon.skills.append("memory_flash")
 		dialogue_box.show_narration("You have learned Memory Flash!", true)
 		await dialogue_box.line_finished
 	

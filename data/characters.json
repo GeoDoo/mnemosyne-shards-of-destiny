@@ -1,10 +1,10 @@
 {
   "party_members": [
     {
-      "id": "alexios",
-      "display_name": "Alexios",
+      "id": "alkmaeon",
+      "display_name": "Alkmaeon",
       "character_class": "Memory Seeker",
-      "description": "A young boy from Aethon Village, chosen by fate to recover the Shards of Destiny.",
+      "description": "A young boy from Aethon Village, chosen by fate to recover the Shards of Destiny. His name means 'mighty in wrath' — a tragic hero who must act under ambiguous circumstances.",
       "base_stats": {
         "max_hp": 100,
         "max_mp": 30,

@@ -1,7 +1,7 @@
 # Chapter 1: The Awakening
 
 ## Overview
-Alexios's first visit to the Temple of Apollo triggers dormant memories. He must explore the ruins, face corrupted spirits, and receive his first divine vision.
+Alkmaeon's first visit to the Temple of Apollo triggers dormant memories. He must explore the ruins, face corrupted spirits, and receive his first divine vision.
 
 ---
 
@@ -15,7 +15,7 @@ Alexios's first visit to the Temple of Apollo triggers dormant memories. He must
 - Exit village toward the temple
 
 **Elder Theron Dialogue**:
-> "Welcome, young Alexios."
+> "Welcome, young Alkmaeon."
 > "The temple on the hill... it calls to you, does it not?"
 > "I have seen that look before. Go, but be careful."
 
