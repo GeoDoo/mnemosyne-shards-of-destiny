@@ -20,6 +20,11 @@ var can_move: bool = true
 # Touch joystick reference (set by exploration scene)
 var virtual_joystick: Control = null
 
+# Tap-to-move
+var tap_target: Vector2 = Vector2.ZERO
+var is_tap_moving: bool = false
+var tap_arrive_distance: float = 20.0
+
 
 func _ready() -> void:
 	add_to_group("player")
@@ -66,6 +71,22 @@ func _get_input_direction() -> Vector2:
 		var joystick_input = virtual_joystick.get_input()
 		if joystick_input.length() > 0.1:
 			direction = joystick_input
+			is_tap_moving = false  # Cancel tap movement when using joystick
+	
+	# Tap-to-move
+	if is_tap_moving and direction == Vector2.ZERO:
+		var to_target = tap_target - global_position
+		if to_target.length() > tap_arrive_distance:
+			direction = to_target.normalized()
+		else:
+			# Arrived at destination
+			is_tap_moving = false
+			# Try to interact if we're near something
+			_try_interact()
+	
+	# Cancel tap movement on keyboard input
+	if direction != Vector2.ZERO and (Input.is_action_pressed("move_up") or Input.is_action_pressed("move_down") or Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right")):
+		is_tap_moving = false
 	
 	return direction
 
@@ -78,6 +99,51 @@ func _input(event: InputEvent) -> void:
 		_try_interact()
 	elif event.is_action_pressed("menu"):
 		menu_pressed.emit()
+	
+	# Tap-to-move for touch screens
+	if event is InputEventScreenTouch and event.pressed:
+		_handle_tap(event.position)
+	elif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		_handle_tap(event.position)
+
+
+func _handle_tap(screen_pos: Vector2) -> void:
+	# Convert screen position to world position
+	var camera = get_viewport().get_camera_2d()
+	var world_pos: Vector2
+	
+	if camera:
+		world_pos = camera.get_global_mouse_position()
+	else:
+		# No camera, use viewport transform
+		var canvas_transform = get_canvas_transform()
+		world_pos = canvas_transform.affine_inverse() * screen_pos
+	
+	# Check if we tapped on an interactable first
+	if _check_tap_interaction(world_pos):
+		return
+	
+	# Set tap target for movement
+	tap_target = world_pos
+	is_tap_moving = true
+
+
+func _check_tap_interaction(world_pos: Vector2) -> bool:
+	# Check if tap is near an interactable
+	var space_state = get_world_2d().direct_space_state
+	var query = PhysicsPointQueryParameters2D.new()
+	query.position = world_pos
+	query.collision_mask = 32  # Interactables layer
+	
+	var results = space_state.intersect_point(query, 1)
+	if results.size() > 0:
+		var collider = results[0].collider
+		# Move towards interactable, then interact when close
+		tap_target = collider.global_position
+		is_tap_moving = true
+		return false  # Still move towards it
+	
+	return false
 
 
 func _try_interact() -> void:
