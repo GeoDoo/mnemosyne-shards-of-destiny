@@ -108,11 +108,12 @@ func _face_direction(direction: Vector2) -> void:
 	if not sprite:
 		return
 	
-	# Simple left/right flip for now
-	if direction.x < 0:
-		sprite.flip_h = true
-	elif direction.x > 0:
-		sprite.flip_h = false
+	# Simple left/right flip (only works for actual sprites, not placeholders)
+	if "flip_h" in sprite:
+		if direction.x < 0:
+			sprite.flip_h = true
+		elif direction.x > 0:
+			sprite.flip_h = false
 
 
 func _physics_process(delta: float) -> void:

@@ -36,42 +36,46 @@ grow_vertical = 2
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 48
 text = "MNEMOSYNE"
 horizontal_alignment = 1
 
 [node name="Subtitle" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 24
 text = "Shards of Destiny"
 horizontal_alignment = 1
 
 [node name="Spacer" type="Control" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 60)
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
 [node name="NewGameButton" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(200, 50)
+custom_minimum_size = Vector2(300, 70)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
 text = "New Game"
 
 [node name="ContinueButton" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(200, 50)
+custom_minimum_size = Vector2(300, 70)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
 text = "Continue"
 
 [node name="SettingsButton" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(200, 50)
+custom_minimum_size = Vector2(300, 70)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
 text = "Settings"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(200, 50)
+custom_minimum_size = Vector2(300, 70)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/NewGameButton" to="." method="_on_new_game_pressed"]

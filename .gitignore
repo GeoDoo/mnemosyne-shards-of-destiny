@@ -18,3 +18,4 @@ export/
 *.cfg.user
 *.uid
 *.import
+*.idsig
