@@ -41,7 +41,7 @@ func _initialize_starting_party() -> void:
 	alkmaeon.magic = 8
 	alkmaeon.speed = 10
 	alkmaeon.luck = 5
-	alkmaeon.skills = ["basic_attack", "defend"]
+	alkmaeon.skills.assign(["basic_attack", "defend"])
 	alkmaeon.skill_points = 0
 	
 	add_to_party(alkmaeon)

@@ -8,10 +8,10 @@ signal line_finished
 @export var text_speed: float = 0.03  # Seconds per character
 @export var auto_advance_delay: float = 1.0  # Delay before auto-continuing
 
-@onready var name_label: Label = $Panel/MarginContainer/VBoxContainer/NameLabel
-@onready var text_label: RichTextLabel = $Panel/MarginContainer/VBoxContainer/TextLabel
-@onready var portrait: TextureRect = $Panel/Portrait
-@onready var continue_indicator: Label = $Panel/ContinueIndicator
+var name_label: Label = null
+var text_label: RichTextLabel = null
+var portrait: TextureRect = null
+var continue_indicator: Label = null
 
 var is_typing: bool = false
 var current_text: String = ""
@@ -22,6 +22,13 @@ var _auto_continue: bool = false  # Whether to auto-emit line_finished when typi
 
 func _ready() -> void:
 	add_to_group("dialogue_box")
+	
+	# Get UI nodes (flexible paths)
+	name_label = get_node_or_null("Panel/MarginContainer/VBoxContainer/NameLabel")
+	text_label = get_node_or_null("Panel/MarginContainer/VBoxContainer/TextLabel")
+	portrait = get_node_or_null("Panel/Portrait")
+	continue_indicator = get_node_or_null("Panel/ContinueIndicator")
+	
 	hide()
 	if continue_indicator:
 		continue_indicator.hide()
@@ -35,7 +42,8 @@ func _process(delta: float) -> void:
 	if type_timer >= text_speed:
 		type_timer = 0.0
 		displayed_characters += 1
-		text_label.visible_characters = displayed_characters
+		if text_label:
+			text_label.visible_characters = displayed_characters
 		
 		if displayed_characters >= current_text.length():
 			_finish_typing()
@@ -60,11 +68,16 @@ func show_dialogue(speaker_name: String, text: String, portrait_path: String = "
 	show()
 	_auto_continue = auto_continue
 	
-	name_label.text = speaker_name
-	name_label.visible = speaker_name != ""
+	if name_label:
+		name_label.text = speaker_name
+		name_label.visible = speaker_name != ""
+	
 	current_text = text
-	text_label.text = text
-	text_label.visible_characters = 0
+	
+	if text_label:
+		text_label.text = text
+		text_label.visible_characters = 0
+	
 	displayed_characters = 0
 	
 	# Load portrait if provided
@@ -91,7 +104,8 @@ func show_narration(text: String, auto_continue: bool = false) -> void:
 
 func _skip_typing() -> void:
 	displayed_characters = current_text.length()
-	text_label.visible_characters = displayed_characters
+	if text_label:
+		text_label.visible_characters = displayed_characters
 	_finish_typing()
 
 

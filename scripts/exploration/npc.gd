@@ -15,8 +15,8 @@ signal dialogue_ended
 @export var wander_radius: float = 50.0
 @export var wander_speed: float = 50.0
 
-@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var interaction_area: Area2D = $InteractionArea
+var sprite: CanvasItem = null
+var interaction_area: Area2D = null
 
 var home_position: Vector2
 var is_talking: bool = false
@@ -27,7 +27,13 @@ func _ready() -> void:
 	add_to_group("npcs")
 	home_position = global_position
 	
-	# Setup interaction area
+	# Get sprite (could be AnimatedSprite2D or ColorRect)
+	sprite = get_node_or_null("AnimatedSprite2D")
+	if sprite == null:
+		sprite = get_node_or_null("Sprite")
+	
+	# Get interaction area
+	interaction_area = get_node_or_null("InteractionArea")
 	if interaction_area:
 		interaction_area.set_collision_layer_value(5, true)
 

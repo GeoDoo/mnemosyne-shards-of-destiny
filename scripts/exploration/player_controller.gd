@@ -8,9 +8,9 @@ signal menu_pressed
 @export var move_speed: float = 200.0
 @export var touch_controls_enabled: bool = true
 
-@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var interaction_area: Area2D = $InteractionArea
-@onready var collision_shape: CollisionShape2D = $CollisionShape2D
+var sprite: CanvasItem = null
+var interaction_area: Area2D = null
+var collision_shape: CollisionShape2D = null
 
 var input_direction: Vector2 = Vector2.ZERO
 var is_moving: bool = false
@@ -23,6 +23,13 @@ var virtual_joystick: Control = null
 
 func _ready() -> void:
 	add_to_group("player")
+	
+	# Get nodes (support both AnimatedSprite2D and simple Sprite/ColorRect)
+	sprite = get_node_or_null("AnimatedSprite2D")
+	if sprite == null:
+		sprite = get_node_or_null("Sprite")
+	interaction_area = get_node_or_null("InteractionArea")
+	collision_shape = get_node_or_null("CollisionShape2D")
 
 
 func _physics_process(delta: float) -> void:
@@ -74,6 +81,10 @@ func _input(event: InputEvent) -> void:
 
 
 func _try_interact() -> void:
+	if interaction_area == null:
+		interact_pressed.emit()
+		return
+	
 	var interactables = interaction_area.get_overlapping_areas()
 	
 	for area in interactables:
@@ -88,48 +99,39 @@ func _try_interact() -> void:
 
 
 func _update_animation() -> void:
-	if not sprite:
+	if sprite == null:
 		return
 	
-	# Determine animation based on facing direction
-	var anim_name = "walk_"
-	
-	if abs(facing_direction.x) > abs(facing_direction.y):
-		if facing_direction.x > 0:
-			anim_name += "right"
+	# Only animate if it's an AnimatedSprite2D
+	if sprite is AnimatedSprite2D:
+		var anim_name = "walk_"
+		
+		if abs(facing_direction.x) > abs(facing_direction.y):
+			anim_name += "right" if facing_direction.x > 0 else "left"
 		else:
-			anim_name += "left"
-	else:
-		if facing_direction.y > 0:
-			anim_name += "down"
-		else:
-			anim_name += "up"
-	
-	if sprite.sprite_frames and sprite.sprite_frames.has_animation(anim_name):
-		sprite.play(anim_name)
+			anim_name += "down" if facing_direction.y > 0 else "up"
+		
+		if sprite.sprite_frames and sprite.sprite_frames.has_animation(anim_name):
+			sprite.play(anim_name)
 
 
 func _play_idle_animation() -> void:
-	if not sprite:
+	if sprite == null:
 		return
 	
-	var anim_name = "idle_"
-	
-	if abs(facing_direction.x) > abs(facing_direction.y):
-		if facing_direction.x > 0:
-			anim_name += "right"
+	# Only animate if it's an AnimatedSprite2D
+	if sprite is AnimatedSprite2D:
+		var anim_name = "idle_"
+		
+		if abs(facing_direction.x) > abs(facing_direction.y):
+			anim_name += "right" if facing_direction.x > 0 else "left"
 		else:
-			anim_name += "left"
-	else:
-		if facing_direction.y > 0:
-			anim_name += "down"
-		else:
-			anim_name += "up"
-	
-	if sprite.sprite_frames and sprite.sprite_frames.has_animation(anim_name):
-		sprite.play(anim_name)
-	elif sprite.sprite_frames and sprite.sprite_frames.has_animation("idle_down"):
-		sprite.play("idle_down")
+			anim_name += "down" if facing_direction.y > 0 else "up"
+		
+		if sprite.sprite_frames and sprite.sprite_frames.has_animation(anim_name):
+			sprite.play(anim_name)
+		elif sprite.sprite_frames and sprite.sprite_frames.has_animation("idle_down"):
+			sprite.play("idle_down")
 
 
 ## Set position (used when loading saves or transitioning scenes)
