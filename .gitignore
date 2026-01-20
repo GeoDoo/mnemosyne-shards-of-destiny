@@ -1,0 +1,18 @@
+# Godot 4+ specific ignores
+.godot/
+.import/
+*.translation
+export_presets.cfg
+.mono/
+data_*/
+mono_crash.*.json
+.DS_Store
+.vscode/
+*.swp
+*~
+build/
+export/
+*.apk
+*.aab
+*.ipa
+*.cfg.user

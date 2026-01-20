@@ -1,0 +1,88 @@
+{
+  "party_members": [
+    {
+      "id": "alexios",
+      "display_name": "Alexios",
+      "character_class": "Memory Seeker",
+      "description": "A young boy from Aethon Village, chosen by fate to recover the Shards of Destiny.",
+      "base_stats": {
+        "max_hp": 100,
+        "max_mp": 30,
+        "attack": 12,
+        "defense": 10,
+        "magic": 8,
+        "speed": 10,
+        "luck": 5
+      },
+      "growth_rates": {
+        "hp": 12,
+        "mp": 4,
+        "attack": 3,
+        "defense": 2,
+        "magic": 2,
+        "speed": 2
+      },
+      "starting_skills": ["basic_attack", "defend"],
+      "learnable_skills": [
+        {"skill_id": "memory_flash", "level": 1, "note": "Learned through story"},
+        {"skill_id": "shard_recall", "level": 8},
+        {"skill_id": "heal", "level": 5}
+      ]
+    },
+    {
+      "id": "lyra",
+      "display_name": "Lyra",
+      "character_class": "Oracle Apprentice",
+      "description": "A young woman training at the village shrine, gifted with healing powers.",
+      "base_stats": {
+        "max_hp": 80,
+        "max_mp": 50,
+        "attack": 6,
+        "defense": 8,
+        "magic": 14,
+        "speed": 9,
+        "luck": 7
+      },
+      "growth_rates": {
+        "hp": 8,
+        "mp": 6,
+        "attack": 1,
+        "defense": 2,
+        "magic": 4,
+        "speed": 2
+      },
+      "starting_skills": ["basic_attack", "defend", "heal"],
+      "learnable_skills": [
+        {"skill_id": "divine_shield", "level": 4},
+        {"skill_id": "memory_flash", "level": 7}
+      ]
+    },
+    {
+      "id": "castor",
+      "display_name": "Castor",
+      "character_class": "Shadow Walker",
+      "description": "A mysterious traveler found at the temple, wielding shadow-touched blades.",
+      "base_stats": {
+        "max_hp": 85,
+        "max_mp": 25,
+        "attack": 15,
+        "defense": 7,
+        "magic": 6,
+        "speed": 14,
+        "luck": 10
+      },
+      "growth_rates": {
+        "hp": 9,
+        "mp": 3,
+        "attack": 4,
+        "defense": 2,
+        "magic": 1,
+        "speed": 3
+      },
+      "starting_skills": ["basic_attack", "defend", "shadow_strike"],
+      "learnable_skills": [
+        {"skill_id": "flame_burst", "level": 6}
+      ]
+    }
+  ]
+}

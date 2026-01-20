@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://village_scene_123"]
+
+[ext_resource type="PackedScene" uid="uid://player_scene_123" path="res://scenes/characters/player.tscn" id="1_player"]
+[ext_resource type="PackedScene" uid="uid://dialogue_box_123" path="res://scenes/ui/dialogue_box.tscn" id="2_dialogue"]
+[ext_resource type="Script" path="res://scripts/exploration/npc.gd" id="3_npc"]
+[ext_resource type="Script" path="res://scripts/exploration/scene_transition.gd" id="4_transition"]
+
+[node name="Village" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.2, 0.35, 0.2, 1)
+
+[node name="Ground" type="TileMap" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("1_player")]
+position = Vector2(640, 400)
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="Default" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(640, 400)
+
+[node name="FromTemple" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(1100, 360)
+
+[node name="NPCs" type="Node2D" parent="."]
+
+[node name="Villager1" type="CharacterBody2D" parent="NPCs"]
+position = Vector2(500, 350)
+script = ExtResource("3_npc")
+npc_name = "Elder Theron"
+dialogue_lines = Array[String](["Welcome, young Alexios.", "The temple on the hill... it calls to you, does it not?", "I have seen that look before. Go, but be careful."])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Villager1"]
+shape = SubResource("RectangleShape2D_collision")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPCs/Villager1"]
+
+[node name="Sprite" type="ColorRect" parent="NPCs/Villager1"]
+offset_left = -16.0
+offset_top = -32.0
+offset_right = 16.0
+offset_bottom = 0.0
+color = Color(0.6, 0.5, 0.3, 1)
+
+[node name="InteractionArea" type="Area2D" parent="NPCs/Villager1"]
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Villager1/InteractionArea"]
+shape = SubResource("RectangleShape2D_collision")
+
+[node name="Transitions" type="Node2D" parent="."]
+
+[node name="ToTemple" type="Area2D" parent="Transitions"]
+position = Vector2(1200, 360)
+script = ExtResource("4_transition")
+target_scene = "temple_ruins"
+spawn_point_name = "FromVillage"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/ToTemple"]
+shape = SubResource("RectangleShape2D_collision")
+
+[node name="Label" type="Label" parent="Transitions/ToTemple"]
+offset_left = -50.0
+offset_top = -40.0
+offset_right = 50.0
+offset_bottom = -20.0
+text = "To Temple →"
+horizontal_alignment = 1
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="DialogueBox" parent="UI" instance=ExtResource("2_dialogue")]
+
+[node name="VillageLabel" type="Label" parent="UI"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 200.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 24
+text = "Aethon Village"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_collision"]
+size = Vector2(32, 32)

@@ -1,0 +1,95 @@
+{
+  "enemies": [
+    {
+      "id": "temple_spirit",
+      "display_name": "Temple Spirit",
+      "description": "A restless spirit bound to the ruined temple.",
+      "level": 1,
+      "max_hp": 35,
+      "attack": 7,
+      "defense": 3,
+      "magic": 8,
+      "speed": 6,
+      "skills": ["basic_attack"],
+      "experience_reward": 12,
+      "currency_reward": 8,
+      "element_modifiers": {
+        "light": 1.5,
+        "shadow": 0.5
+      }
+    },
+    {
+      "id": "corrupted_shade",
+      "display_name": "Corrupted Shade",
+      "description": "A shadow creature twisted by forgotten memories.",
+      "level": 2,
+      "max_hp": 28,
+      "attack": 10,
+      "defense": 2,
+      "magic": 6,
+      "speed": 10,
+      "skills": ["basic_attack", "shadow_strike"],
+      "experience_reward": 15,
+      "currency_reward": 10,
+      "element_modifiers": {
+        "light": 2.0,
+        "shadow": 0.0
+      }
+    },
+    {
+      "id": "forgotten_guardian",
+      "display_name": "Forgotten Guardian",
+      "description": "An ancient protector of the temple, now corrupted.",
+      "level": 3,
+      "max_hp": 60,
+      "attack": 12,
+      "defense": 8,
+      "magic": 5,
+      "speed": 4,
+      "skills": ["basic_attack", "defend"],
+      "experience_reward": 25,
+      "currency_reward": 20,
+      "element_modifiers": {
+        "fire": 1.5,
+        "light": 1.0
+      }
+    },
+    {
+      "id": "memory_wisp",
+      "display_name": "Memory Wisp",
+      "description": "A fragment of lost memory given ethereal form.",
+      "level": 1,
+      "max_hp": 20,
+      "attack": 5,
+      "defense": 1,
+      "magic": 12,
+      "speed": 12,
+      "skills": ["basic_attack"],
+      "experience_reward": 8,
+      "currency_reward": 5,
+      "element_modifiers": {
+        "shadow": 1.5,
+        "light": 0.5
+      }
+    },
+    {
+      "id": "apollo_remnant",
+      "display_name": "Remnant of Apollo",
+      "description": "A twisted echo of divine power, boss of the temple.",
+      "level": 5,
+      "max_hp": 150,
+      "attack": 15,
+      "defense": 10,
+      "magic": 18,
+      "speed": 8,
+      "skills": ["basic_attack", "flame_burst", "divine_shield"],
+      "experience_reward": 100,
+      "currency_reward": 75,
+      "element_modifiers": {
+        "shadow": 1.5,
+        "fire": 0.5,
+        "light": 0.5
+      }
+    }
+  ]
+}

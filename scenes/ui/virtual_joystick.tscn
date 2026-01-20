@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://virtual_joystick_123"]
+
+[ext_resource type="Script" path="res://scripts/ui/virtual_joystick.gd" id="1_joystick"]
+
+[node name="VirtualJoystick" type="Control"]
+anchors_preset = 0
+offset_right = 150.0
+offset_bottom = 150.0
+script = ExtResource("1_joystick")
+
+[node name="Base" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 150.0
+
+[node name="Tip" type="TextureRect" parent="Base"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 45.0
+offset_right = 105.0
+offset_bottom = 105.0
