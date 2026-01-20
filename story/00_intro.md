@@ -1,31 +1,91 @@
-# Mnemosyne: Shards of Destiny — Opening
+# Opening Narration — In-Game Text
 
-## Intro Narration
-
-In a humble village nestled beneath starlit mountains, a young boy's destiny begins to stir the moment he steps among the shattered pillars of an ancient Temple of Apollo. As he walks through the silent ruins, radiant yet unsettling flashes of a forgotten past blaze across his mind — visions that feel both alien and unmistakably his own. With each return to the sacred site, the memories burn brighter, as if the stones themselves are awakening to call him. High above, a rare Red Moon swells in the heavens — or perhaps a celestial alignment foretold by the secretive teachings of the Orphics begins to take shape — and with it, the visions surge with divine intensity. Compelled by a force greater than fear, the boy feels a heroic summons rising in his heart, drawing him beyond his village and into a world of gods, mysteries, and ancient truths that he must uncover to understand his place in the unfolding fate of the cosmos.
+> *See `00_story_baseline.md` for the full mythic spine.*
 
 ---
 
-## Key Story Elements
+## Prologue: The Chorus of Ruin
 
-### Setting
-- **Aethon Village**: A humble village beneath starlit mountains
-- **Temple of Apollo**: Ancient ruins on a hill above the village
-- **Era**: Ancient Greek-inspired world with active gods
+*[Cinematic — Chorus-style narration, auto-advancing]*
 
-### Protagonist
-- **Alexios**: A young boy from the village
-- Experiences visions/memories that aren't his own
-- Called by fate to gather the "Shards of Destiny"
+> Before the age of men, before the memory of mortals, the world trembled beneath the coils of Typhon, born of Gaia's fury.
 
-### Central Mystery
-- The "Shards of Destiny" — fragments of Mnemosyne's power (divine memories)
-- Connection between Alexios and the gods
-- The significance of the Red Moon / celestial alignment
-- Orphic mysteries and their secret teachings
+> Lightning clashed with storm, and the heavens burned.
 
-### Themes
-- Memory and identity
-- Fate vs. free will
-- Divine inheritance
-- The weight of forgotten truths
+> Zeus cast him down, burying him beneath the roots of the earth...
+
+> Yet chaos does not die — it only sleeps.
+
+> To guard against his return, the gods wove the Order of Destiny — a harmony of fate, law, and remembrance.
+
+> At its heart stood Mnemosyne, keeper of cosmic memory.
+
+> At its borders walked Hécate, torch in hand, guiding souls across the thresholds between life, death, and truth.
+
+> Yet nothing eternal remains unbroken.
+
+> Somewhere, a fragment of this order — a Shard of Destiny — was lost...
+
+> ...hidden in a forgotten sanctuary of Apollo, god of light and prophecy.
+
+*[Fade to black]*
+
+---
+
+## Opening: The Village
+
+*[Gameplay begins — Village exterior, morning]*
+
+> In a quiet mountain village, a boy grows up among shepherds and farmers...
+
+> ...raised in the shadow of ancient legends he barely understands.
+
+*[Player gains control]*
+
+---
+
+## First Temple Visit
+
+*[Triggered when player enters Temple of Apollo for the first time]*
+
+> Drawn by an inexplicable pull, you climb to the shattered Temple of Apollo overlooking the valley.
+
+> Broken columns. Fallen statues. An altar cracked by time.
+
+*[Vision flash — auto-advancing]*
+
+> A flash of burning skies.
+
+> A memory not your own — a war between light and storm.
+
+> A shattered crystal scattering into radiant fragments.
+
+> For a moment, you see a figure: a veiled woman bearing a torch...
+
+> ...Hécate, standing between worlds, watching you.
+
+*[Screen fades, returns to temple]*
+
+> When you awaken, the temple is silent again — but you are changed.
+
+---
+
+## The Red Moon
+
+*[Triggered after first temple visit, returning to village at night]*
+
+> That night, a Red Moon rises.
+
+> Your visions return — stronger, clearer...
+
+> ...as if the heavens themselves are remembering through you.
+
+*[Elder approaches]*
+
+**Elder Theron:**
+> "When the Red Moon bleeds, the earth remembers..."
+> "...and the buried one stirs."
+
+> You feel an irresistible calling.
+
+> You must leave.
