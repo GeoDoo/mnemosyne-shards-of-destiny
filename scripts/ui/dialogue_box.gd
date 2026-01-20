@@ -6,8 +6,7 @@ signal dialogue_finished
 signal line_finished
 
 @export var text_speed: float = 0.03  # Seconds per character
-@export var auto_advance: bool = false
-@export var auto_advance_delay: float = 2.0
+@export var auto_advance_delay: float = 1.0  # Delay before auto-continuing
 
 @onready var name_label: Label = $Panel/MarginContainer/VBoxContainer/NameLabel
 @onready var text_label: RichTextLabel = $Panel/MarginContainer/VBoxContainer/TextLabel
@@ -18,6 +17,7 @@ var is_typing: bool = false
 var current_text: String = ""
 var displayed_characters: int = 0
 var type_timer: float = 0.0
+var _auto_continue: bool = false  # Whether to auto-emit line_finished when typing completes
 
 
 func _ready() -> void:
@@ -55,10 +55,13 @@ func _input(event: InputEvent) -> void:
 
 
 ## Show dialogue with speaker name and text
-func show_dialogue(speaker_name: String, text: String, portrait_path: String = "") -> void:
+## Set auto_continue=true to automatically emit line_finished when typing completes (for cutscenes/visions)
+func show_dialogue(speaker_name: String, text: String, portrait_path: String = "", auto_continue: bool = false) -> void:
 	show()
+	_auto_continue = auto_continue
 	
 	name_label.text = speaker_name
+	name_label.visible = speaker_name != ""
 	current_text = text
 	text_label.text = text
 	text_label.visible_characters = 0
@@ -81,9 +84,9 @@ func show_dialogue(speaker_name: String, text: String, portrait_path: String = "
 
 
 ## Show dialogue without speaker (narration)
-func show_narration(text: String) -> void:
-	show_dialogue("", text, "")
-	name_label.hide()
+## Set auto_continue=true to automatically emit line_finished when typing completes
+func show_narration(text: String, auto_continue: bool = false) -> void:
+	show_dialogue("", text, "", auto_continue)
 
 
 func _skip_typing() -> void:
@@ -94,10 +97,14 @@ func _skip_typing() -> void:
 
 func _finish_typing() -> void:
 	is_typing = false
-	if continue_indicator:
-		continue_indicator.show()
 	
-	if auto_advance:
+	if _auto_continue:
+		# Auto-continue mode: emit signal after a brief delay for reading
+		if continue_indicator:
+			continue_indicator.hide()
 		await get_tree().create_timer(auto_advance_delay).timeout
-		if not is_typing:  # Make sure we haven't started new dialogue
-			line_finished.emit()
+		line_finished.emit()
+	else:
+		# Manual mode: show indicator and wait for player input
+		if continue_indicator:
+			continue_indicator.show()

@@ -104,18 +104,18 @@ func _trigger_first_vision() -> void:
 	has_triggered_first_vision = true
 	player.disable_movement()
 	
-	# Vision sequence
+	# Vision sequence - use auto_continue for cinematic flow
 	await _flash_screen(Color.WHITE, 0.3)
 	
-	dialogue_box.show_narration("As you step among the shattered pillars, a flash sears through your mind...")
+	dialogue_box.show_narration("As you step among the shattered pillars, a flash sears through your mind...", true)
 	await dialogue_box.line_finished
 	
 	await _flash_screen(Color.WHITE, 0.5)
 	
-	dialogue_box.show_narration("Visions of a forgotten past blaze across your thoughts...")
+	dialogue_box.show_narration("Visions of a forgotten past blaze across your thoughts...", true)
 	await dialogue_box.line_finished
 	
-	dialogue_box.show_narration("Images both alien and unmistakably your own.")
+	dialogue_box.show_narration("Images both alien and unmistakably your own.", true)
 	await dialogue_box.line_finished
 	
 	dialogue_box.hide()
@@ -126,40 +126,40 @@ func _trigger_altar_vision() -> void:
 	player.disable_movement()
 	GameManager.set_state(GameManager.GameState.VISION)
 	
-	# Intense vision sequence
+	# Intense vision sequence - use auto_continue for cinematic flow
 	await _flash_screen(Color.WHITE, 0.5)
 	await _flash_screen(Color(1, 0.8, 0.8), 0.3)
 	
-	dialogue_box.show_narration("You touch the cold stone of the altar...")
+	dialogue_box.show_narration("You touch the cold stone of the altar...", true)
 	await dialogue_box.line_finished
 	
 	await _flash_screen(Color.WHITE, 1.0)
 	
-	dialogue_box.show_narration("A surge of divine energy courses through you!")
+	dialogue_box.show_narration("A surge of divine energy courses through you!", true)
 	await dialogue_box.line_finished
 	
-	dialogue_box.show_narration("You see a great temple, whole and magnificent, filled with worshippers...")
+	dialogue_box.show_narration("You see a great temple, whole and magnificent, filled with worshippers...", true)
 	await dialogue_box.line_finished
 	
-	dialogue_box.show_narration("A figure in golden robes turns to face you — Apollo himself.")
+	dialogue_box.show_narration("A figure in golden robes turns to face you — Apollo himself.", true)
 	await dialogue_box.line_finished
 	
-	dialogue_box.show_dialogue("???", "Child of Memory... the Shards call to you.", "")
+	dialogue_box.show_dialogue("???", "Child of Memory... the Shards call to you.", "", true)
 	await dialogue_box.line_finished
 	
-	dialogue_box.show_dialogue("???", "Gather them, before the Red Moon rises complete.", "")
+	dialogue_box.show_dialogue("???", "Gather them, before the Red Moon rises complete.", "", true)
 	await dialogue_box.line_finished
 	
 	await _flash_screen(Color.WHITE, 0.5)
 	
-	dialogue_box.show_narration("The vision fades, leaving you breathless but somehow... stronger.")
+	dialogue_box.show_narration("The vision fades, leaving you breathless but somehow... stronger.", true)
 	await dialogue_box.line_finished
 	
 	# Unlock new skill
 	var alexios = PartyManager.get_character("alexios")
 	if alexios and not alexios.has_skill("memory_flash"):
 		alexios.skills.append("memory_flash")
-		dialogue_box.show_narration("You have learned Memory Flash!")
+		dialogue_box.show_narration("You have learned Memory Flash!", true)
 		await dialogue_box.line_finished
 	
 	dialogue_box.hide()
