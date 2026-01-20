@@ -141,7 +141,7 @@ func _check_tap_interaction(world_pos: Vector2) -> bool:
 		# Move towards interactable, then interact when close
 		tap_target = collider.global_position
 		is_tap_moving = true
-		return false  # Still move towards it
+		return true  # Found interactable, dont overwrite tap_target
 	
 	return false
 
