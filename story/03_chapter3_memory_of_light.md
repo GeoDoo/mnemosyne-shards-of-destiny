@@ -1,9 +1,9 @@
 # Chapter 3: The Memory of Light
 
-> *The journey east brings Alkmaeon and Lyra to the ruins of Apollo's eastern shrine — a place where light once conquered darkness. Here they meet Castor, a mysterious shadow-touched traveler with secrets of his own. Together, they must brave the corrupted sanctuary and claim the first Shard of Destiny.*
+> *The journey east brings Alkmaeon and Theano to the ruins of Apollo's eastern shrine — a place where light once conquered darkness. Here they meet Brasidas, a mysterious shadow-touched traveler with secrets of his own. Together, they must brave the corrupted sanctuary and claim the first Shard of Destiny.*
 
 **Prerequisites**: Chapter 2 complete (`chapter2_complete` flag set)  
-**Party**: Alkmaeon, Lyra (Castor joins mid-chapter)
+**Party**: Alkmaeon, Theano (Brasidas joins mid-chapter)
 
 ---
 
@@ -32,12 +32,12 @@
 
 ### Travel Dialogue: The World Beyond
 
-**Lyra:**
+**Theano:**
 > "We're entering the Eastern Provinces. Apollo's influence is strongest here."
 
 > "Or it was, once. Before the great forgetting."
 
-**Lyra:**
+**Theano:**
 > "A thousand years ago, temples to Apollo dotted these hills."
 
 > "Oracles, healing sanctuaries, places of prophecy."
@@ -47,17 +47,17 @@
 *[Player choice]*
 
 **Option A: "Why did people stop worshipping?"**
-> **Lyra:** "New gods. New empires. New ways of understanding the world."
+> **Theano:** "New gods. New empires. New ways of understanding the world."
 > "The Olympians became... stories. Myths. Things of the past."
 > "But the past has a way of returning."
 
 **Option B: "If faith faded, why does Apollo's power remain?"**
-> **Lyra:** "The gods don't need worship to exist. They need it to act."
+> **Theano:** "The gods don't need worship to exist. They need it to act."
 > "Without belief, they become distant. Silent."
 > "But the Shards are different. They're memory — preserved even when the world forgets."
 
 **Option C: "Do you still have faith?"**
-> **Lyra:** "I serve at Delphi. Faith isn't optional."
+> **Theano:** "I serve at Delphi. Faith isn't optional."
 > *[She pauses]*
 > "But I'll admit... before I met you, I sometimes wondered if the gods were truly listening."
 > "Now I know they are. I just wish they'd speak more clearly."
@@ -107,7 +107,7 @@
 
 ---
 
-**Lyra:**
+**Theano:**
 > "The eternal flame. I've read about it."
 
 > "Apollo lit it himself when the shrine was built."
@@ -183,16 +183,16 @@
 
 ---
 
-### Dialogue: Castor Introduction
+### Dialogue: Brasidas Introduction
 
-**Castor:**
-> "Name's Castor. Treasure hunter. Explorer of places better left unexplored."
+**Brasidas:**
+> "Name's Brasidas. Treasure hunter. Explorer of places better left unexplored."
 
 > "And currently, the only living person stupid enough to still be here."
 
 *[He studies the party]*
 
-**Castor:**
+**Brasidas:**
 > "Let me guess. You're here for the shrine."
 
 > "Not to loot it — you don't have the look. Too... earnest."
@@ -202,24 +202,24 @@
 *[Player choice]*
 
 **Option A: "We're here for something hidden in the shrine."**
-> **Castor:** "Hidden, huh? Must be valuable."
+> **Brasidas:** "Hidden, huh? Must be valuable."
 > "The shrine's been picked clean by looters over the centuries."
 > "But if there's something still in there... it's in deep."
 
 **Option B: "We're here to restore the light."**
-> **Castor:** "Ha. Noble. Foolish. I like that."
+> **Brasidas:** "Ha. Noble. Foolish. I like that."
 > "The light went out for a reason. Something came out of the inner sanctum."
 > "Whatever's in there doesn't want visitors."
 
 **Option C: "Why are you still here?"**
-> **Castor:** "I was inside when it happened. Barely made it out."
+> **Brasidas:** "I was inside when it happened. Barely made it out."
 > "Lost my partner to those shadow-things."
 > "I've been waiting. Watching. Trying to figure out how to go back in."
 > "Alone, I can't do it. But maybe..."
 
 ---
 
-**Castor:**
+**Brasidas:**
 > "Look, I don't know why you're really here. But I know the shrine."
 
 > "I've been mapping it for months. Secret passages, trap rooms, the works."
@@ -229,39 +229,39 @@
 *[Player choice]*
 
 **Option A: "We could use someone who knows the layout."**
-> **Castor:** "Smart. I like smart."
+> **Brasidas:** "Smart. I like smart."
 > "Let's make a deal then. I help you reach whatever you're after."
 > "And if there's anything valuable along the way... I get first pick."
 
 **Option B: "How do we know we can trust you?"**
-> **Castor:** "You don't. But ask yourself — what's my play here?"
+> **Brasidas:** "You don't. But ask yourself — what's my play here?"
 > "I could've stayed hidden. Let you die in there."
 > "Instead I'm offering help. That's got to count for something."
-> **Lyra:** "He has a point, Alkmaeon. We need every advantage we can get."
+> **Theano:** "He has a point, Alkmaeon. We need every advantage we can get."
 
 **Option C: "What happened to your partner?"**
-> *[Castor's expression darkens]*
-> **Castor:** "The shadows took her. Dragged her into the inner sanctum."
+> *[Brasidas's expression darkens]*
+> **Brasidas:** "The shadows took her. Dragged her into the inner sanctum."
 > "I tried to follow. Almost died."
 > "If there's any chance she's still alive... I need to find out."
 
 ---
 
-**Lyra:**
+**Theano:**
 > "We should accept his help, Alkmaeon."
 
 > "He knows the shrine. We don't."
 
 > "And there's something else..."
 
-*[She studies Castor]*
+*[She studies Brasidas]*
 
-**Lyra:**
+**Theano:**
 > "You're touched by shadow. I can see it."
 
 > "Not corrupted — not yet — but marked."
 
-**Castor:**
+**Brasidas:**
 > "Perceptive. Yes, I've been... brushed by things most people never see."
 
 > "It's an occupational hazard when you spend your life in dark places."
@@ -272,10 +272,10 @@
 
 ---
 
-> ***Castor has joined the party!***
+> ***Brasidas has joined the party!***
 
-**Party Member: Castor**
-- Class: Shadow Walker
+**Party Member: Brasidas**
+- Class: Spartan Warrior
 - Role: DPS / Scout
 - Starting Skills: Basic Attack, Defend, Shadow Strike
 - Stats: High Speed, High Attack, High Luck, Lower Defense
@@ -298,7 +298,7 @@
 
 > And at its heart — darkness. Absolute and hungry.
 
-**Castor:**
+**Brasidas:**
 > "The entrance is through here. The main hall."
 
 > "Stay close. The shadows react to movement."
@@ -315,10 +315,10 @@
 
 > The eternal flame's brazier stands cold at the chamber's center.
 
-**Lyra:**
+**Theano:**
 > "I can barely see..."
 
-**Castor:**
+**Brasidas:**
 > "Give it a moment. Your eyes adjust."
 
 > "Or they don't. And then the shadows find you."
@@ -342,12 +342,12 @@
 - Resist: Shadow element
 - Uses: Basic Attack, Draining Touch (steals HP)
 
-**Castor (Combat):**
+**Brasidas (Combat):**
 > "There! Hit them before they scatter!"
 
 *[After combat]*
 
-**Castor:**
+**Brasidas:**
 > "Shadow Spawn. They're what happens when the darkness... eats something."
 
 > "The villagers who didn't escape. The priests who stayed to protect the flame."
@@ -366,7 +366,7 @@
 
 ### Shrine Layout
 
-**Castor:**
+**Brasidas:**
 > "The shrine has three wings. Treasury, Library, and the Inner Sanctum."
 
 > "The Sanctum is where the eternal flame was. That's where your... whatever you're after... probably is."
@@ -392,19 +392,19 @@
 > *The vault doors hang open. Empty pedestals line the walls.*
 > *But in the darkness, something glimmers.*
 
-**Castor:**
+**Brasidas:**
 > "Wait. That's still here?"
 
 > *He retrieves a small golden amulet from a hidden niche.*
 
-**Castor:**
+**Brasidas:**
 > "Sun Pendant. Apollo's blessing."
 
 > "The looters must've missed it. Too well hidden."
 
 > ***Found: Sun Pendant***
 > *Emits faint light in darkness. +5 Magic, grants minor Light resistance.*
-> *Castor: "You should carry this. I work better in the dark."*
+> *Brasidas: "You should carry this. I work better in the dark."*
 
 ---
 
@@ -413,16 +413,16 @@
 > *A great sundial dominates the treasury floor, but there's no sun to cast shadows.*
 > *Three mirrors ring the room, each adjustable.*
 
-**Castor:**
+**Brasidas:**
 > "This used to work automatically. Sunlight through the dome."
 
 > "We'll have to fake it."
 
-**Lyra:**
+**Theano:**
 > "I can generate light with a prayer. If we angle the mirrors correctly..."
 
 **Puzzle Solution:**
-- Lyra generates light
+- Theano generates light
 - Player adjusts Mirror 1 to reflect toward Mirror 2
 - Mirror 2 reflects to Mirror 3
 - Mirror 3 focuses on the sundial's center
@@ -434,7 +434,7 @@
 
 > *Inside: a flame that hasn't burned in centuries — but wants to.*
 
-**Lyra:**
+**Theano:**
 > "The secondary flame. If I can channel Apollo's power..."
 
 *[She prays — the flame ignites]*
@@ -472,7 +472,7 @@
 
 **At 50% HP:**
 > *The shadow corruption intensifies — the statue moves faster, hits harder.*
-> **Castor:** "It's drawing power from the darkness! Hit it with light!"
+> **Brasidas:** "It's drawing power from the darkness! Hit it with light!"
 
 **At 25% HP:**
 > **Gilded Specter:** "REMEMBER... US..."
@@ -507,7 +507,7 @@
 > *A history of this place. Records of priests, prophecies, miracles.*
 > *One entry catches your eye: "The Shard of Light was entrusted to our keeping by Apollo himself. It must never fall to shadow."*
 
-**Lyra:**
+**Theano:**
 > "The Shard of Light. That's what we're looking for."
 
 > "It's been here all along — hidden in the Inner Sanctum."
@@ -522,23 +522,23 @@
 **Inscription:**
 > "Speak the name of the mother of the Muses, and pass."
 
-**Castor:**
+**Brasidas:**
 > "A riddle. Great. I hate riddles."
 
 *[Player choice]*
 
 **Option A: "Mnemosyne."**
 > *The door shimmers and opens.*
-> **Lyra:** "Memory. The answer was always memory."
+> **Theano:** "Memory. The answer was always memory."
 
 **Option B: "Hera." (Wrong)**
 > *The door pulses — a warning.*
-> **Lyra:** "No... Hera is queen of the gods, but not the Muses' mother."
+> **Theano:** "No... Hera is queen of the gods, but not the Muses' mother."
 > *[Player can try again]*
 
 **Option C: "Apollo." (Wrong)**
 > *The door pulses — a warning.*
-> **Castor:** "Apollo's their leader, not their parent."
+> **Brasidas:** "Apollo's their leader, not their parent."
 > *[Player can try again]*
 
 ---
@@ -547,7 +547,7 @@
 
 > *Beyond the word-lock, another cold brazier waits.*
 
-**Lyra:**
+**Theano:**
 > "The second flame. One more, and the Sanctum opens."
 
 *[She lights it]*
@@ -579,8 +579,8 @@
 **Battle Dialogue:**
 
 **At Start:**
-> **Castor:** "What in the hells is that thing?"
-> **Lyra:** "The knowledge that was lost — given form by shadow."
+> **Brasidas:** "What in the hells is that thing?"
+> **Theano:** "The knowledge that was lost — given form by shadow."
 
 **At 50% HP:**
 > **Ink Horror:** *[Single voice, suddenly clear]* "WE KNEW WHAT WAS COMING. WE TRIED TO WARN THEM."
@@ -636,10 +636,10 @@
 
 > The Shard.
 
-**Lyra:**
+**Theano:**
 > "There it is. The Memory of Light."
 
-**Castor:**
+**Brasidas:**
 > "And between us and it... that."
 
 ---
@@ -663,10 +663,10 @@
 
 ---
 
-**Lyra:**
+**Theano:**
 > "Typhon. He's already reaching out, corrupting Apollo's servants."
 
-**Castor:**
+**Brasidas:**
 > "Less talking, more fighting. That thing is between us and our goal."
 
 ***Boss Battle: Corrupted High Priest***
@@ -701,12 +701,12 @@
 > **Corrupted Priest:** "THERE IS NO HELP... ONLY THE DARKNESS..."
 
 **At 75% HP:**
-> **Lyra:** "I'm channeling Apollo's light! Hit him now!"
+> **Theano:** "I'm channeling Apollo's light! Hit him now!"
 > *[Light damage increased for 2 turns]*
 
 **At 25% HP:**
 > **Corrupted Priest:** "The buried one... will rise... you cannot stop..."
-> **Castor:** "We'll see about that. Finish him!"
+> **Brasidas:** "We'll see about that. Finish him!"
 
 ---
 
@@ -844,12 +844,12 @@
 
 ---
 
-**Lyra:**
+**Theano:**
 > "You have it. The first Shard."
 
 > "I can feel its power. It's... beautiful."
 
-**Castor:**
+**Brasidas:**
 > "Great. One down, two to go."
 
 > "Now can we get out of here? This place gives me the creeps."
@@ -864,18 +864,18 @@
 
 > Through the shrine, shadows retreat. The corruption lifts.
 
-**Lyra:**
+**Theano:**
 > "We did it. The shrine is cleansed."
 
 > "The villagers can return home."
 
 ---
 
-### Castor's Moment
+### Brasidas's Moment
 
-*[Before leaving, Castor pauses]*
+*[Before leaving, Brasidas pauses]*
 
-**Castor:**
+**Brasidas:**
 > "Wait."
 
 > "Before we go... there's something I need to do."
@@ -884,18 +884,18 @@
 
 > *A shadow lingers there — smaller than the others. Waiting.*
 
-**Castor:**
-> "Mira."
+**Brasidas:**
+> "Korinna."
 
 > *The shadow shifts — and a woman's face appears. Sad. Grateful.*
 
-**Mira's Spirit:**
+**Korinna's Spirit:**
 > "Cas... you came back."
 
-**Castor:**
+**Brasidas:**
 > "I told you I would."
 
-**Mira's Spirit:**
+**Korinna's Spirit:**
 > "The darkness... is gone. I can rest now."
 
 > "Find what you're looking for, Cas. Don't let the shadows take you too."
@@ -904,9 +904,9 @@
 
 ---
 
-*[Castor stands in silence for a moment]*
+*[Brasidas stands in silence for a moment]*
 
-**Castor:**
+**Brasidas:**
 > "...She was my partner. Treasure hunter, like me."
 
 > "We came here looking for gold. Found something else instead."
@@ -914,16 +914,16 @@
 *[Player choice]*
 
 **Option A: "I'm sorry."**
-> **Castor:** "Don't be. She's free now. That's all I wanted."
+> **Brasidas:** "Don't be. She's free now. That's all I wanted."
 > "Let's keep moving. We've got two more of these to find."
 
 **Option B: "She seemed at peace."**
-> **Castor:** "Yeah. Yeah, she did."
+> **Brasidas:** "Yeah. Yeah, she did."
 > "That's more than most people get."
 > "Come on. The road's waiting."
 
 **Option C: "Will you be alright?"**
-> **Castor:** "I'll be fine. I'm always fine."
+> **Brasidas:** "I'll be fine. I'm always fine."
 > *[A pause]*
 > "...Thank you. For helping me close this chapter."
 > "Now let's go write the next one."
@@ -950,28 +950,28 @@
 
 ---
 
-**Lyra:**
+**Theano:**
 > "One Shard claimed. Two more to find."
 
 > "The Memory of Silence lies to the west. The Memory of Ruin to the north."
 
-**Castor:**
+**Brasidas:**
 > "West is closer. But the rumors about that place..."
 
 > "They say the oracles there went silent generations ago."
 
 > "No one knows why."
 
-**Lyra:**
+**Theano:**
 > "Then that's where we go next."
 
 > "Whatever silenced them — it might be connected to the Shards."
 
 ---
 
-### Castor Commits
+### Brasidas Commits
 
-**Castor:**
+**Brasidas:**
 > "Look, I know we made a deal. I help you, I get first pick of valuables."
 
 > "But that Shard... that's not treasure. That's something else."
@@ -983,24 +983,24 @@
 *[Player choice]*
 
 **Option A: "Welcome to the quest."**
-> **Castor:** "Quest. Right. I've never been on a quest before."
+> **Brasidas:** "Quest. Right. I've never been on a quest before."
 > "Usually I just steal things and run."
 > "This'll be different."
 
 **Option B: "We could use a rogue."**
-> **Castor:** "Rogue. I prefer 'acquisitions specialist.'"
+> **Brasidas:** "Rogue. I prefer 'acquisitions specialist.'"
 > "But yeah. Locked doors, hidden traps, dark places."
 > "That's my specialty."
 
 **Option C: "What changed your mind?"**
-> **Castor:** "Mira. Seeing her free."
+> **Brasidas:** "Korinna. Seeing her free."
 > "And... that vision. I didn't see it, but I felt something."
 > "The light, pushing back the dark."
 > "Maybe there's more to life than surviving."
 
 ---
 
-> ***Castor is now a permanent party member!***
+> ***Brasidas is now a permanent party member!***
 
 ---
 
@@ -1034,12 +1034,12 @@
 | Flag | Description |
 |------|-------------|
 | `shrine_village_reached` | Arrived at the Eastern Shrine |
-| `castor_joined` | Castor joins the party |
+| `castor_joined` | Brasidas joins the party |
 | `treasury_flame_lit` | First secondary flame restored |
 | `library_flame_lit` | Second secondary flame restored |
 | `corrupted_priest_defeated` | Boss defeated |
 | `shard_of_light_acquired` | First Shard claimed |
-| `mira_freed` | Castor's partner's spirit released |
+| `mira_freed` | Brasidas's partner's spirit released |
 | `chapter3_complete` | Chapter 3 finished |
 
 ## Skills Learned
@@ -1064,8 +1064,8 @@
 | Character | Level | Notes |
 |-----------|-------|-------|
 | Alkmaeon | 4-5 | Carries the Shard of Light |
-| Lyra | 3-4 | Growing confidence in her divine connection |
-| Castor | 3-4 | Found closure; committed to the quest |
+| Theano | 3-4 | Growing confidence in her divine connection |
+| Brasidas | 3-4 | Found closure; committed to the quest |
 
 ## Enemies Encountered
 
@@ -1092,6 +1092,6 @@ This chapter establishes the dungeon formula for Act III:
 - **Dungeon** with multiple wings, puzzles, and mini-bosses
 - **Major boss** tied to the Shard's theme
 - **Vision sequence** revealing cosmic truth
-- **Character development** (Castor's closure with Mira)
+- **Character development** (Brasidas's closure with Korinna)
 
-Castor's arc shows that even "selfish" characters can find meaning in the quest.
+Brasidas's arc shows that even "selfish" characters can find meaning in the quest.

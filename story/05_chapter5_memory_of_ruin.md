@@ -3,7 +3,7 @@
 > *The final Shard awaits in the storm-scarred valley where Typhon's power bleeds into the world. Here, at the edge of chaos, Alkmaeon confronts the most dangerous truth: the memory of what came before order. Before gods. Before meaning. And in that primal darkness, he begins to question who — or what — he truly is.*
 
 **Prerequisites**: Chapter 4 complete (`chapter4_complete` flag set)  
-**Party**: Alkmaeon, Lyra, Castor
+**Party**: Alkmaeon, Theano, Brasidas
 
 ---
 
@@ -28,10 +28,10 @@
 
 > The earth itself trembles, as if something vast is turning in its sleep.
 
-**Castor:**
+**Brasidas:**
 > "I've been to a lot of bad places. This might be the worst."
 
-**Lyra:**
+**Theano:**
 > "We're approaching the prison. The roots of the mountains where Zeus bound Typhon."
 
 > "His power seeps through the cracks. Corrupts everything it touches."
@@ -40,7 +40,7 @@
 
 ### Travel Dialogue: The Weight of Shards
 
-**Lyra:**
+**Theano:**
 > "Alkmaeon... how do you feel?"
 
 > "Carrying two Shards now. It must be... a lot."
@@ -48,20 +48,20 @@
 *[Player choice]*
 
 **Option A: "Heavy. Like I'm carrying memories that aren't mine."**
-> **Lyra:** "They aren't yours. They're the world's."
+> **Theano:** "They aren't yours. They're the world's."
 > "But you're the one bearing them. That takes strength."
-> **Castor:** "Or insanity. Sometimes it's hard to tell the difference."
+> **Brasidas:** "Or insanity. Sometimes it's hard to tell the difference."
 
 **Option B: "I can handle it."**
-> **Lyra:** "I believe you. But don't be afraid to lean on us."
+> **Theano:** "I believe you. But don't be afraid to lean on us."
 > "You're not alone in this. Not anymore."
-> **Castor:** "What she said. We're in this together, for better or worse."
+> **Brasidas:** "What she said. We're in this together, for better or worse."
 
 **Option C: "Sometimes I forget what's me and what's the Shards."**
-> **Lyra:** *[Concerned]* "That's... worrying."
+> **Theano:** *[Concerned]* "That's... worrying."
 > "The Shards are powerful. They might be... changing you."
-> **Castor:** "Changing how? Should we be worried?"
-> **Lyra:** "I don't know. That's what worries me."
+> **Brasidas:** "Changing how? Should we be worried?"
+> **Theano:** "I don't know. That's what worries me."
 
 ---
 
@@ -111,10 +111,10 @@
 
 **After Combat:**
 
-**Castor:**
+**Brasidas:**
 > "These things aren't natural. They're not even unnatural in a normal way."
 
-**Lyra:**
+**Theano:**
 > "They're fragments of Typhon's dream."
 
 > "When he sleeps, he still rages. This is what his nightmares become."
@@ -143,26 +143,26 @@
 
 > Energy that hurts to look at. Colors that shouldn't exist.
 
-**Lyra:**
+**Theano:**
 > "The Breach. Where Typhon's power is strongest."
 
 > "The Shard will be there. At the source of the corruption."
 
-**Castor:**
+**Brasidas:**
 > "Of course it is. It couldn't be somewhere nice."
 
 ---
 
 ### The Valley's Trials
 
-**Castor:**
+**Brasidas:**
 > "We can't just walk straight to it."
 
 > "Look — the terrain's too unstable. Lightning, earthquakes, pits."
 
 > "We'll have to find a path."
 
-**Lyra:**
+**Theano:**
 > "There are three routes. Each has dangers."
 
 > "We should stick together. Splitting up in this place would be suicide."
@@ -203,7 +203,7 @@
 
 > You'll have to move between strikes.
 
-**Castor:**
+**Brasidas:**
 > "Watch the ground. It glows before the lightning hits."
 
 > "When you see the glow — move!"
@@ -227,10 +227,10 @@
 
 **Combat Tips:**
 
-**Lyra:**
+**Theano:**
 > "Don't use electrical attacks! They'll absorb them!"
 
-**Castor:**
+**Brasidas:**
 > "Physical strikes! Disrupt their form!"
 
 *[After Combat]*
@@ -260,12 +260,12 @@
 
 > Looking at it too long makes your thoughts scatter.
 
-**Lyra:**
+**Theano:**
 > *[Struggling to focus]* "I can't... the divine energy is too chaotic."
 
 > "My connection to Apollo... it's being drowned out."
 
-**Castor:**
+**Brasidas:**
 > *[Shaking his head]* "I can see in the dark, but this..."
 
 > "This isn't dark. It's... everything and nothing."
@@ -289,10 +289,10 @@
 **Alkmaeon:**
 > "I can see it. The Shard. I can reach it."
 
-**Lyra:**
+**Theano:**
 > "Alkmaeon, wait — we should plan—"
 
-**Castor:**
+**Brasidas:**
 > "He's already moving."
 
 ---
@@ -305,7 +305,7 @@
 
 > The world warps around you.
 
-> Lyra and Castor's voices fade to distant echoes.
+> Theano and Brasidas's voices fade to distant echoes.
 
 > You are alone.
 
@@ -579,14 +579,14 @@
 
 ### Breaking Through
 
-*[Lyra's voice cuts through the chaos]*
+*[Theano's voice cuts through the chaos]*
 
-**Lyra (distant):**
+**Theano (distant):**
 > "ALKMAEON!"
 
 > "DON'T LISTEN TO HIM! HE'S TRYING TO BREAK YOU!"
 
-**Castor (distant):**
+**Brasidas (distant):**
 > "FIGHT IT! WE'RE HERE! WE'RE WITH YOU!"
 
 ---
@@ -683,14 +683,14 @@
 
 **Phase 2 Transition:**
 > **Echo of Typhon:** "YOU FIGHT WELL. BUT CAN YOU ENDURE?"
-> **Lyra:** "The heads — they're protecting the core!"
-> **Castor:** "Then we take them out!"
+> **Theano:** "The heads — they're protecting the core!"
+> **Brasidas:** "Then we take them out!"
 
 **Phase 3:**
 > **Echo of Typhon:** "ENOUGH! I WILL END THIS!"
-> **Lyra:** "Alkmaeon — the Shards! Use them together!"
+> **Theano:** "Alkmaeon — the Shards! Use them together!"
 > **Alkmaeon:** "I... I don't know if I can..."
-> **Castor:** "You can! We believe in you!"
+> **Brasidas:** "You can! We believe in you!"
 
 **Final Attack:**
 > *Alkmaeon raises both Shards — Light and Silence.*
@@ -794,20 +794,20 @@
 
 ### Returning to the Party
 
-*[The chaos field dissipates — Lyra and Castor reach Alkmaeon]*
+*[The chaos field dissipates — Theano and Brasidas reach Alkmaeon]*
 
-**Lyra:**
+**Theano:**
 > "Alkmaeon! Are you—"
 
 *[She stops. Sees something in his eyes.]*
 
-**Lyra:**
+**Theano:**
 > "You're... different."
 
-**Castor:**
+**Brasidas:**
 > "Different how? Good different or bad different?"
 
-**Lyra:**
+**Theano:**
 > "I don't know."
 
 ---
@@ -815,22 +815,22 @@
 *[Player choice — how does Alkmaeon present himself?]*
 
 **Option A: "I'm still me. But I'm more now too."**
-> **Lyra:** "More... how?"
+> **Theano:** "More... how?"
 > **Alkmaeon:** "I can feel them. The Shards. They're becoming part of me."
 > "But I'm still Alkmaeon. I won't let that go."
-> **Castor:** "Good. We need Alkmaeon. Not some divine... thing."
+> **Brasidas:** "Good. We need Alkmaeon. Not some divine... thing."
 
 **Option B: "I don't know what I am anymore."**
-> **Lyra:** "Alkmaeon..."
-> **Castor:** "You're our friend. That's what you are."
+> **Theano:** "Alkmaeon..."
+> **Brasidas:** "You're our friend. That's what you are."
 > "Whatever else is going on — that doesn't change."
 > **Alkmaeon:** "...Thank you. I needed to hear that."
 
 **Option C: "Typhon offered me a choice. Freedom or order."**
-> **Lyra:** "And what did you choose?"
+> **Theano:** "And what did you choose?"
 > **Alkmaeon:** "I chose to keep fighting. To see this through."
 > "I don't know if order is right. But I know chaos isn't the answer."
-> **Castor:** "Then we keep moving. Together."
+> **Brasidas:** "Then we keep moving. Together."
 
 ---
 
@@ -851,10 +851,10 @@
 
 > Typhon dreams on. But for the moment, his nightmare has been held at bay.
 
-**Castor:**
+**Brasidas:**
 > "Three Shards. We actually did it."
 
-**Lyra:**
+**Theano:**
 > "The gathering is complete. But what now?"
 
 > "Hécate said we need to restore the Order. But how?"
@@ -934,12 +934,12 @@
 
 ### Party Resolution
 
-**Lyra:**
+**Theano:**
 > "The Temple of Apollo. Where this all started."
 
 > "We've come so far. And now we're going back."
 
-**Castor:**
+**Brasidas:**
 > "Circles. Everything's circles with the gods."
 
 > "But we're different now. We've seen things."
@@ -948,23 +948,23 @@
 
 ---
 
-**Lyra:**
+**Theano:**
 > "Alkmaeon... are you ready?"
 
 *[Player choice — final moment before Act IV]*
 
 **Option A: "Ready as I'll ever be."**
-> **Lyra:** "Then let's finish this."
-> **Castor:** "Together."
+> **Theano:** "Then let's finish this."
+> **Brasidas:** "Together."
 
 **Option B: "I'm scared. But I won't stop."**
-> **Lyra:** "Fear is wisdom. The foolish don't survive quests like this."
-> **Castor:** "And neither do the cowardly. You're neither."
+> **Theano:** "Fear is wisdom. The foolish don't survive quests like this."
+> **Brasidas:** "And neither do the cowardly. You're neither."
 > "Let's go."
 
 **Option C: "Let's go home."**
-> **Lyra:** "Home. Yes. To end this where it began."
-> **Castor:** "Poetic. I hate poetry. But let's do it anyway."
+> **Theano:** "Home. Yes. To end this where it began."
+> **Brasidas:** "Poetic. I hate poetry. But let's do it anyway."
 
 ---
 
@@ -1019,8 +1019,8 @@
 | Character | Level | Notes |
 |-----------|-------|-------|
 | Alkmaeon | 8-9 | Carries all three Shards; beginning transformation |
-| Lyra | 7-8 | Faith stabilizing; ready for final confrontation |
-| Castor | 7-8 | Fully committed; protective of the party |
+| Theano | 7-8 | Faith stabilizing; ready for final confrontation |
+| Brasidas | 7-8 | Fully committed; protective of the party |
 
 ## Enemies Encountered
 

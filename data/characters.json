@@ -4,7 +4,7 @@
       "id": "alkmaeon",
       "display_name": "Alkmaeon",
       "character_class": "Memory Seeker",
-      "description": "A young boy from Aethon Village, chosen by fate to recover the Shards of Destiny. His name means 'mighty in wrath' — a tragic hero who must act under ambiguous circumstances.",
+      "description": "A young boy from the village of Helikon, chosen by fate to recover the Shards of Destiny. His name means 'mighty in wrath' — a tragic hero who must act under ambiguous circumstances.",
       "base_stats": {
         "max_hp": 100,
         "max_mp": 30,
@@ -24,16 +24,16 @@
       },
       "starting_skills": ["basic_attack", "defend"],
       "learnable_skills": [
-        {"skill_id": "memory_flash", "level": 1, "note": "Learned through story"},
+        {"skill_id": "memory_flash", "level": 1, "note": "Learned through story at Delphi"},
         {"skill_id": "shard_recall", "level": 8},
         {"skill_id": "heal", "level": 5}
       ]
     },
     {
-      "id": "lyra",
-      "display_name": "Lyra",
-      "character_class": "Oracle Apprentice",
-      "description": "A young woman training at the village shrine, gifted with healing powers.",
+      "id": "theano",
+      "display_name": "Theano",
+      "character_class": "Priestess of Demeter",
+      "description": "A young priestess trained at the sanctuary of Demeter, gifted with healing powers and knowledge of the mysteries. She was sent to investigate the disturbance sensed by the oracles.",
       "base_stats": {
         "max_hp": 80,
         "max_mp": 50,
@@ -58,30 +58,31 @@
       ]
     },
     {
-      "id": "castor",
-      "display_name": "Castor",
-      "character_class": "Shadow Walker",
-      "description": "A mysterious traveler found at the temple, wielding shadow-touched blades.",
+      "id": "brasidas",
+      "display_name": "Brasidas",
+      "character_class": "Spartan Warrior",
+      "description": "A bold Spartan soldier encountered on the sacred island of Delos. Once a celebrated general, he now travels alone seeking redemption for past failures. His courage and tactical mind make him a formidable ally.",
       "base_stats": {
-        "max_hp": 85,
-        "max_mp": 25,
-        "attack": 15,
-        "defense": 7,
-        "magic": 6,
-        "speed": 14,
-        "luck": 10
+        "max_hp": 95,
+        "max_mp": 20,
+        "attack": 16,
+        "defense": 12,
+        "magic": 4,
+        "speed": 11,
+        "luck": 8
       },
       "growth_rates": {
-        "hp": 9,
-        "mp": 3,
+        "hp": 11,
+        "mp": 2,
         "attack": 4,
-        "defense": 2,
+        "defense": 3,
         "magic": 1,
-        "speed": 3
+        "speed": 2
       },
-      "starting_skills": ["basic_attack", "defend", "shadow_strike"],
+      "starting_skills": ["basic_attack", "defend", "shield_bash"],
       "learnable_skills": [
-        {"skill_id": "flame_burst", "level": 6}
+        {"skill_id": "spartan_discipline", "level": 5, "note": "Reduce damage taken for 3 turns"},
+        {"skill_id": "war_cry", "level": 8, "note": "Boost party attack"}
       ]
     }
   ]

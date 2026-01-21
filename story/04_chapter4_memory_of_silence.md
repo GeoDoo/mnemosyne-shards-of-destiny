@@ -3,7 +3,7 @@
 > *The western road leads to the Oracle's Rest — a place where prophecy died and the gods stopped answering. Here, the party confronts an uncomfortable truth: the divine are not always benevolent. Sometimes they simply... forget. The Memory of Silence teaches that mortals must bear the weight of fate alone.*
 
 **Prerequisites**: Chapter 3 complete (`chapter3_complete` flag set)  
-**Party**: Alkmaeon, Lyra, Castor
+**Party**: Alkmaeon, Theano, Brasidas
 
 ---
 
@@ -26,14 +26,14 @@
 
 > The earth itself seems wounded — cracked, parched, forgotten.
 
-**Castor:**
+**Brasidas:**
 > "Cheerful place. Reminds me of home."
 
 > "And no, I'm not going to explain that."
 
 ---
 
-**Lyra:**
+**Theano:**
 > "The Cracked Plains. I've read about them."
 
 > "A thousand years ago, this was fertile farmland."
@@ -43,17 +43,17 @@
 *[Player choice]*
 
 **Option A: "The oracle's silence caused this?"**
-> **Lyra:** "Cause and effect are complicated with divine matters."
+> **Theano:** "Cause and effect are complicated with divine matters."
 > "Did the silence kill the land? Or did the land's death silence the oracle?"
 > "Either way, they're connected."
 
 **Option B: "What happened to the oracle?"**
-> **Lyra:** "No one knows. One day, the Pythia of the West simply... stopped speaking."
+> **Theano:** "No one knows. One day, the Pythia of the West simply... stopped speaking."
 > "Pilgrims came seeking guidance. Received nothing."
 > "Eventually, they stopped coming at all."
 
 **Option C: "Can we fix it?"**
-> **Lyra:** "I don't know. We might restore the Shard."
+> **Theano:** "I don't know. We might restore the Shard."
 > "But some damage... some wounds..."
 > "They don't heal just because you want them to."
 
@@ -61,16 +61,16 @@
 
 ### Travel Dialogue: Party Dynamics
 
-**Castor:**
-> "So, Lyra. You serve Apollo, right?"
+**Brasidas:**
+> "So, Theano. You serve Apollo, right?"
 
-**Lyra:**
+**Theano:**
 > "I serve at Delphi. Apollo's priestess, yes."
 
-**Castor:**
+**Brasidas:**
 > "And this place — where the gods stopped talking — doesn't that... worry you?"
 
-**Lyra:**
+**Theano:**
 > "Of course it worries me."
 
 > "But faith isn't about comfort. It's about truth."
@@ -79,7 +79,7 @@
 
 ---
 
-**Castor:**
+**Brasidas:**
 > "Alkmaeon, you've been quiet."
 
 > "What's on your mind?"
@@ -87,19 +87,19 @@
 *[Player choice]*
 
 **Option A: "Thinking about what's ahead."**
-> **Castor:** "Fair. Planning ahead. Smart."
-> **Lyra:** "The Memory of Silence. What Apollo showed you was victory."
+> **Brasidas:** "Fair. Planning ahead. Smart."
+> **Theano:** "The Memory of Silence. What Apollo showed you was victory."
 > "This one... will be different."
 
 **Option B: "The vision from the last Shard. Light conquering darkness."**
-> **Castor:** "Right. Good guys win, bad guys lose."
+> **Brasidas:** "Right. Good guys win, bad guys lose."
 > "Something tells me this next truth won't be so simple."
-> **Lyra:** "The Memory of Silence is about what the gods forget. Not victory — loss."
+> **Theano:** "The Memory of Silence is about what the gods forget. Not victory — loss."
 
 **Option C: "Wondering if we're ready."**
-> **Lyra:** "We're never ready. That's the nature of divine quests."
+> **Theano:** "We're never ready. That's the nature of divine quests."
 > "But we go anyway. Because someone has to."
-> **Castor:** "Comforting. Really."
+> **Brasidas:** "Comforting. Really."
 
 ---
 
@@ -119,7 +119,7 @@
 > *The offering bowl is full of dust and dead flowers.*
 > *She didn't listen either.*
 
-**Castor:**
+**Brasidas:**
 > "Cheery. Let's keep moving."
 
 ---
@@ -143,14 +143,14 @@
 
 **After Combat:**
 
-**Lyra:**
+**Theano:**
 > "Hollow Ones. Spirits that forgot even themselves."
 
 > "They're not evil. They're just... empty."
 
 > "Forgotten by the gods. Forgotten by the world."
 
-**Castor:**
+**Brasidas:**
 > "That's... actually really sad."
 
 ---
@@ -176,10 +176,10 @@
 
 > Even your footsteps seem muted.
 
-**Castor:**
+**Brasidas:**
 > "Is it just me, or is it... too quiet?"
 
-**Lyra:**
+**Theano:**
 > "It's not just you. This place has been cut off from the divine."
 
 > "The silence isn't natural. It's imposed."
@@ -198,7 +198,7 @@
 > *Gold, jewels, precious things — all worthless now.*
 > *The gods didn't want them.*
 
-**Castor:**
+**Brasidas:**
 > "All this treasure, just lying here..."
 
 > *[He reaches for a golden cup — then pulls back]*
@@ -221,7 +221,7 @@
 
 > This is the darkness of absence. Of nothing.
 
-**Lyra:**
+**Theano:**
 > "This is different from before."
 
 > "At Apollo's shrine, darkness invaded. This..."
@@ -248,15 +248,15 @@
 
 > Some still have offerings in their bony hands.
 
-**Castor:**
+**Brasidas:**
 > "They... they died waiting?"
 
-**Lyra:**
+**Theano:**
 > "The oracle stopped answering. But they kept believing."
 
 > "They waited. And waited. Until..."
 
-**Castor:**
+**Brasidas:**
 > "Until the gods let them die."
 
 *[Silence]*
@@ -286,7 +286,7 @@
 
 > But nothing echoes here. Sound... dies.
 
-**Lyra:**
+**Theano:**
 > *[Speaking normally — her voice is flat, dead]*
 
 > "The acoustic design. It's been... inverted."
@@ -300,10 +300,10 @@
 > *Three doors, each sealed with a voice-activated mechanism.*
 > *But voice doesn't work here — the silence absorbs it.*
 
-**Castor:**
+**Brasidas:**
 > "Great. Doors that need sound in a place that eats sound."
 
-**Lyra:**
+**Theano:**
 > "Wait. The Shard of Light."
 
 > "It's not sound, but it is a form of expression. Divine expression."
@@ -345,10 +345,10 @@
 
 **Battle Tips:**
 
-**Lyra (Combat):**
+**Theano (Combat):**
 > "Don't let them combine! Focus fire!"
 
-**Castor (Combat):**
+**Brasidas (Combat):**
 > "My shadow skills — they're not working!"
 
 **Alkmaeon (Combat):**
@@ -362,15 +362,15 @@
 
 > Into the earth. Into the heart of silence.
 
-**Lyra:**
+**Theano:**
 > "The Pythia's Chamber. Where the oracle communed with Apollo."
 
 > "If the Shard is anywhere, it's there."
 
-**Castor:**
+**Brasidas:**
 > "And whatever's causing this silence..."
 
-**Lyra:**
+**Theano:**
 > "Will be there too."
 
 ---
@@ -424,7 +424,7 @@
 
 > "Someone... came."
 
-**Lyra:**
+**Theano:**
 > "By the gods... she's still alive. After all this time."
 
 **Last Pythia:**
@@ -531,17 +531,17 @@
 **Battle Dialogue:**
 
 **At Start:**
-> **Lyra:** "It's the silence itself — given form!"
-> **Castor:** "How do you fight silence?"
+> **Theano:** "It's the silence itself — given form!"
+> **Brasidas:** "How do you fight silence?"
 > **Alkmaeon:** "By speaking. By remembering. By refusing to be forgotten."
 
 **Phase 1:**
 > **The Unspoken:** "YOUR GODS WILL NOT SAVE YOU."
-> **Lyra:** "We don't need them to save us. We save ourselves!"
+> **Theano:** "We don't need them to save us. We save ourselves!"
 
 **Phase 2:**
 > **The Unspoken:** "WHY DO YOU STRUGGLE? ALL THINGS END IN SILENCE."
-> **Castor:** "Maybe. But not today!"
+> **Brasidas:** "Maybe. But not today!"
 
 **Phase 3:**
 > **The Unspoken:** "IF YOU DESTROY ME... YOU DESTROY THEIR MEMORY. THE FORGOTTEN ONES."
@@ -748,14 +748,14 @@
 
 ### Party Reactions
 
-**Lyra:**
+**Theano:**
 > *[Tears streaming down her face]*
 
 > "A thousand years. She waited a thousand years for someone to come."
 
 > "And we almost didn't."
 
-**Castor:**
+**Brasidas:**
 > "The gods... they really just... looked away?"
 
 > "All those people. All those prayers. And nothing."
@@ -767,20 +767,20 @@
 *[Player choice — important thematic moment]*
 
 **Option A: "Maybe the point isn't that they help. It's that we do."**
-> **Lyra:** "...Yes. That's what Mnemosyne was saying."
+> **Theano:** "...Yes. That's what Mnemosyne was saying."
 > "The gods gave us the capacity for memory. For meaning."
 > "What we do with it is up to us."
-> **Castor:** "Cold comfort. But... comfort."
+> **Brasidas:** "Cold comfort. But... comfort."
 
 **Option B: "The gods have their own struggles. Cosmic ones we can't understand."**
-> **Lyra:** "That doesn't make it easier."
+> **Theano:** "That doesn't make it easier."
 > "But it makes it make sense."
-> **Castor:** "Sense isn't the same as right."
-> **Lyra:** "No. But it's what we have."
+> **Brasidas:** "Sense isn't the same as right."
+> **Theano:** "No. But it's what we have."
 
 **Option C: "I don't know. But we're still here. That has to mean something."**
-> **Castor:** "Does it?"
-> **Lyra:** "It means we haven't given up."
+> **Brasidas:** "Does it?"
+> **Theano:** "It means we haven't given up."
 > "It means someone is still fighting."
 > "Maybe that's enough. Maybe it has to be."
 
@@ -806,20 +806,20 @@
 
 ---
 
-### Lyra's Crisis
+### Theano's Crisis
 
 *[LYRA stands apart from the group, staring at the sky]*
 
-**Castor:**
+**Brasidas:**
 > "She's been like that for an hour."
 
 > "Should someone...?"
 
 ---
 
-*[Alkmaeon approaches Lyra]*
+*[Alkmaeon approaches Theano]*
 
-**Lyra:**
+**Theano:**
 > "I've served Apollo my entire life."
 
 > "Prayed to him every day. Believed he was listening."
@@ -828,7 +828,7 @@
 
 *[She turns to face Alkmaeon — her faith shaken]*
 
-**Lyra:**
+**Theano:**
 > "What if none of it mattered?"
 
 > "What if every prayer I offered, every service I performed..."
@@ -838,26 +838,26 @@
 *[Player choice]*
 
 **Option A: "He heard the important ones. He sent us here, didn't he?"**
-> **Lyra:** "Did he? Or did we just... end up here?"
+> **Theano:** "Did he? Or did we just... end up here?"
 > "I want to believe. I do. But after what we saw..."
 > "How do I pray to a god who might not be listening?"
 
 **Option B: "Maybe the prayers mattered to you. Isn't that enough?"**
-> **Lyra:** "Is it? I thought I was connecting to something greater."
+> **Theano:** "Is it? I thought I was connecting to something greater."
 > "Now I wonder if I was just... talking to myself."
 > *[Pause]*
 > "...But myself is still here. Still fighting."
 > "Maybe you're right. Maybe that's what matters."
 
 **Option C: "I don't have answers. But I'm here. We're here."**
-> **Lyra:** "...Thank you."
+> **Theano:** "...Thank you."
 > "I don't need you to fix my faith."
 > "I just need to know I'm not alone."
 > "And I'm not. That helps."
 
 ---
 
-**Lyra:**
+**Theano:**
 > "One more Shard. The Memory of Ruin."
 
 > "And then... the truth Apollo mentioned. The hardest one."
@@ -868,18 +868,18 @@
 
 ---
 
-### Castor's Reflection
+### Brasidas's Reflection
 
-*[CASTOR approaches as Lyra walks away]*
+*[CASTOR approaches as Theano walks away]*
 
-**Castor:**
+**Brasidas:**
 > "That was heavy. The whole thing."
 
 > "I've seen dark stuff in my line of work. But gods forgetting people?"
 
 > "That's a different kind of dark."
 
-**Castor:**
+**Brasidas:**
 > "You know what I keep thinking about?"
 
 > "Those pilgrims. The ones who died waiting."
@@ -888,7 +888,7 @@
 
 *[He shakes his head]*
 
-**Castor:**
+**Brasidas:**
 > "I've never believed in much. Too cynical, Mira always said."
 
 > "But now I wonder if she had the right idea."
@@ -901,12 +901,12 @@
 
 ### The Road North
 
-**Castor:**
+**Brasidas:**
 > "So. The Memory of Ruin. North, right?"
 
 > "Into Typhon's shadow."
 
-**Lyra:**
+**Theano:**
 > *[Rejoining the group, composure partially restored]*
 
 > "The storm-scarred valley. Where his power bleeds through the cracks."
@@ -915,7 +915,7 @@
 
 > "There will be chaos. Raw and primal."
 
-**Castor:**
+**Brasidas:**
 > "Great. From sad to scary."
 
 > "At least we'll get some variety."
@@ -952,7 +952,7 @@
 | `last_pythia_met` | Encountered the trapped oracle |
 | `unspoken_defeated` | Boss defeated |
 | `shard_of_silence_acquired` | Second Shard claimed |
-| `lyras_faith_shaken` | Lyra's character development trigger |
+| `lyras_faith_shaken` | Theano's character development trigger |
 | `chapter4_complete` | Chapter 4 finished |
 
 ## Items Received
@@ -968,8 +968,8 @@
 | Character | Level | Notes |
 |-----------|-------|-------|
 | Alkmaeon | 6-7 | Carries two Shards now; growing burden |
-| Lyra | 5-6 | Faith shaken but not broken |
-| Castor | 5-6 | Finding unexpected depth |
+| Theano | 5-6 | Faith shaken but not broken |
+| Brasidas | 5-6 | Finding unexpected depth |
 
 ## Enemies Encountered
 
@@ -985,7 +985,7 @@
 - **Divine Indifference**: The gods are not evil, just vast beyond mortal comprehension
 - **Self-Reliance**: Mortals must save themselves, not wait for divine intervention
 - **Memory as Immortality**: Being remembered is the only true immortality for mortals
-- **Faith Challenged**: Lyra's arc — faith tested and emerging different, but intact
+- **Faith Challenged**: Theano's arc — faith tested and emerging different, but intact
 
 ## Transitions
 
@@ -999,7 +999,7 @@
 This is the emotional low point of Act III — deliberately somber and philosophical. Key narrative purposes:
 
 1. **Contrast with Chapter 3**: Victory vs. loss, light vs. silence
-2. **Challenge the party's beliefs**: Especially Lyra's faith
+2. **Challenge the party's beliefs**: Especially Theano's faith
 3. **Prepare for Chapter 5**: After silence comes chaos
 4. **Deepen themes**: The Shards aren't just power-ups — each carries difficult truths
 5. **The Pythia's prophecy**: Foreshadows the choice in Act IV/V

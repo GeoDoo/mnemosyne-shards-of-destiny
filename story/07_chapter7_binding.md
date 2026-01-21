@@ -3,7 +3,7 @@
 > *Act V — The Final Movement. Alkmaeon ascends the broken altar beneath the Red Moon. Whether he chose transcendence or defiance, the moment of truth has arrived. Typhon's chains shatter. The buried one rises. And the fate of all things hangs on what one boy — one Shard — chooses to become.*
 
 **Prerequisites**: Chapter 6 complete, choice made  
-**Party**: Alkmaeon, Lyra, Castor  
+**Party**: Alkmaeon, Theano, Brasidas  
 **Paths**: Transcendence or Defiance (determined by Chapter 6 choice)
 
 ---
@@ -54,10 +54,10 @@
 
 ---
 
-**Lyra:**
+**Theano:**
 > "He's breaking through! The binding is failing!"
 
-**Castor:**
+**Brasidas:**
 > "Alkmaeon! Whatever you're going to do — do it now!"
 
 ---
@@ -103,19 +103,19 @@
 ---
 
 **Alkmaeon:**
-> "Lyra. Castor. I need you to do something for me."
+> "Theano. Brasidas. I need you to do something for me."
 
-**Lyra:**
+**Theano:**
 > "Anything."
 
 **Alkmaeon:**
 > "Remember me. Not what I become. Who I was."
 
-> "Alkmaeon. The boy from Aethon Village."
+> "Alkmaeon. The boy from Helikon."
 
 > "Remember that he existed. That he mattered."
 
-**Castor:**
+**Brasidas:**
 > "You're not going to—"
 
 **Alkmaeon:**
@@ -248,7 +248,7 @@
 
 **Form**: Titanic — the party is ants before a giant. Alkmaeon (transformed) is the only one who can truly damage him.
 
-**Mechanic**: Lyra and Castor support Alkmaeon by maintaining barriers and healing. Alkmaeon channels the Order's power.
+**Mechanic**: Theano and Brasidas support Alkmaeon by maintaining barriers and healing. Alkmaeon channels the Order's power.
 
 **Phase 1: The Storm Rises** (100%-70% HP)
 - Typhon attacks with catastrophic area damage
@@ -274,7 +274,7 @@
 > **Alkmaeon:** "I don't think. I know."
 
 **Phase 1 Transition:**
-> **Lyra:** "Alkmaeon! We can't hold much longer!"
+> **Theano:** "Alkmaeon! We can't hold much longer!"
 > **Alkmaeon:** "Just a little more. The power is almost ready."
 
 **Phase 2:**
@@ -283,7 +283,7 @@
 > **Alkmaeon:** "It doesn't crush. It holds. There's a difference."
 
 **Phase 2 Transition:**
-> **Castor:** "He's weakening! Keep pushing!"
+> **Brasidas:** "He's weakening! Keep pushing!"
 > **Typhon:** "I AM ETERNAL! I CANNOT BE DESTROYED!"
 
 **Phase 3:**
@@ -332,7 +332,7 @@
 
 *[The Red Moon sets. The sun rises. The world is saved.]*
 
-> Dawn breaks over Aethon Village.
+> Dawn breaks over Helikon.
 
 > The first dawn of a world reborn.
 
@@ -362,7 +362,7 @@
 
 ### Farewells
 
-**Lyra:**
+**Theano:**
 > "Is it... is it really you?"
 
 **Alkmaeon:**
@@ -381,7 +381,7 @@
 
 ---
 
-**Castor:**
+**Brasidas:**
 > "So this is goodbye?"
 
 **Alkmaeon:**
@@ -576,7 +576,7 @@
 
 ### Preparing for Battle
 
-**Lyra:**
+**Theano:**
 > "Alkmaeon... are you sure about this?"
 
 **Alkmaeon:**
@@ -584,7 +584,7 @@
 
 > "Whatever happens next, I face it as myself."
 
-**Castor:**
+**Brasidas:**
 > "Then let's show this storm god what mortals can do."
 
 ---
@@ -640,8 +640,8 @@
 
 **Phase 2: Teamwork** (60%-30% HP)
 - Combo attacks unlock — party members can chain abilities
-- Lyra + Alkmaeon: Divine Resonance (massive heal + damage)
-- Castor + Alkmaeon: Shadow Memory (critical strike + defense down)
+- Theano + Alkmaeon: Divine Resonance (massive heal + damage)
+- Brasidas + Alkmaeon: Shadow Memory (critical strike + defense down)
 - All Three: Trinity Strike (heavy damage, breaks Typhon's phase)
 - Typhon grows more erratic — Hundred Heads, Reality Tear
 
@@ -659,10 +659,10 @@
 
 **Phase 1 Transition:**
 > **Typhon:** "YOU WOUND ME? IMPOSSIBLE!"
-> **Castor:** "Apparently not!"
+> **Brasidas:** "Apparently not!"
 
 **Phase 2:**
-> **Lyra:** "Together! Channel everything through the Shards!"
+> **Theano:** "Together! Channel everything through the Shards!"
 > **Alkmaeon:** "I can feel them responding. They want to help!"
 
 **Phase 2 Transition:**
@@ -706,7 +706,7 @@
 ## Scene 7.4B: Remaining Human (Epilogue - Defiance)
 
 **Type**: Epilogue  
-**Location**: Aethon Village — days later  
+**Location**: Helikon — days later  
 **Audio**: Warm, human, hopeful
 
 ---
@@ -745,7 +745,7 @@
 
 ---
 
-**Lyra:**
+**Theano:**
 > "How do you feel?"
 
 **Alkmaeon:**
@@ -756,7 +756,7 @@
 **Alkmaeon:**
 > "But I'm still me. That's what matters."
 
-**Lyra:**
+**Theano:**
 > "You chose mortality. You chose to stay human."
 
 > "Most people never have to make that choice."
@@ -765,7 +765,7 @@
 
 ---
 
-**Castor:**
+**Brasidas:**
 > "So what now? You're carrying three pieces of cosmic destiny."
 
 > "That's not exactly a normal life."
@@ -806,14 +806,14 @@
 
 *[The party gathers — discussing the future]*
 
-**Lyra:**
+**Theano:**
 > "The Pythia will want a report. The events here... they've changed everything."
 
 > "The oracles are speaking again. Faith is returning."
 
 > "Your defiance... it showed people that mortals matter."
 
-**Castor:**
+**Brasidas:**
 > "As for me... I think I'm done with treasure hunting."
 
 > "Found something more valuable anyway."
@@ -823,12 +823,12 @@
 **Alkmaeon:**
 > "So you're staying?"
 
-**Castor:**
+**Brasidas:**
 > "If you'll have me. Someone's got to watch your back."
 
 > "Carrying cosmic destiny and all — that's a lot of target on your head."
 
-**Lyra:**
+**Theano:**
 > "I'll visit when I can. Delphi needs me, but..."
 
 > "This village. These people. You."
@@ -996,8 +996,8 @@
 | Character | Level | Ending Notes |
 |-----------|-------|--------------|
 | Alkmaeon | 10+ | Transcends or remains mortal |
-| Lyra | 9 | Returns to Delphi, forever changed |
-| Castor | 9 | Finds purpose and belonging |
+| Theano | 9 | Returns to Delphi, forever changed |
+| Brasidas | 9 | Finds purpose and belonging |
 
 ## Thematic Resolution
 
@@ -1027,7 +1027,7 @@ The post-credits scene sets up potential sequel hooks while honoring the closure
 
 **Prologue**: Cosmic backstory — Typhon, the Order, the lost Shard
 
-**Act I** (Chapters 1-2): Alkmaeon's awakening, first visions, meets Lyra, discovers his calling
+**Act I** (Chapters 1-2): Alkmaeon's awakening, first visions, meets Theano, discovers his calling
 
 **Act II** (Chapter 2): The Well of Mnemosyne, Hécate's guidance, the three paths revealed
 

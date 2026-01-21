@@ -1,16 +1,16 @@
 # Chapter 2: The Call of Memory
 
-> *Alkmaeon and Lyra journey north to find the legendary Well of Mnemosyne. At this sacred Orphic site, the visions intensify, revealing the true scope of their quest. And at the crossroads between worlds, Hécate herself appears — offering guidance, warnings, and a path forward.*
+> *Alkmaeon and Theano journey north to find the legendary Well of Mnemosyne. At this sacred Orphic site, the visions intensify, revealing the true scope of their quest. And at the crossroads between worlds, Hécate herself appears — offering guidance, warnings, and a path forward.*
 
 **Prerequisites**: Chapter 1 complete (`chapter1_complete` flag set)  
-**Party**: Alkmaeon, Lyra
+**Party**: Alkmaeon, Theano
 
 ---
 
 ## Scene 2.1: The Northern Road
 
 **Type**: Travel / Exploration  
-**Location**: Mountain paths north of Aethon Village  
+**Location**: Mountain paths north of Helikon Village  
 **Time**: Morning  
 **Audio**: Mountain wind, footsteps on stone, birds of prey circling
 
@@ -18,23 +18,23 @@
 
 ### Setting Out
 
-*[Alkmaeon and Lyra walk the northern road — first real journey sequence]*
+*[Alkmaeon and Theano walk the northern road — first real journey sequence]*
 
 > The road north is little more than a goat path.
 
 > It winds through rocky outcrops and stunted pines, climbing ever higher.
 
-> Behind you, Aethon Village shrinks to a cluster of tiny rooftops.
+> Behind you, Helikon Village shrinks to a cluster of tiny rooftops.
 
 > Ahead, the mountains rise like a wall against the sky.
 
 ---
 
-### Travel Dialogue: Getting to Know Lyra
+### Travel Dialogue: Getting to Know Theano
 
 *[As the party travels, conversation triggers]*
 
-**Lyra:**
+**Theano:**
 > "You're quiet this morning."
 
 > "Most people who receive a divine vision can't stop talking about it."
@@ -42,33 +42,33 @@
 *[Player choice]*
 
 **Option A: "I'm still processing."**
-> **Lyra:** "That's wise. Many who hear the gods speak too soon understand too little."
+> **Theano:** "That's wise. Many who hear the gods speak too soon understand too little."
 > "But don't process forever. The Red Moon won't wait."
 
 **Option B: "What's there to say? A god told me to save the world."**
-> **Lyra:** "Ha. When you put it that way, it does sound absurd."
+> **Theano:** "Ha. When you put it that way, it does sound absurd."
 > "But absurdity is the language of the divine. The gods rarely make sense to mortal minds."
 
 **Option C: "Tell me about Delphi."**
-> **Lyra:** "Delphi... it is the center of the world. Literally — the navel of the earth."
+> **Theano:** "Delphi... it is the center of the world. Literally — the navel of the earth."
 > "Apollo's greatest temple stands there. The Pythia speaks his prophecies."
 > "I trained there for three years. Learned to hear the whispers between words."
 
 ---
 
-**Lyra:**
+**Theano:**
 > "I should tell you about the Well of Mnemosyne."
 
 > "It's not like normal water. It's... concentrated memory."
 
-**Lyra:**
+**Theano:**
 > "The Orphics believed that when we die, we forget everything — our lives, our loves, our very selves."
 
 > "To escape this cycle, they taught initiates to drink from Mnemosyne's pool."
 
 > "To remember. Even in death."
 
-**Lyra:**
+**Theano:**
 > "The well we seek is one of her sacred springs."
 
 > "If the Shards of Destiny are fragments of cosmic memory..."
@@ -95,7 +95,7 @@
 > *Hermes — god of travelers, guide of souls.*
 > *His stone eyes seem to follow you as you pass.*
 
-**Lyra:**
+**Theano:**
 > "A shrine to Hermes. The Orphics honored him as a guide between worlds."
 
 > "If he's watching over this road... we're on the right path."
@@ -107,7 +107,7 @@
 > *A standing stone carved with spiraling symbols.*
 > *Time has worn most away, but one word remains legible: ΜΝΗΜΟΣΥΝΗ*
 
-**Lyra:**
+**Theano:**
 > "Mnemosyne. We're close."
 
 ---
@@ -130,14 +130,14 @@
 
 > Wolves — gaunt and desperate, driven from their territory by something.
 
-**Lyra:**
+**Theano:**
 > "They're not attacking out of malice. They're terrified."
 
 > "Something has disturbed the mountains. They're fleeing."
 
 *[After combat]*
 
-**Lyra:**
+**Theano:**
 > "The balance is shifting. Even the animals can feel it."
 
 > "We need to hurry."
@@ -162,7 +162,7 @@
 
 > But something feels wrong. The air shimmers slightly.
 
-**Lyra:**
+**Theano:**
 > "This is it. I can feel sacred power here."
 
 > "But there's a barrier. A veil between the mortal world and the sacred."
@@ -175,19 +175,19 @@
 > *The stone looks solid, but when you focus, you see ripples — like heat haze.*
 > *An illusion? Or something more?*
 
-**Lyra:**
+**Theano:**
 > "The Orphics hid their mysteries well."
 
 > "Only the worthy could pass. Those who remembered the old words."
 
-*[Lyra approaches the cliff, raises her hands]*
+*[Theano approaches the cliff, raises her hands]*
 
-**Lyra:**
+**Theano:**
 > "I learned this prayer at Delphi. I never thought I'd use it."
 
 *[She speaks in ancient Greek — the words seem to bend reality]*
 
-**Lyra:**
+**Theano:**
 > *"Ek tou potamou tes Lethes... pros ten Mnemosyne..."*
 
 > *"From the river of Forgetting... toward Remembrance..."*
@@ -208,7 +208,7 @@
 
 > And at the valley's heart: a pool of water so clear it seems like liquid light.
 
-**Lyra:**
+**Theano:**
 > "The Well of Mnemosyne."
 
 > "I've read about it my entire life. I never thought I'd see it."
@@ -231,7 +231,7 @@
 > *Instructions for the dead. Passwords for the afterlife.*
 > *"I am a child of Earth and starry Heaven, but my race is of Heaven alone."*
 
-**Lyra:**
+**Theano:**
 > "The Orphic gold tablets. These words were buried with the dead."
 
 > "They taught the soul what to say when it reached the underworld."
@@ -258,7 +258,7 @@
 
 > You see a boy made of light. A vessel waiting to be filled.
 
-**Lyra:**
+**Theano:**
 > "Drink. Let the waters show you what you need to see."
 
 > "I'll watch over you. Whatever happens."
@@ -399,7 +399,7 @@
 
 *[Alkmaeon gasps awake, collapsed by the pool]*
 
-**Lyra:**
+**Theano:**
 > "Alkmaeon! Are you alright?"
 
 > "You've been unconscious for hours. I was afraid I'd lost you."
@@ -407,17 +407,17 @@
 *[Player choice]*
 
 **Option A: "I saw... everything."**
-> **Lyra:** "Everything? The waters showed you the cosmic memory itself?"
+> **Theano:** "Everything? The waters showed you the cosmic memory itself?"
 > "That should be impossible. No mortal has seen that since..."
 > "Since Orpheus himself descended to the underworld."
 
 **Option B: "I know where the Shards are."**
-> **Lyra:** "You found them? Through the visions?"
+> **Theano:** "You found them? Through the visions?"
 > "Tell me. Tell me everything."
 
 **Option C: "Hécate is waiting for us."**
-> **Lyra:** "Hécate? The goddess herself?"
-> *[Lyra pales]*
+> **Theano:** "Hécate? The goddess herself?"
+> *[Theano pales]*
 > "Then we shouldn't keep her waiting. Hécate's patience is... finite."
 
 ---
@@ -613,21 +613,21 @@
 
 ### Return to the Valley
 
-*[Alkmaeon and Lyra wake by the pool]*
+*[Alkmaeon and Theano wake by the pool]*
 
-**Lyra:**
+**Theano:**
 > "What... what happened? One moment you were speaking of Hécate, the next..."
 
 > "We were gone. Both of us. For hours — maybe days."
 
 *[She looks around — the sun has moved significantly]*
 
-**Lyra:**
+**Theano:**
 > "Did you see her? Did you speak with the goddess?"
 
 *[Player recounts the meeting]*
 
-**Lyra:**
+**Theano:**
 > "Three Shards. Three paths. And Hécate herself watching over us."
 
 > "This is bigger than I imagined. Bigger than any prophecy I've heard."
@@ -636,7 +636,7 @@
 
 ### Choosing the First Path
 
-**Lyra:**
+**Theano:**
 > "Where do we go first?"
 
 > "The Eastern Shrine is closest — Apollo's territory. That might be safest."
@@ -648,16 +648,16 @@
 *[Player choice — this affects Chapter 3]*
 
 **Option A: "East. The Memory of Light."**
-> **Lyra:** "To Apollo's shrine then. The dawn god's power may yet aid us."
+> **Theano:** "To Apollo's shrine then. The dawn god's power may yet aid us."
 > *[Flag set: `first_path_east`]*
 
 **Option B: "West. The Memory of Silence."**
-> **Lyra:** "The Oracle's Rest. I've heard dark rumors about that place."
+> **Theano:** "The Oracle's Rest. I've heard dark rumors about that place."
 > "But if you feel called there... I trust your instincts."
 > *[Flag set: `first_path_west`]*
 
 **Option C: "North. The Memory of Ruin."**
-> **Lyra:** "Into Typhon's shadow. The most dangerous path first."
+> **Theano:** "Into Typhon's shadow. The most dangerous path first."
 > "Either you're very brave or very foolish."
 > "Let's hope it's the former."
 > *[Flag set: `first_path_north`]*
@@ -680,7 +680,7 @@
 
 > Only the memory remains.
 
-**Lyra:**
+**Theano:**
 > "We should rest before we set out. The journey ahead will be long."
 
 > "There's a waystation on the mountain pass — travelers sometimes shelter there."
@@ -691,23 +691,23 @@
 
 ### Travel Dialogue: Processing
 
-**Lyra:**
+**Theano:**
 > "Alkmaeon... what was it like? Speaking with Hécate?"
 
 *[Player choice]*
 
 **Option A: "Terrifying. She sees everything."**
-> **Lyra:** "The gods are terrifying. That's why mortals built temples — to keep them at a distance."
+> **Theano:** "The gods are terrifying. That's why mortals built temples — to keep them at a distance."
 > "But you... you're walking among them now."
 > "I don't know if that makes you blessed or cursed."
 
 **Option B: "She's not what I expected. Not good or evil — just... vast."**
-> **Lyra:** "The gods are beyond morality. They simply are."
+> **Theano:** "The gods are beyond morality. They simply are."
 > "Hécate especially. She guards the thresholds — life and death, knowledge and ignorance."
 > "She doesn't judge. She just watches. And sometimes, she guides."
 
 **Option C: "I think she wants me to succeed."**
-> **Lyra:** "Perhaps. Or perhaps she simply wants the game to continue."
+> **Theano:** "Perhaps. Or perhaps she simply wants the game to continue."
 > "The gods have their own reasons. We rarely understand them."
 > "But for now, her goals and ours align. That's enough."
 
@@ -725,12 +725,12 @@
 
 ---
 
-**Lyra:**
+**Theano:**
 > "I've been thinking about what Hécate said."
 
 > "The Shards attract attention. Others will try to claim them."
 
-**Lyra:**
+**Theano:**
 > "We should be prepared. We might not be the only ones on this path."
 
 ---
@@ -757,13 +757,13 @@
 
 ---
 
-**Lyra:**
+**Theano:**
 > "Nightmare?"
 
 **Alkmaeon:**
 > "Just a dream."
 
-**Lyra:**
+**Theano:**
 > "Nothing is 'just' a dream for you anymore."
 
 > "Get some rest. We have a long road ahead."
@@ -814,7 +814,7 @@
 | Character | Level | Notes |
 |-----------|-------|-------|
 | Alkmaeon | 2-3 | Growing stronger, visions intensifying |
-| Lyra | 2 | Proving her value as guide and healer |
+| Theano | 2 | Proving her value as guide and healer |
 
 ## Enemies Encountered
 
@@ -834,11 +834,11 @@
 
 This chapter serves as the "Act II" transition — expanding the scope from personal journey to cosmic quest. Key narrative beats:
 
-1. **Deepening Lyra's character** through travel dialogue
+1. **Deepening Theano's character** through travel dialogue
 2. **Revealing the full scope** of the quest (three Shards, cosmic stakes)
 3. **Introducing Hécate** as a complex divine guide
 4. **Player agency** in choosing which path to take first
 5. **Foreshadowing** other seekers / antagonists
 6. **Building atmosphere** of a world in danger
 
-The dream sequence at the end hints at Castor, who will appear in Chapter 3.
+The dream sequence at the end hints at Brasidas, who will appear in Chapter 3.

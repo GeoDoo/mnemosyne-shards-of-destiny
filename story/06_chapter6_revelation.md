@@ -1,16 +1,16 @@
 # Chapter 6: The Revelation
 
-> *Act IV — The party returns to where it all began: the Temple of Apollo above Aethon Village. With all three Shards gathered, the time has come for the final truth. Alkmaeon learns what he truly is — and faces a choice that will determine not only his fate, but the fate of everything.*
+> *Act IV — The party returns to where it all began: the Temple of Apollo above Helikon. With all three Shards gathered, the time has come for the final truth. Alkmaeon learns what he truly is — and faces a choice that will determine not only his fate, but the fate of everything.*
 
 **Prerequisites**: Chapter 5 complete (`all_shards_gathered` flag set)  
-**Party**: Alkmaeon, Lyra, Castor
+**Party**: Alkmaeon, Theano, Brasidas
 
 ---
 
 ## Scene 6.1: Homecoming
 
 **Type**: Emotional return / Setup  
-**Location**: Approach to Aethon Village  
+**Location**: Approach to Helikon  
 **Time**: Late afternoon — the Red Moon already visible in the sky  
 **Audio**: Familiar village sounds, but with ominous undertone
 
@@ -18,7 +18,7 @@
 
 ### The Road Home
 
-*[The party approaches Aethon Village from the north]*
+*[The party approaches Helikon from the north]*
 
 > The familiar mountains rise before you.
 
@@ -30,12 +30,12 @@
 
 ---
 
-**Castor:**
+**Brasidas:**
 > "So this is your village? Nice. Quiet."
 
 > "Probably won't be quiet for long."
 
-**Lyra:**
+**Theano:**
 > "The Red Moon is larger than I've ever seen it."
 
 > "We have a day. Maybe less."
@@ -46,7 +46,7 @@
 
 ### The Village Changed
 
-*[Entering Aethon Village — atmosphere is tense]*
+*[Entering Helikon — atmosphere is tense]*
 
 > The village is different.
 
@@ -60,7 +60,7 @@
 
 ### NPC: Villagers (Brief Encounters)
 
-**Nikos:**
+**Damon:**
 > "Alkmaeon! You're back!"
 
 > *[He looks at you — and steps back]*
@@ -69,7 +69,7 @@
 
 > "What happened to you out there?"
 
-**Myrrine:**
+**Kleio:**
 > "The boy returns. But not just a boy anymore."
 
 > "I see the light in you. And the shadow."
@@ -177,31 +177,31 @@
 
 ### Party Dialogue: Final Words
 
-**Lyra:**
+**Theano:**
 > "Alkmaeon... before we go in..."
 
 > "I want you to know something."
 
-**Lyra:**
-> "When I came to Aethon Village, I thought I was on a mission."
+**Theano:**
+> "When I came to Helikon, I thought I was on a mission."
 
 > "Investigate the disturbance. Report back to Delphi."
 
 > "But somewhere along the way... it stopped being about duty."
 
-**Lyra:**
+**Theano:**
 > "You became my friend. Both of you."
 
 > "Whatever happens in there... I'm glad I met you."
 
 ---
 
-**Castor:**
+**Brasidas:**
 > "Yeah, uh... what she said."
 
 > "Look, I'm not good at this emotional stuff."
 
-**Castor:**
+**Brasidas:**
 > "But for what it's worth... this is the first time in my life I've believed in something."
 
 > "Not gods. Not fate. Just... this. What we're doing."
@@ -213,16 +213,16 @@
 *[Player choice — Alkmaeon's response]*
 
 **Option A: "You've both saved me. In ways you don't even know."**
-> **Lyra:** "We saved each other."
-> **Castor:** "Less talking. More climbing. We've got a world to save."
+> **Theano:** "We saved each other."
+> **Brasidas:** "Less talking. More climbing. We've got a world to save."
 
 **Option B: "Whatever happens in there, we face it together."**
-> **Castor:** "Together. I like the sound of that."
-> **Lyra:** "Together, then. All the way to the end."
+> **Brasidas:** "Together. I like the sound of that."
+> **Theano:** "Together, then. All the way to the end."
 
 **Option C: "If I don't make it out... remember me."**
-> **Lyra:** "Don't talk like that."
-> **Castor:** "Yeah, you're making it out. We're all making it out."
+> **Theano:** "Don't talk like that."
+> **Brasidas:** "Yeah, you're making it out. We're all making it out."
 > "But... yeah. We'll remember. Always."
 
 ---
@@ -235,10 +235,10 @@
 
 > The ancient stones pulse with energy — the Shards responding to their birthplace.
 
-**Lyra:**
+**Theano:**
 > "The sanctum. That's where we need to go."
 
-**Castor:**
+**Brasidas:**
 > "Then let's not keep fate waiting."
 
 ---
@@ -275,7 +275,7 @@
 
 > They do not see you. They are memories, playing out forever.
 
-**Lyra:**
+**Theano:**
 > "The temple is remembering itself."
 
 > "All the prayers. All the faith. All the hope."
@@ -512,12 +512,12 @@
 
 ### Party Reactions
 
-**Lyra:**
+**Theano:**
 > "No. No, there has to be another way."
 
 > "He can't just... cease to exist!"
 
-**Castor:**
+**Brasidas:**
 > "This is wrong. He's a person, not a tool!"
 
 > "The gods made him for this? And they're just going to... use him up?"
@@ -609,10 +609,10 @@
 
 ---
 
-**Lyra:**
+**Theano:**
 > "It's corrupted a piece of Apollo himself!"
 
-**Castor:**
+**Brasidas:**
 > "Then we un-corrupt it. The hard way."
 
 ***Boss Battle: Corrupted Remnant of Apollo***
@@ -656,8 +656,8 @@
 > **Corrupted Remnant:** "SILENCE! THE SUN GOD SERVES CHAOS NOW!"
 
 **Phase 2:**
-> **Lyra:** "It's tearing itself apart! The real Apollo is fighting back!"
-> **Castor:** "Then we help him win!"
+> **Theano:** "It's tearing itself apart! The real Apollo is fighting back!"
+> **Brasidas:** "Then we help him win!"
 
 **Phase 2 Transition:**
 > **Apollo:** "I... gave you... my light... USE IT!"
@@ -665,7 +665,7 @@
 
 **Phase 3:**
 > **Corrupted Remnant:** "ENOUGH! TYPHON'S WILL BE DONE!"
-> **Lyra:** "Alkmaeon! The Shards! It's the only way!"
+> **Theano:** "Alkmaeon! The Shards! It's the only way!"
 > **Alkmaeon:** "All three... together... NOW!"
 
 **Final Attack:**
@@ -728,16 +728,16 @@
 
 ---
 
-### Lyra's Final Words
+### Theano's Final Words
 
-**Lyra:**
+**Theano:**
 > "Alkmaeon... I don't know what to say."
 
 > "I've spent my whole life serving the gods. Believing in their wisdom."
 
 > "And now they're asking you to... to cease to be."
 
-**Lyra:**
+**Theano:**
 > "If it were me... I don't know what I'd choose."
 
 > "But I know this: whatever you decide, I'll support you."
@@ -750,21 +750,21 @@
 
 ---
 
-### Castor's Final Words
+### Brasidas's Final Words
 
-**Castor:**
+**Brasidas:**
 > "You know what I think? This is garbage."
 
 > "The gods make you. Shape your whole life. And then ask you to sacrifice it?"
 
 > "That's not a choice. That's a trap."
 
-**Castor:**
+**Brasidas:**
 > "But... I've also seen what's out there. The chaos. The ruin."
 
 > "If Typhon rises, none of this matters. There won't be a world to live in."
 
-**Castor:**
+**Brasidas:**
 > "I hate saying this, but... maybe some things are worth dying for."
 
 > "I never thought I'd believe that. You made me believe it."
@@ -882,7 +882,7 @@
 
 | Flag | Description |
 |------|-------------|
-| `returned_home` | Alkmaeon returned to Aethon Village |
+| `returned_home` | Alkmaeon returned to Helikon |
 | `mother_farewell` | Final conversation with mother |
 | `truth_revealed` | Learned he is the fourth Shard |
 | `corrupted_remnant_defeated` | Beat the chapter boss |
@@ -904,8 +904,8 @@
 | Character | Level | Notes |
 |-----------|-------|-------|
 | Alkmaeon | 10 | At the threshold of transformation |
-| Lyra | 9 | Ready to support any choice |
-| Castor | 9 | Committed to the end |
+| Theano | 9 | Ready to support any choice |
+| Brasidas | 9 | Committed to the end |
 
 ## Enemies Encountered
 

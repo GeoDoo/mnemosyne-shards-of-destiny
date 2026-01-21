@@ -1,16 +1,16 @@
 {
   "enemies": [
     {
-      "id": "temple_spirit",
-      "display_name": "Temple Spirit",
-      "description": "A restless spirit bound to the ruined temple.",
+      "id": "mormolykeia",
+      "display_name": "Mormolykeia",
+      "description": "A night spirit that haunts the darkness, preying on the unwary. Servant of Hecate.",
       "level": 1,
-      "max_hp": 35,
+      "max_hp": 30,
       "attack": 7,
       "defense": 3,
-      "magic": 8,
-      "speed": 6,
-      "skills": ["basic_attack"],
+      "magic": 9,
+      "speed": 8,
+      "skills": ["basic_attack", "terrifying_wail"],
       "experience_reward": 12,
       "currency_reward": 8,
       "element_modifiers": {
@@ -19,16 +19,34 @@
       }
     },
     {
-      "id": "corrupted_shade",
-      "display_name": "Corrupted Shade",
-      "description": "A shadow creature twisted by forgotten memories.",
-      "level": 2,
-      "max_hp": 28,
-      "attack": 10,
+      "id": "strix",
+      "display_name": "Strix",
+      "description": "An owl-woman spirit that drinks the blood of the living. Harbinger of ill omens.",
+      "level": 1,
+      "max_hp": 25,
+      "attack": 9,
       "defense": 2,
       "magic": 6,
+      "speed": 12,
+      "skills": ["basic_attack", "blood_drain"],
+      "experience_reward": 10,
+      "currency_reward": 6,
+      "element_modifiers": {
+        "light": 1.5,
+        "fire": 1.3
+      }
+    },
+    {
+      "id": "ker",
+      "display_name": "Ker",
+      "description": "A spirit of violent death, daughter of Nyx. Drawn to places of bloodshed and despair.",
+      "level": 2,
+      "max_hp": 35,
+      "attack": 11,
+      "defense": 4,
+      "magic": 8,
       "speed": 10,
-      "skills": ["basic_attack", "shadow_strike"],
+      "skills": ["basic_attack", "death_touch"],
       "experience_reward": 15,
       "currency_reward": 10,
       "element_modifiers": {
@@ -37,58 +55,147 @@
       }
     },
     {
-      "id": "forgotten_guardian",
-      "display_name": "Forgotten Guardian",
-      "description": "An ancient protector of the temple, now corrupted.",
+      "id": "empusa",
+      "display_name": "Empusa",
+      "description": "A shapeshifting vampire demon with one bronze leg and one donkey leg. Servant of Hecate who seduces and devours travelers.",
       "level": 3,
-      "max_hp": 60,
+      "max_hp": 55,
       "attack": 12,
+      "defense": 6,
+      "magic": 10,
+      "speed": 9,
+      "skills": ["basic_attack", "draining_kiss", "shapeshift"],
+      "experience_reward": 25,
+      "currency_reward": 18,
+      "element_modifiers": {
+        "light": 1.5,
+        "fire": 1.3
+      }
+    },
+    {
+      "id": "lamia",
+      "display_name": "Lamia",
+      "description": "Once a beautiful queen of Libya, driven mad by Hera's curse. Now a child-devouring demon with a serpent's tail.",
+      "level": 4,
+      "max_hp": 70,
+      "attack": 14,
+      "defense": 7,
+      "magic": 12,
+      "speed": 8,
+      "skills": ["basic_attack", "venomous_bite", "hypnotic_gaze"],
+      "experience_reward": 35,
+      "currency_reward": 25,
+      "element_modifiers": {
+        "light": 1.5,
+        "fire": 1.2
+      }
+    },
+    {
+      "id": "eurynomos",
+      "display_name": "Eurynomos",
+      "description": "A daemon of the underworld who devours the flesh of corpses. His skin is the blue-black of carrion flies.",
+      "level": 3,
+      "max_hp": 50,
+      "attack": 13,
       "defense": 8,
       "magic": 5,
-      "speed": 4,
-      "skills": ["basic_attack", "defend"],
-      "experience_reward": 25,
-      "currency_reward": 20,
+      "speed": 6,
+      "skills": ["basic_attack", "corpse_feast"],
+      "experience_reward": 22,
+      "currency_reward": 15,
       "element_modifiers": {
-        "fire": 1.5,
-        "light": 1.0
+        "light": 1.8,
+        "fire": 1.3
       }
     },
     {
-      "id": "memory_wisp",
-      "display_name": "Memory Wisp",
-      "description": "A fragment of lost memory given ethereal form.",
-      "level": 1,
-      "max_hp": 20,
-      "attack": 5,
-      "defense": 1,
-      "magic": 12,
-      "speed": 12,
-      "skills": ["basic_attack"],
-      "experience_reward": 8,
-      "currency_reward": 5,
+      "id": "mormo",
+      "display_name": "Mormo",
+      "description": "A fearsome spirit invoked to frighten children. She bit a woman of Corinth who then ate her own offspring.",
+      "level": 2,
+      "max_hp": 45,
+      "attack": 10,
+      "defense": 5,
+      "magic": 11,
+      "speed": 9,
+      "skills": ["basic_attack", "nightmare_shriek"],
+      "experience_reward": 18,
+      "currency_reward": 12,
       "element_modifiers": {
-        "shadow": 1.5,
-        "light": 0.5
+        "light": 1.5,
+        "shadow": 0.5
       }
     },
     {
-      "id": "apollo_remnant",
-      "display_name": "Remnant of Apollo",
-      "description": "A twisted echo of divine power, boss of the temple.",
+      "id": "python",
+      "display_name": "Python",
+      "description": "The great serpent of Delphi, slain by Apollo in ages past. Now stirring from death's sleep as chaos returns.",
       "level": 5,
       "max_hp": 150,
-      "attack": 15,
+      "attack": 16,
       "defense": 10,
-      "magic": 18,
-      "speed": 8,
-      "skills": ["basic_attack", "flame_burst", "divine_shield"],
+      "magic": 14,
+      "speed": 7,
+      "skills": ["basic_attack", "coiling_crush", "venomous_breath"],
       "experience_reward": 100,
       "currency_reward": 75,
       "element_modifiers": {
-        "shadow": 1.5,
-        "fire": 0.5,
-        "light": 0.5
+        "light": 1.5,
+        "fire": 1.2
+      }
+    },
+    {
+      "id": "melinoe",
+      "display_name": "Melinoe",
+      "description": "Goddess of nightmares and madness, daughter of Persephone. Half her body is pale as bone, half dark as night.",
+      "level": 6,
+      "max_hp": 180,
+      "attack": 14,
+      "defense": 8,
+      "magic": 20,
+      "speed": 10,
+      "skills": ["basic_attack", "nightmare_vision", "madness_touch", "summon_shades"],
+      "experience_reward": 120,
+      "currency_reward": 90,
+      "element_modifiers": {
+        "light": 1.8,
+        "shadow": 0.3
+      }
+    },
+    {
+      "id": "echidna",
+      "display_name": "Echidna",
+      "description": "The Mother of Monsters, mate of Typhon. Half woman, half serpent. She guards her husband's dreaming prison.",
+      "level": 7,
+      "max_hp": 220,
+      "attack": 18,
+      "defense": 12,
+      "magic": 16,
+      "speed": 8,
+      "skills": ["basic_attack", "serpent_strike", "summon_offspring", "mother_of_monsters"],
+      "experience_reward": 150,
+      "currency_reward": 110,
+      "element_modifiers": {
+        "light": 1.3,
+        "fire": 1.2
+      }
+    },
+    {
+      "id": "typhon",
+      "display_name": "Typhon",
+      "description": "Father of Monsters, child of Gaia and Tartarus. A hundred dragon heads, a voice like thunder. The greatest enemy the gods have ever faced.",
+      "level": 10,
+      "max_hp": 300,
+      "attack": 25,
+      "defense": 15,
+      "magic": 22,
+      "speed": 10,
+      "skills": ["basic_attack", "hundred_heads", "storm_of_chaos", "primordial_roar", "world_shaker"],
+      "experience_reward": 500,
+      "currency_reward": 300,
+      "element_modifiers": {
+        "light": 1.2,
+        "shadow": 0.8
       }
     }
   ]

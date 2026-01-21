@@ -1,6 +1,6 @@
 # Chapter 1: The Awakening
 
-> *Alkmaeon leaves his village to explore the Temple of Apollo. He faces his first battles, receives a divine vision from Apollo himself, and learns the skill that will define his journey. Upon returning, he meets Lyra — the oracle apprentice who will become his first companion.*
+> *Alkmaeon leaves his village to explore the Temple of Apollo. He faces his first battles, receives a divine vision from Apollo himself, and learns the skill that will define his journey. Upon returning, he meets Theano — the oracle apprentice who will become his first companion.*
 
 **Prerequisites**: Prologue complete (`red_moon_witnessed` flag set)
 
@@ -106,23 +106,23 @@
 
 ---
 
-### NPC: Elder Theron (Dawn)
+### NPC: Epimenides (Dawn)
 
 **Location**: Standing at the village gate
 
-**Elder Theron:**
+**Epimenides:**
 > "Alkmaeon. I knew you would not wait."
 
 > "The pull is too strong now. I understand."
 
-**Elder Theron:**
+**Epimenides:**
 > "Return to the temple. Go deeper than before."
 
 > "There is a sanctum at its heart — an altar where the priests once communed with Apollo."
 
 > "If answers exist, they will be there."
 
-**Elder Theron:**
+**Epimenides:**
 > "But be warned. The temple is no longer sacred ground."
 
 > "Spirits linger there. Echoes of the past, twisted by centuries of neglect."
@@ -132,24 +132,24 @@
 *[Player choice]*
 
 **Option A: "I can handle myself."**
-> **Elder Theron:** "Confidence is good. Overconfidence is fatal."
+> **Epimenides:** "Confidence is good. Overconfidence is fatal."
 > "Here. You may need this."
 
 **Option B: "What kind of spirits?"**
-> **Elder Theron:** "The lost. The forgotten. Fragments of memory given form."
+> **Epimenides:** "The lost. The forgotten. Fragments of memory given form."
 > "They are not evil — merely confused. Trapped between what was and what is."
 > "But they will attack anything that disturbs their slumber."
 
 **Option C: "Will you come with me?"**
-> **Elder Theron:** "These old bones would slow you down."
+> **Epimenides:** "These old bones would slow you down."
 > "Besides, my place is here. Watching. Waiting."
 > "Your path lies ahead, not behind."
 
 ---
 
-*[Elder Theron gives Alkmaeon items]*
+*[Epimenides gives Alkmaeon items]*
 
-**Elder Theron:**
+**Epimenides:**
 > "Take these. Healing herbs from my garden."
 
 > "And remember — when in doubt, defend. Live to strike another day."
@@ -157,7 +157,7 @@
 > ***Received: Healing Herb x3***
 > *Restores 30 HP when used.*
 
-**Elder Theron:**
+**Epimenides:**
 > "Go now. The temple awaits."
 
 > "And Alkmaeon — trust the visions. They are trying to show you the truth."
@@ -587,10 +587,10 @@
 
 ---
 
-## Scene 1.5: Return to Aethon Village
+## Scene 1.5: Return to Helikon
 
 **Type**: Story / Character introduction  
-**Location**: Aethon Village  
+**Location**: Helikon  
 **Time**: Late afternoon  
 **Audio**: Village ambience, but more somber than before
 
@@ -612,55 +612,55 @@
 
 ---
 
-### NPC: Nikos (Changed Dialogue)
+### NPC: Damon (Changed Dialogue)
 
-**Nikos:**
+**Damon:**
 > "Alkmaeon... is it true? You went into the inner temple?"
 
 > "My grandfather says no one's been that deep in generations."
 
 *[He looks at you differently — uncertain]*
 
-**Nikos:**
+**Damon:**
 > "You seem... different. Did something happen up there?"
 
 *[Player choice]*
 
 **Option A: "I met a god."**
-> **Nikos:** "A god?! You're joking. You have to be joking."
+> **Damon:** "A god?! You're joking. You have to be joking."
 > *[He backs away slowly]*
 > "I... I need to go. The sheep. I need to check on the sheep."
 
 **Option B: "I learned some things about myself."**
-> **Nikos:** "Yeah? Well... good for you, I guess."
+> **Damon:** "Yeah? Well... good for you, I guess."
 > "Just... be careful, okay? Strange things happen to people who mess with the old places."
 
 **Option C: "Nothing I want to talk about."**
-> **Nikos:** "Right. Sure. I get it."
+> **Damon:** "Right. Sure. I get it."
 > "Just... you know where to find me. If you ever want to talk."
 
 ---
 
-### NPC: Myrrine (Changed Dialogue)
+### NPC: Kleio (Changed Dialogue)
 
-**Myrrine:**
+**Kleio:**
 > "The temple boy returns."
 
 > "I can see it in your eyes. The same look your father had."
 
-**Myrrine:**
+**Kleio:**
 > "He went seeking answers too. Found them, I suppose."
 
 > "Cost him everything."
 
 *[She studies you]*
 
-**Myrrine:**
+**Kleio:**
 > "But you... you might be different. Stronger, maybe."
 
 > "Or maybe the gods are just crueler than I thought."
 
-**Myrrine:**
+**Kleio:**
 > "There's a girl at the shrine. Arrived this morning."
 
 > "She's been asking about you. About the visions."
@@ -669,44 +669,44 @@
 
 ---
 
-### NPC: Elder Theron (Changed Dialogue)
+### NPC: Epimenides (Changed Dialogue)
 
 **Location**: His house
 
-**Elder Theron:**
+**Epimenides:**
 > "Alkmaeon. You've returned — and I can see you've been... touched."
 
 > "The light of Apollo. I haven't seen it in mortal eyes since..."
 
 *[He trails off]*
 
-**Elder Theron:**
+**Epimenides:**
 > "Tell me. What did you see?"
 
 *[Player recounts the vision — summarized]*
 
-**Elder Theron:**
+**Epimenides:**
 > "The Shards of Destiny. So the old texts were true."
 
 > "Fragments of cosmic order, scattered when Typhon was imprisoned."
 
 > "If Apollo himself has tasked you with finding them..."
 
-**Elder Theron:**
+**Epimenides:**
 > "This is beyond anything I can help you with, boy."
 
 > "But there is someone who might know more."
 
 > "A young woman arrived at the village shrine this morning."
 
-> "She says she's an apprentice oracle. Trained at Delphi itself."
+> "She says she's an apprentice oracle. Trained at the sanctuary of Demeter itself."
 
-**Elder Theron:**
-> "Her name is Lyra. Find her. She may have answers I do not."
+**Epimenides:**
+> "Her name is Theano. Find her. She may have answers I do not."
 
 ---
 
-## Scene 1.6: Meeting Lyra
+## Scene 1.6: Meeting Theano
 
 **Type**: Character introduction  
 **Location**: Village Shrine  
@@ -734,19 +734,19 @@
 
 ---
 
-### Dialogue: Lyra Introduction
+### Dialogue: Theano Introduction
 
 *[LYRA senses your approach and rises]*
 
-**Lyra:**
+**Theano:**
 > "You're him. The one who touched Apollo's light."
 
 > "I felt it from across the valley. A flash like a second sun."
 
 *[She turns to face you — her eyes are a striking pale blue, almost silver]*
 
-**Lyra:**
-> "I am Lyra. Apprentice of the Pythia — the Oracle of Delphi."
+**Theano:**
+> "I am Theano. Apprentice of the Pythia — the Oracle of the sanctuary of Demeter."
 
 > "I was sent here three days ago, following a vision."
 
@@ -754,50 +754,50 @@
 
 ---
 
-**Lyra:**
+**Theano:**
 > "You are Alkmaeon, yes? The villagers speak of nothing else."
 
 *[Player choice]*
 
 **Option A: "How do you know about the visions?"**
-> **Lyra:** "I am an oracle, Alkmaeon. Visions are my life."
+> **Theano:** "I am an oracle, Alkmaeon. Visions are my life."
 > "But yours are different. Stronger. More... direct."
 > "Apollo speaks to many. But few hear him as clearly as you seem to."
 
 **Option B: "Why were you sent here?"**
-> **Lyra:** "The Pythia saw a disturbance. A stirring in the cosmic order."
+> **Theano:** "The Pythia saw a disturbance. A stirring in the cosmic order."
 > "She sent me to investigate — and to help, if I could."
 > "I think you are the disturbance she saw."
 
 **Option C: "I don't need an oracle's help."**
-> **Lyra:** "Perhaps not. But you have it anyway."
+> **Theano:** "Perhaps not. But you have it anyway."
 > "The gods do not send us where we are not needed."
 > "Whether you accept my help is your choice. But I will not abandon my task."
 
 ---
 
-**Lyra:**
+**Theano:**
 > "I know what happened in the temple. I could feel the vision from here."
 
 > "Apollo has given you a great gift — and a terrible burden."
 
 > "The Shards of Destiny... I have read of them in the oldest texts."
 
-**Lyra:**
+**Theano:**
 > "They are fragments of Mnemosyne's power, scattered across the world."
 
 > "Each one contains a memory — a piece of cosmic truth."
 
 > "Gathering them is the only way to restore the Order of Destiny."
 
-**Lyra:**
+**Theano:**
 > "But you cannot do it alone. The path is too dangerous."
 
 > "There are those who would stop you. Forces that want chaos to reign."
 
 ---
 
-**Lyra:**
+**Theano:**
 > "Let me come with you."
 
 > "I can heal wounds. I can read the signs the gods leave us."
@@ -807,17 +807,17 @@
 *[Player choice]*
 
 **Option A: "I'd be glad for the company."**
-> **Lyra:** "Then it's settled. We leave at dawn."
+> **Theano:** "Then it's settled. We leave at dawn."
 > *[She smiles — the first genuine warmth you've seen from her]*
 > "I have a feeling this is the beginning of something important."
 
 **Option B: "Can you fight?"**
-> **Lyra:** "I trained with the temple guards at Delphi."
+> **Theano:** "I trained with the temple guards at the sanctuary of Demeter."
 > "I won't be cutting down monsters with a sword, but I can hold my own."
 > "And more importantly, I can keep you alive when the monsters fight back."
 
 **Option C: "I need to think about it."**
-> **Lyra:** "Of course. This is not a decision to make lightly."
+> **Theano:** "Of course. This is not a decision to make lightly."
 > "I'll be here when you're ready."
 > *[She returns to her prayers]*
 
@@ -825,46 +825,46 @@
 
 ---
 
-### Lyra Joins the Party
+### Theano Joins the Party
 
-**Lyra:**
+**Theano:**
 > "The Red Moon is waxing. We don't have much time."
 
-> "Elder Theron spoke of a place — a hidden spring north of the village."
+> "Epimenides spoke of a place — a hidden spring north of the village."
 
 > "He called it the Well of Mnemosyne. A sacred site of the old Orphic mysteries."
 
-**Lyra:**
+**Theano:**
 > "If the Shards are tied to Mnemosyne's power, that well may be the key."
 
 > "We should go there first. See what secrets it holds."
 
-> ***Lyra has joined the party!***
+> ***Theano has joined the party!***
 
-**Party Member: Lyra**
-- Class: Oracle Apprentice
+**Party Member: Theano**
+- Class: Priestess of Demeter
 - Role: Healer / Support
 - Starting Skills: Basic Attack, Defend, Heal
 - Stats: High Magic, High MP, Lower HP and Attack
 
 ---
 
-### Lyra's Equipment
+### Theano's Equipment
 
-**Lyra:**
+**Theano:**
 > "Before we go — take this."
 
 > "It's not much, but it might help."
 
-> ***Received: Oracle's Balm x2***
-> *Restores 50 HP when used. Lyra's personal supply.*
+> ***Received: Demeter's Balm x2***
+> *Restores 50 HP when used. Theano's personal supply.*
 
 ---
 
 ## Scene 1.7: Night in the Village
 
 **Type**: Story / Setup for Chapter 2  
-**Location**: Aethon Village — Evening  
+**Location**: Helikon — Evening  
 **Audio**: Night ambience, distant wolves, ominous undertone
 
 ---
@@ -877,9 +877,9 @@
 
 > Your mother packs food and supplies, saying little.
 
-> Elder Theron provides what knowledge he can — old maps, half-remembered legends.
+> Epimenides provides what knowledge he can — old maps, half-remembered legends.
 
-> And Lyra prays at the shrine, communing with forces you cannot see.
+> And Theano prays at the shrine, communing with forces you cannot see.
 
 ---
 
@@ -930,7 +930,7 @@
 
 ---
 
-> When dawn breaks, you and Lyra set out.
+> When dawn breaks, you and Theano set out.
 
 > Northward. Toward the mountains.
 
@@ -952,7 +952,7 @@
 | `first_combat_complete` | Tutorial combat finished |
 | `apollo_vision_complete` | Received vision from Apollo |
 | `memory_flash_learned` | Memory Flash skill acquired |
-| `lyra_joined` | Lyra has joined the party |
+| `lyra_joined` | Theano has joined the party |
 | `chapter1_complete` | Chapter 1 finished, ready for Chapter 2 |
 
 ## Skills Learned
@@ -966,11 +966,11 @@
 | Item | Effect | Source |
 |------|--------|--------|
 | Father's Compass | Key item — reveals hidden paths | Mother |
-| Healing Herb x3 | Restores 30 HP | Elder Theron |
+| Healing Herb x3 | Restores 30 HP | Epimenides |
 | Ancient Coin x2 | Currency | Temple exploration |
 | Shadow Essence | Crafting material | Corrupted Shade |
 | Faded Scroll | Lore item | Priest's quarters |
-| Oracle's Balm x2 | Restores 50 HP | Lyra |
+| Demeter's Balm x2 | Restores 50 HP | Theano |
 | Father's Cloak | +3 Defense | Mother |
 
 ## Party Status
@@ -978,7 +978,7 @@
 | Character | Level | Role |
 |-----------|-------|------|
 | Alkmaeon | 1-2 | Memory Seeker (Balanced) |
-| Lyra | 1 | Oracle Apprentice (Healer) |
+| Theano | 1 | Priestess of Demeter (Healer) |
 
 ## Enemies Encountered
 

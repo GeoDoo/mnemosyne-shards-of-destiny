@@ -10,14 +10,16 @@ This folder contains the narrative content for **Mnemosyne: Shards of Destiny**.
 
 ```
 story/
-├── README.md                    # This file
-├── 00_story_baseline.md         # THE MYTHIC SPINE — Full 5-act story
-├── 00_intro.md                  # Opening narration (in-game text)
-├── 01_chapter1_awakening.md     # Chapter 1: The Awakening (gameplay)
-├── 02_chapter2_*.md             # Chapter 2+ (future)
-├── characters/                  # Character backgrounds and arcs
-├── lore/                        # World-building, mythology, Orphic mysteries
-└── dialogues/                   # NPC dialogue scripts
+├── README.md                           # This file
+├── 00_story_baseline.md                # THE MYTHIC SPINE — Full 5-act story
+├── 00_intro.md                         # Prologue: The Chorus of Ruin
+├── 01_chapter1_awakening.md            # Chapter 1: The Awakening
+├── 02_chapter2_call_of_memory.md       # Chapter 2: The Call of Memory
+├── 03_chapter3_memory_of_light.md      # Chapter 3: Memory of Light
+├── 04_chapter4_memory_of_silence.md    # Chapter 4: Memory of Silence
+├── 05_chapter5_memory_of_ruin.md       # Chapter 5: Memory of Ruin
+├── 06_chapter6_revelation.md           # Chapter 6: The Revelation
+└── 07_chapter7_binding.md              # Chapter 7: The Binding of Fate
 ```
 
 ---
@@ -27,11 +29,59 @@ story/
 | Act | Title | Game Mapping |
 |-----|-------|--------------|
 | **Prologue** | The Chorus of Ruin | Opening cinematic |
-| **Act I** | The Boy and the Ruins | Chapter 1: Village + Temple |
-| **Act II** | The Call of Memory | Chapter 2: Well of Mnemosyne |
-| **Act III** | The Trial of the Shards | Chapters 3-5: Three shrines |
-| **Act IV** | The Revelation | Chapter 6: Typhon's Sanctum |
-| **Act V** | The Binding of Fate | Final: Return to Temple |
+| **Act I** | The Boy and the Ruins | Chapter 1: Helikon + Delphi |
+| **Act II** | The Call of Memory | Chapter 2: Lebadeia |
+| **Act III** | The Trial of the Shards | Chapters 3-5: Delos, Necromanteion, Olympus |
+| **Act IV** | The Revelation | Chapter 6: Return to Delphi |
+| **Act V** | The Binding of Fate | Chapter 7: Final confrontation |
+
+---
+
+## Party Members
+
+| Character | Class | Background |
+|-----------|-------|------------|
+| **Alkmaeon** | Memory Seeker | Protagonist from Helikon village; his name means "mighty in wrath" |
+| **Theano** | Priestess of Demeter | Healer trained at the sanctuary of Demeter; joins in Chapter 1 |
+| **Brasidas** | Spartan Warrior | Bold Spartan general seeking redemption; joins in Chapter 3 |
+
+---
+
+## Real Greek Locations
+
+| Location | Chapter | Mythological Significance |
+|----------|---------|---------------------------|
+| **Helikon** (Mount Helicon, Boeotia) | Start | Sacred to the Muses, daughters of Mnemosyne |
+| **Delphi** | Ch 1, 6, 7 | Apollo's sanctuary, home of the Pythia |
+| **Lebadeia** | Ch 2 | Oracle of Trophonios; springs of Lethe and Mnemosyne |
+| **Delos** | Ch 3 | Sacred island, Apollo's birthplace |
+| **Necromanteion** (Acheron River) | Ch 4 | Oracle of the Dead, entrance to underworld |
+| **Mount Olympus** | Ch 5 | Home of the gods, near Typhon's prison |
+
+---
+
+## Greek Mythology Monsters
+
+| Monster | Role | Mythological Source |
+|---------|------|---------------------|
+| **Mormo** | Ch 1 Mini-boss | Night spirit serving Hecate |
+| **Empusa** | Common enemy | Shapeshifting vampire, servant of Hecate |
+| **Lamia** | Ch 3 enemy | Child-devouring demon queen |
+| **Python** | Ch 3 Boss | Great serpent of Delphi, slain by Apollo |
+| **Melinoe** | Ch 4 Boss | Goddess of nightmares, daughter of Persephone |
+| **Echidna** | Ch 5 Boss | Mother of Monsters, mate of Typhon |
+| **Typhon** | Final Boss | Father of Monsters, primordial chaos |
+
+---
+
+## Supporting NPCs
+
+| Character | Role | Notes |
+|-----------|------|-------|
+| **Epimenides** | Wise Elder | Cretan mystic who slept 57 years and gained prophecy |
+| **Kleio** | Village woman | Named after the Muse of History |
+| **Damon** | Village boy | Childhood acquaintance |
+| **Korinna** | Brasidas's partner (spirit) | Ancient Greek poetess from Boeotia |
 
 ---
 
@@ -64,6 +114,7 @@ story/
 3. **Chorus narration** for cosmic/backstory moments (italic, third-person)
 4. Mark dialogue with speaker name or `*narration*` for internal thoughts
 5. Keep individual dialogue lines short (fit on mobile screen)
+6. Use authentic Greek names and locations throughout
 
 ---
 
@@ -73,7 +124,7 @@ story/
 |------|---------|
 | **Shards of Destiny** | Fragments of the Order of Destiny, scattered divine memory |
 | **Red Moon** | Celestial event signaling Typhon's stirring |
-| **Well of Mnemosyne** | Sacred spring where memory flows; Orphic rite site |
+| **Lebadeia** | Real location with springs of Lethe and Mnemosyne |
 | **Order of Destiny** | The cosmic harmony woven by the gods after Typhon's defeat |
-| **The Buried One** | Typhon, imprisoned beneath the earth |
-| **Memory Flash** | The boy's signature ability, channeling Mnemosyne's power |
+| **The Buried One** | Typhon, imprisoned beneath Mount Etna/Olympus |
+| **Memory Flash** | Alkmaeon's signature ability, channeling Mnemosyne's power |

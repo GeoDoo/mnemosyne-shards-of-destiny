@@ -1,6 +1,6 @@
 # Prologue: The Chorus of Ruin
 
-> *The opening sequence that establishes the mythic backstory and introduces the player to Aethon Village.*
+> *The opening sequence that establishes the mythic backstory and introduces the player to Helikon.*
 
 ---
 
@@ -119,7 +119,7 @@
 ## Scene 0.2: The Village Awakens
 
 **Type**: Gameplay introduction  
-**Location**: Aethon Village — Alkmaeon's home  
+**Location**: Helikon — Alkmaeon's home  
 **Time**: Early morning  
 **Audio**: Birdsong, distant sheep bells, peaceful village ambience
 
@@ -129,7 +129,7 @@
 
 *[Fade from white to interior of a small stone house]*
 
-> In a quiet mountain village called Aethon...
+> In a quiet mountain village called Helikon...
 
 > A boy grows up among shepherds and farmers.
 
@@ -155,7 +155,7 @@
 > "I've let you sleep long enough. The others have been up since dawn."
 
 **Alkmaeon's Mother:**
-> "Your breakfast is on the table. Eat, then go see what Elder Theron needs."
+> "Your breakfast is on the table. Eat, then go see what Epimenides needs."
 
 > "He asked for you specifically this morning."
 
@@ -193,15 +193,15 @@
 
 ---
 
-## Scene 0.3: Aethon Village
+## Scene 0.3: Helikon
 
 **Type**: Exploration (tutorial)  
-**Location**: Aethon Village — Exterior  
+**Location**: Helikon — Exterior  
 **Time**: Morning  
 **Objectives**: 
 - Learn movement controls
 - Talk to villagers (optional)
-- Find Elder Theron
+- Find Epimenides
 
 ---
 
@@ -209,56 +209,56 @@
 
 *[First time entering village square]*
 
-> Aethon Village. Home.
+> Helikon. Home.
 
 > Stone houses cluster around a central square. A well. A small shrine to the gods.
 
 > To the north, the path leads up the mountain — toward the temple ruins.
 
-> To the east, Elder Theron's house stands apart from the others.
+> To the east, Epimenides's house stands apart from the others.
 
 ---
 
-### NPC: Shepherd Boy (Nikos)
+### NPC: Shepherd Boy (Damon)
 
 **Location**: Near the well
 
-**Nikos:**
+**Damon:**
 > "Hey, Alkmaeon! Done sleeping the day away?"
 
 > "I've already taken the sheep to the high pasture and back."
 
-**Nikos:**
+**Damon:**
 > "My grandfather says there's going to be a red moon tonight."
 
 > "He says it's a bad omen. But what does he know?"
 
 *[If spoken to again]*
 
-**Nikos:**
-> "Don't you have somewhere to be? Elder Theron was looking for you."
+**Damon:**
+> "Don't you have somewhere to be? Epimenides was looking for you."
 
 ---
 
-### NPC: Old Woman (Myrrine)
+### NPC: Old Woman (Kleio)
 
 **Location**: Outside her house, tending herbs
 
-**Myrrine:**
+**Kleio:**
 > "Ah, young Alkmaeon. You have your father's eyes."
 
 > "He used to stare at that temple too, you know. Before..."
 
 *[She trails off]*
 
-**Myrrine:**
+**Kleio:**
 > "Never mind. The past is the past."
 
 > "Go on now. Don't keep the Elder waiting."
 
 *[If spoken to again]*
 
-**Myrrine:**
+**Kleio:**
 > "Be careful, boy. Some things are better left undisturbed."
 
 ---
@@ -279,7 +279,7 @@
 
 **Option B: "Who's the monster?"**
 > **Iris:** "Demetrios is Typhon! But he's not very scary."
-> **Iris:** "My mama says Typhon is just a story. But Elder Theron says all stories are true somewhere."
+> **Iris:** "My mama says Typhon is just a story. But Epimenides says all stories are true somewhere."
 
 ---
 
@@ -322,11 +322,11 @@
 
 ---
 
-## Scene 0.4: Elder Theron
+## Scene 0.4: Epimenides
 
 **Type**: Story dialogue  
-**Location**: Elder Theron's house  
-**Trigger**: Player enters Theron's home
+**Location**: Epimenides's house  
+**Trigger**: Player enters Epimenides's home
 
 ---
 
@@ -340,48 +340,48 @@
 
 ---
 
-### Dialogue: Elder Theron (First Meeting)
+### Dialogue: Epimenides (First Meeting)
 
-**Elder Theron:**
+**Epimenides:**
 > "Alkmaeon. Come in, come in."
 
 > "Sit. We have much to discuss."
 
 *[Alkmaeon sits]*
 
-**Elder Theron:**
+**Epimenides:**
 > "You've been dreaming again. I can see it in your eyes."
 
 > "Dreams of fire. Of light. Of things you cannot name."
 
-**Elder Theron:**
+**Epimenides:**
 > "Do not look so surprised. I was young once too."
 
 > "And I have studied the old ways long enough to recognize the signs."
 
 ---
 
-**Elder Theron:**
+**Epimenides:**
 > "Tell me, boy. What do you know of the temple on the mountain?"
 
 *[Player choice]*
 
 **Option A: "Mother says to stay away from it."**
-> **Elder Theron:** "Your mother is wise to be cautious."
+> **Epimenides:** "Your mother is wise to be cautious."
 > "But caution and ignorance are not the same thing."
 
 **Option B: "I dream about it sometimes."**
-> **Elder Theron:** "Yes. I thought as much."
+> **Epimenides:** "Yes. I thought as much."
 > "The temple calls to those who are meant to hear."
 
 **Option C: "It's just old ruins."**
-> **Elder Theron:** "Just ruins? No, boy."
+> **Epimenides:** "Just ruins? No, boy."
 > "That temple was sacred to Apollo himself. A place where mortals could glimpse fate."
 > "Its stones remember what we have forgotten."
 
 ---
 
-**Elder Theron:**
+**Epimenides:**
 > "Listen carefully, Alkmaeon."
 
 > "Long ago, the gods waged a war against chaos itself."
@@ -390,7 +390,7 @@
 
 > "Fragments of their power were scattered. Hidden. Lost."
 
-**Elder Theron:**
+**Epimenides:**
 > "The temple on our mountain was one of Apollo's sanctuaries."
 
 > "It fell to ruin centuries ago. But the power within it..."
@@ -399,14 +399,14 @@
 
 ---
 
-**Elder Theron:**
+**Epimenides:**
 > "Tonight, a Red Moon will rise."
 
 > "It is an omen. The heavens aligning in ways they have not for generations."
 
 > "I believe the temple will... react."
 
-**Elder Theron:**
+**Epimenides:**
 > "I am too old to climb that mountain."
 
 > "But you, Alkmaeon — you hear its call."
@@ -417,20 +417,20 @@
 
 ---
 
-*[Elder Theron gives Alkmaeon a small item]*
+*[Epimenides gives Alkmaeon a small item]*
 
-**Elder Theron:**
+**Epimenides:**
 > "Take this. An old charm of protection."
 
 > "It won't save you from your fate. But it may buy you time to understand it."
 
-> ***Received: Charm of Theron***
+> ***Received: Charm of Epimenides***
 > *A small bronze disc inscribed with ancient symbols.*
 > *Effect: +5 Defense*
 
 ---
 
-**Elder Theron:**
+**Epimenides:**
 > "Go now. The mountain awaits."
 
 > "And Alkmaeon..."
@@ -474,7 +474,7 @@
 
 **View of the Valley:**
 > *From here, you can see the whole valley.*
-> *Aethon Village. The river. The distant mountains.*
+> *Helikon. The river. The distant mountains.*
 > *It looks so small. So fragile.*
 
 ---
@@ -620,7 +620,7 @@
 ## Scene 0.9: The Red Moon Rises
 
 **Type**: Cinematic / Story event  
-**Location**: Aethon Village — Evening  
+**Location**: Helikon — Evening  
 **Trigger**: Player returns to village after first temple visit  
 **Audio**: Ominous drone, villagers murmuring
 
@@ -654,51 +654,51 @@
 
 *[ELDER THERON approaches]*
 
-**Elder Theron:**
+**Epimenides:**
 > "Alkmaeon. You've returned."
 
 > "I see the temple has shown you... something."
 
 *[He looks at the moon]*
 
-**Elder Theron:**
+**Epimenides:**
 > "The Red Moon. It has not risen in living memory."
 
 > "My grandmother spoke of it. Her grandmother before her."
 
-**Elder Theron:**
+**Epimenides:**
 > "When the Red Moon bleeds, the earth remembers..."
 
 > "...and the buried one stirs."
 
 ---
 
-**Elder Theron:**
+**Epimenides:**
 > "What did you see, boy? In the temple?"
 
 *[Player choice]*
 
 **Option A: "I saw a war. Gods and monsters."**
-> **Elder Theron:** "The Titanomachy. The war that shaped the world."
+> **Epimenides:** "The Titanomachy. The war that shaped the world."
 > "If the temple showed you that... then you are more important than I feared."
 
 **Option B: "I saw a woman with torches. Watching me."**
-> **Elder Theron:** "Hécate. The goddess of crossroads."
+> **Epimenides:** "Hécate. The goddess of crossroads."
 > "If she has taken notice of you... your path is no longer your own."
 
 **Option C: "I don't know. It was too fast."**
-> **Elder Theron:** "The visions will become clearer. For better or worse."
+> **Epimenides:** "The visions will become clearer. For better or worse."
 
 ---
 
-**Elder Theron:**
+**Epimenides:**
 > "Listen to me carefully, Alkmaeon."
 
 > "What you experienced was not a dream. It was a memory."
 
 > "Divine memory. Cosmic truth, pressed into your mind."
 
-**Elder Theron:**
+**Epimenides:**
 > "The temple chose you. Or perhaps... you were always meant to be chosen."
 
 > "Either way, your life in this village is ending."
@@ -719,13 +719,13 @@
 **Alkmaeon's Mother:**
 > "No... not this. Not my son."
 
-**Elder Theron:**
+**Epimenides:**
 > "It is already done, Thalia. The boy has been marked."
 
 **Alkmaeon's Mother:**
 > "Then unmarked him! You're the Elder — do something!"
 
-**Elder Theron:**
+**Epimenides:**
 > "Some things cannot be undone."
 
 > "Only faced."
@@ -768,7 +768,7 @@
 
 | Flag | Description |
 |------|-------------|
-| `theron_quest_given` | Elder Theron has sent Alkmaeon to the temple |
+| `theron_quest_given` | Epimenides has sent Alkmaeon to the temple |
 | `first_vision_complete` | Alkmaeon has experienced his first divine vision |
 | `red_moon_witnessed` | The Red Moon has risen; prologue complete |
 
@@ -776,7 +776,7 @@
 
 | Item | Effect | Source |
 |------|--------|--------|
-| Charm of Theron | +5 Defense | Elder Theron |
+| Charm of Epimenides | +5 Defense | Epimenides |
 
 ## Transitions
 
