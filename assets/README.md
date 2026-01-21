@@ -25,7 +25,7 @@ assets/
 │   ├── ui/                  # UI elements, icons
 │   └── effects/             # VFX, particles
 ├── portraits/
-│   ├── party/               # Dialogue portraits (64x64 or 96x96)
+│   ├── party/               # Dialogue portraits (48x48)
 │   └── npcs/
 ├── tilesets/
 │   ├── thespiae/            # Starting village
@@ -57,24 +57,31 @@ Examples:
   alkmaeon_hurt_01.png
 ```
 
-### Sprite Sheets
+### Sprite Sheets (Current Format)
 ```
-{character}_{animation}_sheet.png
+{character}_spritesheet.png
+
+Contains all animations in horizontal rows:
+- Row 1: IDLE (4-6 frames)
+- Row 2: WALK (6 frames)
+- Row 3: ATTACK (6 frames)
+- Row 4: HURT (2 frames)
+- Row 5: SKILL (4-6 frames)
 
 Examples:
-  alkmaeon_walk_sheet.png    (8 frames horizontal)
-  brasidas_attack_sheet.png  (6 frames horizontal)
+  alkmaeon_spritesheet.png
+  theano_spritesheet.png
+  brasidas_spritesheet.png
 ```
 
-### Portraits (64x64 or 96x96)
+### Portraits (48x48)
 ```
-{character}_portrait_{expression}.png
+{character}_portrait.png
 
 Examples:
-  alkmaeon_portrait_neutral.png
-  alkmaeon_portrait_surprised.png
-  theano_portrait_sad.png
-  brasidas_portrait_angry.png
+  alkmaeon_portrait.png
+  theano_portrait.png
+  brasidas_portrait.png
 ```
 
 ### Enemies
@@ -170,12 +177,12 @@ Examples:
 ## Asset Checklist
 
 ### Party Members
-- [ ] Alkmaeon — sprites (32x32)
-- [ ] Alkmaeon — portrait
-- [ ] Theano — sprites (32x32)
-- [ ] Theano — portrait
-- [ ] Brasidas — sprites (32x32)
-- [ ] Brasidas — portrait
+- [x] Alkmaeon — spritesheet (alkmaeon_spritesheet.png)
+- [x] Alkmaeon — portrait (alkmaeon_portrait.png)
+- [x] Theano — spritesheet (theano_spritesheet.png)
+- [x] Theano — portrait (theano_portrait.png)
+- [x] Brasidas — spritesheet (brasidas_spritesheet.png)
+- [x] Brasidas — portrait (brasidas_portrait.png)
 
 ### NPCs
 - [ ] Epimenides — sprites + portrait
