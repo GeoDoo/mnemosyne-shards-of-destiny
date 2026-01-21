@@ -4,7 +4,7 @@
       "id": "alkmaeon",
       "display_name": "Alkmaeon",
       "character_class": "Memory Seeker",
-      "description": "A young boy from the village of Helikon, chosen by fate to recover the Shards of Destiny. His name means 'mighty in wrath' — a tragic hero who must act under ambiguous circumstances.",
+      "description": "A young boy from the village of Thespiae, chosen by fate to recover the Shards of Destiny. His name means 'mighty in wrath' — a tragic hero who must act under ambiguous circumstances.",
       "base_stats": {
         "max_hp": 100,
         "max_mp": 30,
@@ -61,7 +61,7 @@
       "id": "brasidas",
       "display_name": "Brasidas",
       "character_class": "Spartan Warrior",
-      "description": "A bold Spartan soldier encountered on the sacred island of Delos. Once a celebrated general, he now travels alone seeking redemption for past failures. His courage and tactical mind make him a formidable ally.",
+      "description": "A bold Spartan soldier encountered on the sacred island of Delos. Once a celebrated general, he now wanders alone — haunted by the death of his wife Arete while he was away at war. His courage and tactical mind make him a formidable ally.",
       "base_stats": {
         "max_hp": 95,
         "max_mp": 20,

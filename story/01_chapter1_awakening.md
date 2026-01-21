@@ -587,10 +587,10 @@
 
 ---
 
-## Scene 1.5: Return to Helikon
+## Scene 1.5: Return to Thespiae
 
 **Type**: Story / Character introduction  
-**Location**: Helikon  
+**Location**: Thespiae  
 **Time**: Late afternoon  
 **Audio**: Village ambience, but more somber than before
 
@@ -864,7 +864,7 @@
 ## Scene 1.7: Night in the Village
 
 **Type**: Story / Setup for Chapter 2  
-**Location**: Helikon — Evening  
+**Location**: Thespiae — Evening  
 **Audio**: Night ambience, distant wolves, ominous undertone
 
 ---

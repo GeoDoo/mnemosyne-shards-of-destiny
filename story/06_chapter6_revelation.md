@@ -1,6 +1,6 @@
 # Chapter 6: The Revelation
 
-> *Act IV — The party returns to where it all began: the Temple of Apollo above Helikon. With all three Shards gathered, the time has come for the final truth. Alkmaeon learns what he truly is — and faces a choice that will determine not only his fate, but the fate of everything.*
+> *Act IV — The party returns to where it all began: the Temple of Apollo above Thespiae. With all three Shards gathered, the time has come for the final truth. Alkmaeon learns what he truly is — and faces a choice that will determine not only his fate, but the fate of everything.*
 
 **Prerequisites**: Chapter 5 complete (`all_shards_gathered` flag set)  
 **Party**: Alkmaeon, Theano, Brasidas
@@ -10,7 +10,7 @@
 ## Scene 6.1: Homecoming
 
 **Type**: Emotional return / Setup  
-**Location**: Approach to Helikon  
+**Location**: Approach to Thespiae  
 **Time**: Late afternoon — the Red Moon already visible in the sky  
 **Audio**: Familiar village sounds, but with ominous undertone
 
@@ -18,7 +18,7 @@
 
 ### The Road Home
 
-*[The party approaches Helikon from the north]*
+*[The party approaches Thespiae from the north]*
 
 > The familiar mountains rise before you.
 
@@ -46,7 +46,7 @@
 
 ### The Village Changed
 
-*[Entering Helikon — atmosphere is tense]*
+*[Entering Thespiae — atmosphere is tense]*
 
 > The village is different.
 
@@ -183,7 +183,7 @@
 > "I want you to know something."
 
 **Theano:**
-> "When I came to Helikon, I thought I was on a mission."
+> "When I came to Thespiae, I thought I was on a mission."
 
 > "Investigate the disturbance. Report back to Delphi."
 
@@ -882,7 +882,7 @@
 
 | Flag | Description |
 |------|-------------|
-| `returned_home` | Alkmaeon returned to Helikon |
+| `returned_home` | Alkmaeon returned to Thespiae |
 | `mother_farewell` | Final conversation with mother |
 | `truth_revealed` | Learned he is the fourth Shard |
 | `corrupted_remnant_defeated` | Beat the chapter boss |

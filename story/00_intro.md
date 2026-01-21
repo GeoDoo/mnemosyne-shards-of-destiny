@@ -1,6 +1,6 @@
 # Prologue: The Chorus of Ruin
 
-> *The opening sequence that establishes the mythic backstory and introduces the player to Helikon.*
+> *The opening sequence that establishes the mythic backstory and introduces the player to Thespiae.*
 
 ---
 
@@ -119,7 +119,7 @@
 ## Scene 0.2: The Village Awakens
 
 **Type**: Gameplay introduction  
-**Location**: Helikon — Alkmaeon's home  
+**Location**: Thespiae — Alkmaeon's home  
 **Time**: Early morning  
 **Audio**: Birdsong, distant sheep bells, peaceful village ambience
 
@@ -129,7 +129,7 @@
 
 *[Fade from white to interior of a small stone house]*
 
-> In a quiet mountain village called Helikon...
+> In a quiet mountain village called Thespiae...
 
 > A boy grows up among shepherds and farmers.
 
@@ -193,10 +193,10 @@
 
 ---
 
-## Scene 0.3: Helikon
+## Scene 0.3: Thespiae
 
 **Type**: Exploration (tutorial)  
-**Location**: Helikon — Exterior  
+**Location**: Thespiae — Exterior  
 **Time**: Morning  
 **Objectives**: 
 - Learn movement controls
@@ -209,7 +209,7 @@
 
 *[First time entering village square]*
 
-> Helikon. Home.
+> Thespiae. Home.
 
 > Stone houses cluster around a central square. A well. A small shrine to the gods.
 
@@ -474,7 +474,7 @@
 
 **View of the Valley:**
 > *From here, you can see the whole valley.*
-> *Helikon. The river. The distant mountains.*
+> *Thespiae. The river. The distant mountains.*
 > *It looks so small. So fragile.*
 
 ---
@@ -620,7 +620,7 @@
 ## Scene 0.9: The Red Moon Rises
 
 **Type**: Cinematic / Story event  
-**Location**: Helikon — Evening  
+**Location**: Thespiae — Evening  
 **Trigger**: Player returns to village after first temple visit  
 **Audio**: Ominous drone, villagers murmuring
 

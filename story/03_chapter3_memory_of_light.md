@@ -885,17 +885,17 @@
 > *A shadow lingers there — smaller than the others. Waiting.*
 
 **Brasidas:**
-> "Korinna."
+> "Arete."
 
 > *The shadow shifts — and a woman's face appears. Sad. Grateful.*
 
-**Korinna's Spirit:**
-> "Cas... you came back."
+**Arete's Spirit:**
+> "My husband... you came back."
 
 **Brasidas:**
 > "I told you I would."
 
-**Korinna's Spirit:**
+**Arete's Spirit:**
 > "The darkness... is gone. I can rest now."
 
 > "Find what you're looking for, Cas. Don't let the shadows take you too."
@@ -993,7 +993,7 @@
 > "That's my specialty."
 
 **Option C: "What changed your mind?"**
-> **Brasidas:** "Korinna. Seeing her free."
+> **Brasidas:** "Arete. Seeing her free."
 > "And... that vision. I didn't see it, but I felt something."
 > "The light, pushing back the dark."
 > "Maybe there's more to life than surviving."
@@ -1092,6 +1092,6 @@ This chapter establishes the dungeon formula for Act III:
 - **Dungeon** with multiple wings, puzzles, and mini-bosses
 - **Major boss** tied to the Shard's theme
 - **Vision sequence** revealing cosmic truth
-- **Character development** (Brasidas's closure with Korinna)
+- **Character development** (Brasidas's closure with Arete)
 
 Brasidas's arc shows that even "selfish" characters can find meaning in the quest.

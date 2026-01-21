@@ -29,7 +29,7 @@ story/
 | Act | Title | Game Mapping |
 |-----|-------|--------------|
 | **Prologue** | The Chorus of Ruin | Opening cinematic |
-| **Act I** | The Boy and the Ruins | Chapter 1: Helikon + Delphi |
+| **Act I** | The Boy and the Ruins | Chapter 1: Thespiae + Delphi |
 | **Act II** | The Call of Memory | Chapter 2: Lebadeia |
 | **Act III** | The Trial of the Shards | Chapters 3-5: Delos, Necromanteion, Olympus |
 | **Act IV** | The Revelation | Chapter 6: Return to Delphi |
@@ -41,7 +41,7 @@ story/
 
 | Character | Class | Background |
 |-----------|-------|------------|
-| **Alkmaeon** | Memory Seeker | Protagonist from Helikon village; his name means "mighty in wrath" |
+| **Alkmaeon** | Memory Seeker | Protagonist from Thespiae village; his name means "mighty in wrath" |
 | **Theano** | Priestess of Demeter | Healer trained at the sanctuary of Demeter; joins in Chapter 1 |
 | **Brasidas** | Spartan Warrior | Bold Spartan general seeking redemption; joins in Chapter 3 |
 
@@ -51,7 +51,7 @@ story/
 
 | Location | Chapter | Mythological Significance |
 |----------|---------|---------------------------|
-| **Helikon** (Mount Helicon, Boeotia) | Start | Sacred to the Muses, daughters of Mnemosyne |
+| **Thespiae** (Boeotia, foot of Mt. Helicon) | Start | Ancient city sacred to Eros; near the Muses' mountain |
 | **Delphi** | Ch 1, 6, 7 | Apollo's sanctuary, home of the Pythia |
 | **Lebadeia** | Ch 2 | Oracle of Trophonios; springs of Lethe and Mnemosyne |
 | **Delos** | Ch 3 | Sacred island, Apollo's birthplace |
@@ -81,7 +81,7 @@ story/
 | **Epimenides** | Wise Elder | Cretan mystic who slept 57 years and gained prophecy |
 | **Kleio** | Village woman | Named after the Muse of History |
 | **Damon** | Village boy | Childhood acquaintance |
-| **Korinna** | Brasidas's partner (spirit) | Ancient Greek poetess from Boeotia |
+| **Arete** | Brasidas's wife (spirit) | Spartan woman who died while Brasidas was away at war; her spirit is trapped at Delos |
 
 ---
 

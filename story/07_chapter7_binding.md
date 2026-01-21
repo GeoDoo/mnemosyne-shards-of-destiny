@@ -111,7 +111,7 @@
 **Alkmaeon:**
 > "Remember me. Not what I become. Who I was."
 
-> "Alkmaeon. The boy from Helikon."
+> "Alkmaeon. The boy from Thespiae."
 
 > "Remember that he existed. That he mattered."
 
@@ -332,7 +332,7 @@
 
 *[The Red Moon sets. The sun rises. The world is saved.]*
 
-> Dawn breaks over Helikon.
+> Dawn breaks over Thespiae.
 
 > The first dawn of a world reborn.
 
@@ -706,7 +706,7 @@
 ## Scene 7.4B: Remaining Human (Epilogue - Defiance)
 
 **Type**: Epilogue  
-**Location**: Helikon — days later  
+**Location**: Thespiae — days later  
 **Audio**: Warm, human, hopeful
 
 ---

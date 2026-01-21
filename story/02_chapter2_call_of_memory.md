@@ -10,7 +10,7 @@
 ## Scene 2.1: The Northern Road
 
 **Type**: Travel / Exploration  
-**Location**: Mountain paths north of Helikon Village  
+**Location**: Mountain paths north of Thespiae Village  
 **Time**: Morning  
 **Audio**: Mountain wind, footsteps on stone, birds of prey circling
 
@@ -24,7 +24,7 @@
 
 > It winds through rocky outcrops and stunted pines, climbing ever higher.
 
-> Behind you, Helikon Village shrinks to a cluster of tiny rooftops.
+> Behind you, Thespiae Village shrinks to a cluster of tiny rooftops.
 
 > Ahead, the mountains rise like a wall against the sky.
 
