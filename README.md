@@ -1,16 +1,18 @@
 # Mnemosyne: Shards of Destiny
 
-A turn-based RPG built with Godot 4, where a young hero uncovers divine memories at an ancient Temple of Apollo.
+A turn-based JRPG built with Godot 4, set in ancient Greece where a young hero uncovers divine memories and faces monsters from authentic Greek mythology.
 
 ## Story
 
-*In a humble village nestled beneath starlit mountains, a young boy's destiny begins to stir the moment he steps among the shattered pillars of an ancient Temple of Apollo. As he walks through the silent ruins, radiant yet unsettling flashes of a forgotten past blaze across his mind — visions that feel both alien and unmistakably his own. With each return to the sacred site, the memories burn brighter, as if the stones themselves are awakening to call him. High above, a rare Red Moon swells in the heavens — or perhaps a celestial alignment foretold by the secretive teachings of the Orphics begins to take shape — and with it, the visions surge with divine intensity. Compelled by a force greater than fear, the boy feels a heroic summons rising in his heart, drawing him beyond his village and into a world of gods, mysteries, and ancient truths that he must uncover to understand his place in the unfolding fate of the cosmos.*
+*In the village of Thespiae, at the foot of Mount Helicon, a young man named Alkmaeon begins to experience visions — fragments of divine memory that blaze across his mind whenever he visits the nearby ruins of a Temple of Apollo. As the Red Moon rises and Typhon stirs beneath the earth, Alkmaeon must journey across Greece to recover the scattered Shards of Destiny before the Father of Monsters breaks free and plunges the world into chaos.*
+
+*Guided by Hecate at the crossroads and haunted by echoes of Mnemosyne, he will travel from Delphi to Delos, from the springs of Lebadeia to the Necromanteion at the Acheron River — the very entrance to the underworld.*
 
 ## Features
 
 ### MVP Scope
 - **Turn-based Party Combat**: Classic JRPG-style battles with up to 3 party members
-- **Exploration**: Top-down exploration of the village and Temple of Apollo ruins
+- **Exploration**: Top-down exploration of authentic Greek locations
 - **Skill System**: Learn and upgrade abilities through leveling and story progression
 - **Vision Sequences**: Experience divine memories that reveal the story
 - **Mobile-First**: Touch controls with virtual joystick support
@@ -23,9 +25,34 @@ A turn-based RPG built with Godot 4, where a young hero uncovers divine memories
 - XP and leveling progression
 
 ### Characters
-- **Alkmaeon** - Memory Seeker (protagonist) — "mighty in wrath", a name heavy with tragic fate
-- **Theano** - Priestess of Demeter (healer)
-- **Brasidas** - Spartan Warrior (damage dealer)
+
+| Character | Class | Description |
+|-----------|-------|-------------|
+| **Alkmaeon** | Memory Seeker | Protagonist from Thespiae; "mighty in wrath" |
+| **Theano** | Priestess of Demeter | Healer trained at Demeter's sanctuary |
+| **Brasidas** | Spartan Warrior | Bold general seeking redemption |
+
+### Locations (Real Greek Sites)
+
+| Location | Significance |
+|----------|--------------|
+| **Thespiae** | Starting village at foot of Mount Helicon |
+| **Delphi** | Apollo's sanctuary, home of the Pythia |
+| **Lebadeia** | Springs of Lethe and Mnemosyne |
+| **Delos** | Sacred island, Apollo's birthplace |
+| **Necromanteion** | Oracle of the Dead at Acheron River |
+| **Mount Olympus** | Home of the gods |
+
+### Enemies (Greek Mythology)
+
+| Monster | Description |
+|---------|-------------|
+| **Empusa** | Shapeshifting vampire servant of Hecate |
+| **Lamia** | Child-devouring demon queen |
+| **Python** | Great serpent of Delphi |
+| **Melinoe** | Goddess of nightmares |
+| **Echidna** | Mother of Monsters |
+| **Typhon** | Father of Monsters, final boss |
 
 ## Getting Started
 
@@ -48,21 +75,27 @@ A turn-based RPG built with Godot 4, where a young hero uncovers divine memories
 
 ```
 mnemosyne-shards-of-destiny/
-├── assets/           # Sprites, audio, fonts
-├── data/             # JSON data files (skills, enemies, characters)
+├── assets/           # Sprites, portraits, audio
+│   ├── sprites/      # Character and enemy sprites
+│   └── portraits/    # Dialogue portraits (48x48)
+├── data/             # JSON data files
+│   ├── characters.json
+│   ├── enemies.json
+│   └── skills.json
 ├── scenes/           # Godot scene files (.tscn)
 │   ├── main/         # Main menu
 │   ├── exploration/  # Village, Temple
 │   ├── combat/       # Battle scene
-│   ├── ui/           # UI components
-│   └── characters/   # Player, NPC scenes
+│   └── ui/           # UI components
 ├── scripts/          # GDScript files
 │   ├── autoload/     # Singleton managers
 │   ├── combat/       # Battle system
 │   ├── exploration/  # Player, NPCs, interactions
-│   ├── data/         # Data classes
 │   └── ui/           # UI controllers
-└── project.godot     # Godot project file
+├── story/            # Narrative scripts (Markdown)
+│   ├── 00_intro.md through 07_chapter7_binding.md
+│   └── README.md     # Story bible
+└── project.godot
 ```
 
 ## Controls
@@ -102,7 +135,7 @@ mnemosyne-shards-of-destiny/
 - Additional party members
 
 ### Phase 5: Polish
-- Pixel art assets
+- Pixel art assets (in progress)
 - Sound effects and music
 - UI polish
 - Mobile optimization
