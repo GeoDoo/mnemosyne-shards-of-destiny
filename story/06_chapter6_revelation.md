@@ -104,7 +104,7 @@
 > "Whatever else you've become... you're still my son."
 
 **Option B: "I've been carrying something. For all of us."**
-> **Mother:** "I know. Elder Theron told me."
+> **Mother:** "I know. Epimenides told me."
 > "The Shards. The fate of the world."
 > "It should never have been your burden to bear."
 > "But you've borne it anyway. I'm so proud of you."
@@ -117,18 +117,18 @@
 
 ---
 
-### Elder Theron Awaits
+### Epimenides Awaits
 
 *[ELDER THERON approaches — grave but calm]*
 
-**Elder Theron:**
+**Epimenides:**
 > "Alkmaeon. You've returned. And you've gathered them all."
 
 > "I can feel the Shards. Light. Silence. Ruin."
 
 > "Three truths. Three fragments of cosmic memory."
 
-**Elder Theron:**
+**Epimenides:**
 > "But there is one more truth. The truth Hécate spoke of."
 
 > "It waits for you in the temple. In the inner sanctum."
@@ -138,14 +138,14 @@
 *[Player choice]*
 
 **Option A: "I'm ready."**
-> **Elder Theron:** "Courage. Good. You'll need it."
+> **Epimenides:** "Courage. Good. You'll need it."
 
 **Option B: "Do I have a choice?"**
-> **Elder Theron:** "There is always a choice. But sometimes..."
+> **Epimenides:** "There is always a choice. But sometimes..."
 > "The consequences of not choosing are worse."
 
 **Option C: "What do you know, Elder?"**
-> **Elder Theron:** "I know fragments. Hints. The old texts speak of a vessel."
+> **Epimenides:** "I know fragments. Hints. The old texts speak of a vessel."
 > "A mortal container for divine memory. Born to restore what was lost."
 > "I suspected when you were born. I was certain when the visions began."
 > "But the full truth... only the temple can show you that."

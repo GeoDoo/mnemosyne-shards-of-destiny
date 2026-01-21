@@ -784,7 +784,7 @@
 
 > Alkmaeon. Son of a dead father and a grieving mother.
 
-> A child from Aethon Village who wanted nothing more than a simple life.
+> A child from Thespiae who wanted nothing more than a simple life.
 
 > That boy is real too.
 
@@ -972,7 +972,7 @@
 
 > South. Back through the lands they've crossed.
 
-> Back to Aethon Village. Back to the Temple of Apollo.
+> Back to Thespiae. Back to the Temple of Apollo.
 
 > The three Shards pulse in unison.
 

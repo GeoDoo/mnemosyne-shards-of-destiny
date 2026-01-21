@@ -24,8 +24,8 @@ A turn-based RPG built with Godot 4, where a young hero uncovers divine memories
 
 ### Characters
 - **Alkmaeon** - Memory Seeker (protagonist) — "mighty in wrath", a name heavy with tragic fate
-- **Lyra** - Oracle Apprentice (healer)
-- **Castor** - Shadow Walker (damage dealer)
+- **Theano** - Priestess of Demeter (healer)
+- **Brasidas** - Spartan Warrior (damage dealer)
 
 ## Getting Started
 

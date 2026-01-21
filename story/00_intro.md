@@ -780,4 +780,4 @@
 
 ## Transitions
 
-**Next**: Chapter 1 — The Awakening (temple exploration, first combat, meet Lyra)
+**Next**: Chapter 1 — The Awakening (temple exploration, first combat, meet Theano)
