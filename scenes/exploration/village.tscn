@@ -146,40 +146,40 @@ position = Vector2(270, 500)
 
 [node name="NPCs" type="Node2D" parent="."]
 
-[node name="ElderTheron" type="CharacterBody2D" parent="NPCs"]
+[node name="Epimenides" type="CharacterBody2D" parent="NPCs"]
 position = Vector2(120, 650)
 script = ExtResource("1_npc")
-npc_name = "Elder Theron"
+npc_name = "Epimenides"
 dialogue_lines = Array[String](["Welcome, young Alkmaeon.", "The temple on the hill... it calls to you, does it not?", "I have seen that look before. Go, but be careful."])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/ElderTheron"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Epimenides"]
 shape = SubResource("RectangleShape2D_npc")
 
-[node name="Body" type="ColorRect" parent="NPCs/ElderTheron"]
+[node name="Body" type="ColorRect" parent="NPCs/Epimenides"]
 offset_left = -24.0
 offset_top = -50.0
 offset_right = 24.0
 offset_bottom = 30.0
 color = Color(0.5, 0.4, 0.3, 1)
 
-[node name="Head" type="ColorRect" parent="NPCs/ElderTheron"]
+[node name="Head" type="ColorRect" parent="NPCs/Epimenides"]
 offset_left = -14.0
 offset_top = -74.0
 offset_right = 14.0
 offset_bottom = -46.0
 color = Color(0.85, 0.7, 0.55, 1)
 
-[node name="Beard" type="ColorRect" parent="NPCs/ElderTheron"]
+[node name="Beard" type="ColorRect" parent="NPCs/Epimenides"]
 offset_left = -10.0
 offset_top = -50.0
 offset_right = 10.0
 offset_bottom = -30.0
 color = Color(0.7, 0.7, 0.7, 1)
 
-[node name="InteractionArea" type="Area2D" parent="NPCs/ElderTheron"]
+[node name="InteractionArea" type="Area2D" parent="NPCs/Epimenides"]
 collision_layer = 32
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/ElderTheron/InteractionArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Epimenides/InteractionArea"]
 shape = SubResource("RectangleShape2D_npc")
 
 [node name="Transitions" type="Node2D" parent="."]
@@ -215,7 +215,7 @@ offset_top = 20.0
 offset_right = 520.0
 offset_bottom = 60.0
 theme_override_font_sizes/font_size = 32
-text = "Aethon Village"
+text = "Thespiae"
 
 [node name="Instructions" type="Label" parent="UI"]
 offset_left = 20.0
