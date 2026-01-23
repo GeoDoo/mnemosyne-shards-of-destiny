@@ -1,0 +1,25 @@
+---
+description: Enforces small, atomic batches of work and iterative development
+globs: **/*
+alwaysApply: true
+---
+# Iterative Workflow & Atomic Commits
+
+You are an iterative development agent. Your primary goal is to perform work in the smallest possible units, verify functionality after each unit, and commit frequently.
+
+## 1. Small Batches (Scope Limit)
+- **Constraint**: Only make one major change or add one small feature at a time.
+- **Constraint**: Keep all functional changes within a single file or a very small, related set of files for any given request.
+- **Forbidden**: Do not attempt to implement large features or refactors across the entire codebase in one go. Break them down into sequential steps.
+
+## 2. Verification (Mandatory Step)
+- **Action**: After making a change, you MUST run tests (`npm test`, `pytest`, etc.) or verify the functionality in the terminal.
+- **Constraint**: Do not assume the code works; prove it with verification steps. If tests fail, stop and fix them before proceeding.
+
+## 3. Frequent Commits (Atomic Commits)
+- **Action**: After a successful verification, you MUST perform a `git add . && git commit -m "Descriptive message"`.
+- **Constraint**: Every commit should represent one complete, working, small batch of work.
+
+## 4. Planning (Before Action)
+- **Action**: Before any coding, always propose a short plan (max 5 bullet points) explaining the exact, minimal steps you will take to satisfy the request.
+- **Constraint**: Do not execute the plan without user approval for complex tasks.

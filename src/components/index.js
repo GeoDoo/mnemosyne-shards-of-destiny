@@ -26,7 +26,12 @@ export {
   createCypress, 
   createOlive, 
   createOak, 
-  createDeadTree 
+  createDeadTree,
+  Well,
+  WellPresets,
+  createVillageWell,
+  createSacredWell,
+  createRuinedWell
 } from './environment/index.js';
 
 // Entities

@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { House, HouseColors, Tree, NPC, Crate, Barrel, MarketStall } from '../components';
+import { House, HouseColors, Tree, NPC, Crate, Barrel, MarketStall, Well } from '../components';
 
 // Performance: Squared distance avoids expensive sqrt() in update loop
 const distSq = (x1, y1, x2, y2) => (x2 - x1) ** 2 + (y2 - y1) ** 2;
@@ -149,8 +149,14 @@ export default class VillageScene extends Phaser.Scene {
     // Temple entrance (north) - leads to battle
     this.createTempleEntrance(this.worldWidth/2, 80);
     
-    // Well in center
-    this.createWell(this.worldWidth/2, this.worldHeight/2);
+    // Well in center (using new component)
+    this.well = new Well(this, {
+      x: this.worldWidth/2,
+      y: this.worldHeight/2,
+      variant: 'village'
+    });
+    if (this.well.getCollider()) this.buildings.add(this.well.getCollider());
+    this.wellInteractable = this.well.getInteractable();
   }
 
   createTempleEntrance(x, y) {
@@ -235,65 +241,6 @@ export default class VillageScene extends Phaser.Scene {
     // Temple zone trigger
     this.templeZone = this.add.rectangle(x, y + 10, 50, 30, 0x000000, 0);
     this.physics.add.existing(this.templeZone, true);
-  }
-
-  createWell(x, y) {
-    const well = this.add.container(x, y);
-    
-    // Shadow
-    well.add(this.add.ellipse(3, 3, 55, 40, 0x000000, 0.3));
-    
-    // Stone base - Greek style circular well
-    well.add(this.add.circle(0, 0, 30, 0x888888)); // Outer stone
-    well.add(this.add.circle(0, 0, 27, 0x999999));
-    well.add(this.add.circle(0, 0, 22, 0x777777)); // Inner wall
-    well.add(this.add.circle(0, 0, 17, 0x1a2a3a)); // Water (dark)
-    well.add(this.add.circle(-4, -4, 5, 0x2a3a4a, 0.4)); // Water reflection
-    
-    // Stone rim details
-    const rimDetails = this.add.graphics();
-    rimDetails.lineStyle(2, 0x666666);
-    rimDetails.strokeCircle(0, 0, 28);
-    well.add(rimDetails);
-    
-    // Two stone pillars (Greek style)
-    well.add(this.add.rectangle(-22, -30, 8, 50, 0xaaaaaa));
-    well.add(this.add.rectangle(-22, -30, 6, 48, 0xbbbbbb));
-    well.add(this.add.rectangle(22, -30, 8, 50, 0xaaaaaa));
-    well.add(this.add.rectangle(22, -30, 6, 48, 0xbbbbbb));
-    
-    // Pillar capitals
-    well.add(this.add.rectangle(-22, -56, 12, 5, 0xcccccc));
-    well.add(this.add.rectangle(22, -56, 12, 5, 0xcccccc));
-    
-    // Cross beam (marble/stone)
-    well.add(this.add.rectangle(0, -60, 55, 6, 0xdddddd));
-    well.add(this.add.rectangle(0, -60, 52, 4, 0xeeeeee));
-    
-    // Bronze/terracotta pulley wheel
-    well.add(this.add.circle(0, -60, 8, 0x8b6b4a));
-    well.add(this.add.circle(0, -60, 5, 0x9b7b5a));
-    
-    // Rope
-    well.add(this.add.rectangle(0, -40, 2, 35, 0x8b7355));
-    
-    // Amphora-style bucket (Greek)
-    const bucket = this.add.graphics();
-    bucket.fillStyle(0xb86b4a); // Terracotta
-    bucket.fillEllipse(0, -18, 10, 14);
-    bucket.fillStyle(0xa05a3a);
-    bucket.fillRect(-1, -26, 2, 6); // Handle
-    well.add(bucket);
-    
-    // Collision
-    const collider = this.add.circle(x, y, 35, 0x000000, 0);
-    this.physics.add.existing(collider, true);
-    this.buildings.add(collider);
-    
-    this.wellInteractable = { x, y, name: 'Well', type: 'examine', dialogue: [
-      { speaker: '', text: 'A stone well built in the traditional Greek style.' },
-      { speaker: '', text: 'The cool water comes from deep underground springs.' }
-    ]};
   }
 
   createTrees() {
