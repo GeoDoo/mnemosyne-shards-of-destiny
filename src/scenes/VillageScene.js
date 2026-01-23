@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import House, { HouseColors } from '../assets/House.js';
 
 export default class VillageScene extends Phaser.Scene {
   constructor() {
@@ -41,7 +42,7 @@ export default class VillageScene extends Phaser.Scene {
 
     // Input
     this.cursors = this.input.keyboard.createCursorKeys();
-    this.keys = this.input.keyboard.addKeys('W,A,S,D,SPACE,B');
+    this.keys = this.input.keyboard.addKeys('W,A,S,D,SPACE,B,G');
 
     // State
     this.inDialogue = false;
@@ -69,75 +70,83 @@ export default class VillageScene extends Phaser.Scene {
 
   createBuildings() {
     this.buildings = this.physics.add.staticGroup();
+    this.houses = [];
 
-    // House 1 - Top left
-    this.createBuilding(300, 250, 200, 150, 0xd4c4a8, 'House');
+    // House 1 - Top left (Greek Villa style)
+    const house1 = new House(this, {
+      x: 300,
+      y: 250,
+      width: 200,
+      height: 150,
+      wallColor: HouseColors.wall.stone,
+      roofColor: HouseColors.roof.terracotta,
+      windows: [
+        { side: 'left', hasShutters: true, shutterColor: 0x4466aa },
+        { side: 'right', hasShutters: true, shutterColor: 0x4466aa }
+      ],
+      decorations: ['flowerPot'],
+      hasCollider: true
+    });
+    this.houses.push(house1);
+    if (house1.getCollider()) this.buildings.add(house1.getCollider());
     
-    // House 2 - Top right  
-    this.createBuilding(1700, 250, 180, 140, 0xc9b898, 'House');
+    // House 2 - Top right (Simple residence)
+    const house2 = new House(this, {
+      x: 1700,
+      y: 250,
+      width: 180,
+      height: 140,
+      wallColor: HouseColors.wall.stucco,
+      roofColor: HouseColors.roof.terracotta,
+      windows: [{ side: 'left' }, { side: 'right' }],
+      decorations: ['amphora'],
+      hasCollider: true
+    });
+    this.houses.push(house2);
+    if (house2.getCollider()) this.buildings.add(house2.getCollider());
     
-    // Shop - Left side
-    this.createBuilding(200, 700, 160, 120, 0xddd0b8, 'General Store');
+    // Shop - Left side (General Store)
+    const shop = new House(this, {
+      x: 200,
+      y: 700,
+      width: 160,
+      height: 120,
+      wallColor: HouseColors.wall.tan,
+      roofColor: HouseColors.roof.brown,
+      doorColor: HouseColors.door.oak,
+      trim: HouseColors.trim.gold,
+      windows: [{ side: 'right', hasShutters: true }],
+      decorations: ['amphora', 'flowerPot'],
+      hasCollider: true
+    });
+    this.houses.push(shop);
+    if (shop.getCollider()) this.buildings.add(shop.getCollider());
     
     // Tavern - Right side
-    this.createBuilding(1800, 700, 200, 150, 0xc4b4a0, 'Tavern');
+    const tavern = new House(this, {
+      x: 1800,
+      y: 700,
+      width: 200,
+      height: 150,
+      wallColor: HouseColors.wall.stucco,
+      roofColor: HouseColors.roof.brown,
+      doorColor: HouseColors.door.darkWood,
+      trim: 0x8b6914,
+      windows: [
+        { side: 'left', hasShutters: true, shutterColor: 0x6b4c38 },
+        { side: 'right', hasShutters: true, shutterColor: 0x6b4c38 }
+      ],
+      decorations: ['torch', 'hangingPlant'],
+      hasCollider: true
+    });
+    this.houses.push(tavern);
+    if (tavern.getCollider()) this.buildings.add(tavern.getCollider());
     
     // Temple entrance (north) - leads to battle
     this.createTempleEntrance(this.worldWidth/2, 80);
     
     // Well in center
     this.createWell(this.worldWidth/2, this.worldHeight/2);
-  }
-
-  createBuilding(x, y, w, h, color, name) {
-    // Shadow
-    this.add.rectangle(x + 4, y + 4, w, h, 0x000000, 0.3);
-    
-    // Main walls - cream stucco
-    this.add.rectangle(x, y, w, h, 0xe8e0d0);
-    this.add.rectangle(x, y, w - 4, h - 4, 0xf0e8d8);
-    
-    // Roof using Graphics for proper triangle
-    const roofW = w + 20;
-    const roofH = 40;
-    const wallTop = y - h/2;
-    
-    const roof = this.add.graphics();
-    
-    // Main roof - terracotta
-    roof.fillStyle(0xb85535);
-    roof.beginPath();
-    roof.moveTo(x - roofW/2, wallTop);           // bottom left
-    roof.lineTo(x, wallTop - roofH);             // peak
-    roof.lineTo(x + roofW/2, wallTop);           // bottom right
-    roof.closePath();
-    roof.fillPath();
-    
-    // Left side lighter (sun)
-    roof.fillStyle(0xc86545);
-    roof.beginPath();
-    roof.moveTo(x - roofW/2 + 3, wallTop - 2);
-    roof.lineTo(x, wallTop - roofH + 5);
-    roof.lineTo(x, wallTop - 2);
-    roof.closePath();
-    roof.fillPath();
-    
-    // Ridge cap
-    this.add.rectangle(x, wallTop - roofH + 4, 24, 8, 0x8b3520);
-    
-    // Door
-    this.add.rectangle(x, y + h/2 - 22, 22, 44, 0x5c4033);
-    this.add.rectangle(x, y + h/2 - 22, 18, 40, 0x6b4c3b);
-    this.add.circle(x + 6, y + h/2 - 22, 2, 0x8b7355);
-    
-    // Windows - small dark openings
-    this.add.rectangle(x - w/4, y - 5, 14, 18, 0x2a2a35);
-    this.add.rectangle(x + w/4, y - 5, 14, 18, 0x2a2a35);
-    
-    // Collision
-    const collider = this.add.rectangle(x, y, w + 10, h + 10, 0x000000, 0);
-    this.physics.add.existing(collider, true);
-    this.buildings.add(collider);
   }
 
   createTempleEntrance(x, y) {
@@ -316,7 +325,6 @@ export default class VillageScene extends Phaser.Scene {
     // Collision - create static body directly
     const collider = this.add.rectangle(x, y + 15, 30, 50, 0x000000, 0);
     this.physics.add.existing(collider, true);
-    collider.body.setImmovable(true);
     this.treeColliders.push(collider);
   }
 
@@ -712,6 +720,11 @@ export default class VillageScene extends Phaser.Scene {
     // B for temple shortcut
     if (Phaser.Input.Keyboard.JustDown(this.keys.B)) {
       this.goToTemple();
+    }
+
+    // G for asset gallery (dev tool)
+    if (Phaser.Input.Keyboard.JustDown(this.keys.G)) {
+      this.scene.start('AssetGalleryScene');
     }
 
     // Depth sort NPCs and player

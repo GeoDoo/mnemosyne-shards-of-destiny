@@ -3,6 +3,7 @@ import BootScene from './scenes/BootScene.js';
 import MainMenuScene from './scenes/MainMenuScene.js';
 import VillageScene from './scenes/VillageScene.js';
 import BattleScene from './scenes/BattleScene.js';
+import AssetGalleryScene from './scenes/AssetGalleryScene.js';
 
 // Game configuration
 const config = {
@@ -22,7 +23,7 @@ const config = {
       debug: false
     }
   },
-  scene: [BootScene, MainMenuScene, VillageScene, BattleScene],
+  scene: [BootScene, MainMenuScene, VillageScene, BattleScene, AssetGalleryScene],
   pixelArt: true,
   roundPixels: true
 };

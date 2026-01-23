@@ -14,27 +14,28 @@ export default class MainMenuScene extends Phaser.Scene {
 
     // Menu panel
     const panelY = height * 0.6;
-    this.add.rectangle(width / 2, panelY + 20, 280, 200, 0x000000, 0.7)
+    this.add.rectangle(width / 2, panelY + 30, 280, 260, 0x000000, 0.7)
       .setStrokeStyle(2, 0xcccccc);
 
     // Buttons
     const buttons = [
-      { text: 'New Game', y: panelY - 30, action: () => this.startNewGame() },
-      { text: 'Continue', y: panelY + 25, action: () => this.continueGame(), disabled: !this.hasSave() },
-      { text: 'Settings', y: panelY + 80, action: () => {} }
+      { text: 'New Game', y: panelY - 50, action: () => this.startNewGame() },
+      { text: 'Continue', y: panelY, action: () => this.continueGame(), disabled: !this.hasSave() },
+      { text: 'Settings', y: panelY + 50, action: () => {} },
+      { text: 'Asset Gallery', y: panelY + 100, action: () => this.openGallery(), small: true }
     ];
 
-    buttons.forEach(({ text, y, action, disabled }) => {
+    buttons.forEach(({ text, y, action, disabled, small }) => {
       const btn = this.add.text(width / 2, y, text, {
-        fontSize: '24px',
-        fill: disabled ? '#555555' : '#ffffff',
+        fontSize: small ? '16px' : '24px',
+        fill: disabled ? '#555555' : (small ? '#888888' : '#ffffff'),
         fontFamily: 'Arial'
       }).setOrigin(0.5);
 
       if (!disabled) {
         btn.setInteractive({ useHandCursor: true });
         btn.on('pointerover', () => btn.setColor('#ffcc00'));
-        btn.on('pointerout', () => btn.setColor('#ffffff'));
+        btn.on('pointerout', () => btn.setColor(small ? '#888888' : '#ffffff'));
         btn.on('pointerdown', action);
       }
     });
@@ -84,5 +85,9 @@ export default class MainMenuScene extends Phaser.Scene {
         this.scene.start('VillageScene');
       });
     }
+  }
+
+  openGallery() {
+    this.scene.start('AssetGalleryScene');
   }
 }
