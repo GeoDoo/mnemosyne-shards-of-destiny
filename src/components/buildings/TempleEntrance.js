@@ -40,11 +40,12 @@ export default class TempleEntrance extends Component {
   
   constructor(scene, config = {}) {
     super(scene, config);
-    this._columnColliders = [];
-    this._triggerZone = null;
   }
   
   _build() {
+    // Initialize before use (can't set in constructor before super())
+    this._columnColliders = [];
+    this._triggerZone = null;
     const { variant } = this.config;
     const preset = TempleEntrancePresets[variant] || TempleEntrancePresets.apollo;
     
