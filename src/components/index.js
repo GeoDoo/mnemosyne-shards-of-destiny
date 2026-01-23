@@ -16,7 +16,12 @@ export {
   createInn, 
   createShop, 
   createSmith, 
-  createTemple 
+  createTemple,
+  TempleEntrance,
+  TempleEntrancePresets,
+  createApolloEntrance,
+  createMnemosyneEntrance,
+  createHecateEntrance
 } from './buildings/index.js';
 
 // Environment
