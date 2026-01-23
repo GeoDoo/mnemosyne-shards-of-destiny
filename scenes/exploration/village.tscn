@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=8 format=3]
 
 [ext_resource type="Script" path="res://scripts/exploration/npc.gd" id="1_npc"]
 [ext_resource type="Script" path="res://scripts/exploration/scene_transition.gd" id="2_transition"]
 [ext_resource type="Script" path="res://scripts/exploration/player_controller.gd" id="3_player"]
 [ext_resource type="Script" path="res://scripts/ui/dialogue_box.gd" id="4_dialogue"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/party/alkmaeon/alkmaeon_spritesheet.png" id="5_player_sprite"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npcs/epimenides_spritesheet.png" id="6_npc_sprite"]
+[ext_resource type="Texture2D" path="res://assets/portraits/npcs/epimenides_portrait.png" id="7_npc_portrait"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
 size = Vector2(28, 12)
@@ -107,26 +110,12 @@ script = ExtResource("3_player")
 position = Vector2(0, 20)
 shape = SubResource("RectangleShape2D_player")
 
-[node name="Body" type="ColorRect" parent="Player"]
-offset_left = -20.0
-offset_top = -40.0
-offset_right = 20.0
-offset_bottom = 24.0
-color = Color(0.3, 0.45, 0.7, 1)
-
-[node name="Head" type="ColorRect" parent="Player"]
-offset_left = -12.0
-offset_top = -60.0
-offset_right = 12.0
-offset_bottom = -36.0
-color = Color(0.9, 0.75, 0.6, 1)
-
-[node name="Hair" type="ColorRect" parent="Player"]
-offset_left = -14.0
-offset_top = -68.0
-offset_right = 14.0
-offset_bottom = -55.0
-color = Color(0.25, 0.2, 0.15, 1)
+[node name="Sprite" type="Sprite2D" parent="Player"]
+texture = ExtResource("5_player_sprite")
+hframes = 4
+vframes = 5
+frame = 0
+scale = Vector2(2, 2)
 
 [node name="InteractionArea" type="Area2D" parent="Player"]
 collision_layer = 0
@@ -150,31 +139,18 @@ position = Vector2(270, 500)
 position = Vector2(120, 650)
 script = ExtResource("1_npc")
 npc_name = "Epimenides"
+portrait_texture = ExtResource("7_npc_portrait")
 dialogue_lines = Array[String](["Welcome, young Alkmaeon.", "The temple on the hill... it calls to you, does it not?", "I have seen that look before. Go, but be careful."])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Epimenides"]
 shape = SubResource("RectangleShape2D_npc")
 
-[node name="Body" type="ColorRect" parent="NPCs/Epimenides"]
-offset_left = -24.0
-offset_top = -50.0
-offset_right = 24.0
-offset_bottom = 30.0
-color = Color(0.5, 0.4, 0.3, 1)
-
-[node name="Head" type="ColorRect" parent="NPCs/Epimenides"]
-offset_left = -14.0
-offset_top = -74.0
-offset_right = 14.0
-offset_bottom = -46.0
-color = Color(0.85, 0.7, 0.55, 1)
-
-[node name="Beard" type="ColorRect" parent="NPCs/Epimenides"]
-offset_left = -10.0
-offset_top = -50.0
-offset_right = 10.0
-offset_bottom = -30.0
-color = Color(0.7, 0.7, 0.7, 1)
+[node name="Sprite" type="Sprite2D" parent="NPCs/Epimenides"]
+texture = ExtResource("6_npc_sprite")
+hframes = 4
+vframes = 5
+frame = 0
+scale = Vector2(2, 2)
 
 [node name="InteractionArea" type="Area2D" parent="NPCs/Epimenides"]
 collision_layer = 32
@@ -248,12 +224,22 @@ offset_top = 10.0
 offset_right = -20.0
 offset_bottom = -10.0
 
+[node name="Portrait" type="TextureRect" parent="UI/DialogueBox/Panel"]
+visible = false
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 95.0
+offset_bottom = 95.0
+expand_mode = 1
+stretch_mode = 5
+
 [node name="MarginContainer" type="MarginContainer" parent="UI/DialogueBox/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 20.0
+offset_left = 100.0
 offset_top = 15.0
 offset_right = -20.0
 offset_bottom = -15.0

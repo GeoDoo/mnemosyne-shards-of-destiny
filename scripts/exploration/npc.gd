@@ -7,6 +7,7 @@ signal dialogue_ended
 
 @export var npc_name: String = "Villager"
 @export var portrait_path: String = ""
+@export var portrait_texture: Texture2D = null
 @export var dialogue_lines: Array[String] = []
 @export var dialogue_after_flag: Array[String] = []  # Alternate dialogue after a flag is set
 @export var flag_for_alternate: String = ""
@@ -95,7 +96,11 @@ func _show_current_dialogue() -> void:
 	
 	var dialogue_box = get_tree().get_first_node_in_group("dialogue_box")
 	if dialogue_box:
-		dialogue_box.show_dialogue(npc_name, lines[current_dialogue_index], portrait_path)
+		# Use texture if available, otherwise fall back to path
+		if portrait_texture:
+			dialogue_box.show_dialogue_with_texture(npc_name, lines[current_dialogue_index], portrait_texture)
+		else:
+			dialogue_box.show_dialogue(npc_name, lines[current_dialogue_index], portrait_path)
 
 
 func _get_current_dialogue_lines() -> Array[String]:

@@ -96,6 +96,35 @@ func show_dialogue(speaker_name: String, text: String, portrait_path: String = "
 		continue_indicator.hide()
 
 
+## Show dialogue with a pre-loaded texture
+func show_dialogue_with_texture(speaker_name: String, text: String, texture: Texture2D, auto_continue: bool = false) -> void:
+	show()
+	_auto_continue = auto_continue
+	
+	if name_label:
+		name_label.text = speaker_name
+		name_label.visible = speaker_name != ""
+	
+	current_text = text
+	
+	if text_label:
+		text_label.text = text
+		text_label.visible_characters = 0
+	
+	displayed_characters = 0
+	
+	# Use provided texture directly
+	if texture and portrait:
+		portrait.texture = texture
+		portrait.show()
+	elif portrait:
+		portrait.hide()
+	
+	is_typing = true
+	if continue_indicator:
+		continue_indicator.hide()
+
+
 ## Show dialogue without speaker (narration)
 ## Set auto_continue=true to automatically emit line_finished when typing completes
 func show_narration(text: String, auto_continue: bool = false) -> void:
