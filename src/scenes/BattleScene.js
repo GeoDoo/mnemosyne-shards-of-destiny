@@ -3,26 +3,12 @@ import Phaser from 'phaser';
 export default class BattleScene extends Phaser.Scene {
   constructor() {
     super({ key: 'BattleScene' });
-    
-    this.battleState = 'INACTIVE'; // INACTIVE, PLAYER_TURN, ENEMY_TURN, EXECUTING, VICTORY, DEFEAT
-    this.party = [];
-    this.enemies = [];
-    this.turnOrder = [];
-    this.currentTurnIndex = 0;
-    this.selectedAction = null;
-    this.selectedTarget = null;
-    
-    // UI elements
-    this.commandMenu = null;
-    this.partyStatus = null;
-    this.turnIndicator = null;
   }
 
   init(data) {
-    // Receive battle data (enemies, background, etc.)
     this.battleData = data || {
-      enemies: [{ id: 'eidolon', name: 'Eidolon', hp: 35, maxHp: 35, attack: 8, defense: 4, speed: 9 }],
-      background: 'bg_village'
+      enemies: [{ id: 'eidolon', name: 'Eidolon', hp: 50, maxHp: 50, attack: 12, defense: 5 }],
+      background: 'bg_temple'
     };
   }
 
@@ -30,555 +16,256 @@ export default class BattleScene extends Phaser.Scene {
     const { width, height } = this.cameras.main;
 
     // Background
-    const bgKey = this.battleData.background || 'bg_village';
-    if (this.textures.exists(bgKey)) {
-      const bg = this.add.image(width / 2, height / 2, bgKey);
-      bg.setDisplaySize(width, height);
+    if (this.textures.exists(this.battleData.background)) {
+      this.add.image(width / 2, height / 2, this.battleData.background).setDisplaySize(width, height);
     } else {
-      this.add.rectangle(width / 2, height / 2, width, height, 0x2a2a4a);
+      this.add.rectangle(width / 2, height / 2, width, height, 0x2a3344);
     }
 
-    // Initialize party from game state
-    this.initializeParty();
+    // Darken bottom for UI
+    this.add.rectangle(width / 2, height - 90, width, 180, 0x000000, 0.7);
 
-    // Initialize enemies
-    this.initializeEnemies();
+    // Get party
+    const gameState = this.registry.get('gameState');
+    this.party = gameState.party.map(m => ({ ...m, isDefending: false }));
+    this.enemies = this.battleData.enemies.map(e => ({ ...e }));
 
-    // Create combatant displays
-    this.createCombatantDisplays();
+    // Create combatants
+    this.createCombatants(width, height);
 
     // Create UI
-    this.createBattleUI();
+    this.createUI(width, height);
 
-    // Calculate turn order and start battle
-    this.calculateTurnOrder();
-    this.battleState = 'STARTING';
+    // State
+    this.battleState = 'PLAYER_TURN';
+
+    this.cameras.main.fadeIn(300);
     
-    // Short delay then start first turn
-    this.time.delayedCall(500, () => this.startNextTurn());
-
-    // Fade in
-    this.cameras.main.fadeIn(300, 0, 0, 0);
+    // Battle intro sequence
+    this.showMessage('An Eidolon appears!');
+    this.time.delayedCall(1500, () => {
+      this.showMessage('A spirit of the forgotten...');
+      this.time.delayedCall(1500, () => {
+        this.messageBox.setVisible(false);
+        this.commandMenu.setVisible(true);
+      });
+    });
   }
 
-  initializeParty() {
-    const gameState = this.registry.get('gameState');
-    this.party = gameState.party.map(member => ({
-      ...member,
-      isEnemy: false,
-      isDefending: false
-    }));
-  }
-
-  initializeEnemies() {
-    this.enemies = this.battleData.enemies.map((enemy, index) => ({
-      id: enemy.id,
-      name: enemy.name,
-      hp: enemy.hp || enemy.maxHp,
-      maxHp: enemy.maxHp,
-      attack: enemy.attack,
-      defense: enemy.defense,
-      magic: enemy.magic || 5,
-      speed: enemy.speed,
-      skills: enemy.skills || ['basic_attack'],
-      isEnemy: true,
-      index: index
-    }));
-  }
-
-  createCombatantDisplays() {
-    const { width, height } = this.cameras.main;
-
-    // Enemy positions (top area)
-    this.enemySprites = [];
-    const enemyStartX = width / 2 - ((this.enemies.length - 1) * 80);
+  createCombatants(width, height) {
+    // Player - left side
+    const px = width * 0.25;
+    const py = height * 0.45;
     
-    this.enemies.forEach((enemy, i) => {
-      const x = enemyStartX + i * 160;
-      const y = 250;
+    this.party[0].sprite = this.add.container(px, py);
+    const pShadow = this.add.ellipse(0, 30, 35, 12, 0x000000, 0.4);
+    const pBody = this.add.graphics();
+    pBody.fillStyle(0x3355aa);
+    pBody.fillRoundedRect(-15, -10, 30, 45, 6);
+    const pHead = this.add.graphics();
+    pHead.fillStyle(0xddb896);
+    pHead.fillCircle(0, -28, 14);
+    const pHair = this.add.graphics();
+    pHair.fillStyle(0x4a3728);
+    pHair.fillEllipse(0, -38, 20, 10);
+    this.party[0].sprite.add([pShadow, pBody, pHead, pHair]);
+    this.party[0].baseX = px;
 
-      const container = this.add.container(x, y);
-      
-      // Enemy placeholder (red rectangle)
-      const sprite = this.add.rectangle(0, 0, 80, 80, 0xaa3333);
-      sprite.setStrokeStyle(2, 0xff5555);
-      container.add(sprite);
-
-      // Enemy name
-      const nameText = this.add.text(0, -60, enemy.name, {
-        fontSize: '16px',
-        fill: '#ffffff',
-        stroke: '#000000',
-        strokeThickness: 2
-      });
-      nameText.setOrigin(0.5);
-      container.add(nameText);
-
-      // HP bar background
-      const hpBg = this.add.rectangle(0, 55, 70, 10, 0x333333);
-      container.add(hpBg);
-
-      // HP bar
-      const hpBar = this.add.rectangle(-30, 55, 60, 8, 0x44aa44);
-      hpBar.setOrigin(0, 0.5);
-      container.add(hpBar);
-
-      container.enemyData = enemy;
-      container.hpBar = hpBar;
-      container.sprite = sprite;
-
-      // Make clickable for targeting
-      sprite.setInteractive({ useHandCursor: true });
-      sprite.on('pointerdown', () => this.selectTarget(enemy));
-
-      this.enemySprites.push(container);
-    });
-
-    // Party positions (bottom area)
-    this.partySprites = [];
-    const partyStartX = width / 2 - ((this.party.length - 1) * 70);
+    // Enemy - right side  
+    const ex = width * 0.72;
+    const ey = height * 0.38;
     
-    this.party.forEach((member, i) => {
-      const x = partyStartX + i * 140;
-      const y = height - 300;
+    this.enemies[0].sprite = this.add.container(ex, ey);
+    const eShadow = this.add.ellipse(0, 40, 45, 15, 0x000000, 0.4);
+    const eBody = this.add.graphics();
+    eBody.fillStyle(0x443366);
+    eBody.fillRoundedRect(-20, -15, 40, 60, 8);
+    const eHead = this.add.graphics();
+    eHead.fillStyle(0x554477);
+    eHead.fillCircle(0, -40, 18);
+    const eEye1 = this.add.circle(-7, -43, 4, 0xff3333);
+    const eEye2 = this.add.circle(7, -43, 4, 0xff3333);
+    this.enemies[0].sprite.add([eShadow, eBody, eHead, eEye1, eEye2]);
+    this.enemies[0].baseX = ex;
 
-      const container = this.add.container(x, y);
-      
-      // Party member placeholder (blue rectangle)
-      const sprite = this.add.rectangle(0, 0, 60, 80, 0x3366aa);
-      sprite.setStrokeStyle(2, 0x5588cc);
-      container.add(sprite);
-
-      // Name
-      const nameText = this.add.text(0, -55, member.name, {
-        fontSize: '14px',
-        fill: '#ffffff'
-      });
-      nameText.setOrigin(0.5);
-      container.add(nameText);
-
-      container.memberData = member;
-      container.sprite = sprite;
-
-      this.partySprites.push(container);
-    });
+    // Enemy HP bar
+    const enemy = this.enemies[0];
+    this.add.text(ex, ey - 85, enemy.name, { fontSize: '18px', fill: '#ffffff' }).setOrigin(0.5);
+    this.add.rectangle(ex, ey - 65, 82, 14, 0x333333).setStrokeStyle(1, 0x666666);
+    enemy.hpBar = this.add.rectangle(ex - 38, ey - 65, 76, 10, 0xcc3333).setOrigin(0, 0.5);
   }
 
-  createBattleUI() {
-    const { width, height } = this.cameras.main;
-
-    // Turn indicator
-    this.turnIndicator = this.add.text(width / 2, 50, '', {
-      fontSize: '24px',
-      fill: '#ffffff',
-      stroke: '#000000',
-      strokeThickness: 3
-    });
-    this.turnIndicator.setOrigin(0.5);
-
-    // Party status panel
-    this.createPartyStatusPanel(width, height);
-
-    // Command menu (hidden initially)
-    this.createCommandMenu(width, height);
-
-    // Target selection hint
-    this.targetHint = this.add.text(width / 2, 180, 'Select a target', {
-      fontSize: '20px',
-      fill: '#ffdd44',
-      stroke: '#000000',
-      strokeThickness: 2
-    });
-    this.targetHint.setOrigin(0.5);
-    this.targetHint.setVisible(false);
-  }
-
-  createPartyStatusPanel(width, height) {
-    const panelY = height - 150;
+  createUI(width, height) {
+    // Party status
+    const member = this.party[0];
+    this.add.text(30, height - 160, member.name, { fontSize: '20px', fill: '#ffffff' });
     
-    // Background
-    this.add.rectangle(width / 2, panelY + 50, width - 20, 120, 0x1a1a2e, 0.9)
-      .setStrokeStyle(2, 0x4a4a6a);
+    // HP bar
+    this.add.text(30, height - 130, 'HP', { fontSize: '14px', fill: '#888888' });
+    this.add.rectangle(110, height - 123, 102, 16, 0x333333).setStrokeStyle(1, 0x555555);
+    this.hpFill = this.add.rectangle(60, height - 123, 100 * (member.hp / member.maxHp), 12, 0x44aa44).setOrigin(0, 0.5);
+    this.hpText = this.add.text(170, height - 130, `${member.hp}/${member.maxHp}`, { fontSize: '14px', fill: '#88ff88' });
 
-    // Party member stats
-    this.partyStatusTexts = [];
-    this.party.forEach((member, i) => {
-      const x = 30 + i * 170;
-      const y = panelY + 20;
+    // MP bar
+    this.add.text(30, height - 100, 'MP', { fontSize: '14px', fill: '#888888' });
+    this.add.rectangle(110, height - 93, 102, 16, 0x333333).setStrokeStyle(1, 0x555555);
+    this.mpFill = this.add.rectangle(60, height - 93, 100 * (member.mp / member.maxMp), 12, 0x4466cc).setOrigin(0, 0.5);
+    this.mpText = this.add.text(170, height - 100, `${member.mp}/${member.maxMp}`, { fontSize: '14px', fill: '#88aaff' });
 
-      const nameText = this.add.text(x, y, member.name, {
-        fontSize: '16px',
-        fill: '#d4af37',
-        fontStyle: 'bold'
-      });
+    // Command menu
+    this.commandMenu = this.add.container(width - 110, height - 115).setVisible(false);
+    const menuBg = this.add.rectangle(0, 0, 160, 150, 0x111111, 0.9).setStrokeStyle(1, 0x666666);
+    this.commandMenu.add(menuBg);
 
-      const hpText = this.add.text(x, y + 25, `HP: ${member.hp}/${member.maxHp}`, {
-        fontSize: '14px',
-        fill: '#55cc55'
-      });
-
-      const mpText = this.add.text(x, y + 45, `MP: ${member.mp}/${member.maxMp}`, {
-        fontSize: '14px',
-        fill: '#5588ff'
-      });
-
-      this.partyStatusTexts.push({ name: nameText, hp: hpText, mp: mpText, member });
-    });
-  }
-
-  createCommandMenu(width, height) {
-    this.commandMenu = this.add.container(width - 130, height - 280);
-    this.commandMenu.setVisible(false);
-
-    // Background
-    const bg = this.add.rectangle(0, 0, 200, 200, 0x1a1a2e, 0.95);
-    bg.setStrokeStyle(2, 0xd4af37);
-    this.commandMenu.add(bg);
-
-    // Command buttons
-    const commands = ['Attack', 'Skills', 'Defend', 'Items'];
-    commands.forEach((cmd, i) => {
-      const btn = this.createCommandButton(0, -60 + i * 45, cmd);
+    ['Attack', 'Skill', 'Defend', 'Flee'].forEach((cmd, i) => {
+      const btn = this.add.text(0, -55 + i * 35, cmd, { fontSize: '18px', fill: '#cccccc' }).setOrigin(0.5);
+      btn.setInteractive({ useHandCursor: true });
+      btn.on('pointerover', () => btn.setColor('#ffcc00'));
+      btn.on('pointerout', () => btn.setColor('#cccccc'));
+      btn.on('pointerdown', () => this.doAction(cmd.toLowerCase()));
       this.commandMenu.add(btn);
     });
+
+    // Message box
+    this.messageBox = this.add.container(width / 2, height / 2 - 50).setVisible(false);
+    const msgBg = this.add.rectangle(0, 0, 300, 60, 0x000000, 0.85).setStrokeStyle(1, 0x888888);
+    this.messageText = this.add.text(0, 0, '', { fontSize: '24px', fill: '#ffffff' }).setOrigin(0.5);
+    this.messageBox.add([msgBg, this.messageText]);
   }
 
-  createCommandButton(x, y, text) {
-    const container = this.add.container(x, y);
-
-    const bg = this.add.rectangle(0, 0, 160, 40, 0x2a2a4a);
-    bg.setStrokeStyle(1, 0x5a5a7a);
-    bg.setInteractive({ useHandCursor: true });
-
-    const label = this.add.text(0, 0, text, {
-      fontSize: '18px',
-      fill: '#ffffff'
-    });
-    label.setOrigin(0.5);
-
-    container.add([bg, label]);
-
-    // Hover effect
-    bg.on('pointerover', () => {
-      bg.setFillStyle(0x3a3a5a);
-    });
-    bg.on('pointerout', () => {
-      bg.setFillStyle(0x2a2a4a);
-    });
-
-    // Click handler
-    bg.on('pointerdown', () => {
-      this.handleCommand(text);
-    });
-
-    return container;
+  showMessage(text) {
+    this.messageText.setText(text);
+    this.messageBox.setVisible(true);
   }
 
-  calculateTurnOrder() {
-    const allCombatants = [...this.party, ...this.enemies];
-    this.turnOrder = allCombatants
-      .filter(c => c.hp > 0)
-      .sort((a, b) => b.speed - a.speed);
-    this.currentTurnIndex = 0;
-  }
-
-  startNextTurn() {
-    // Check for battle end
-    if (this.checkBattleEnd()) return;
-
-    // Recalculate turn order if needed
-    this.turnOrder = this.turnOrder.filter(c => c.hp > 0);
-    
-    if (this.currentTurnIndex >= this.turnOrder.length) {
-      this.currentTurnIndex = 0;
-    }
-
-    const current = this.turnOrder[this.currentTurnIndex];
-    this.turnIndicator.setText(`${current.name}'s Turn`);
-
-    // Reset defending status
-    current.isDefending = false;
-
-    if (current.isEnemy) {
-      this.battleState = 'ENEMY_TURN';
-      this.commandMenu.setVisible(false);
-      // AI action after delay
-      this.time.delayedCall(800, () => this.executeEnemyTurn(current));
-    } else {
-      this.battleState = 'PLAYER_TURN';
-      this.commandMenu.setVisible(true);
-      this.selectedAction = null;
-      this.selectedTarget = null;
-      this.currentPartyMember = current;
-    }
-  }
-
-  handleCommand(command) {
-    switch (command) {
-      case 'Attack':
-        this.selectedAction = 'attack';
-        this.commandMenu.setVisible(false);
-        this.targetHint.setVisible(true);
-        break;
-      case 'Skills':
-        // TODO: Show skills menu
-        console.log('Skills not implemented');
-        break;
-      case 'Defend':
-        this.selectedAction = 'defend';
-        this.executePlayerAction();
-        break;
-      case 'Items':
-        // TODO: Show items menu
-        console.log('Items not implemented');
-        break;
-    }
-  }
-
-  selectTarget(target) {
-    if (this.battleState !== 'PLAYER_TURN' || !this.selectedAction) return;
-    if (this.selectedAction === 'defend') return;
-
-    this.selectedTarget = target;
-    this.targetHint.setVisible(false);
-    this.executePlayerAction();
-  }
-
-  executePlayerAction() {
+  doAction(action) {
+    if (this.battleState !== 'PLAYER_TURN') return;
     this.battleState = 'EXECUTING';
     this.commandMenu.setVisible(false);
 
-    const attacker = this.currentPartyMember;
+    const player = this.party[0];
+    const enemy = this.enemies[0];
 
-    if (this.selectedAction === 'attack' && this.selectedTarget) {
-      const damage = this.calculateDamage(attacker, this.selectedTarget);
-      this.applyDamage(this.selectedTarget, damage);
-      this.showDamageNumber(this.selectedTarget, damage);
-    } else if (this.selectedAction === 'defend') {
-      attacker.isDefending = true;
-      this.showStatusText(attacker, 'Defending!');
-    }
-
-    // Next turn after delay
-    this.time.delayedCall(800, () => {
-      this.currentTurnIndex++;
-      this.startNextTurn();
-    });
-  }
-
-  executeEnemyTurn(enemy) {
-    this.battleState = 'EXECUTING';
-
-    // Simple AI: attack random party member
-    const aliveParty = this.party.filter(m => m.hp > 0);
-    if (aliveParty.length === 0) return;
-
-    const target = Phaser.Utils.Array.GetRandom(aliveParty);
-    const damage = this.calculateDamage(enemy, target);
-    this.applyDamage(target, damage);
-    this.showDamageNumber(target, damage);
-
-    // Next turn after delay
-    this.time.delayedCall(800, () => {
-      this.currentTurnIndex++;
-      this.startNextTurn();
-    });
-  }
-
-  calculateDamage(attacker, defender) {
-    const baseDamage = attacker.attack;
-    const defense = defender.isDefending ? defender.defense * 2 : defender.defense;
-    const damage = Math.max(1, baseDamage - defense / 2);
-    const variance = 0.9 + Math.random() * 0.2;
-    return Math.floor(damage * variance);
-  }
-
-  applyDamage(target, damage) {
-    target.hp = Math.max(0, target.hp - damage);
-    this.updateDisplay(target);
-
-    // Check if defeated
-    if (target.hp <= 0) {
-      this.handleDefeat(target);
-    }
-  }
-
-  updateDisplay(combatant) {
-    if (combatant.isEnemy) {
-      const sprite = this.enemySprites.find(s => s.enemyData === combatant);
-      if (sprite) {
-        const hpPercent = combatant.hp / combatant.maxHp;
-        sprite.hpBar.setScale(hpPercent, 1);
+    if (action === 'attack') {
+      const dmg = Math.max(1, player.attack + Phaser.Math.Between(-2, 4) - Math.floor(enemy.defense / 2));
+      this.tweens.add({
+        targets: player.sprite,
+        x: player.sprite.x + 120,
+        duration: 100,
+        yoyo: true,
+        onYoyo: () => this.damageEnemy(enemy, dmg),
+        onComplete: () => this.afterPlayerTurn()
+      });
+    } else if (action === 'skill') {
+      if (player.mp < 10) {
+        this.showMessage('No MP!');
+        this.time.delayedCall(800, () => { this.messageBox.setVisible(false); this.battleState = 'PLAYER_TURN'; this.commandMenu.setVisible(true); });
+        return;
       }
-    } else {
-      const statusText = this.partyStatusTexts.find(s => s.member === combatant);
-      if (statusText) {
-        statusText.hp.setText(`HP: ${combatant.hp}/${combatant.maxHp}`);
+      player.mp -= 10;
+      const heal = Math.floor(player.magic * 2 + 15);
+      player.hp = Math.min(player.maxHp, player.hp + heal);
+      this.updatePlayerUI();
+      this.showDamage(player.sprite.x, player.sprite.y - 50, '+' + heal, '#44ff44');
+      this.showMessage('Healed!');
+      this.time.delayedCall(1000, () => this.afterPlayerTurn());
+    } else if (action === 'defend') {
+      player.isDefending = true;
+      this.showMessage('Defending');
+      this.time.delayedCall(800, () => this.afterPlayerTurn());
+    } else if (action === 'flee') {
+      if (Phaser.Math.Between(0, 1)) {
+        this.showMessage('Escaped!');
+        this.time.delayedCall(800, () => { this.cameras.main.fadeOut(300); this.cameras.main.once('camerafadeoutcomplete', () => this.scene.start('VillageScene')); });
+      } else {
+        this.showMessage('Failed!');
+        this.time.delayedCall(800, () => this.afterPlayerTurn());
       }
     }
   }
 
-  showDamageNumber(target, damage) {
-    const isEnemy = target.isEnemy;
-    let x, y;
-
-    if (isEnemy) {
-      const sprite = this.enemySprites.find(s => s.enemyData === target);
-      if (sprite) {
-        x = sprite.x;
-        y = sprite.y - 50;
-      }
-    } else {
-      const sprite = this.partySprites.find(s => s.memberData === target);
-      if (sprite) {
-        x = sprite.x;
-        y = sprite.y - 50;
-      }
-    }
-
-    const dmgText = this.add.text(x, y, `-${damage}`, {
-      fontSize: '28px',
-      fill: '#ff4444',
-      stroke: '#000000',
-      strokeThickness: 3
-    });
-    dmgText.setOrigin(0.5);
-
-    this.tweens.add({
-      targets: dmgText,
-      y: y - 40,
-      alpha: 0,
-      duration: 800,
-      onComplete: () => dmgText.destroy()
-    });
-  }
-
-  showStatusText(target, text) {
-    const sprite = this.partySprites.find(s => s.memberData === target);
-    if (!sprite) return;
-
-    const statusText = this.add.text(sprite.x, sprite.y - 50, text, {
-      fontSize: '20px',
-      fill: '#44aaff',
-      stroke: '#000000',
-      strokeThickness: 2
-    });
-    statusText.setOrigin(0.5);
-
-    this.tweens.add({
-      targets: statusText,
-      y: sprite.y - 80,
-      alpha: 0,
-      duration: 1000,
-      onComplete: () => statusText.destroy()
-    });
-  }
-
-  handleDefeat(combatant) {
-    if (combatant.isEnemy) {
-      const sprite = this.enemySprites.find(s => s.enemyData === combatant);
-      if (sprite) {
-        this.tweens.add({
-          targets: sprite,
-          alpha: 0,
-          duration: 500
-        });
-      }
-    } else {
-      const sprite = this.partySprites.find(s => s.memberData === combatant);
-      if (sprite) {
-        sprite.sprite.setFillStyle(0x666666);
-      }
+  damageEnemy(enemy, dmg) {
+    enemy.hp = Math.max(0, enemy.hp - dmg);
+    this.tweens.add({ targets: enemy.hpBar, scaleX: enemy.hp / enemy.maxHp, duration: 150 });
+    this.showDamage(enemy.sprite.x, enemy.sprite.y - 70, '-' + dmg, '#ffff44');
+    if (enemy.hp <= 0) {
+      this.tweens.add({ targets: enemy.sprite, alpha: 0, duration: 400 });
     }
   }
 
-  checkBattleEnd() {
-    const aliveParty = this.party.filter(m => m.hp > 0);
-    const aliveEnemies = this.enemies.filter(e => e.hp > 0);
-
-    if (aliveEnemies.length === 0) {
-      this.battleState = 'VICTORY';
-      this.showVictory();
-      return true;
-    }
-
-    if (aliveParty.length === 0) {
-      this.battleState = 'DEFEAT';
-      this.showDefeat();
-      return true;
-    }
-
-    return false;
+  updatePlayerUI() {
+    const p = this.party[0];
+    this.tweens.add({ targets: this.hpFill, width: 100 * (p.hp / p.maxHp), duration: 150 });
+    this.tweens.add({ targets: this.mpFill, width: 100 * (p.mp / p.maxMp), duration: 150 });
+    this.hpText.setText(`${p.hp}/${p.maxHp}`);
+    this.mpText.setText(`${p.mp}/${p.maxMp}`);
   }
 
-  showVictory() {
+  showDamage(x, y, text, color) {
+    const t = this.add.text(x, y, text, { fontSize: '28px', fill: color, stroke: '#000', strokeThickness: 3 }).setOrigin(0.5);
+    this.tweens.add({ targets: t, y: y - 30, alpha: 0, duration: 600, onComplete: () => t.destroy() });
+  }
+
+  afterPlayerTurn() {
+    this.messageBox.setVisible(false);
+    if (this.enemies[0].hp <= 0) { this.victory(); return; }
+    this.enemyTurn();
+  }
+
+  enemyTurn() {
+    this.battleState = 'ENEMY_TURN';
+    const enemy = this.enemies[0];
+    const player = this.party[0];
+
+    this.time.delayedCall(500, () => {
+      let dmg = Math.max(1, enemy.attack + Phaser.Math.Between(-2, 3) - Math.floor(player.defense / 2));
+      if (player.isDefending) { dmg = Math.floor(dmg / 2); player.isDefending = false; }
+
+      this.tweens.add({
+        targets: enemy.sprite,
+        x: enemy.sprite.x - 100,
+        duration: 100,
+        yoyo: true,
+        onYoyo: () => {
+          player.hp = Math.max(0, player.hp - dmg);
+          this.updatePlayerUI();
+          this.showDamage(player.sprite.x, player.sprite.y - 50, '-' + dmg, '#ff4444');
+        },
+        onComplete: () => {
+          if (player.hp <= 0) { this.defeat(); return; }
+          this.battleState = 'PLAYER_TURN';
+          this.commandMenu.setVisible(true);
+        }
+      });
+    });
+  }
+
+  victory() {
+    this.battleState = 'DONE';
     const { width, height } = this.cameras.main;
-
-    // Victory screen
-    const overlay = this.add.rectangle(width / 2, height / 2, width, height, 0x000000, 0.7);
-    
-    const victoryText = this.add.text(width / 2, height / 2 - 50, 'VICTORY!', {
-      fontSize: '48px',
-      fill: '#d4af37',
-      stroke: '#000000',
-      strokeThickness: 4
-    });
-    victoryText.setOrigin(0.5);
-
-    // Calculate rewards
-    const expGained = this.enemies.reduce((sum, e) => sum + (e.exp || 15), 0);
-    const goldGained = this.enemies.reduce((sum, e) => sum + (e.gold || 10), 0);
-
-    const rewardText = this.add.text(width / 2, height / 2 + 20, 
-      `EXP: +${expGained}\nGold: +${goldGained}`, {
-      fontSize: '24px',
-      fill: '#ffffff',
-      align: 'center'
-    });
-    rewardText.setOrigin(0.5);
-
-    // Continue button
-    const continueBtn = this.add.text(width / 2, height / 2 + 100, 'Continue', {
-      fontSize: '28px',
-      fill: '#ffffff',
-      backgroundColor: '#2a2a4a',
-      padding: { x: 30, y: 15 }
-    });
-    continueBtn.setOrigin(0.5);
-    continueBtn.setInteractive({ useHandCursor: true });
-    continueBtn.on('pointerdown', () => {
-      // Update game state
-      const gameState = this.registry.get('gameState');
-      gameState.currency += goldGained;
-      // TODO: Add exp to party members
-      
-      this.scene.start('VillageScene');
+    this.add.rectangle(width/2, height/2, width, height, 0x000000, 0.7);
+    this.add.text(width/2, height/2 - 40, 'VICTORY', { fontSize: '48px', fill: '#ffcc00' }).setOrigin(0.5);
+    const exp = this.battleData.enemies[0].exp || 20;
+    const gold = this.battleData.enemies[0].gold || 10;
+    this.add.text(width/2, height/2 + 10, `EXP +${exp}  Gold +${gold}`, { fontSize: '22px', fill: '#ffffff' }).setOrigin(0.5);
+    const btn = this.add.text(width/2, height/2 + 60, '[ Continue ]', { fontSize: '22px', fill: '#888888' }).setOrigin(0.5).setInteractive({ useHandCursor: true });
+    btn.on('pointerover', () => btn.setColor('#ffffff'));
+    btn.on('pointerdown', () => {
+      const gs = this.registry.get('gameState');
+      gs.currency += gold;
+      gs.party[0].hp = Math.min(gs.party[0].maxHp, gs.party[0].hp + 30);
+      this.cameras.main.fadeOut(400);
+      this.cameras.main.once('camerafadeoutcomplete', () => this.scene.start('VillageScene'));
     });
   }
 
-  showDefeat() {
+  defeat() {
+    this.battleState = 'DONE';
     const { width, height } = this.cameras.main;
-
-    const overlay = this.add.rectangle(width / 2, height / 2, width, height, 0x000000, 0.8);
-    
-    const defeatText = this.add.text(width / 2, height / 2 - 30, 'GAME OVER', {
-      fontSize: '48px',
-      fill: '#aa3333',
-      stroke: '#000000',
-      strokeThickness: 4
-    });
-    defeatText.setOrigin(0.5);
-
-    const retryBtn = this.add.text(width / 2, height / 2 + 50, 'Return to Menu', {
-      fontSize: '24px',
-      fill: '#ffffff',
-      backgroundColor: '#2a2a4a',
-      padding: { x: 20, y: 10 }
-    });
-    retryBtn.setOrigin(0.5);
-    retryBtn.setInteractive({ useHandCursor: true });
-    retryBtn.on('pointerdown', () => {
-      this.scene.start('MainMenuScene');
-    });
+    this.add.rectangle(width/2, height/2, width, height, 0x000000, 0.85);
+    this.add.text(width/2, height/2 - 20, 'GAME OVER', { fontSize: '48px', fill: '#cc2222' }).setOrigin(0.5);
+    const btn = this.add.text(width/2, height/2 + 40, '[ Title ]', { fontSize: '22px', fill: '#666666' }).setOrigin(0.5).setInteractive({ useHandCursor: true });
+    btn.on('pointerover', () => btn.setColor('#ffffff'));
+    btn.on('pointerdown', () => { this.cameras.main.fadeOut(400); this.cameras.main.once('camerafadeoutcomplete', () => this.scene.start('MainMenuScene')); });
   }
 }

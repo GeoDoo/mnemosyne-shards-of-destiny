@@ -8,8 +8,8 @@ import BattleScene from './scenes/BattleScene.js';
 const config = {
   type: Phaser.AUTO,
   parent: 'game-container',
-  width: 540,
-  height: 960,
+  width: 1920,
+  height: 1080,
   backgroundColor: '#1a1a2e',
   scale: {
     mode: Phaser.Scale.FIT,

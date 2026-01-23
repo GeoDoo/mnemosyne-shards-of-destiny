@@ -60,30 +60,17 @@ export default class BootScene extends Phaser.Scene {
     this.load.image('portrait_mother', 'assets/portraits/npcs/mother_portrait.png');
     this.load.image('portrait_arete', 'assets/portraits/npcs/arete_portrait.png');
 
-    // Load party spritesheets (4 columns x 3 rows based on current format)
-    this.load.spritesheet('sprite_alkmaeon', 'assets/sprites/characters/party/alkmaeon/alkmaeon_spritesheet.png', {
-      frameWidth: 384,
-      frameHeight: 341
-    });
-    this.load.spritesheet('sprite_theano', 'assets/sprites/characters/party/theano/theano_spritesheet.png', {
-      frameWidth: 384,
-      frameHeight: 341
-    });
-    this.load.spritesheet('sprite_brasidas', 'assets/sprites/characters/party/brasidas/brasidas_spritesheet.png', {
-      frameWidth: 384,
-      frameHeight: 341
-    });
-
-    // Load NPC spritesheets
-    this.load.spritesheet('sprite_epimenides', 'assets/sprites/characters/npcs/epimenides_spritesheet.png', {
-      frameWidth: 256,
-      frameHeight: 256
-    });
+    // Load character images (use portraits as stand-in sprites for now)
+    this.load.image('sprite_alkmaeon', 'assets/portraits/party/alkmaeon_portrait.png');
+    this.load.image('sprite_theano', 'assets/portraits/party/theano_portrait.png');
+    this.load.image('sprite_brasidas', 'assets/portraits/party/brasidas_portrait.png');
+    this.load.image('sprite_epimenides', 'assets/portraits/npcs/epimenides_portrait.png');
 
     // Load JSON data
     this.load.json('characters', 'data/characters.json');
     this.load.json('enemies', 'data/enemies.json');
     this.load.json('skills', 'data/skills.json');
+    this.load.json('dialogues', 'data/dialogues.json');
   }
 
   create() {
@@ -91,6 +78,7 @@ export default class BootScene extends Phaser.Scene {
     this.registry.set('characters', this.cache.json.get('characters'));
     this.registry.set('enemies', this.cache.json.get('enemies'));
     this.registry.set('skills', this.cache.json.get('skills'));
+    this.registry.set('dialogues', this.cache.json.get('dialogues'));
 
     // Initialize game state
     this.registry.set('gameState', {
