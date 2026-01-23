@@ -140,8 +140,8 @@ func _create_combatant_sprite(combatant: Dictionary, is_enemy: bool) -> Node2D:
 			sprite.hframes = 4  # Idle animation typically has 4 frames
 			sprite.vframes = 5  # 5 rows (idle, walk, attack, defend, hurt)
 			sprite.frame = 0    # First frame of idle
-			# Scale up for visibility
-			sprite.scale = Vector2(2.0, 2.0) if is_enemy else Vector2(2.0, 2.0)
+			# Scale for visibility (sprites are large, scale down)
+			sprite.scale = Vector2(0.4, 0.4)
 			# Flip enemies to face left (toward party)
 			if is_enemy:
 				sprite.flip_h = true

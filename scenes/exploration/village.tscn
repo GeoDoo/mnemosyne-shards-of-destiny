@@ -115,7 +115,7 @@ texture = ExtResource("5_player_sprite")
 hframes = 4
 vframes = 5
 frame = 0
-scale = Vector2(2, 2)
+scale = Vector2(0.3, 0.3)
 
 [node name="InteractionArea" type="Area2D" parent="Player"]
 collision_layer = 0
