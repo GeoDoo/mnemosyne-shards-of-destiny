@@ -152,26 +152,36 @@
 
 ---
 
-## Phase 9: Scene Implementation ⬜ TODO
+## Phase 9: Scene Implementation 🔄 IN PROGRESS
 
-### Exploration Scenes
-- [ ] Village (Thespiae) — interactive NPCs, buildings
-- [ ] Temple of Apollo — exploration, encounters
+### Core Scene Updates
+- [x] Main menu uses main_menu_bg.png
+- [x] Battle scene uses combat backgrounds
+- [x] Victory screen with victory_screen.png
+- [x] Game over screen with gameover_screen.png + retry/quit
+- [x] Battle sprites load from sprite_path (party + enemies)
+- [x] Village: player sprite (Alkmaeon spritesheet)
+- [x] Village: NPC sprite (Epimenides spritesheet)
+- [x] Dialogue portraits support
+
+### Exploration Scenes (TileMap-based)
+- [ ] Village (Thespiae) — use thespiae_tileset
+- [ ] Temple of Apollo — use temple_tileset
 - [ ] Well of Mnemosyne area
 - [ ] Delos island
 - [ ] Necromanteion
 - [ ] Mount Olympus approach
 
 ### System Scenes
-- [ ] Main menu (New Game, Continue, Settings)
+- [x] Main menu (New Game, Continue, Settings, Quit)
 - [ ] Settings menu (volume, controls)
-- [ ] Game Over screen
+- [x] Game Over screen
 - [ ] Credits
 
 ### Dialogue System
-- [ ] Dialogue box UI
-- [ ] Portrait display
-- [ ] Text auto-advance / manual advance
+- [x] Dialogue box UI
+- [x] Portrait display
+- [x] Text typewriter effect
 - [ ] Choice selection
 - [ ] Vision sequence handler
 
