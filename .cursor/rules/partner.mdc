@@ -13,3 +13,4 @@ alwaysApply: true
 # Thinking Process
 - Always use internal reasoning to check for edge cases.
 - Before big changes, output a brief plan and wait for my "LFG" or "Go" to proceed.
+- When a slash command is used, Opus 4.5 must spend at least 15 seconds in 'Thinking' mode before the first line of code is written.
