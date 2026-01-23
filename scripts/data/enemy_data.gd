@@ -4,7 +4,14 @@ class_name EnemyData
 
 @export var id: String = ""
 @export var display_name: String = ""
+@export var description: String = ""
 @export var sprite_path: String = ""
+
+# Classification
+@export var tier: int = 1  # 1-4 for common enemies
+@export var chapters: Array[int] = []  # Which chapters this enemy appears in
+@export var boss_type: String = ""  # "", "mini_boss", "chapter_boss", "final_boss"
+@export var phases: int = 1  # Number of phases for boss fights
 
 # Stats
 @export var level: int = 1
@@ -40,7 +47,11 @@ func create_instance() -> Dictionary:
 	return {
 		"id": id,
 		"display_name": display_name,
+		"description": description,
 		"sprite_path": sprite_path,
+		"tier": tier,
+		"boss_type": boss_type,
+		"phases": phases,
 		"level": level,
 		"max_hp": max_hp,
 		"current_hp": max_hp,
@@ -51,9 +62,17 @@ func create_instance() -> Dictionary:
 		"skills": skills.duplicate(),
 		"skill_weights": skill_weights.duplicate(),
 		"element_modifiers": element_modifiers.duplicate(),
+		"experience_reward": experience_reward,
+		"currency_reward": currency_reward,
 		"status_effects": [],
-		"is_enemy": true
+		"is_enemy": true,
+		"current_phase": 1
 	}
+
+
+## Check if this is a boss enemy
+func is_boss() -> bool:
+	return boss_type != ""
 
 
 ## Serialize to dictionary
@@ -61,7 +80,12 @@ func to_dict() -> Dictionary:
 	return {
 		"id": id,
 		"display_name": display_name,
+		"description": description,
 		"sprite_path": sprite_path,
+		"tier": tier,
+		"chapters": chapters.duplicate(),
+		"boss_type": boss_type,
+		"phases": phases,
 		"level": level,
 		"max_hp": max_hp,
 		"attack": attack,
@@ -82,7 +106,11 @@ static func from_dict(data: Dictionary) -> EnemyData:
 	var enemy = EnemyData.new()
 	enemy.id = data.get("id", "")
 	enemy.display_name = data.get("display_name", "")
+	enemy.description = data.get("description", "")
 	enemy.sprite_path = data.get("sprite_path", "")
+	enemy.tier = data.get("tier", 1)
+	enemy.boss_type = data.get("boss_type", "")
+	enemy.phases = data.get("phases", 1)
 	enemy.level = data.get("level", 1)
 	enemy.max_hp = data.get("max_hp", 50)
 	enemy.attack = data.get("attack", 8)
@@ -95,4 +123,11 @@ static func from_dict(data: Dictionary) -> EnemyData:
 	enemy.currency_reward = data.get("currency_reward", 5)
 	enemy.drop_table = data.get("drop_table", [])
 	enemy.element_modifiers = data.get("element_modifiers", {})
+	
+	# Handle chapters array
+	var chapters_data = data.get("chapters", [])
+	if chapters_data is Array:
+		for ch in chapters_data:
+			enemy.chapters.append(int(ch))
+	
 	return enemy

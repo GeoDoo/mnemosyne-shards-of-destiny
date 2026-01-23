@@ -1,202 +1,561 @@
 {
-  "enemies": [
-    {
-      "id": "mormolykeia",
-      "display_name": "Mormolykeia",
-      "description": "A night spirit that haunts the darkness, preying on the unwary. Servant of Hecate.",
-      "level": 1,
-      "max_hp": 30,
-      "attack": 7,
-      "defense": 3,
-      "magic": 9,
-      "speed": 8,
-      "skills": ["basic_attack", "terrifying_wail"],
-      "experience_reward": 12,
-      "currency_reward": 8,
-      "element_modifiers": {
-        "light": 1.5,
-        "shadow": 0.5
+  "enemies": {
+    "common": [
+      {
+        "id": "eidolon",
+        "display_name": "Eidolon",
+        "description": "A shade of the dead, the most basic phantom. It drifts between worlds, sorrowful and lost.",
+        "sprite_path": "res://assets/sprites/enemies/common/eidolon_spritesheet.png",
+        "tier": 1,
+        "level": 1,
+        "max_hp": 25,
+        "attack": 6,
+        "defense": 2,
+        "magic": 4,
+        "speed": 6,
+        "skills": ["basic_attack"],
+        "experience_reward": 8,
+        "currency_reward": 5,
+        "element_modifiers": {
+          "light": 1.5,
+          "shadow": 0.5
+        },
+        "chapters": [1, 2]
+      },
+      {
+        "id": "phasma",
+        "display_name": "Phasma",
+        "description": "A vengeful apparition, more dangerous than the common shade. Its rage burns cold.",
+        "sprite_path": "res://assets/sprites/enemies/common/phasma_spritesheet.png",
+        "tier": 1,
+        "level": 1,
+        "max_hp": 30,
+        "attack": 8,
+        "defense": 3,
+        "magic": 6,
+        "speed": 7,
+        "skills": ["basic_attack", "ghostly_wail"],
+        "experience_reward": 10,
+        "currency_reward": 6,
+        "element_modifiers": {
+          "light": 1.5,
+          "shadow": 0.5
+        },
+        "chapters": [1, 2]
+      },
+      {
+        "id": "oneiros",
+        "display_name": "Oneiros",
+        "description": "A dream spirit, child of Night and Sleep. It drifts through the waking world, bringing visions.",
+        "sprite_path": "res://assets/sprites/enemies/common/oneiros_spritesheet.png",
+        "tier": 1,
+        "level": 1,
+        "max_hp": 20,
+        "attack": 5,
+        "defense": 2,
+        "magic": 10,
+        "speed": 9,
+        "skills": ["basic_attack", "dream_touch"],
+        "experience_reward": 10,
+        "currency_reward": 7,
+        "element_modifiers": {
+          "light": 1.3,
+          "shadow": 0.7
+        },
+        "chapters": [1, 2]
+      },
+      {
+        "id": "satyr",
+        "display_name": "Satyr",
+        "description": "A wild nature spirit, half-man half-goat. Usually peaceful, but Typhon's stirring has driven them to aggression.",
+        "sprite_path": "res://assets/sprites/enemies/common/satyr_spritesheet.png",
+        "tier": 1,
+        "level": 2,
+        "max_hp": 35,
+        "attack": 10,
+        "defense": 4,
+        "magic": 3,
+        "speed": 8,
+        "skills": ["basic_attack", "headbutt"],
+        "experience_reward": 12,
+        "currency_reward": 8,
+        "element_modifiers": {
+          "fire": 1.3,
+          "earth": 0.7
+        },
+        "chapters": [1, 2]
+      },
+      {
+        "id": "corrupted_oread",
+        "display_name": "Corrupted Oread",
+        "description": "A mountain nymph driven mad by Typhon's chaos bleeding through the earth. Her beauty is cracked with red veins of corruption.",
+        "sprite_path": "res://assets/sprites/enemies/common/corrupted_oread_spritesheet.png",
+        "tier": 1,
+        "level": 2,
+        "max_hp": 32,
+        "attack": 9,
+        "defense": 5,
+        "magic": 8,
+        "speed": 7,
+        "skills": ["basic_attack", "stone_claw", "corrupted_scream"],
+        "experience_reward": 14,
+        "currency_reward": 10,
+        "element_modifiers": {
+          "light": 1.5,
+          "earth": 0.5
+        },
+        "chapters": [2]
+      },
+      {
+        "id": "empousa",
+        "display_name": "Empousa",
+        "description": "A shapeshifting vampire demon with one bronze leg and one donkey leg. Servant of Hecate who seduces and devours travelers.",
+        "sprite_path": "res://assets/sprites/enemies/common/empousa_spritesheet.png",
+        "tier": 2,
+        "level": 3,
+        "max_hp": 55,
+        "attack": 12,
+        "defense": 6,
+        "magic": 10,
+        "speed": 9,
+        "skills": ["basic_attack", "draining_kiss", "shapeshift"],
+        "experience_reward": 25,
+        "currency_reward": 18,
+        "element_modifiers": {
+          "light": 1.5,
+          "fire": 1.3
+        },
+        "chapters": [2, 3, 4]
+      },
+      {
+        "id": "mormo",
+        "display_name": "Mormo",
+        "description": "A fearsome spirit invoked to frighten children. She scuttles in the darkness, teeth gleaming.",
+        "sprite_path": "res://assets/sprites/enemies/common/mormo_spritesheet.png",
+        "tier": 2,
+        "level": 2,
+        "max_hp": 45,
+        "attack": 10,
+        "defense": 5,
+        "magic": 11,
+        "speed": 9,
+        "skills": ["basic_attack", "nightmare_shriek"],
+        "experience_reward": 18,
+        "currency_reward": 12,
+        "element_modifiers": {
+          "light": 1.5,
+          "shadow": 0.5
+        },
+        "chapters": [2, 3]
+      },
+      {
+        "id": "mormolykeia",
+        "display_name": "Mormolykeia",
+        "description": "A night spirit that haunts the darkness, preying on the unwary. Servant of Hecate.",
+        "sprite_path": "res://assets/sprites/enemies/common/mormolykeia_spritesheet.png",
+        "tier": 2,
+        "level": 2,
+        "max_hp": 40,
+        "attack": 9,
+        "defense": 4,
+        "magic": 12,
+        "speed": 10,
+        "skills": ["basic_attack", "terrifying_wail", "shadow_grasp"],
+        "experience_reward": 16,
+        "currency_reward": 10,
+        "element_modifiers": {
+          "light": 1.5,
+          "shadow": 0.5
+        },
+        "chapters": [2, 3]
+      },
+      {
+        "id": "strix",
+        "display_name": "Strix",
+        "description": "An owl-woman spirit that drinks the blood of the living. Harbinger of ill omens.",
+        "sprite_path": "res://assets/sprites/enemies/common/strix_spritesheet.png",
+        "tier": 2,
+        "level": 2,
+        "max_hp": 30,
+        "attack": 11,
+        "defense": 3,
+        "magic": 7,
+        "speed": 14,
+        "skills": ["basic_attack", "blood_drain", "swooping_strike"],
+        "experience_reward": 14,
+        "currency_reward": 9,
+        "element_modifiers": {
+          "light": 1.5,
+          "fire": 1.3
+        },
+        "chapters": [2, 3, 4]
+      },
+      {
+        "id": "ker",
+        "display_name": "Ker",
+        "description": "A spirit of violent death, daughter of Nyx. Drawn to places of bloodshed and despair.",
+        "sprite_path": "res://assets/sprites/enemies/common/ker_spritesheet.png",
+        "tier": 2,
+        "level": 3,
+        "max_hp": 50,
+        "attack": 14,
+        "defense": 5,
+        "magic": 10,
+        "speed": 11,
+        "skills": ["basic_attack", "death_touch", "blood_frenzy"],
+        "experience_reward": 22,
+        "currency_reward": 15,
+        "element_modifiers": {
+          "light": 2.0,
+          "shadow": 0.0
+        },
+        "chapters": [3, 4]
+      },
+      {
+        "id": "lamia",
+        "display_name": "Lamia",
+        "description": "Once a beautiful queen of Libya, driven mad by Hera's curse. Now a child-devouring demon with a serpent's tail.",
+        "sprite_path": "res://assets/sprites/enemies/common/lamia_spritesheet.png",
+        "tier": 2,
+        "level": 4,
+        "max_hp": 70,
+        "attack": 14,
+        "defense": 7,
+        "magic": 12,
+        "speed": 8,
+        "skills": ["basic_attack", "venomous_bite", "hypnotic_gaze"],
+        "experience_reward": 35,
+        "currency_reward": 25,
+        "element_modifiers": {
+          "light": 1.5,
+          "fire": 1.2
+        },
+        "chapters": [3, 4]
+      },
+      {
+        "id": "eurynomos",
+        "display_name": "Eurynomos",
+        "description": "A daemon of the underworld who devours the flesh of corpses. His skin is the blue-black of carrion flies.",
+        "sprite_path": "res://assets/sprites/enemies/common/eurynomos_spritesheet.png",
+        "tier": 3,
+        "level": 4,
+        "max_hp": 65,
+        "attack": 16,
+        "defense": 10,
+        "magic": 6,
+        "speed": 6,
+        "skills": ["basic_attack", "corpse_feast", "carrion_swarm"],
+        "experience_reward": 30,
+        "currency_reward": 20,
+        "element_modifiers": {
+          "light": 1.8,
+          "fire": 1.3
+        },
+        "chapters": [4, 5]
+      },
+      {
+        "id": "oizys",
+        "display_name": "Oizys",
+        "description": "Spirit of misery, anxiety, and depression. Daughter of Nyx. Her presence weighs upon the soul.",
+        "sprite_path": "res://assets/sprites/enemies/common/oizys_spritesheet.png",
+        "tier": 3,
+        "level": 4,
+        "max_hp": 55,
+        "attack": 8,
+        "defense": 6,
+        "magic": 18,
+        "speed": 5,
+        "skills": ["basic_attack", "wave_of_despair", "crushing_sorrow"],
+        "experience_reward": 28,
+        "currency_reward": 18,
+        "element_modifiers": {
+          "light": 1.5,
+          "shadow": 0.5
+        },
+        "chapters": [4]
+      },
+      {
+        "id": "achlys",
+        "display_name": "Achlys",
+        "description": "Goddess of the death-mist, misery, and poison. Possibly older than Chaos itself. She weeps eternally.",
+        "sprite_path": "res://assets/sprites/enemies/common/achlys_spritesheet.png",
+        "tier": 3,
+        "level": 5,
+        "max_hp": 60,
+        "attack": 10,
+        "defense": 5,
+        "magic": 20,
+        "speed": 6,
+        "skills": ["basic_attack", "poison_mist", "eternal_tears"],
+        "experience_reward": 35,
+        "currency_reward": 22,
+        "element_modifiers": {
+          "light": 1.5,
+          "water": 0.7
+        },
+        "chapters": [4, 5]
+      },
+      {
+        "id": "mania",
+        "display_name": "Mania",
+        "description": "Spirit of madness, insanity, and frenzy. Her movements are erratic, her laughter unending.",
+        "sprite_path": "res://assets/sprites/enemies/common/mania_spritesheet.png",
+        "tier": 3,
+        "level": 5,
+        "max_hp": 50,
+        "attack": 15,
+        "defense": 4,
+        "magic": 16,
+        "speed": 13,
+        "skills": ["basic_attack", "maddening_touch", "frenzied_assault"],
+        "experience_reward": 32,
+        "currency_reward": 20,
+        "element_modifiers": {
+          "light": 1.3,
+          "shadow": 0.7
+        },
+        "chapters": [4, 5]
+      },
+      {
+        "id": "algea",
+        "display_name": "Algea",
+        "description": "Spirits of pain, sorrow, and grief — daughters of Eris. Three faces weep, scream, and stare hollow.",
+        "sprite_path": "res://assets/sprites/enemies/common/algea_spritesheet.png",
+        "tier": 3,
+        "level": 5,
+        "max_hp": 75,
+        "attack": 12,
+        "defense": 8,
+        "magic": 14,
+        "speed": 7,
+        "skills": ["basic_attack", "chain_lash", "threefold_anguish"],
+        "experience_reward": 38,
+        "currency_reward": 25,
+        "element_modifiers": {
+          "light": 1.4,
+          "shadow": 0.6
+        },
+        "chapters": [4, 5]
+      },
+      {
+        "id": "telkhines",
+        "display_name": "Telkhines",
+        "description": "Sea demons who forged Poseidon's trident. Masters of storms, destroyed by Zeus for their envy.",
+        "sprite_path": "res://assets/sprites/enemies/common/telkhines_spritesheet.png",
+        "tier": 4,
+        "level": 6,
+        "max_hp": 85,
+        "attack": 16,
+        "defense": 10,
+        "magic": 18,
+        "speed": 8,
+        "skills": ["basic_attack", "trident_strike", "storm_surge"],
+        "experience_reward": 45,
+        "currency_reward": 30,
+        "element_modifiers": {
+          "fire": 1.5,
+          "water": 0.5,
+          "light": 1.3
+        },
+        "chapters": [5, 6]
+      },
+      {
+        "id": "makhai",
+        "display_name": "Makhai",
+        "description": "Spirits of battle and combat, children of Eris. They exist only for war.",
+        "sprite_path": "res://assets/sprites/enemies/common/makhai_spritesheet.png",
+        "tier": 4,
+        "level": 6,
+        "max_hp": 90,
+        "attack": 20,
+        "defense": 12,
+        "magic": 5,
+        "speed": 10,
+        "skills": ["basic_attack", "dual_slash", "battle_fury"],
+        "experience_reward": 48,
+        "currency_reward": 32,
+        "element_modifiers": {
+          "light": 1.2,
+          "shadow": 0.8
+        },
+        "chapters": [5, 6]
+      },
+      {
+        "id": "anemoi_thuellai",
+        "display_name": "Anemoi Thuellai",
+        "description": "Violent storm-wind spirits, destructive counterparts to the Anemoi wind gods.",
+        "sprite_path": "res://assets/sprites/enemies/common/anemoi_thuellai_spritesheet.png",
+        "tier": 4,
+        "level": 6,
+        "max_hp": 70,
+        "attack": 14,
+        "defense": 6,
+        "magic": 22,
+        "speed": 16,
+        "skills": ["basic_attack", "gale_blast", "lightning_strike"],
+        "experience_reward": 50,
+        "currency_reward": 35,
+        "element_modifiers": {
+          "earth": 1.5,
+          "fire": 0.7
+        },
+        "chapters": [5, 6]
+      },
+      {
+        "id": "gigas",
+        "display_name": "Gigas",
+        "description": "Giant born from Gaia, enemy of the Olympian gods. His legs end in serpent tails.",
+        "sprite_path": "res://assets/sprites/enemies/common/gigas_spritesheet.png",
+        "tier": 4,
+        "level": 7,
+        "max_hp": 120,
+        "attack": 22,
+        "defense": 15,
+        "magic": 8,
+        "speed": 5,
+        "skills": ["basic_attack", "boulder_smash", "earthshaker"],
+        "experience_reward": 60,
+        "currency_reward": 40,
+        "element_modifiers": {
+          "light": 1.3,
+          "earth": 0.5
+        },
+        "chapters": [5, 6]
       }
-    },
-    {
-      "id": "strix",
-      "display_name": "Strix",
-      "description": "An owl-woman spirit that drinks the blood of the living. Harbinger of ill omens.",
-      "level": 1,
-      "max_hp": 25,
-      "attack": 9,
-      "defense": 2,
-      "magic": 6,
-      "speed": 12,
-      "skills": ["basic_attack", "blood_drain"],
-      "experience_reward": 10,
-      "currency_reward": 6,
-      "element_modifiers": {
-        "light": 1.5,
-        "fire": 1.3
+    ],
+    "bosses": [
+      {
+        "id": "mormo_empowered",
+        "display_name": "Mormo",
+        "description": "The night spirit Mormo, empowered by stolen divine energy. She guards the temple's inner sanctum.",
+        "sprite_path": "res://assets/sprites/enemies/bosses/mormo_empowered_spritesheet.png",
+        "boss_type": "mini_boss",
+        "chapter": 1,
+        "level": 3,
+        "max_hp": 80,
+        "attack": 12,
+        "defense": 6,
+        "magic": 14,
+        "speed": 10,
+        "skills": ["basic_attack", "nightmare_shriek", "shadow_claw", "terrifying_presence"],
+        "experience_reward": 50,
+        "currency_reward": 30,
+        "element_modifiers": {
+          "light": 1.8,
+          "shadow": 0.3
+        },
+        "phases": 1
+      },
+      {
+        "id": "python",
+        "display_name": "Python",
+        "description": "The great serpent of Delphi, slain by Apollo in ages past. Now stirring from death's sleep as chaos returns.",
+        "sprite_path": "res://assets/sprites/enemies/bosses/python_spritesheet.png",
+        "boss_type": "chapter_boss",
+        "chapter": 3,
+        "level": 5,
+        "max_hp": 180,
+        "attack": 18,
+        "defense": 12,
+        "magic": 16,
+        "speed": 7,
+        "skills": ["basic_attack", "coiling_crush", "venomous_breath", "ancient_fury"],
+        "experience_reward": 120,
+        "currency_reward": 80,
+        "element_modifiers": {
+          "light": 1.5,
+          "fire": 1.2
+        },
+        "phases": 2
+      },
+      {
+        "id": "melinoe",
+        "display_name": "Melinoe",
+        "description": "Goddess of nightmares and madness, daughter of Persephone. Half her body is pale as bone, half dark as night.",
+        "sprite_path": "res://assets/sprites/enemies/bosses/melinoe_spritesheet.png",
+        "boss_type": "chapter_boss",
+        "chapter": 4,
+        "level": 6,
+        "max_hp": 220,
+        "attack": 14,
+        "defense": 10,
+        "magic": 24,
+        "speed": 11,
+        "skills": ["basic_attack", "nightmare_vision", "madness_touch", "summon_shades", "dual_nature"],
+        "experience_reward": 150,
+        "currency_reward": 100,
+        "element_modifiers": {
+          "light": 1.8,
+          "shadow": 0.3
+        },
+        "phases": 2
+      },
+      {
+        "id": "echidna",
+        "display_name": "Echidna",
+        "description": "The Mother of Monsters, mate of Typhon. Half woman, half serpent. She guards her husband's dreaming prison.",
+        "sprite_path": "res://assets/sprites/enemies/bosses/echidna_spritesheet.png",
+        "boss_type": "chapter_boss",
+        "chapter": 5,
+        "level": 7,
+        "max_hp": 280,
+        "attack": 20,
+        "defense": 14,
+        "magic": 18,
+        "speed": 9,
+        "skills": ["basic_attack", "serpent_strike", "tail_sweep", "summon_offspring", "mother_of_monsters"],
+        "experience_reward": 180,
+        "currency_reward": 120,
+        "element_modifiers": {
+          "light": 1.3,
+          "fire": 1.2
+        },
+        "phases": 2
+      },
+      {
+        "id": "corrupted_apollo",
+        "display_name": "Corrupted Remnant of Apollo",
+        "description": "Apollo's divine avatar, twisted by Typhon's chaos. Light and shadow war within his form.",
+        "sprite_path": "res://assets/sprites/enemies/bosses/corrupted_apollo_spritesheet.png",
+        "boss_type": "chapter_boss",
+        "chapter": 6,
+        "level": 8,
+        "max_hp": 320,
+        "attack": 22,
+        "defense": 16,
+        "magic": 26,
+        "speed": 12,
+        "skills": ["basic_attack", "golden_arrow", "corrupted_light", "divine_discord", "desperate_blast"],
+        "experience_reward": 220,
+        "currency_reward": 150,
+        "element_modifiers": {
+          "light": 0.5,
+          "shadow": 1.5
+        },
+        "phases": 3
+      },
+      {
+        "id": "typhon",
+        "display_name": "Typhon",
+        "description": "Father of Monsters, child of Gaia and Tartarus. A hundred dragon heads, a voice like thunder. The greatest enemy the gods have ever faced.",
+        "sprite_path": "res://assets/sprites/enemies/bosses/typhon_spritesheet.png",
+        "boss_type": "final_boss",
+        "chapter": 7,
+        "level": 10,
+        "max_hp": 500,
+        "attack": 28,
+        "defense": 18,
+        "magic": 25,
+        "speed": 10,
+        "skills": ["basic_attack", "hundred_heads", "storm_of_chaos", "primordial_roar", "world_shaker", "father_of_monsters"],
+        "experience_reward": 500,
+        "currency_reward": 300,
+        "element_modifiers": {
+          "light": 1.2,
+          "shadow": 0.8
+        },
+        "phases": 3
       }
-    },
-    {
-      "id": "ker",
-      "display_name": "Ker",
-      "description": "A spirit of violent death, daughter of Nyx. Drawn to places of bloodshed and despair.",
-      "level": 2,
-      "max_hp": 35,
-      "attack": 11,
-      "defense": 4,
-      "magic": 8,
-      "speed": 10,
-      "skills": ["basic_attack", "death_touch"],
-      "experience_reward": 15,
-      "currency_reward": 10,
-      "element_modifiers": {
-        "light": 2.0,
-        "shadow": 0.0
-      }
-    },
-    {
-      "id": "empusa",
-      "display_name": "Empusa",
-      "description": "A shapeshifting vampire demon with one bronze leg and one donkey leg. Servant of Hecate who seduces and devours travelers.",
-      "level": 3,
-      "max_hp": 55,
-      "attack": 12,
-      "defense": 6,
-      "magic": 10,
-      "speed": 9,
-      "skills": ["basic_attack", "draining_kiss", "shapeshift"],
-      "experience_reward": 25,
-      "currency_reward": 18,
-      "element_modifiers": {
-        "light": 1.5,
-        "fire": 1.3
-      }
-    },
-    {
-      "id": "lamia",
-      "display_name": "Lamia",
-      "description": "Once a beautiful queen of Libya, driven mad by Hera's curse. Now a child-devouring demon with a serpent's tail.",
-      "level": 4,
-      "max_hp": 70,
-      "attack": 14,
-      "defense": 7,
-      "magic": 12,
-      "speed": 8,
-      "skills": ["basic_attack", "venomous_bite", "hypnotic_gaze"],
-      "experience_reward": 35,
-      "currency_reward": 25,
-      "element_modifiers": {
-        "light": 1.5,
-        "fire": 1.2
-      }
-    },
-    {
-      "id": "eurynomos",
-      "display_name": "Eurynomos",
-      "description": "A daemon of the underworld who devours the flesh of corpses. His skin is the blue-black of carrion flies.",
-      "level": 3,
-      "max_hp": 50,
-      "attack": 13,
-      "defense": 8,
-      "magic": 5,
-      "speed": 6,
-      "skills": ["basic_attack", "corpse_feast"],
-      "experience_reward": 22,
-      "currency_reward": 15,
-      "element_modifiers": {
-        "light": 1.8,
-        "fire": 1.3
-      }
-    },
-    {
-      "id": "mormo",
-      "display_name": "Mormo",
-      "description": "A fearsome spirit invoked to frighten children. She bit a woman of Corinth who then ate her own offspring.",
-      "level": 2,
-      "max_hp": 45,
-      "attack": 10,
-      "defense": 5,
-      "magic": 11,
-      "speed": 9,
-      "skills": ["basic_attack", "nightmare_shriek"],
-      "experience_reward": 18,
-      "currency_reward": 12,
-      "element_modifiers": {
-        "light": 1.5,
-        "shadow": 0.5
-      }
-    },
-    {
-      "id": "python",
-      "display_name": "Python",
-      "description": "The great serpent of Delphi, slain by Apollo in ages past. Now stirring from death's sleep as chaos returns.",
-      "level": 5,
-      "max_hp": 150,
-      "attack": 16,
-      "defense": 10,
-      "magic": 14,
-      "speed": 7,
-      "skills": ["basic_attack", "coiling_crush", "venomous_breath"],
-      "experience_reward": 100,
-      "currency_reward": 75,
-      "element_modifiers": {
-        "light": 1.5,
-        "fire": 1.2
-      }
-    },
-    {
-      "id": "melinoe",
-      "display_name": "Melinoe",
-      "description": "Goddess of nightmares and madness, daughter of Persephone. Half her body is pale as bone, half dark as night.",
-      "level": 6,
-      "max_hp": 180,
-      "attack": 14,
-      "defense": 8,
-      "magic": 20,
-      "speed": 10,
-      "skills": ["basic_attack", "nightmare_vision", "madness_touch", "summon_shades"],
-      "experience_reward": 120,
-      "currency_reward": 90,
-      "element_modifiers": {
-        "light": 1.8,
-        "shadow": 0.3
-      }
-    },
-    {
-      "id": "echidna",
-      "display_name": "Echidna",
-      "description": "The Mother of Monsters, mate of Typhon. Half woman, half serpent. She guards her husband's dreaming prison.",
-      "level": 7,
-      "max_hp": 220,
-      "attack": 18,
-      "defense": 12,
-      "magic": 16,
-      "speed": 8,
-      "skills": ["basic_attack", "serpent_strike", "summon_offspring", "mother_of_monsters"],
-      "experience_reward": 150,
-      "currency_reward": 110,
-      "element_modifiers": {
-        "light": 1.3,
-        "fire": 1.2
-      }
-    },
-    {
-      "id": "typhon",
-      "display_name": "Typhon",
-      "description": "Father of Monsters, child of Gaia and Tartarus. A hundred dragon heads, a voice like thunder. The greatest enemy the gods have ever faced.",
-      "level": 10,
-      "max_hp": 300,
-      "attack": 25,
-      "defense": 15,
-      "magic": 22,
-      "speed": 10,
-      "skills": ["basic_attack", "hundred_heads", "storm_of_chaos", "primordial_roar", "world_shaker"],
-      "experience_reward": 500,
-      "currency_reward": 300,
-      "element_modifiers": {
-        "light": 1.2,
-        "shadow": 0.8
-      }
-    }
-  ]
+    ]
+  }
 }

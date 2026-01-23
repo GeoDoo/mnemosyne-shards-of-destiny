@@ -1,6 +1,6 @@
 # Mnemosyne: Shards of Destiny — Development Progress
 
-**Last Updated:** 2026-01-23
+**Last Updated:** 2026-01-23 (Phase 6 complete)
 
 ---
 
@@ -89,25 +89,27 @@
 
 ---
 
-## Phase 6: Data Integration ⬜ TODO
+## Phase 6: Data Integration ✅ COMPLETE
 
 ### Update enemies.json with new Greek mythology roster
-- [ ] Remove old generic enemies (Temple Spirit, Shadow Spawn, etc.)
-- [ ] Add Tier 1 enemies (Eidolon, Phasma, Oneiros, Satyr, Corrupted Oread)
-- [ ] Add Tier 2 enemies (Empousa, Mormo, Mormolykeia, Strix, Ker, Lamia)
-- [ ] Add Tier 3 enemies (Eurynomos, Oizys, Achlys, Mania, Algea)
-- [ ] Add Tier 4 enemies (Telkhines, Makhai, Anemoi Thuellai, Gigas)
-- [ ] Add boss data (Python, Melinoe, Echidna, Corrupted Apollo, Typhon)
-- [ ] Balance stats for progression curve
+- [x] Remove old generic enemies (Temple Spirit, Shadow Spawn, etc.)
+- [x] Add Tier 1 enemies (Eidolon, Phasma, Oneiros, Satyr, Corrupted Oread)
+- [x] Add Tier 2 enemies (Empousa, Mormo, Mormolykeia, Strix, Ker, Lamia)
+- [x] Add Tier 3 enemies (Eurynomos, Oizys, Achlys, Mania, Algea)
+- [x] Add Tier 4 enemies (Telkhines, Makhai, Anemoi Thuellai, Gigas)
+- [x] Add boss data (Mormo Empowered, Python, Melinoe, Echidna, Corrupted Apollo, Typhon)
+- [x] Balance stats for progression curve
 
 ### Update skills.json
-- [ ] Add enemy-specific skills
-- [ ] Add boss abilities
-- [ ] Balance skill damage/costs
+- [x] Add enemy-specific skills (34 enemy skills)
+- [x] Add boss abilities (22 boss skills)
+- [x] Organize by player/enemy/boss categories
 
 ### Wire sprites to data
-- [ ] Add sprite_path to each enemy in enemies.json
-- [ ] Add sprite_path to NPCs in characters.json
+- [x] Add sprite_path to each enemy in enemies.json
+- [x] Create EnemyDatabase utility class
+- [x] Update EnemyData class with new fields (tier, chapters, boss_type, phases)
+- [ ] Add sprite_path to NPCs in characters.json (pending)
 
 ---
 
@@ -232,4 +234,4 @@
 
 ## Next Priority
 
-**Phase 6: Data Integration** — Update `enemies.json` to match new Greek mythology enemy roster, then wire sprites to data.
+**Phase 7: Environment Assets** — Create tilesets for exploration maps (Thespiae village, Temple of Apollo, etc.)

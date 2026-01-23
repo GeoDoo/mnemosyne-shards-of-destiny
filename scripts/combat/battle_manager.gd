@@ -44,7 +44,18 @@ func _load_skill_database() -> void:
 		var json = JSON.new()
 		if json.parse(file.get_as_text()) == OK:
 			var data = json.get_data()
-			for skill_data in data.get("skills", []):
+			var skills_data = data.get("skills", {})
+			
+			# Load player skills
+			for skill_data in skills_data.get("player", []):
+				skill_database[skill_data["id"]] = SkillData.from_dict(skill_data)
+			
+			# Load enemy skills
+			for skill_data in skills_data.get("enemy", []):
+				skill_database[skill_data["id"]] = SkillData.from_dict(skill_data)
+			
+			# Load boss skills
+			for skill_data in skills_data.get("boss", []):
 				skill_database[skill_data["id"]] = SkillData.from_dict(skill_data)
 		file.close()
 	
