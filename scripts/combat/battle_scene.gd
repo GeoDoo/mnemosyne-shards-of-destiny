@@ -137,8 +137,8 @@ func _create_combatant_sprite(combatant: Dictionary, is_enemy: bool) -> Node2D:
 			sprite.texture = texture
 			sprite.name = "Sprite"
 			# Assume sprite sheet, use first frame (top-left)
-			sprite.hframes = 4  # Idle animation typically has 4 frames
-			sprite.vframes = 5  # 5 rows (idle, walk, attack, defend, hurt)
+			sprite.hframes = 4  # 4 columns
+			sprite.vframes = 3  # 3 rows (idle, walk/attack, hurt)
 			sprite.frame = 0    # First frame of idle
 			# Scale for visibility (sprites are large, scale down)
 			sprite.scale = Vector2(0.4, 0.4)

@@ -113,9 +113,9 @@ shape = SubResource("RectangleShape2D_player")
 [node name="Sprite" type="Sprite2D" parent="Player"]
 texture = ExtResource("5_player_sprite")
 hframes = 4
-vframes = 5
+vframes = 3
 frame = 0
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.2, 0.2)
 
 [node name="InteractionArea" type="Area2D" parent="Player"]
 collision_layer = 0
