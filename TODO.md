@@ -1,6 +1,6 @@
 # Mnemosyne: Shards of Destiny — Development Progress
 
-**Last Updated:** 2026-01-23 (Phase 7 complete)
+**Last Updated:** 2026-01-23 (Phase 8 complete)
 
 ---
 
@@ -136,15 +136,19 @@
 
 ---
 
-## Phase 8: UI Assets ⬜ TODO
+## Phase 8: UI Assets ✅ COMPLETE
 
-- [ ] Main menu background
-- [ ] Dialogue box frame
+### Image Assets
+- [x] Main menu background (main_menu_bg.png)
+- [x] Victory screen (victory_screen.png)
+- [x] Game over screen (gameover_screen.png)
+
+### Code-Based UI (to build in Godot)
+- [ ] Dialogue box frame (NinePatchRect/StyleBox)
 - [ ] Combat UI (command menu, HP/MP bars)
 - [ ] Inventory/equipment screen
 - [ ] Pause menu
-- [ ] Victory/defeat screens
-- [ ] Touch joystick graphics
+- [ ] Touch controls (joystick, buttons)
 
 ---
 
@@ -220,6 +224,7 @@
 | Enemy sprites | 26 | 26 |
 | Tilesets | 9 | 9 |
 | Combat backgrounds | 6 | 6 |
+| UI screens | 3 | 3 |
 | Music tracks | 0 | ~9 |
 
 ### File Locations
@@ -227,6 +232,7 @@
 - Portraits: `assets/portraits/`
 - Tilesets: `assets/tilesets/exploration/`
 - Combat BGs: `assets/tilesets/combat/`
+- UI: `assets/ui/`
 - Data: `data/`
 - Story: `story/`
 - Scripts: `scripts/`
@@ -236,4 +242,4 @@
 
 ## Next Priority
 
-**Phase 8: UI Assets** — Create UI elements (dialogue boxes, menus, combat HUD, etc.)
+**Phase 9: Scene Implementation** — Build actual game scenes (exploration maps, menus, dialogue system)
