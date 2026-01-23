@@ -135,6 +135,8 @@ func _character_to_combatant(character: CharacterData) -> Dictionary:
 		"id": character.id,
 		"display_name": character.display_name,
 		"character_ref": character,
+		"sprite_path": character.sprite_path,
+		"portrait_path": character.portrait_path,
 		"max_hp": character.max_hp,
 		"current_hp": character.current_hp,
 		"max_mp": character.max_mp,

@@ -5,6 +5,8 @@
       "display_name": "Alkmaeon",
       "character_class": "Memory Seeker",
       "description": "A young boy from the village of Thespiae, chosen by fate to recover the Shards of Destiny. His name means 'mighty in wrath' — a tragic hero who must act under ambiguous circumstances.",
+      "sprite_path": "res://assets/sprites/characters/party/alkmaeon/alkmaeon_spritesheet.png",
+      "portrait_path": "res://assets/portraits/party/alkmaeon_portrait.png",
       "base_stats": {
         "max_hp": 100,
         "max_mp": 30,
@@ -34,6 +36,8 @@
       "display_name": "Theano",
       "character_class": "Priestess of Demeter",
       "description": "A young priestess trained at the sanctuary of Demeter, gifted with healing powers and knowledge of the mysteries. She was sent to investigate the disturbance sensed by the oracles.",
+      "sprite_path": "res://assets/sprites/characters/party/theano/theano_spritesheet.png",
+      "portrait_path": "res://assets/portraits/party/theano_portrait.png",
       "base_stats": {
         "max_hp": 80,
         "max_mp": 50,
@@ -62,6 +66,8 @@
       "display_name": "Brasidas",
       "character_class": "Spartan Warrior",
       "description": "A bold Spartan soldier encountered on the sacred island of Delos. Once a celebrated general, he now wanders alone — haunted by the death of his wife Arete while he was away at war. His courage and tactical mind make him a formidable ally.",
+      "sprite_path": "res://assets/sprites/characters/party/brasidas/brasidas_spritesheet.png",
+      "portrait_path": "res://assets/portraits/party/brasidas_portrait.png",
       "base_stats": {
         "max_hp": 95,
         "max_mp": 20,

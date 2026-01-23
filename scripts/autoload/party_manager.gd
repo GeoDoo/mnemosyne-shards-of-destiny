@@ -30,6 +30,8 @@ func _initialize_starting_party() -> void:
 	alkmaeon.id = "alkmaeon"
 	alkmaeon.display_name = "Alkmaeon"
 	alkmaeon.character_class = "Memory Seeker"
+	alkmaeon.sprite_path = "res://assets/sprites/characters/party/alkmaeon/alkmaeon_spritesheet.png"
+	alkmaeon.portrait_path = "res://assets/portraits/party/alkmaeon_portrait.png"
 	alkmaeon.level = 1
 	alkmaeon.experience = 0
 	alkmaeon.max_hp = 100

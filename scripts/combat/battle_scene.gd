@@ -62,24 +62,26 @@ func _ready() -> void:
 
 
 func _start_test_battle() -> void:
-	# Create test enemies
+	# Create test enemies from real enemy data
 	var enemies = []
 	
-	var spirit = {
-		"id": "temple_spirit",
-		"display_name": "Temple Spirit",
-		"max_hp": 40,
-		"current_hp": 40,
+	# Load a real enemy - Eidolon (Tier 1)
+	var eidolon = {
+		"id": "eidolon",
+		"display_name": "Eidolon",
+		"sprite_path": "res://assets/sprites/enemies/common/eidolon_spritesheet.png",
+		"max_hp": 35,
+		"current_hp": 35,
 		"attack": 8,
 		"defense": 4,
-		"magic": 6,
-		"speed": 7,
-		"skills": ["basic_attack"],
-		"experience_reward": 15,
-		"currency_reward": 10,
+		"magic": 10,
+		"speed": 9,
+		"skills": ["spectral_touch", "basic_attack"],
+		"experience_reward": 12,
+		"currency_reward": 8,
 		"is_enemy": true
 	}
-	enemies.append(spirit)
+	enemies.append(eidolon)
 	
 	battle_manager.start_battle(enemies)
 
@@ -124,24 +126,58 @@ func _create_combatant_sprite(combatant: Dictionary, is_enemy: bool) -> Node2D:
 	var container = Node2D.new()
 	container.name = combatant["display_name"]
 	
-	# Create placeholder sprite (colored rectangle)
-	var sprite = ColorRect.new()
-	sprite.size = Vector2(64, 64)
-	sprite.position = Vector2(-32, -32)
-	sprite.color = Color.CRIMSON if is_enemy else Color.DODGER_BLUE
-	container.add_child(sprite)
+	# Try to load actual sprite texture
+	var sprite_path = combatant.get("sprite_path", "")
+	var has_sprite = false
+	
+	if sprite_path != "" and ResourceLoader.exists(sprite_path):
+		var texture = load(sprite_path)
+		if texture:
+			var sprite = Sprite2D.new()
+			sprite.texture = texture
+			sprite.name = "Sprite"
+			# Assume sprite sheet, use first frame (top-left)
+			sprite.hframes = 4  # Idle animation typically has 4 frames
+			sprite.vframes = 5  # 5 rows (idle, walk, attack, defend, hurt)
+			sprite.frame = 0    # First frame of idle
+			# Scale up for visibility
+			sprite.scale = Vector2(2.0, 2.0) if is_enemy else Vector2(2.0, 2.0)
+			# Flip enemies to face left (toward party)
+			if is_enemy:
+				sprite.flip_h = true
+			container.add_child(sprite)
+			has_sprite = true
+	
+	# Fallback to colored rectangle if no sprite
+	if not has_sprite:
+		var placeholder = ColorRect.new()
+		placeholder.size = Vector2(64, 64)
+		placeholder.position = Vector2(-32, -32)
+		placeholder.color = Color.CRIMSON if is_enemy else Color.DODGER_BLUE
+		placeholder.name = "Sprite"
+		container.add_child(placeholder)
 	
 	# Add name label
 	var label = Label.new()
 	label.text = combatant["display_name"]
-	label.position = Vector2(-40, -50)
-	label.add_theme_font_size_override("font_size", 12)
+	label.position = Vector2(-40, -70)
+	label.add_theme_font_size_override("font_size", 14)
+	label.add_theme_color_override("font_color", Color.WHITE)
+	label.add_theme_color_override("font_outline_color", Color.BLACK)
+	label.add_theme_constant_override("outline_size", 2)
 	container.add_child(label)
+	
+	# Add HP bar background
+	var hp_bg = ColorRect.new()
+	hp_bg.size = Vector2(64, 10)
+	hp_bg.position = Vector2(-32, 50)
+	hp_bg.color = Color(0.2, 0.2, 0.2, 0.8)
+	container.add_child(hp_bg)
 	
 	# Add HP bar
 	var hp_bar = ProgressBar.new()
 	hp_bar.size = Vector2(60, 8)
-	hp_bar.position = Vector2(-30, 40)
+	hp_bar.position = Vector2(-30, 51)
 	hp_bar.max_value = combatant["max_hp"]
 	hp_bar.value = combatant["current_hp"]
 	hp_bar.show_percentage = false
