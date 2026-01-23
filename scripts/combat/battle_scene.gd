@@ -8,7 +8,9 @@ extends Node2D
 @onready var party_status: VBoxContainer = $CanvasLayer/BattleUI/PartyStatus
 @onready var turn_indicator: Label = $CanvasLayer/BattleUI/TurnIndicator
 @onready var victory_screen: Control = $CanvasLayer/VictoryScreen
-@onready var xp_label: Label = $CanvasLayer/VictoryScreen/Panel/VBoxContainer/XPLabel
+@onready var xp_label: Label = $CanvasLayer/VictoryScreen/ContentPanel/VBoxContainer/XPLabel
+@onready var currency_label: Label = $CanvasLayer/VictoryScreen/ContentPanel/VBoxContainer/CurrencyLabel
+@onready var gameover_screen: Control = $CanvasLayer/GameOverScreen
 @onready var damage_numbers: Node2D = $DamageNumbers
 
 @onready var enemy_positions: Node2D = $EnemyPositions
@@ -23,7 +25,9 @@ var current_target_type: SkillData.TargetType
 @onready var skills_button: Button = $CanvasLayer/BattleUI/CommandMenu/SkillsButton
 @onready var defend_button: Button = $CanvasLayer/BattleUI/CommandMenu/DefendButton
 @onready var items_button: Button = $CanvasLayer/BattleUI/CommandMenu/ItemsButton
-@onready var continue_button: Button = $CanvasLayer/VictoryScreen/Panel/VBoxContainer/ContinueButton
+@onready var continue_button: Button = $CanvasLayer/VictoryScreen/ContentPanel/VBoxContainer/ContinueButton
+@onready var retry_button: Button = $CanvasLayer/GameOverScreen/ContentPanel/VBoxContainer/RetryButton
+@onready var quit_button: Button = $CanvasLayer/GameOverScreen/ContentPanel/VBoxContainer/QuitButton
 
 
 func _ready() -> void:
@@ -42,11 +46,16 @@ func _ready() -> void:
 	items_button.pressed.connect(_on_items_pressed)
 	continue_button.pressed.connect(_on_continue_pressed)
 	
+	# Connect game over buttons
+	retry_button.pressed.connect(_on_retry_pressed)
+	quit_button.pressed.connect(_on_quit_pressed)
+	
 	# Hide menus initially
 	command_menu.hide()
 	skills_menu.hide()
 	target_menu.hide()
 	victory_screen.hide()
+	gameover_screen.hide()
 	
 	# Start battle with test enemies if no data provided
 	_start_test_battle()
@@ -314,9 +323,10 @@ func _on_battle_ended(victory: bool) -> void:
 		victory_screen.show()
 		continue_button.grab_focus()
 	else:
-		# Show defeat screen / game over
+		# Show game over screen
 		await get_tree().create_timer(1.0).timeout
-		GameManager.end_combat(false)
+		gameover_screen.show()
+		retry_button.grab_focus()
 
 
 func _on_experience_gained(amount: int) -> void:
@@ -326,6 +336,17 @@ func _on_experience_gained(amount: int) -> void:
 func _on_continue_pressed() -> void:
 	victory_screen.hide()
 	GameManager.end_combat(true)
+
+
+func _on_retry_pressed() -> void:
+	gameover_screen.hide()
+	# Reload the current battle
+	get_tree().reload_current_scene()
+
+
+func _on_quit_pressed() -> void:
+	gameover_screen.hide()
+	GameManager.end_combat(false)
 
 
 func _update_party_status() -> void:
