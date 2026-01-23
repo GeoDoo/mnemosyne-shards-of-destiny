@@ -1,6 +1,6 @@
 # Mnemosyne: Shards of Destiny — Development Progress
 
-**Last Updated:** 2026-01-23 (Phase 6 complete)
+**Last Updated:** 2026-01-23 (Phase 7 complete)
 
 ---
 
@@ -113,26 +113,26 @@
 
 ---
 
-## Phase 7: Environment Assets ⬜ TODO
+## Phase 7: Environment Assets ✅ COMPLETE
 
 ### Tilesets (16x16)
-- [ ] Thespiae (starting village)
-- [ ] Temple of Apollo (ruins)
-- [ ] Mountain path
-- [ ] Delphi
-- [ ] Lebadeia (Well of Mnemosyne)
-- [ ] Delos (sacred island)
-- [ ] Necromanteion (Oracle of the Dead)
-- [ ] Mount Olympus
-- [ ] Typhon's sanctum
+- [x] Thespiae (starting village)
+- [x] Temple of the Muses
+- [x] Mountain path (Mount Helicon)
+- [x] Delphi
+- [x] Levadeia (Well of Mnemosyne)
+- [x] Delos (sacred island)
+- [x] Necromanteion (Oracle of the Dead)
+- [x] Mount Olympus Foothills
+- [x] Typhon's Sanctum
 
 ### Combat Backgrounds
-- [ ] Village/outdoor
-- [ ] Temple interior
-- [ ] Mountain/wilderness
-- [ ] Underground/cave
-- [ ] Divine realm
-- [ ] Final boss arena
+- [x] Village/outdoor (bg_village.png)
+- [x] Temple interior (bg_temple.png)
+- [x] Mountain/wilderness (bg_mountain.png)
+- [x] Underground/cave (bg_cave.png)
+- [x] Divine realm (bg_divine.png)
+- [x] Final boss arena (bg_final.png)
 
 ---
 
@@ -218,13 +218,15 @@
 | NPC sprites | 5 | 5 |
 | NPC portraits | 5 | 5 |
 | Enemy sprites | 26 | 26 |
-| Tilesets | 0 | ~9 |
-| Combat backgrounds | 0 | ~6 |
+| Tilesets | 9 | 9 |
+| Combat backgrounds | 6 | 6 |
 | Music tracks | 0 | ~9 |
 
 ### File Locations
 - Sprites: `assets/sprites/`
 - Portraits: `assets/portraits/`
+- Tilesets: `assets/tilesets/exploration/`
+- Combat BGs: `assets/tilesets/combat/`
 - Data: `data/`
 - Story: `story/`
 - Scripts: `scripts/`
@@ -234,4 +236,4 @@
 
 ## Next Priority
 
-**Phase 7: Environment Assets** — Create tilesets for exploration maps (Thespiae village, Temple of Apollo, etc.)
+**Phase 8: UI Assets** — Create UI elements (dialogue boxes, menus, combat HUD, etc.)
