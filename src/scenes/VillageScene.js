@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import House, { HouseColors } from '../assets/House.js';
+import { House, HouseColors, Tree, NPC, Crate, Barrel, MarketStall } from '../components';
 
 // Performance: Squared distance avoids expensive sqrt() in update loop
 const distSq = (x1, y1, x2, y2) => (x2 - x1) ** 2 + (y2 - y1) ** 2;
@@ -297,7 +297,8 @@ export default class VillageScene extends Phaser.Scene {
   }
 
   createTrees() {
-    // Store tree colliders in array for manual collision
+    // Store trees and their colliders using the new Tree component
+    this.trees = [];
     this.treeColliders = [];
     
     const treePositions = [
@@ -307,154 +308,54 @@ export default class VillageScene extends Phaser.Scene {
       [400, 1400], [700, 1350], [1300, 1350], [1600, 1400],
     ];
     
-    treePositions.forEach(([x, y]) => this.createTree(x, y));
-  }
-
-  createTree(x, y) {
-    // Shadow
-    this.add.ellipse(x + 4, y + 30, 40, 16, 0x000000, 0.3);
-    
-    // Trunk
-    this.add.rectangle(x, y + 18, 14, 40, 0x5c4033);
-    this.add.rectangle(x, y + 18, 10, 36, 0x6b4c38);
-    
-    // Foliage - layered for depth
-    this.add.circle(x - 12, y - 15, 22, 0x2d5a27);
-    this.add.circle(x + 12, y - 15, 22, 0x2d5a27);
-    this.add.circle(x, y - 25, 26, 0x3a6b32);
-    this.add.circle(x - 8, y - 20, 18, 0x4a8a4a);
-    this.add.circle(x + 8, y - 22, 20, 0x4a8a4a);
-    this.add.circle(x, y - 32, 18, 0x5a9a5a);
-    
-    // Collision - create static body directly
-    const collider = this.add.rectangle(x, y + 15, 30, 50, 0x000000, 0);
-    this.physics.add.existing(collider, true);
-    this.treeColliders.push(collider);
+    treePositions.forEach(([x, y]) => {
+      const tree = new Tree(this, { x, y, variant: 'cypress', hasCollider: true });
+      this.trees.push(tree);
+      if (tree.getCollider()) {
+        this.treeColliders.push(tree.getCollider());
+      }
+    });
   }
 
   createMarket() {
     this.marketItems = this.physics.add.staticGroup();
-    
-    // Market stalls on the right side of square
-    this.createMarketStall(this.worldWidth/2 + 250, this.worldHeight/2 - 80, 'Fruit Stand');
-    this.createMarketStall(this.worldWidth/2 + 250, this.worldHeight/2 + 80, 'Pottery');
-    
-    // Crates and barrels
-    this.createCrate(this.worldWidth/2 - 280, this.worldHeight/2 - 100);
-    this.createCrate(this.worldWidth/2 - 250, this.worldHeight/2 - 80);
-    this.createBarrel(this.worldWidth/2 - 300, this.worldHeight/2 + 50);
-    this.createBarrel(this.worldWidth/2 - 270, this.worldHeight/2 + 80);
-  }
-
-  createMarketStall(x, y, name) {
-    const stall = this.add.container(x, y);
-    
-    // Shadow
-    stall.add(this.add.ellipse(3, 25, 90, 30, 0x000000, 0.25));
-    
-    // Wooden table/counter
-    stall.add(this.add.rectangle(-35, 18, 5, 22, 0x6b4c38));
-    stall.add(this.add.rectangle(35, 18, 5, 22, 0x6b4c38));
-    stall.add(this.add.rectangle(0, 5, 80, 10, 0x7b5c48));
-    stall.add(this.add.rectangle(0, 3, 76, 6, 0x8b6c58));
-    
-    // Wooden poles for awning
-    stall.add(this.add.rectangle(-38, -18, 4, 48, 0x6b4c38));
-    stall.add(this.add.rectangle(38, -18, 4, 48, 0x6b4c38));
-    
-    // Linen awning (draped fabric - Greek style)
-    const awningColor = name === 'Fruit Stand' ? 0xcc8855 : 0x7788aa;
-    // Simple rectangular awning with slight drape effect
-    stall.add(this.add.rectangle(0, -40, 95, 16, awningColor));
-    stall.add(this.add.rectangle(0, -38, 90, 12, awningColor + 0x111111));
-    // Drape shadows at edges
-    stall.add(this.add.rectangle(-40, -34, 12, 4, awningColor - 0x222222));
-    stall.add(this.add.rectangle(40, -34, 12, 4, awningColor - 0x222222));
-    // Center drape
-    stall.add(this.add.rectangle(0, -32, 30, 6, awningColor - 0x111111));
-    
-    // Items on table
-    if (name === 'Fruit Stand') {
-      // Pomegranates (Greek!)
-      stall.add(this.add.circle(-28, -3, 5, 0xaa2233));
-      stall.add(this.add.circle(-20, -2, 5, 0xbb3344));
-      // Figs
-      stall.add(this.add.ellipse(-8, -3, 4, 5, 0x553366));
-      stall.add(this.add.ellipse(-2, -2, 4, 5, 0x664477));
-      // Grapes
-      stall.add(this.add.circle(10, -3, 3, 0x443366));
-      stall.add(this.add.circle(13, -1, 3, 0x443366));
-      stall.add(this.add.circle(16, -3, 3, 0x443366));
-      stall.add(this.add.circle(12, -5, 3, 0x554477));
-      // Olives in bowl
-      stall.add(this.add.ellipse(28, -2, 10, 6, 0xaa9988));
-      stall.add(this.add.circle(26, -4, 2, 0x334422));
-      stall.add(this.add.circle(30, -4, 2, 0x334422));
-    } else {
-      // Greek amphorae and pottery
-      stall.add(this.add.ellipse(-25, -8, 8, 14, 0xb86b4a));
-      stall.add(this.add.ellipse(-25, -16, 5, 3, 0xa05a3a));
-      stall.add(this.add.rectangle(-25, -20, 2, 6, 0xa05a3a)); // Handle
-      
-      stall.add(this.add.ellipse(0, -6, 7, 12, 0xc97a55));
-      stall.add(this.add.ellipse(0, -13, 4, 2, 0xb86b4a));
-      
-      stall.add(this.add.ellipse(22, -10, 10, 16, 0xb86b4a));
-      stall.add(this.add.ellipse(22, -20, 6, 3, 0xa05a3a));
-      // Decorative band
-      stall.add(this.add.rectangle(22, -8, 16, 3, 0x222222));
-    }
-    
-    // Collision
-    const collider = this.add.rectangle(x, y, 90, 55, 0x000000, 0);
-    this.physics.add.existing(collider, true);
-    this.marketItems.add(collider);
-    
-    // Interactable
-    stall.interactable = { x, y, name, type: 'examine', dialogue: [
-      { speaker: '', text: name === 'Fruit Stand' 
-        ? 'Fresh pomegranates, figs, grapes, and olives. The bounty of Greece.' 
-        : 'Traditional amphorae and pottery, crafted by local artisans.' }
-    ]};
+    this.props = [];
     this.interactables = this.interactables || [];
-    this.interactables.push(stall.interactable);
-  }
-
-  createCrate(x, y) {
-    const crate = this.add.container(x, y);
-    // Shadow
-    crate.add(this.add.rectangle(2, 2, 22, 22, 0x000000, 0.3));
-    // Main crate
-    crate.add(this.add.rectangle(0, 0, 22, 22, 0x8b6914));
-    crate.add(this.add.rectangle(0, 0, 18, 18, 0x9b7924));
-    // Wood planks
-    crate.add(this.add.rectangle(0, -6, 18, 2, 0x7b5914));
-    crate.add(this.add.rectangle(0, 6, 18, 2, 0x7b5914));
-    crate.add(this.add.rectangle(-6, 0, 2, 18, 0x7b5914));
-    crate.add(this.add.rectangle(6, 0, 2, 18, 0x7b5914));
     
-    const collider = this.add.rectangle(x, y, 26, 26, 0x000000, 0);
-    this.physics.add.existing(collider, true);
-    this.marketItems.add(collider);
-  }
-
-  createBarrel(x, y) {
-    const barrel = this.add.container(x, y);
-    // Shadow
-    barrel.add(this.add.ellipse(2, 3, 22, 10, 0x000000, 0.3));
-    // Main barrel body
-    barrel.add(this.add.ellipse(0, 0, 20, 28, 0x6b4c38));
-    barrel.add(this.add.ellipse(0, 0, 18, 26, 0x7b5c48));
-    // Top
-    barrel.add(this.add.ellipse(0, -10, 18, 8, 0x5c4033));
-    barrel.add(this.add.ellipse(0, -10, 14, 5, 0x4a3525));
-    // Metal bands
-    barrel.add(this.add.ellipse(0, -4, 20, 8, 0x444444, 0).setStrokeStyle(2, 0x555555));
-    barrel.add(this.add.ellipse(0, 6, 20, 8, 0x444444, 0).setStrokeStyle(2, 0x555555));
+    // Market stalls (using new components)
+    const fruitStall = new MarketStall(this, {
+      x: this.worldWidth/2 + 250,
+      y: this.worldHeight/2 - 80,
+      variant: 'fruit',
+      name: 'Fruit Stand'
+    });
+    this.props.push(fruitStall);
+    if (fruitStall.getCollider()) this.marketItems.add(fruitStall.getCollider());
+    if (fruitStall.getInteractable()) this.interactables.push(fruitStall.getInteractable());
     
-    const collider = this.add.circle(x, y, 14, 0x000000, 0);
-    this.physics.add.existing(collider, true);
-    this.marketItems.add(collider);
+    const potteryStall = new MarketStall(this, {
+      x: this.worldWidth/2 + 250,
+      y: this.worldHeight/2 + 80,
+      variant: 'pottery',
+      name: 'Pottery'
+    });
+    this.props.push(potteryStall);
+    if (potteryStall.getCollider()) this.marketItems.add(potteryStall.getCollider());
+    if (potteryStall.getInteractable()) this.interactables.push(potteryStall.getInteractable());
+    
+    // Crates (using new components)
+    const crate1 = new Crate(this, { x: this.worldWidth/2 - 280, y: this.worldHeight/2 - 100 });
+    const crate2 = new Crate(this, { x: this.worldWidth/2 - 250, y: this.worldHeight/2 - 80 });
+    this.props.push(crate1, crate2);
+    if (crate1.getCollider()) this.marketItems.add(crate1.getCollider());
+    if (crate2.getCollider()) this.marketItems.add(crate2.getCollider());
+    
+    // Barrels (using new components)
+    const barrel1 = new Barrel(this, { x: this.worldWidth/2 - 300, y: this.worldHeight/2 + 50 });
+    const barrel2 = new Barrel(this, { x: this.worldWidth/2 - 270, y: this.worldHeight/2 + 80 });
+    this.props.push(barrel1, barrel2);
+    if (barrel1.getCollider()) this.marketItems.add(barrel1.getCollider());
+    if (barrel2.getCollider()) this.marketItems.add(barrel2.getCollider());
   }
 
   createDecorations() {
@@ -476,95 +377,24 @@ export default class VillageScene extends Phaser.Scene {
 
   createNPCs() {
     // Epimenides - village elder, near the well
-    this.createNPC(this.worldWidth/2 - 100, this.worldHeight/2 + 100, 'Epimenides', 'elder',
-      this.dialogueData.npcs?.epimenides?.dialogue || [{ speaker: 'Epimenides', text: 'Welcome, traveler.' }]
-    );
+    const epimenides = new NPC(this, {
+      x: this.worldWidth/2 - 100,
+      y: this.worldHeight/2 + 100,
+      name: 'Epimenides',
+      variant: 'elder',
+      dialogue: this.dialogueData.npcs?.epimenides?.dialogue || [{ speaker: 'Epimenides', text: 'Welcome, traveler.' }]
+    });
+    this.npcs.push(epimenides.getData());
     
     // Merchant - at fruit stand
-    this.createNPC(this.worldWidth/2 + 180, this.worldHeight/2 - 80, 'Merchant', 'merchant',
-      this.dialogueData.npcs?.merchant?.dialogue || [{ speaker: 'Merchant', text: 'Fine goods for sale!' }]
-    );
-  }
-
-  createNPC(x, y, name, type, dialogue) {
-    const npc = this.add.container(x, y);
-    
-    // Shadow
-    npc.add(this.add.ellipse(0, 18, 18, 7, 0x000000, 0.4));
-    
-    if (type === 'elder') {
-      // Greek himation (cloak/robe) - draped style
-      npc.add(this.add.rectangle(0, 6, 18, 28, 0xddd8c8)); // Off-white robe
-      npc.add(this.add.rectangle(0, 6, 16, 26, 0xe8e4d8));
-      // Draped fold detail
-      npc.add(this.add.rectangle(-4, 6, 3, 24, 0xccc8b8));
-      npc.add(this.add.rectangle(5, 10, 2, 16, 0xccc8b8));
-      // Purple trim (sign of wisdom/status)
-      npc.add(this.add.rectangle(0, -6, 16, 2, 0x663366));
-      
-      // Bare arms (Greek elders)
-      npc.add(this.add.rectangle(-10, 4, 3, 10, 0xccb8a0));
-      
-      // Head
-      npc.add(this.add.circle(0, -12, 8, 0xccb8a0)); // Weathered skin
-      
-      // White beard (long, Greek philosopher style)
-      npc.add(this.add.ellipse(0, -4, 12, 12, 0xcccccc));
-      npc.add(this.add.ellipse(0, 2, 10, 8, 0xdddddd));
-      npc.add(this.add.ellipse(0, 8, 6, 6, 0xcccccc)); // Beard tip
-      
-      // Balding with white hair on sides
-      npc.add(this.add.ellipse(-6, -14, 4, 5, 0xbbbbbb));
-      npc.add(this.add.ellipse(6, -14, 4, 5, 0xbbbbbb));
-      
-      // Wise eyes
-      npc.add(this.add.circle(-3, -13, 1.5, 0x334455));
-      npc.add(this.add.circle(3, -13, 1.5, 0x334455));
-      
-      // Laurel wreath hint
-      npc.add(this.add.ellipse(0, -18, 10, 3, 0x556633));
-      
-    } else {
-      // Greek merchant - simple chiton
-      npc.add(this.add.rectangle(0, 6, 14, 24, 0xc4a882)); // Brown/tan chiton
-      npc.add(this.add.rectangle(0, 6, 12, 22, 0xd4b892));
-      // Leather belt
-      npc.add(this.add.rectangle(0, 0, 14, 3, 0x6b4c38));
-      
-      // Arms
-      npc.add(this.add.rectangle(-8, 3, 3, 12, 0xddb896));
-      npc.add(this.add.rectangle(8, 3, 3, 12, 0xddb896));
-      
-      // Head
-      npc.add(this.add.circle(0, -10, 7, 0xddb896));
-      
-      // Dark curly Greek hair
-      npc.add(this.add.ellipse(0, -16, 10, 6, 0x2a1a0a));
-      npc.add(this.add.circle(-4, -12, 3, 0x2a1a0a));
-      npc.add(this.add.circle(4, -12, 3, 0x2a1a0a));
-      npc.add(this.add.circle(-2, -17, 2, 0x2a1a0a));
-      npc.add(this.add.circle(2, -17, 2, 0x2a1a0a));
-      
-      // Short beard
-      npc.add(this.add.ellipse(0, -4, 8, 6, 0x3a2a1a));
-      
-      // Eyes
-      npc.add(this.add.circle(-2, -10, 1.5, 0x443322));
-      npc.add(this.add.circle(2, -10, 1.5, 0x443322));
-    }
-    
-    npc.setScale(1.3);
-    
-    // Physics
-    this.physics.add.existing(npc);
-    npc.body.setImmovable(true);
-    npc.body.setSize(24, 38);
-    
-    this.npcs.push({
-      container: npc,
-      x, y, name, dialogue,
-      type: 'npc'
+    const merchant = new NPC(this, {
+      x: this.worldWidth/2 + 180,
+      y: this.worldHeight/2 - 80,
+      name: 'Merchant',
+      variant: 'merchant',
+      dialogue: this.dialogueData.npcs?.merchant?.dialogue || [{ speaker: 'Merchant', text: 'Fine goods for sale!' }]
     });
+    this.npcs.push(merchant.getData());
   }
 
   createPlayer() {
@@ -732,8 +562,10 @@ export default class VillageScene extends Phaser.Scene {
       this.scene.start('AssetGalleryScene');
     }
 
-    // Depth sort NPCs and player
-    this.sortDepth();
+    // Depth sort only when player moved (avoids unnecessary sorting when idle)
+    if (vx !== 0 || vy !== 0) {
+      this.sortDepth();
+    }
   }
 
   sortDepth() {

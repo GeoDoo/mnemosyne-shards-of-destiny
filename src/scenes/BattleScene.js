@@ -1,4 +1,6 @@
 import Phaser from 'phaser';
+import { BATTLE } from '../config/battle.js';
+import { executeAction } from '../systems/BattleActions.js';
 
 export default class BattleScene extends Phaser.Scene {
   constructor() {
@@ -41,6 +43,9 @@ export default class BattleScene extends Phaser.Scene {
 
     this.cameras.main.fadeIn(300);
     
+    // Object pool for damage numbers (avoids GC spikes)
+    this._createDamagePool();
+
     // Battle intro sequence
     this.showMessage('An Eidolon appears!');
     this.time.delayedCall(1500, () => {
@@ -50,6 +55,20 @@ export default class BattleScene extends Phaser.Scene {
         this.commandMenu.setVisible(true);
       });
     });
+  }
+
+  _createDamagePool() {
+    this.damagePool = [];
+    this.damagePoolIndex = 0;
+    for (let i = 0; i < 10; i++) {
+      const t = this.add.text(0, 0, '', {
+        fontSize: '28px',
+        fill: '#ffffff',
+        stroke: '#000',
+        strokeThickness: 3
+      }).setOrigin(0.5).setVisible(false).setDepth(100);
+      this.damagePool.push(t);
+    }
   }
 
   createCombatants(width, height) {
@@ -142,46 +161,9 @@ export default class BattleScene extends Phaser.Scene {
     if (this.battleState !== 'PLAYER_TURN') return;
     this.battleState = 'EXECUTING';
     this.commandMenu.setVisible(false);
-
-    const player = this.party[0];
-    const enemy = this.enemies[0];
-
-    if (action === 'attack') {
-      const dmg = Math.max(1, player.attack + Phaser.Math.Between(-2, 4) - Math.floor(enemy.defense / 2));
-      this.tweens.add({
-        targets: player.sprite,
-        x: player.sprite.x + 120,
-        duration: 100,
-        yoyo: true,
-        onYoyo: () => this.damageEnemy(enemy, dmg),
-        onComplete: () => this.afterPlayerTurn()
-      });
-    } else if (action === 'skill') {
-      if (player.mp < 10) {
-        this.showMessage('No MP!');
-        this.time.delayedCall(800, () => { this.messageBox.setVisible(false); this.battleState = 'PLAYER_TURN'; this.commandMenu.setVisible(true); });
-        return;
-      }
-      player.mp -= 10;
-      const heal = Math.floor(player.magic * 2 + 15);
-      player.hp = Math.min(player.maxHp, player.hp + heal);
-      this.updatePlayerUI();
-      this.showDamage(player.sprite.x, player.sprite.y - 50, '+' + heal, '#44ff44');
-      this.showMessage('Healed!');
-      this.time.delayedCall(1000, () => this.afterPlayerTurn());
-    } else if (action === 'defend') {
-      player.isDefending = true;
-      this.showMessage('Defending');
-      this.time.delayedCall(800, () => this.afterPlayerTurn());
-    } else if (action === 'flee') {
-      if (Phaser.Math.Between(0, 1)) {
-        this.showMessage('Escaped!');
-        this.time.delayedCall(800, () => { this.cameras.main.fadeOut(300); this.cameras.main.once('camerafadeoutcomplete', () => this.scene.start('VillageScene')); });
-      } else {
-        this.showMessage('Failed!');
-        this.time.delayedCall(800, () => this.afterPlayerTurn());
-      }
-    }
+    
+    // Use command pattern - delegates to BattleActions
+    executeAction(action, this);
   }
 
   damageEnemy(enemy, dmg) {
@@ -202,8 +184,18 @@ export default class BattleScene extends Phaser.Scene {
   }
 
   showDamage(x, y, text, color) {
-    const t = this.add.text(x, y, text, { fontSize: '28px', fill: color, stroke: '#000', strokeThickness: 3 }).setOrigin(0.5);
-    this.tweens.add({ targets: t, y: y - 30, alpha: 0, duration: 600, onComplete: () => t.destroy() });
+    // Use pooled text object instead of creating/destroying
+    const t = this.damagePool[this.damagePoolIndex];
+    this.damagePoolIndex = (this.damagePoolIndex + 1) % this.damagePool.length;
+    
+    t.setPosition(x, y).setText(text).setColor(color).setAlpha(1).setVisible(true);
+    this.tweens.add({
+      targets: t,
+      y: y - 30,
+      alpha: 0,
+      duration: 600,
+      onComplete: () => t.setVisible(false)
+    });
   }
 
   afterPlayerTurn() {
@@ -216,20 +208,26 @@ export default class BattleScene extends Phaser.Scene {
     this.battleState = 'ENEMY_TURN';
     const enemy = this.enemies[0];
     const player = this.party[0];
+    const { TIMING, COMBAT, UI } = BATTLE;
 
-    this.time.delayedCall(500, () => {
-      let dmg = Math.max(1, enemy.attack + Phaser.Math.Between(-2, 3) - Math.floor(player.defense / 2));
-      if (player.isDefending) { dmg = Math.floor(dmg / 2); player.isDefending = false; }
+    this.time.delayedCall(TIMING.ENEMY_TURN_DELAY, () => {
+      const variance = Phaser.Math.Between(COMBAT.ENEMY_DAMAGE_VARIANCE.min, COMBAT.ENEMY_DAMAGE_VARIANCE.max);
+      let dmg = Math.max(COMBAT.MIN_DAMAGE, enemy.attack + variance - Math.floor(player.defense * COMBAT.DEFENSE_MULTIPLIER));
+      
+      if (player.isDefending) {
+        dmg = Math.floor(dmg * COMBAT.DEFENSE_MULTIPLIER);
+        player.isDefending = false;
+      }
 
       this.tweens.add({
         targets: enemy.sprite,
-        x: enemy.sprite.x - 100,
-        duration: 100,
+        x: enemy.sprite.x - COMBAT.ENEMY_LUNGE_DISTANCE,
+        duration: TIMING.ATTACK_LUNGE,
         yoyo: true,
         onYoyo: () => {
           player.hp = Math.max(0, player.hp - dmg);
           this.updatePlayerUI();
-          this.showDamage(player.sprite.x, player.sprite.y - 50, '-' + dmg, '#ff4444');
+          this.showDamage(player.sprite.x, player.sprite.y + UI.DAMAGE_OFFSET_Y, '-' + dmg, '#ff4444');
         },
         onComplete: () => {
           if (player.hp <= 0) { this.defeat(); return; }

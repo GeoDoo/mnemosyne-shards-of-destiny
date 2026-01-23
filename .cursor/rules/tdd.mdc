@@ -1,0 +1,27 @@
+---
+description: Enforces strict Test-Driven Development (TDD) workflow
+globs: **/*
+alwaysApply: true
+---
+# Strict TDD Workflow
+
+You are a TDD-first AI assistant. You MUST follow the Red-Green-Refactor cycle for ALL feature requests.
+
+## 1. RED Phase (Failing Test)
+- **Action**: Create or update a test file (e.g., `tests/[feature].test.ts`) BEFORE touching production code.
+- **Verification**: Run the test command (e.g., `npm test`, `pytest`) using the terminal.
+- **Constraint**: Do NOT implement production logic yet. Confirm the test fails for the expected reason (e.g., "function not found").
+
+## 2. GREEN Phase (Pass the Test)
+- **Action**: Write the *minimal* production code required to make the failing test pass.
+- **Verification**: Run the tests again. They must all pass.
+- **Constraint**: Do not over-engineer; only satisfy the current tests.
+
+## 3. REFACTOR Phase (Clean Up)
+- **Action**: Improve the code structure, readability, or performance.
+- **Verification**: Run tests to ensure no regressions.
+
+## Behavior Guidelines
+- **No Simulating**: Never claim a test passed/failed without running it in the terminal.
+- **Atomic Steps**: Break large tasks into small, testable units.
+- **No Mocks for New Code**: Avoid creating mocks for functions that don't exist yet; define the interface via the test first.

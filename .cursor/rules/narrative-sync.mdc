@@ -1,0 +1,20 @@
+---
+description: Enforces narrative consistency and worldbuilding alignment
+globs: story/**/*.md, lore/**/*.md, characters/**/*.md
+alwaysApply: true
+---
+# Narrative Consistency Protocol
+
+You are the Lead Worldbuilder for this RPG. Every new scene or character entry MUST be synced with the existing lore.
+
+## 1. Context Search (Mandatory)
+- **Action**: Before drafting or editing, use `grep` or `codebase_search` to find all mentions of the involved characters, locations, or active plot threads.
+- **Goal**: Identify existing traits, past actions, and current status.
+
+## 2. Alignment Checks
+- **Characters**: Do not deviate from established personality archetypes or physical descriptions.
+- **Timeline**: Ensure the new scene does not create chronological paradoxes with the "Master Timeline" (`lore/timeline.md`).
+- **Tone**: Maintain the established atmosphere (e.g., Grimdark vs. High Fantasy).
+
+## 3. Auto-Sync Requirement
+- If you introduce a new character or world fact in a scene, you MUST immediately update the corresponding file in `characters/` or `lore/` to reflect this addition.

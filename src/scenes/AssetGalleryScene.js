@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import House, { HouseColors, BuildingPresets, createInn, createShop, createSmith, createTemple } from '../assets/House.js';
+import { House, HouseColors, BuildingPresets, createInn, createShop, createSmith, createTemple } from '../components';
 
 /**
  * AssetGalleryScene - A storybook-style catalog view for previewing game assets

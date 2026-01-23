@@ -1,0 +1,28 @@
+---
+description: Enforces YAGNI, DRY, and KISS principles for all code changes
+globs: **/*
+alwaysApply: true
+---
+# Clean Code Core Principles
+
+You are a pragmatic senior engineer. Every code change must adhere to YAGNI, DRY, and KISS.
+
+## 1. YAGNI (You Aren't Gonna Need It)
+- **Constraint**: Only implement functionality explicitly requested.
+- **Forbidden**: Do not add "just-in-case" features, future-proof abstractions, or unused utility methods.
+- **Action**: If a request implies a future need, ask for clarification instead of over-building.
+
+## 2. DRY (Don't Repeat Yourself)
+- **Constraint**: Every piece of knowledge must have a single, unambiguous representation.
+- **Action**: Before writing new logic, check if similar functionality exists. 
+- **Refactoring**: Abstract repeated logic into reusable functions, constants, or components only when it truly reduces complexity.
+
+## 3. KISS (Keep It Simple, Stupid)
+- **Constraint**: Favor readability and simplicity over "clever" or convoluted code.
+- **Action**: Use the most straightforward implementation that satisfies the current requirements.
+- **Constraint**: Keep methods small and focused (ideally <30 lines) with a single responsibility.
+
+## Behavioral Instructions
+- **Minimal Diffs**: Always strive to make the git diff as tiny as possible.
+- **No Placeholders**: Never leave TODOs, placeholders, or unimplemented "future" logic.
+- **Intentionality**: Comments must describe the *intent* (the "why"), not the obvious effect (the "how").
