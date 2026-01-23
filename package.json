@@ -1,0 +1,17 @@
+{
+  "name": "mnemosyne-shards-of-destiny",
+  "version": "1.0.0",
+  "description": "A turn-based RPG where a young hero uncovers divine memories at an ancient Temple of Apollo",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "phaser": "^3.80.1"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

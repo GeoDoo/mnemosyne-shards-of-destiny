@@ -1,0 +1,731 @@
+{
+  "skills": {
+    "player": [
+      {
+        "id": "basic_attack",
+        "display_name": "Attack",
+        "description": "A basic physical attack.",
+        "target_type": 0,
+        "damage_type": 0,
+        "element": 0,
+        "mp_cost": 0,
+        "base_power": 10,
+        "attack_scaling": 1.0,
+        "magic_scaling": 0.0,
+        "is_basic_attack": true,
+        "can_crit": true,
+        "crit_multiplier": 1.5
+      },
+      {
+        "id": "defend",
+        "display_name": "Defend",
+        "description": "Take a defensive stance, reducing incoming damage by 50% this turn.",
+        "target_type": 4,
+        "is_defend": true
+      },
+      {
+        "id": "memory_flash",
+        "display_name": "Memory Flash",
+        "description": "Strike with a brilliant flash of divine memory. Deals light damage.",
+        "target_type": 0,
+        "damage_type": 1,
+        "element": 2,
+        "mp_cost": 12,
+        "base_power": 25,
+        "attack_scaling": 0.3,
+        "magic_scaling": 1.2,
+        "can_crit": true,
+        "crit_multiplier": 1.5
+      },
+      {
+        "id": "heal",
+        "display_name": "Heal",
+        "description": "Restore HP to a single ally.",
+        "target_type": 2,
+        "damage_type": 3,
+        "element": 0,
+        "mp_cost": 8,
+        "base_power": 30,
+        "attack_scaling": 0.0,
+        "magic_scaling": 0.5,
+        "can_crit": false
+      },
+      {
+        "id": "shard_recall",
+        "display_name": "Shard Recall",
+        "description": "Channel the power of memory shards to damage all enemies.",
+        "target_type": 1,
+        "damage_type": 1,
+        "element": 2,
+        "mp_cost": 20,
+        "base_power": 18,
+        "attack_scaling": 0.2,
+        "magic_scaling": 1.0,
+        "can_crit": true,
+        "crit_multiplier": 1.3
+      },
+      {
+        "id": "divine_shield",
+        "display_name": "Divine Shield",
+        "description": "Protect an ally with a barrier of light, reducing damage taken.",
+        "target_type": 2,
+        "mp_cost": 10,
+        "inflicts_status": "shielded",
+        "status_chance": 1.0,
+        "status_duration": 3
+      },
+      {
+        "id": "shield_bash",
+        "display_name": "Shield Bash",
+        "description": "Slam your shield into the enemy, dealing damage and possibly stunning.",
+        "target_type": 0,
+        "damage_type": 0,
+        "element": 0,
+        "mp_cost": 8,
+        "base_power": 18,
+        "attack_scaling": 1.2,
+        "magic_scaling": 0.0,
+        "inflicts_status": "stunned",
+        "status_chance": 0.3,
+        "status_duration": 1,
+        "can_crit": true,
+        "crit_multiplier": 1.5
+      },
+      {
+        "id": "spartan_discipline",
+        "display_name": "Spartan Discipline",
+        "description": "Steel yourself against harm. Reduces damage taken for 3 turns.",
+        "target_type": 4,
+        "mp_cost": 12,
+        "inflicts_status": "fortified",
+        "status_chance": 1.0,
+        "status_duration": 3
+      },
+      {
+        "id": "war_cry",
+        "display_name": "War Cry",
+        "description": "Rally your allies with a battle cry. Boosts party attack.",
+        "target_type": 3,
+        "mp_cost": 15,
+        "inflicts_status": "attack_up",
+        "status_chance": 1.0,
+        "status_duration": 3
+      }
+    ],
+    "enemy": [
+      {
+        "id": "ghostly_wail",
+        "display_name": "Ghostly Wail",
+        "description": "A chilling cry from beyond the grave.",
+        "target_type": 0,
+        "damage_type": 1,
+        "element": 3,
+        "base_power": 12,
+        "magic_scaling": 0.8
+      },
+      {
+        "id": "dream_touch",
+        "display_name": "Dream Touch",
+        "description": "Inflicts drowsiness with a touch of dream energy.",
+        "target_type": 0,
+        "damage_type": 1,
+        "element": 0,
+        "base_power": 8,
+        "magic_scaling": 1.0,
+        "inflicts_status": "drowsy",
+        "status_chance": 0.4,
+        "status_duration": 2
+      },
+      {
+        "id": "headbutt",
+        "display_name": "Headbutt",
+        "description": "A brutal charge with horns lowered.",
+        "target_type": 0,
+        "damage_type": 0,
+        "base_power": 15,
+        "attack_scaling": 1.1
+      },
+      {
+        "id": "stone_claw",
+        "display_name": "Stone Claw",
+        "description": "Slash with claws of corrupted stone.",
+        "target_type": 0,
+        "damage_type": 0,
+        "element": 5,
+        "base_power": 14,
+        "attack_scaling": 1.0
+      },
+      {
+        "id": "corrupted_scream",
+        "display_name": "Corrupted Scream",
+        "description": "A scream of chaos-tainted anguish.",
+        "target_type": 1,
+        "damage_type": 1,
+        "element": 3,
+        "base_power": 10,
+        "magic_scaling": 0.9
+      },
+      {
+        "id": "draining_kiss",
+        "display_name": "Draining Kiss",
+        "description": "Drain life force through a vampiric kiss.",
+        "target_type": 0,
+        "damage_type": 1,
+        "element": 3,
+        "base_power": 16,
+        "magic_scaling": 0.8,
+        "drain_percent": 0.5
+      },
+      {
+        "id": "shapeshift",
+        "display_name": "Shapeshift",
+        "description": "Change form to confuse attackers. Increases evasion.",
+        "target_type": 4,
+        "inflicts_status": "evasion_up",
+        "status_chance": 1.0,
+        "status_duration": 2
+      },
+      {
+        "id": "nightmare_shriek",
+        "display_name": "Nightmare Shriek",
+        "description": "A terrifying scream that haunts the mind.",
+        "target_type": 0,
+        "damage_type": 1,
+        "element": 3,
+        "base_power": 18,
+        "magic_scaling": 1.0,
+        "inflicts_status": "fear",
+        "status_chance": 0.3,
+        "status_duration": 2
+      },
+      {
+        "id": "terrifying_wail",
+        "display_name": "Terrifying Wail",
+        "description": "A wail that strikes fear into all who hear it.",
+        "target_type": 1,
+        "damage_type": 1,
+        "element": 3,
+        "base_power": 12,
+        "magic_scaling": 0.9,
+        "inflicts_status": "fear",
+        "status_chance": 0.25,
+        "status_duration": 2
+      },
+      {
+        "id": "shadow_grasp",
+        "display_name": "Shadow Grasp",
+        "description": "Tendrils of darkness reach out to grab the target.",
+        "target_type": 0,
+        "damage_type": 1,
+        "element": 3,
+        "base_power": 14,
+        "magic_scaling": 1.0,
+        "inflicts_status": "slowed",
+        "status_chance": 0.4,
+        "status_duration": 2
+      },
+      {
+        "id": "blood_drain",
+        "display_name": "Blood Drain",
+        "description": "Drink the blood of the living to restore health.",
+        "target_type": 0,
+        "damage_type": 0,
+        "base_power": 12,
+        "attack_scaling": 1.0,
+        "drain_percent": 0.6
+      },
+      {
+        "id": "swooping_strike",
+        "display_name": "Swooping Strike",
+        "description": "Dive from above with talons extended.",
+        "target_type": 0,
+        "damage_type": 0,
+        "base_power": 16,
+        "attack_scaling": 1.2,
+        "can_crit": true,
+        "crit_multiplier": 2.0
+      },
+      {
+        "id": "death_touch",
+        "display_name": "Death Touch",
+        "description": "The cold touch of death itself.",
+        "target_type": 0,
+        "damage_type": 1,
+        "element": 3,
+        "base_power": 20,
+        "magic_scaling": 1.0
+      },
+      {
+        "id": "blood_frenzy",
+        "display_name": "Blood Frenzy",
+        "description": "Enter a frenzy at the scent of blood.",
+        "target_type": 4,
+        "inflicts_status": "attack_up",
+        "status_chance": 1.0,
+        "status_duration": 3
+      },
+      {
+        "id": "venomous_bite",
+        "display_name": "Venomous Bite",
+        "description": "A bite that injects deadly venom.",
+        "target_type": 0,
+        "damage_type": 0,
+        "base_power": 14,
+        "attack_scaling": 1.0,
+        "inflicts_status": "poisoned",
+        "status_chance": 0.5,
+        "status_duration": 3
+      },
+      {
+        "id": "hypnotic_gaze",
+        "display_name": "Hypnotic Gaze",
+        "description": "Entrance the target with serpentine eyes.",
+        "target_type": 0,
+        "damage_type": 1,
+        "element": 3,
+        "base_power": 10,
+        "magic_scaling": 0.8,
+        "inflicts_status": "confused",
+        "status_chance": 0.4,
+        "status_duration": 2
+      },
+      {
+        "id": "corpse_feast",
+        "display_name": "Corpse Feast",
+        "description": "Feed on death to restore health.",
+        "target_type": 4,
+        "damage_type": 3,
+        "base_power": 25,
+        "heal_on_kill_bonus": 50
+      },
+      {
+        "id": "carrion_swarm",
+        "display_name": "Carrion Swarm",
+        "description": "Summon a swarm of carrion flies.",
+        "target_type": 1,
+        "damage_type": 1,
+        "element": 3,
+        "base_power": 10,
+        "magic_scaling": 0.6,
+        "inflicts_status": "poisoned",
+        "status_chance": 0.3,
+        "status_duration": 2
+      },
+      {
+        "id": "wave_of_despair",
+        "display_name": "Wave of Despair",
+        "description": "Unleash a crushing wave of misery.",
+        "target_type": 1,
+        "damage_type": 1,
+        "element": 3,
+        "base_power": 14,
+        "magic_scaling": 1.1,
+        "inflicts_status": "defense_down",
+        "status_chance": 0.4,
+        "status_duration": 2
+      },
+      {
+        "id": "crushing_sorrow",
+        "display_name": "Crushing Sorrow",
+        "description": "Overwhelming grief weighs upon the target.",
+        "target_type": 0,
+        "damage_type": 1,
+        "element": 3,
+        "base_power": 22,
+        "magic_scaling": 1.2,
+        "inflicts_status": "slowed",
+        "status_chance": 0.5,
+        "status_duration": 2
+      },
+      {
+        "id": "poison_mist",
+        "display_name": "Poison Mist",
+        "description": "Exhale a cloud of deadly poison.",
+        "target_type": 1,
+        "damage_type": 1,
+        "base_power": 12,
+        "magic_scaling": 1.0,
+        "inflicts_status": "poisoned",
+        "status_chance": 0.6,
+        "status_duration": 3
+      },
+      {
+        "id": "eternal_tears",
+        "display_name": "Eternal Tears",
+        "description": "Weep tears that burn like acid.",
+        "target_type": 0,
+        "damage_type": 1,
+        "element": 4,
+        "base_power": 24,
+        "magic_scaling": 1.3
+      },
+      {
+        "id": "maddening_touch",
+        "display_name": "Maddening Touch",
+        "description": "A touch that brings temporary insanity.",
+        "target_type": 0,
+        "damage_type": 1,
+        "base_power": 16,
+        "magic_scaling": 1.0,
+        "inflicts_status": "confused",
+        "status_chance": 0.5,
+        "status_duration": 2
+      },
+      {
+        "id": "frenzied_assault",
+        "display_name": "Frenzied Assault",
+        "description": "Wild, unpredictable attacks.",
+        "target_type": 0,
+        "damage_type": 0,
+        "base_power": 8,
+        "attack_scaling": 1.5,
+        "hits": 3
+      },
+      {
+        "id": "chain_lash",
+        "display_name": "Chain Lash",
+        "description": "Lash out with chains of sorrow.",
+        "target_type": 0,
+        "damage_type": 0,
+        "base_power": 18,
+        "attack_scaling": 1.0
+      },
+      {
+        "id": "threefold_anguish",
+        "display_name": "Threefold Anguish",
+        "description": "Three faces scream at once, dealing psychic damage.",
+        "target_type": 1,
+        "damage_type": 1,
+        "element": 3,
+        "base_power": 15,
+        "magic_scaling": 1.1
+      },
+      {
+        "id": "trident_strike",
+        "display_name": "Trident Strike",
+        "description": "Strike with a bronze trident forged in the deep.",
+        "target_type": 0,
+        "damage_type": 0,
+        "element": 4,
+        "base_power": 22,
+        "attack_scaling": 1.1
+      },
+      {
+        "id": "storm_surge",
+        "display_name": "Storm Surge",
+        "description": "Summon a surge of storm-tossed water.",
+        "target_type": 1,
+        "damage_type": 1,
+        "element": 4,
+        "base_power": 18,
+        "magic_scaling": 1.2
+      },
+      {
+        "id": "dual_slash",
+        "display_name": "Dual Slash",
+        "description": "Strike twice with twin blades.",
+        "target_type": 0,
+        "damage_type": 0,
+        "base_power": 12,
+        "attack_scaling": 1.0,
+        "hits": 2
+      },
+      {
+        "id": "battle_fury",
+        "display_name": "Battle Fury",
+        "description": "Enter a state of pure combat focus.",
+        "target_type": 4,
+        "inflicts_status": "attack_up",
+        "status_chance": 1.0,
+        "status_duration": 3
+      },
+      {
+        "id": "gale_blast",
+        "display_name": "Gale Blast",
+        "description": "A violent blast of wind.",
+        "target_type": 0,
+        "damage_type": 1,
+        "base_power": 20,
+        "magic_scaling": 1.2
+      },
+      {
+        "id": "lightning_strike",
+        "display_name": "Lightning Strike",
+        "description": "Call down a bolt of lightning.",
+        "target_type": 0,
+        "damage_type": 1,
+        "element": 0,
+        "base_power": 28,
+        "magic_scaling": 1.3,
+        "inflicts_status": "stunned",
+        "status_chance": 0.2,
+        "status_duration": 1
+      },
+      {
+        "id": "boulder_smash",
+        "display_name": "Boulder Smash",
+        "description": "Hurl a massive boulder at the enemy.",
+        "target_type": 0,
+        "damage_type": 0,
+        "element": 5,
+        "base_power": 30,
+        "attack_scaling": 1.2
+      },
+      {
+        "id": "earthshaker",
+        "display_name": "Earthshaker",
+        "description": "Slam the ground, causing an earthquake.",
+        "target_type": 1,
+        "damage_type": 0,
+        "element": 5,
+        "base_power": 20,
+        "attack_scaling": 1.0
+      }
+    ],
+    "boss": [
+      {
+        "id": "shadow_claw",
+        "display_name": "Shadow Claw",
+        "description": "A claw wreathed in stolen shadow.",
+        "target_type": 0,
+        "damage_type": 0,
+        "element": 3,
+        "base_power": 20,
+        "attack_scaling": 1.2
+      },
+      {
+        "id": "terrifying_presence",
+        "display_name": "Terrifying Presence",
+        "description": "The mere presence of this creature strikes fear.",
+        "target_type": 1,
+        "inflicts_status": "fear",
+        "status_chance": 0.5,
+        "status_duration": 2
+      },
+      {
+        "id": "coiling_crush",
+        "display_name": "Coiling Crush",
+        "description": "Wrap around the target and squeeze.",
+        "target_type": 0,
+        "damage_type": 0,
+        "base_power": 25,
+        "attack_scaling": 1.3,
+        "inflicts_status": "slowed",
+        "status_chance": 0.6,
+        "status_duration": 2
+      },
+      {
+        "id": "venomous_breath",
+        "display_name": "Venomous Breath",
+        "description": "Exhale a cloud of ancient venom.",
+        "target_type": 1,
+        "damage_type": 1,
+        "base_power": 18,
+        "magic_scaling": 1.1,
+        "inflicts_status": "poisoned",
+        "status_chance": 0.7,
+        "status_duration": 3
+      },
+      {
+        "id": "ancient_fury",
+        "display_name": "Ancient Fury",
+        "description": "Unleash rage accumulated over millennia.",
+        "target_type": 0,
+        "damage_type": 0,
+        "base_power": 35,
+        "attack_scaling": 1.5
+      },
+      {
+        "id": "nightmare_vision",
+        "display_name": "Nightmare Vision",
+        "description": "Force the target to witness their worst fears.",
+        "target_type": 0,
+        "damage_type": 1,
+        "element": 3,
+        "base_power": 28,
+        "magic_scaling": 1.4,
+        "inflicts_status": "fear",
+        "status_chance": 0.6,
+        "status_duration": 2
+      },
+      {
+        "id": "madness_touch",
+        "display_name": "Madness Touch",
+        "description": "A touch that unravels the mind.",
+        "target_type": 0,
+        "damage_type": 1,
+        "element": 3,
+        "base_power": 22,
+        "magic_scaling": 1.2,
+        "inflicts_status": "confused",
+        "status_chance": 0.5,
+        "status_duration": 2
+      },
+      {
+        "id": "summon_shades",
+        "display_name": "Summon Shades",
+        "description": "Call forth spirits of the dead to fight.",
+        "target_type": 4,
+        "summon": "eidolon",
+        "summon_count": 2
+      },
+      {
+        "id": "dual_nature",
+        "display_name": "Dual Nature",
+        "description": "Attack with both light and shadow simultaneously.",
+        "target_type": 1,
+        "damage_type": 1,
+        "base_power": 20,
+        "magic_scaling": 1.3
+      },
+      {
+        "id": "serpent_strike",
+        "display_name": "Serpent Strike",
+        "description": "A lightning-fast strike with serpentine speed.",
+        "target_type": 0,
+        "damage_type": 0,
+        "base_power": 28,
+        "attack_scaling": 1.3,
+        "inflicts_status": "poisoned",
+        "status_chance": 0.4,
+        "status_duration": 3
+      },
+      {
+        "id": "tail_sweep",
+        "display_name": "Tail Sweep",
+        "description": "Sweep all enemies with a massive tail.",
+        "target_type": 1,
+        "damage_type": 0,
+        "base_power": 22,
+        "attack_scaling": 1.1
+      },
+      {
+        "id": "summon_offspring",
+        "display_name": "Summon Offspring",
+        "description": "Call forth monstrous children to aid in battle.",
+        "target_type": 4,
+        "summon": "lamia",
+        "summon_count": 1
+      },
+      {
+        "id": "mother_of_monsters",
+        "display_name": "Mother of Monsters",
+        "description": "Empower all allied monsters with maternal fury.",
+        "target_type": 3,
+        "inflicts_status": "attack_up",
+        "status_chance": 1.0,
+        "status_duration": 3
+      },
+      {
+        "id": "golden_arrow",
+        "display_name": "Golden Arrow",
+        "description": "Fire an arrow of pure divine light.",
+        "target_type": 0,
+        "damage_type": 1,
+        "element": 2,
+        "base_power": 30,
+        "magic_scaling": 1.4
+      },
+      {
+        "id": "corrupted_light",
+        "display_name": "Corrupted Light",
+        "description": "Light twisted by chaos, burning and cold.",
+        "target_type": 1,
+        "damage_type": 1,
+        "element": 3,
+        "base_power": 25,
+        "magic_scaling": 1.3
+      },
+      {
+        "id": "divine_discord",
+        "display_name": "Divine Discord",
+        "description": "The war between light and shadow erupts outward.",
+        "target_type": 1,
+        "damage_type": 1,
+        "base_power": 30,
+        "magic_scaling": 1.5
+      },
+      {
+        "id": "desperate_blast",
+        "display_name": "Desperate Blast",
+        "description": "A desperate explosion of remaining divine power.",
+        "target_type": 1,
+        "damage_type": 1,
+        "element": 2,
+        "base_power": 40,
+        "magic_scaling": 1.6
+      },
+      {
+        "id": "hundred_heads",
+        "display_name": "Hundred Heads",
+        "description": "All dragon heads breathe fire at once.",
+        "target_type": 1,
+        "damage_type": 1,
+        "element": 1,
+        "base_power": 35,
+        "magic_scaling": 1.4
+      },
+      {
+        "id": "storm_of_chaos",
+        "display_name": "Storm of Chaos",
+        "description": "Summon an apocalyptic storm of primordial chaos.",
+        "target_type": 1,
+        "damage_type": 1,
+        "base_power": 40,
+        "magic_scaling": 1.5
+      },
+      {
+        "id": "primordial_roar",
+        "display_name": "Primordial Roar",
+        "description": "A roar that shakes the foundations of reality.",
+        "target_type": 1,
+        "damage_type": 1,
+        "base_power": 30,
+        "magic_scaling": 1.3,
+        "inflicts_status": "fear",
+        "status_chance": 0.8,
+        "status_duration": 2
+      },
+      {
+        "id": "world_shaker",
+        "display_name": "World Shaker",
+        "description": "Slam the earth with enough force to level mountains.",
+        "target_type": 1,
+        "damage_type": 0,
+        "element": 5,
+        "base_power": 45,
+        "attack_scaling": 1.6
+      },
+      {
+        "id": "father_of_monsters",
+        "display_name": "Father of Monsters",
+        "description": "Channel the primal essence of all monsters ever born.",
+        "target_type": 1,
+        "damage_type": 1,
+        "base_power": 50,
+        "magic_scaling": 1.8
+      }
+    ]
+  },
+  "elements": {
+    "0": "none",
+    "1": "fire",
+    "2": "light",
+    "3": "shadow",
+    "4": "water",
+    "5": "earth"
+  },
+  "target_types": {
+    "0": "single_enemy",
+    "1": "all_enemies",
+    "2": "single_ally",
+    "3": "all_allies",
+    "4": "self"
+  },
+  "damage_types": {
+    "0": "physical",
+    "1": "magical",
+    "2": "true",
+    "3": "healing"
+  }
+}

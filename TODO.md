@@ -1,255 +1,117 @@
 # Mnemosyne: Shards of Destiny — Development Progress
 
-**Last Updated:** 2026-01-23 (Phase 8 complete)
+**Last Updated:** 2026-01-23 (Migrated to Phaser.js)
 
 ---
 
-## Phase 1: Foundation ✅ COMPLETE
+## Tech Stack
 
-- [x] Project structure
-- [x] Godot 4.5 setup
-- [x] Core managers (GameManager, PartyManager, SaveManager, AudioManager)
-- [x] Scene transition system
-- [x] Input mapping (keyboard + touch)
+- **Engine:** Phaser 3 (web-based)
+- **Build Tool:** Vite
+- **Language:** JavaScript (ES6 modules)
 
 ---
 
-## Phase 2: Data & Scripts ✅ COMPLETE
+## Phase 1: Project Setup ✅ COMPLETE
 
-- [x] CharacterData class
-- [x] EnemyData class
-- [x] SkillData class
-- [x] BattleManager (turn-based combat)
-- [x] BattleScene controller
-- [x] PlayerController (movement, interaction, tap-to-move)
+- [x] Migrate from Godot to Phaser.js
+- [x] Set up Vite build system
+- [x] Create project structure
+- [x] Configure game settings (540x960 mobile portrait)
 
 ---
 
-## Phase 3: Story & Narrative ✅ COMPLETE
+## Phase 2: Core Scenes ✅ COMPLETE
 
-- [x] Story baseline (5-act structure)
-- [x] Chapter 1: The Awakening
-- [x] Chapter 2: The Call of Memory
-- [x] Chapter 3: Memory of Light
-- [x] Chapter 4: Memory of Silence
-- [x] Chapter 5: Memory of Ruin
-- [x] Chapter 6: The Revelation
-- [x] Chapter 7: The Binding of Fate
-- [x] Story README / Bible
+- [x] BootScene (asset loading, progress bar)
+- [x] MainMenuScene (background, buttons, new game/continue)
+- [x] VillageScene (exploration, player movement, NPC interaction)
+- [x] BattleScene (turn-based combat system)
 
 ---
 
-## Phase 4: Character Assets ✅ COMPLETE
+## Phase 3: Systems ✅ COMPLETE
 
-### Party Members
-- [x] Alkmaeon spritesheet + portrait
-- [x] Theano spritesheet + portrait
-- [x] Brasidas spritesheet + portrait
-
-### NPCs
-- [x] Epimenides spritesheet + portrait
-- [x] Damon spritesheet + portrait
-- [x] Kleio spritesheet + portrait
-- [x] Alkmaeon's Mother spritesheet + portrait
-- [x] Arete (spirit) spritesheet + portrait
+- [x] DialogueSystem (typewriter effect, portraits)
+- [x] CombatSystem (damage calculation, turn order)
+- [x] Game state management (registry)
+- [x] Save/Load (localStorage)
 
 ---
 
-## Phase 5: Enemy Assets ✅ COMPLETE
+## Phase 4: Content Integration ⬜ TODO
 
-### Common Enemies (Tier 1-4)
-- [x] Eidolon
-- [x] Phasma
-- [x] Oneiros
-- [x] Satyr
-- [x] Corrupted Oread
-- [x] Empousa
-- [x] Mormo
-- [x] Mormolykeia
-- [x] Strix
-- [x] Ker
-- [x] Lamia
-- [x] Eurynomos
-- [x] Oizys
-- [x] Achlys
-- [x] Mania
-- [x] Algea
-- [x] Telkhines
-- [x] Makhai
-- [x] Anemoi Thuellai
-- [x] Gigas
-
-### Boss Enemies
-- [x] Mormo (Empowered) — Ch 1 Mini-boss
-- [x] Python — Ch 3 Boss
-- [x] Melinoe — Ch 4 Boss
-- [x] Echidna — Ch 5 Boss
-- [x] Corrupted Apollo — Ch 6 Boss
-- [x] Typhon — Final Boss
+- [ ] Load all character sprites properly
+- [ ] Load all enemy sprites
+- [ ] Implement skills from skills.json
+- [ ] Add more NPCs to village
+- [ ] Create temple exploration scene
+- [ ] Random encounter system
 
 ---
 
-## Phase 6: Data Integration ✅ COMPLETE
+## Phase 5: Polish ⬜ TODO
 
-### Update enemies.json with new Greek mythology roster
-- [x] Remove old generic enemies (Temple Spirit, Shadow Spawn, etc.)
-- [x] Add Tier 1 enemies (Eidolon, Phasma, Oneiros, Satyr, Corrupted Oread)
-- [x] Add Tier 2 enemies (Empousa, Mormo, Mormolykeia, Strix, Ker, Lamia)
-- [x] Add Tier 3 enemies (Eurynomos, Oizys, Achlys, Mania, Algea)
-- [x] Add Tier 4 enemies (Telkhines, Makhai, Anemoi Thuellai, Gigas)
-- [x] Add boss data (Mormo Empowered, Python, Melinoe, Echidna, Corrupted Apollo, Typhon)
-- [x] Balance stats for progression curve
-
-### Update skills.json
-- [x] Add enemy-specific skills (34 enemy skills)
-- [x] Add boss abilities (22 boss skills)
-- [x] Organize by player/enemy/boss categories
-
-### Wire sprites to data
-- [x] Add sprite_path to each enemy in enemies.json
-- [x] Create EnemyDatabase utility class
-- [x] Update EnemyData class with new fields (tier, chapters, boss_type, phases)
-- [ ] Add sprite_path to NPCs in characters.json (pending)
+- [ ] Animations for combat
+- [ ] Sound effects and music
+- [ ] Screen transitions
+- [ ] Mobile touch controls refinement
+- [ ] Settings menu (volume, etc.)
 
 ---
 
-## Phase 7: Environment Assets ✅ COMPLETE
+## Phase 6: Story Implementation ⬜ TODO
 
-### Tilesets (16x16)
-- [x] Thespiae (starting village)
-- [x] Temple of the Muses
-- [x] Mountain path (Mount Helicon)
-- [x] Delphi
-- [x] Levadeia (Well of Mnemosyne)
-- [x] Delos (sacred island)
-- [x] Necromanteion (Oracle of the Dead)
-- [x] Mount Olympus Foothills
-- [x] Typhon's Sanctum
-
-### Combat Backgrounds
-- [x] Village/outdoor (bg_village.png)
-- [x] Temple interior (bg_temple.png)
-- [x] Mountain/wilderness (bg_mountain.png)
-- [x] Underground/cave (bg_cave.png)
-- [x] Divine realm (bg_divine.png)
-- [x] Final boss arena (bg_final.png)
-
----
-
-## Phase 8: UI Assets ✅ COMPLETE
-
-### Image Assets
-- [x] Main menu background (main_menu_bg.png)
-- [x] Victory screen (victory_screen.png)
-- [x] Game over screen (gameover_screen.png)
-
-### Code-Based UI (to build in Godot)
-- [ ] Dialogue box frame (NinePatchRect/StyleBox)
-- [ ] Combat UI (command menu, HP/MP bars)
-- [ ] Inventory/equipment screen
-- [ ] Pause menu
-- [ ] Touch controls (joystick, buttons)
-
----
-
-## Phase 9: Scene Implementation 🔄 IN PROGRESS
-
-### Core Scene Updates
-- [x] Main menu uses main_menu_bg.png
-- [x] Battle scene uses combat backgrounds
-- [x] Victory screen with victory_screen.png
-- [x] Game over screen with gameover_screen.png + retry/quit
-- [x] Battle sprites load from sprite_path (party + enemies)
-- [x] Village: player sprite (Alkmaeon spritesheet)
-- [x] Village: NPC sprite (Epimenides spritesheet)
-- [x] Dialogue portraits support
-
-### Exploration Scenes (TileMap-based)
-- [ ] Village (Thespiae) — use thespiae_tileset
-- [ ] Temple of Apollo — use temple_tileset
-- [ ] Well of Mnemosyne area
-- [ ] Delos island
-- [ ] Necromanteion
-- [ ] Mount Olympus approach
-
-### System Scenes
-- [x] Main menu (New Game, Continue, Settings, Quit)
-- [ ] Settings menu (volume, controls)
-- [x] Game Over screen
-- [ ] Credits
-
-### Dialogue System
-- [x] Dialogue box UI
-- [x] Portrait display
-- [x] Text typewriter effect
-- [ ] Choice selection
-- [ ] Vision sequence handler
-
----
-
-## Phase 10: Audio ⬜ TODO
-
-### Music
-- [ ] Main menu theme
-- [ ] Village theme
-- [ ] Exploration theme
-- [ ] Battle theme (normal)
-- [ ] Boss battle theme
-- [ ] Final boss theme
-- [ ] Victory fanfare
-- [ ] Game over theme
-- [ ] Vision/divine theme
-
-### Sound Effects
-- [ ] UI sounds (select, confirm, cancel)
-- [ ] Attack sounds
-- [ ] Skill sounds
-- [ ] Damage/hit sounds
-- [ ] Footsteps
-- [ ] Ambient sounds
-
----
-
-## Phase 11: Polish & Testing ⬜ TODO
-
-- [ ] Mobile optimization
-- [ ] Touch control refinement
-- [ ] Difficulty balancing
-- [ ] Bug fixes
-- [ ] Performance testing
-- [ ] Android export test
-- [ ] iOS export test
+- [ ] Chapter 1 story events
+- [ ] Vision sequences
+- [ ] Story flags and branching
+- [ ] Boss encounters
 
 ---
 
 ## Quick Reference
 
+### Running the Game
+
+```bash
+npm install    # Install dependencies
+npm run dev    # Start development server
+npm run build  # Build for production
+```
+
+### Project Structure
+
+```
+src/
+├── main.js           # Entry point
+├── config.js         # Phaser configuration
+├── scenes/           # Game scenes
+│   ├── BootScene.js
+│   ├── MainMenuScene.js
+│   ├── VillageScene.js
+│   └── BattleScene.js
+├── entities/         # Game objects (future)
+└── systems/          # Game systems
+    ├── DialogueSystem.js
+    └── CombatSystem.js
+
+public/
+├── assets/           # Images, sprites
+└── data/             # JSON data files
+```
+
 ### Asset Counts
+
 | Category | Complete | Total |
 |----------|----------|-------|
-| Party sprites | 3 | 3 |
 | Party portraits | 3 | 3 |
-| NPC sprites | 5 | 5 |
 | NPC portraits | 5 | 5 |
-| Enemy sprites | 26 | 26 |
-| Tilesets | 9 | 9 |
 | Combat backgrounds | 6 | 6 |
 | UI screens | 3 | 3 |
-| Music tracks | 0 | ~9 |
-
-### File Locations
-- Sprites: `assets/sprites/`
-- Portraits: `assets/portraits/`
-- Tilesets: `assets/tilesets/exploration/`
-- Combat BGs: `assets/tilesets/combat/`
-- UI: `assets/ui/`
-- Data: `data/`
-- Story: `story/`
-- Scripts: `scripts/`
-- Scenes: `scenes/`
+| Tilesets | 9 | 9 |
 
 ---
 
 ## Next Priority
 
-**Phase 9: Scene Implementation** — Build actual game scenes (exploration maps, menus, dialogue system)
+**Phase 4: Content Integration** — Get sprites loading properly and expand gameplay

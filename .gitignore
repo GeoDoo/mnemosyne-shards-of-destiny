@@ -1,21 +1,29 @@
-# Godot 4+ specific ignores
-.godot/
-.import/
-*.translation
-export_presets.cfg
-.mono/
-data_*/
-mono_crash.*.json
-.DS_Store
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
 .vscode/
 *.swp
+*.swo
 *~
-build/
-export/
-*.apk
-*.aab
-*.ipa
-*.cfg.user
-*.uid
-*.import
-*.idsig
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cache
+.cache/
+.parcel-cache/
