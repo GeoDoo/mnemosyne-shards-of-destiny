@@ -1,6 +1,6 @@
 # Chapter 2: The Call of Memory
 
-> *Alkmaeon and Theano journey north to find the legendary Well of Mnemosyne. At this sacred Orphic site, the visions intensify, revealing the true scope of their quest. And at the crossroads between worlds, Hécate herself appears — offering guidance, warnings, and a path forward.*
+> *Alkmaeon and Theano journey north to find the legendary Well of Mnemosyne. At this sacred Orphic site, the visions intensify, revealing the true scope of their quest. And at the crossroads between worlds, Hecate herself appears — offering guidance, warnings, and a path forward.*
 
 **Prerequisites**: Chapter 1 complete (`chapter1_complete` flag set)  
 **Party**: Alkmaeon, Theano
@@ -52,7 +52,7 @@
 **Option C: "Tell me about Delphi."**
 > **Theano:** "Delphi... it is the center of the world. Literally — the navel of the earth."
 > "Apollo's greatest temple stands there. The Pythia speaks his prophecies."
-> "I trained there for three years. Learned to hear the whispers between words."
+> "I studied its rites at Demeter's sanctuary. Learned to hear the whispers between words."
 
 ---
 
@@ -117,18 +117,18 @@
 *[Mountain path encounters — 2-3 battles]*
 
 **Enemies:**
-- Mountain Wolf (HP: 30, Attack: 9, Speed: 11)
-  - *A lean, hungry predator. Not supernatural — just desperate.*
-- Lost Wanderer (HP: 25, Magic: 10, Speed: 8)
-  - *A spirit of a pilgrim who never reached their destination.*
+- Satyr (HP: 35, Attack: 10, Speed: 8)
+  - *A wild nature spirit, driven to aggression by the unrest in the mountains.*
+- Phasma (HP: 30, Magic: 6, Speed: 7)
+  - *A vengeful apparition drawn to the pilgrim road.*
 
 ---
 
-**Combat Event: Wolves Attack**
+**Combat Event: Satyrs Attack**
 
-> The bushes rustle. Low growls surround you.
+> The bushes rustle. Hoofbeats and laughter echo through the rocks.
 
-> Wolves — gaunt and desperate, driven from their territory by something.
+> Satyrs — usually playful, now wild-eyed and desperate, driven from their territory by something.
 
 **Theano:**
 > "They're not attacking out of malice. They're terrified."
@@ -138,7 +138,7 @@
 *[After combat]*
 
 **Theano:**
-> "The balance is shifting. Even the animals can feel it."
+> "The balance is shifting. Even the spirits can feel it."
 
 > "We need to hurry."
 
@@ -183,7 +183,7 @@
 *[Theano approaches the cliff, raises her hands]*
 
 **Theano:**
-> "I learned this prayer at Delphi. I never thought I'd use it."
+> "I learned this prayer at Demeter's sanctuary. I never thought I'd use it."
 
 *[She speaks in ancient Greek — the words seem to bend reality]*
 
@@ -311,7 +311,7 @@
 
 > And when the war ends — the Weaving.
 
-> Mnemosyne, Apollo, Hécate — binding cosmic order with threads of memory, light, and will.
+> Mnemosyne, Apollo, Hecate — binding cosmic order with threads of memory, light, and will.
 
 > The Order of Destiny. A net to catch chaos.
 
@@ -382,11 +382,11 @@
 
 > A figure stands at the center, torch in hand.
 
-> Hécate.
+> Hecate.
 
 > She speaks — and her voice is inside your skull.
 
-**Hécate:**
+**Hecate:**
 > "Come to me, child of Memory."
 
 > "We have much to discuss."
@@ -415,10 +415,10 @@
 > **Theano:** "You found them? Through the visions?"
 > "Tell me. Tell me everything."
 
-**Option C: "Hécate is waiting for us."**
-> **Theano:** "Hécate? The goddess herself?"
+**Option C: "Hecate is waiting for us."**
+> **Theano:** "Hecate? The goddess herself?"
 > *[Theano pales]*
-> "Then we shouldn't keep her waiting. Hécate's patience is... finite."
+> "Then we shouldn't keep her waiting. Hecate's patience is... finite."
 
 ---
 
@@ -445,7 +445,7 @@
 
 ---
 
-### The Crossroads of Hécate
+### The Crossroads of Hecate
 
 > You stand at a crossroads.
 
@@ -465,49 +465,49 @@
 
 > Behind her, three faces seem to flicker — maiden, mother, crone — though when you look directly, you see only one.
 
-> Hécate. Goddess of crossroads. Goddess of magic. Goddess of the in-between.
+> Hecate. Goddess of crossroads. Goddess of magic. Goddess of the in-between.
 
 ---
 
-### Hécate Speaks
+### Hecate Speaks
 
-**Hécate:**
+**Hecate:**
 > "So. The vessel arrives at last."
 
 > "I have watched you, Alkmaeon. Since before your birth."
 
 > "You were shaped for this purpose. A mortal container for divine memory."
 
-**Hécate:**
+**Hecate:**
 > "Do you understand what you are?"
 
 *[Player choice]*
 
 **Option A: "Apollo told me. I'm meant to gather the Shards."**
-> **Hécate:** "Apollo told you what you needed to hear. Not the whole truth."
+> **Hecate:** "Apollo told you what you needed to hear. Not the whole truth."
 > "The sun god deals in light — and light casts shadows."
 > "But that is not my concern. Not yet."
 
 **Option B: "I don't fully understand. I just know I have to act."**
-> **Hécate:** "Understanding comes later — if you survive."
+> **Hecate:** "Understanding comes later — if you survive."
 > "For now, action is enough."
 > "The wise move forward even when the path is dark."
 
 **Option C: "I know I carry something important. Something the world needs."**
-> **Hécate:** "Important? Perhaps."
+> **Hecate:** "Important? Perhaps."
 > "Or perhaps you are simply a key. Valuable only for the door you can open."
 > "Time will tell which you are."
 
 ---
 
-**Hécate:**
+**Hecate:**
 > "The Shards of Destiny. You saw them in the waters."
 
 > "Three fragments of cosmic memory, scattered when the Order cracked."
 
 > "Each contains a truth. A piece of what was — and what must be again."
 
-**Hécate:**
+**Hecate:**
 > "You must gather all three."
 
 > "But be warned: the Shards are not passive objects."
@@ -518,7 +518,7 @@
 
 ### The Three Paths
 
-**Hécate:**
+**Hecate:**
 > "Three paths lie before you. Three shards to claim."
 
 *[She gestures with her torches — three visions appear]*
@@ -528,10 +528,10 @@
 **Path East: The Memory of Light**
 
 > *You see a shrine burning with golden radiance.*
-> *The Eastern Shrine of Apollo — an outpost of his power.*
+> *Delos — Apollo's sacred island and the seat of his light.*
 > *The first shard rests there, guarded by those who forgot what they protected.*
 
-**Hécate:**
+**Hecate:**
 > "The Memory of Light. Apollo's victory over darkness."
 
 > "It will show you what order can achieve — and what it requires."
@@ -541,10 +541,10 @@
 **Path West: The Memory of Silence**
 
 > *You see a temple draped in shadow and dust.*
-> *The Oracle's Rest — where prophecy died.*
+> *The Necromanteion — where the dead once spoke.*
 > *Silence reigns there. Silence and regret.*
 
-**Hécate:**
+**Hecate:**
 > "The Memory of Silence. The cost of divine indifference."
 
 > "It will show you what the gods forget — and why that matters."
@@ -557,14 +557,14 @@
 > *Lightning strikes without cease. The ground trembles.*
 > *Typhon's power bleeds into the world there.*
 
-**Hécate:**
+**Hecate:**
 > "The Memory of Ruin. Chaos before the Order."
 
 > "It will show you what lies beneath — and why it yearns to rise."
 
 ---
 
-**Hécate:**
+**Hecate:**
 > "The order does not matter. All three must be gathered."
 
 > "But choose wisely where you begin. Each path changes you."
@@ -573,21 +573,21 @@
 
 ---
 
-### Hécate's Warning
+### Hecate's Warning
 
-**Hécate:**
+**Hecate:**
 > "One more thing, child of Memory."
 
 > "You will meet others on your journey. Allies. Enemies. Those who are both."
 
 > "Trust carefully. The Shards attract attention."
 
-**Hécate:**
+**Hecate:**
 > "There are those who serve chaos — knowingly or not."
 
 > "They will try to stop you. Or worse, claim the Shards for themselves."
 
-**Hécate:**
+**Hecate:**
 > "And beneath the mountains... the Buried One dreams."
 
 > "He feels the Shards moving. He knows what they could mean."
@@ -596,7 +596,7 @@
 
 ---
 
-**Hécate:**
+**Hecate:**
 > "Go now. The crossroads will remain."
 
 > "When you are lost — truly lost — call my name."
@@ -616,7 +616,7 @@
 *[Alkmaeon and Theano wake by the pool]*
 
 **Theano:**
-> "What... what happened? One moment you were speaking of Hécate, the next..."
+> "What... what happened? One moment you were speaking of Hecate, the next..."
 
 > "We were gone. Both of us. For hours — maybe days."
 
@@ -628,7 +628,7 @@
 *[Player recounts the meeting]*
 
 **Theano:**
-> "Three Shards. Three paths. And Hécate herself watching over us."
+> "Three Shards. Three paths. And Hecate herself watching over us."
 
 > "This is bigger than I imagined. Bigger than any prophecy I've heard."
 
@@ -639,9 +639,9 @@
 **Theano:**
 > "Where do we go first?"
 
-> "The Eastern Shrine is closest — Apollo's territory. That might be safest."
+> "Delos is closest — Apollo's territory. That might be safest."
 
-> "But Hécate said the order doesn't matter."
+> "But Hecate said the order doesn't matter."
 
 > "The choice is yours, Alkmaeon."
 
@@ -652,7 +652,7 @@
 > *[Flag set: `first_path_east`]*
 
 **Option B: "West. The Memory of Silence."**
-> **Theano:** "The Oracle's Rest. I've heard dark rumors about that place."
+> **Theano:** "The Necromanteion. I've heard dark rumors about that place."
 > "But if you feel called there... I trust your instincts."
 > *[Flag set: `first_path_west`]*
 
@@ -692,7 +692,7 @@
 ### Travel Dialogue: Processing
 
 **Theano:**
-> "Alkmaeon... what was it like? Speaking with Hécate?"
+> "Alkmaeon... what was it like? Speaking with Hecate?"
 
 *[Player choice]*
 
@@ -703,7 +703,7 @@
 
 **Option B: "She's not what I expected. Not good or evil — just... vast."**
 > **Theano:** "The gods are beyond morality. They simply are."
-> "Hécate especially. She guards the thresholds — life and death, knowledge and ignorance."
+> "Hecate especially. She guards the thresholds — life and death, knowledge and ignorance."
 > "She doesn't judge. She just watches. And sometimes, she guides."
 
 **Option C: "I think she wants me to succeed."**
@@ -726,7 +726,7 @@
 ---
 
 **Theano:**
-> "I've been thinking about what Hécate said."
+> "I've been thinking about what Hecate said."
 
 > "The Shards attract attention. Others will try to claim them."
 
@@ -790,7 +790,7 @@
 |------|-------------|
 | `well_found` | Discovered the Well of Mnemosyne |
 | `memory_flood_complete` | Experienced the cosmic vision |
-| `hecate_met` | First direct encounter with Hécate |
+| `hecate_met` | First direct encounter with Hecate |
 | `paths_revealed` | The three Shard locations are known |
 | `first_path_east/west/north` | Player's choice of first destination |
 | `chapter2_complete` | Chapter 2 finished |
@@ -800,11 +800,11 @@
 | Item | Effect | Source |
 |------|--------|--------|
 | Orphic Tablet Fragment | Lore item — protection prayer | Valley exploration |
-| Hécate's Token | Key item — allows return to crossroads | Given by Hécate |
+| Hecate's Token | Key item — allows return to crossroads | Given by Hecate |
 
 ## Key Lore Revealed
 
-- The Shards are fragments of the Order of Destiny, woven by Mnemosyne, Apollo, and Hécate
+- The Shards are fragments of the Order of Destiny, woven by Mnemosyne, Apollo, and Hecate
 - Three Shards must be gathered: Memory of Light, Memory of Silence, Memory of Ruin
 - Typhon stirs in his prison, sensing the Shards' movement
 - Others may be seeking the Shards — potential future antagonists
@@ -820,13 +820,13 @@
 
 | Enemy | HP | XP | Notes |
 |-------|-----|-----|-------|
-| Mountain Wolf | 30 | 10 | Natural predator, not supernatural |
-| Lost Wanderer | 25 | 12 | Spirit of a failed pilgrim |
+| Satyr | 35 | 12 | Nature spirit, driven aggressive |
+| Phasma | 30 | 10 | Vengeful apparition |
 
 ## Transitions
 
 **Previous**: Chapter 1 — The Awakening  
-**Next**: Chapter 3 — The Memory of Light (Eastern Shrine of Apollo)
+**Next**: Chapter 3 — The Memory of Light (Delos, Sanctuary of Apollo)
 
 ---
 
@@ -836,7 +836,7 @@ This chapter serves as the "Act II" transition — expanding the scope from pers
 
 1. **Deepening Theano's character** through travel dialogue
 2. **Revealing the full scope** of the quest (three Shards, cosmic stakes)
-3. **Introducing Hécate** as a complex divine guide
+3. **Introducing Hecate** as a complex divine guide
 4. **Player agency** in choosing which path to take first
 5. **Foreshadowing** other seekers / antagonists
 6. **Building atmosphere** of a world in danger

@@ -119,7 +119,7 @@
 
 ### Epimenides Awaits
 
-*[ELDER THERON approaches — grave but calm]*
+*[EPIMENIDES approaches — grave but calm]*
 
 **Epimenides:**
 > "Alkmaeon. You've returned. And you've gathered them all."
@@ -129,7 +129,7 @@
 > "Three truths. Three fragments of cosmic memory."
 
 **Epimenides:**
-> "But there is one more truth. The truth Hécate spoke of."
+> "But there is one more truth. The truth Hecate spoke of."
 
 > "It waits for you in the temple. In the inner sanctum."
 
@@ -185,7 +185,7 @@
 **Theano:**
 > "When I came to Thespiae, I thought I was on a mission."
 
-> "Investigate the disturbance. Report back to Delphi."
+> "Investigate the disturbance. Report back to Demeter's sanctuary."
 
 > "But somewhere along the way... it stopped being about duty."
 
@@ -349,7 +349,7 @@
 
 > And standing before it — three figures.
 
-> Apollo. Hécate. And a third.
+> Apollo. Hecate. And a third.
 
 > Mnemosyne.
 
@@ -364,7 +364,7 @@
 **Apollo:**
 > "The vessel returns. The Shards are gathered."
 
-**Hécate:**
+**Hecate:**
 > "The paths converge. As they always were meant to."
 
 **Mnemosyne:**
@@ -443,19 +443,19 @@
 
 ### The Choice
 
-**Hécate:**
+**Hecate:**
 > "But now comes the moment of truth."
 
 > "The crossroads I spoke of."
 
-**Hécate:**
+**Hecate:**
 > "To restore the Order, the Shards must be merged."
 
 > "Light. Silence. Ruin. And you."
 
 > "Four become one. The Order remade."
 
-**Hécate:**
+**Hecate:**
 > "But when the Shards merge... what happens to Alkmaeon?"
 
 ---
@@ -503,7 +503,7 @@
 
 ---
 
-**Hécate:**
+**Hecate:**
 > "Choose, Alkmaeon."
 
 > "What matters more: the world, or the boy?"
@@ -542,7 +542,7 @@
 
 *[Player choice — the most important in the game]*
 
-**Hécate:**
+**Hecate:**
 > "Choose."
 
 **Option A: "I'll do it. I'll become the Order."**
@@ -552,7 +552,7 @@
 > *[This leads to the Defiance path in Chapter 7]*
 
 **Option C: "I need time. I can't decide this now."**
-> **Hécate:** "Time is not yours to have."
+> **Hecate:** "Time is not yours to have."
 > "The Red Moon reaches its zenith at midnight."
 > "Decide before then, or the choice will be made for you."
 > *[The decision is delayed — player must make final choice at the start of Chapter 7]*
@@ -632,14 +632,14 @@
 
 **Phase 2: War Within** (70%-40% HP)
 - Becomes unstable — attacks randomly target anyone, including itself
-- Uses: Fractured Prophecy (random effects), Duality Strike (Light + Shadow combo)
+- Uses: Golden Arrow (random effects), Divine Discord (Light + Shadow combo)
 - The real Apollo's voice breaks through occasionally
 - **Apollo (struggling):** "Fight... me... I cannot control..."
 - Strategy: Heal the party member it targets; it will occasionally hurt itself
 
 **Phase 3: Chaos Dominant** (40%-0% HP)
 - Typhon's influence takes full control — pure chaos
-- Uses: Typhon's Voice (massive party damage), Reality Shatter (chance to insta-kill — can be blocked with Defend), Consume Light (absorbs Light attacks to heal)
+- Uses: Corrupted Light (massive party damage), Divine Discord (reality-rending effects), Desperate Blast (drains light to heal)
 - Weakness: The Shards — combined power breaks through Typhon's control
 - Strategy: Alkmaeon must use all three Shards together for ultimate attack
 
@@ -804,7 +804,7 @@
 
 *[If player chose "I need time" earlier, the choice happens here]*
 
-**Hécate (appearing):**
+**Hecate (appearing):**
 > "The time has come, Alkmaeon."
 
 > "Dawn approaches. The Red Moon will set soon."
@@ -813,7 +813,7 @@
 
 > "Typhon will have his chance."
 
-**Hécate:**
+**Hecate:**
 > "Choose now."
 
 > "What will you become?"

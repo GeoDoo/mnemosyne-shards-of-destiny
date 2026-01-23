@@ -8,38 +8,23 @@ This folder contains all visual and audio assets for **Mnemosyne: Shards of Dest
 
 ```
 assets/
-├── sprites/
-│   ├── characters/
-│   │   ├── party/           # Playable characters
-│   │   │   ├── alkmaeon/
-│   │   │   ├── theano/
-│   │   │   └── brasidas/
-│   │   └── npcs/            # Non-playable characters
-│   │       ├── epimenides/
-│   │       ├── arete/
-│   │       ├── kleio/
-│   │       └── damon/
-│   ├── enemies/
-│   │   ├── common/          # Regular enemies
-│   │   └── bosses/          # Boss sprites
-│   ├── ui/                  # UI elements, icons
-│   └── effects/             # VFX, particles
 ├── portraits/
 │   ├── party/               # Dialogue portraits (48x48)
 │   └── npcs/
+├── sprites/
+│   ├── characters/
+│   │   ├── npcs/            # NPC spritesheets
+│   │   └── party/           # Playable characters
+│   │       ├── alkmaeon/
+│   │       ├── brasidas/
+│   │       └── theano/
+│   └── enemies/
+│       ├── bosses/          # Boss sprites
+│       └── common/          # Regular enemies
 ├── tilesets/
-│   ├── thespiae/            # Starting village
-│   ├── delphi/              # Apollo's sanctuary
-│   ├── lebadeia/            # Well of Mnemosyne
-│   ├── delos/               # Sacred island
-│   ├── necromanteion/       # Oracle of the Dead
-│   └── olympus/             # Mount Olympus
-├── backgrounds/
 │   ├── combat/              # Battle backgrounds
-│   └── exploration/         # Parallax layers
-└── audio/
-    ├── music/               # BGM tracks
-    └── sfx/                 # Sound effects
+│   └── exploration/         # Exploration tilesets
+└── ui/                      # UI screens
 ```
 
 ---
@@ -94,16 +79,30 @@ Examples:
   typhon_phase2_idle_01.png
 ```
 
-### Tilesets
+### Tilesets (Exploration)
 ```
-{location}_tileset.png       (main tileset atlas)
-{location}_autotile.png      (for terrain autotiling)
-{location}_objects.png       (decorative objects)
+{location}_tileset.png
 
 Examples:
   thespiae_tileset.png
-  delphi_autotile.png
-  necromanteion_objects.png
+  delos_tileset.png
+  delphi_tileset.png
+  levadeia_tileset.png
+  nekromanteion_tileset.png
+  olympus_tileset.png
+```
+
+### Combat Backgrounds
+```
+bg_{location}.png
+
+Examples:
+  bg_village.png
+  bg_temple.png
+  bg_mountain.png
+  bg_cave.png
+  bg_divine.png
+  bg_final.png
 ```
 
 ---

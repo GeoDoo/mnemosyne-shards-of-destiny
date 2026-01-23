@@ -222,12 +222,12 @@
 > *Select Attack, then choose your target.*
 > *Damage is calculated from your Attack stat vs. enemy Defense.*
 
-*[Player defeats the Temple Spirit]*
+*[Player defeats the Eidolon]*
 
 **Victory!**
-> *You defeated the Temple Spirit!*
-> *Gained 12 XP*
-> *Gained 8 currency*
+> *You defeated the Eidolon!*
+> *Gained 10 XP*
+> *Gained 7 currency*
 
 ---
 
@@ -257,7 +257,7 @@
 
 **Path A: Western Colonnade**
 
-*[Contains 1-2 random encounters: Temple Spirits]*
+*[Contains 1-2 random encounters: Eidolons]*
 
 **Examine: Fallen Statue**
 > *A statue of Apollo, toppled and cracked.*
@@ -277,7 +277,7 @@
 
 **Path B: Eastern Garden**
 
-*[Contains 1-2 random encounters: Memory Wisps]*
+*[Contains 1-2 random encounters: Oneiroi]*
 
 **Examine: Dead Fountain**
 > *A fountain, long dry. Moss grows in the basin.*
@@ -300,46 +300,42 @@
 
 **Path C: Northern Steps (to Inner Temple)**
 
-*[Blocked by a CORRUPTED SHADE — mini-boss encounter]*
+*[Blocked by MORMO (EMPOWERED) — mini-boss encounter]*
 
 > The steps leading to the inner temple are guarded.
 
-> A shadow darker than the others coils at the threshold.
+> A night spirit coils at the threshold, its form flickering like smoke.
 
-> It turns toward you — and you see a face within the darkness.
+> It turns toward you — and you feel a cold that isn't of this world.
 
-> Hollow eyes. A silent scream.
+> Mormo, servant of Hecate, empowered by stolen light.
 
-***Boss Encounter: Corrupted Shade***
+***Boss Encounter: Mormo (Empowered)***
 
 ---
 
-### Mini-Boss: Corrupted Shade
+### Mini-Boss: Mormo (Empowered)
 
-**Corrupted Shade** (HP: 28, High Speed)
-- Uses: Basic Attack, Shadow Strike
+**Mormo (Empowered)** (HP: 80)
+- Uses: Basic Attack, Nightmare Shriek, Shadow Claw, Terrifying Presence
 - Weakness: Light element
-- Immune: Shadow element
+- Resist: Shadow element
 
 **Battle Start:**
-> *The Corrupted Shade hisses — a sound like tearing silk.*
-> *It was a priest once. You can see the remnants of robes in its form.*
-> *Now it is only hunger and shadow.*
+> *Mormo glides forward, her laughter thin as wind through ruins.*
+> *Her shape wavers between woman and monster — a night spirit given hunger.*
 
 **At 50% HP:**
-> *The shade recoils, flickering.*
-> *For a moment, you see the priest it once was — terrified, reaching out.*
-> **Corrupted Shade:** "Help... me..."
-> *Then the darkness swallows the vision, and it attacks with renewed fury.*
+> *She recoils, the stolen light in her body sputtering.*
+> **Mormo:** "You cannot hold the night back forever!"
+> *The shadows thicken, and she attacks with renewed fury.*
 
 **Victory:**
-> *The Corrupted Shade dissolves — but slowly, reluctantly.*
-> *As it fades, you hear a whisper:*
-> **Voice:** "Thank... you..."
-> *Then silence.*
+> *Mormo dissolves into a cloud of black mist.*
+> *As it fades, the torch-light in the hall steadies once more.*
 
-> *Gained 15 XP*
-> *Gained 10 currency*
+> *Gained 50 XP*
+> *Gained 30 currency*
 > ***Found: Shadow Essence***
 > *A fragment of crystallized darkness. Used for crafting.*
 
@@ -511,7 +507,7 @@
 **Apollo:**
 > "And child..."
 
-> "Beware Hécate's crossroads. She serves order... but her methods are her own."
+> "Beware Hecate's crossroads. She serves order... but her methods are her own."
 
 > "Not all guides lead where you wish to go."
 
@@ -551,7 +547,7 @@
 
 > But then instinct takes over, and it lunges.
 
-***Combat: Memory Wisp***
+***Combat: Oneiros***
 
 **Tutorial: Using Skills**
 > *You've learned a new skill! Skills cost MP to use.*
@@ -561,7 +557,7 @@
 *[Player uses Memory Flash — deals heavy damage due to Light weakness]*
 
 > *Memory Flash deals 45 damage! (Light weakness)*
-> *The Memory Wisp is defeated!*
+> *The Oneiros is defeated!*
 
 **Victory!**
 > *Gained 8 XP*
@@ -736,7 +732,7 @@
 
 ### Dialogue: Theano Introduction
 
-*[LYRA senses your approach and rises]*
+*[THEANO senses your approach and rises]*
 
 **Theano:**
 > "You're him. The one who touched Apollo's light."
@@ -746,7 +742,7 @@
 *[She turns to face you — her eyes are a striking pale blue, almost silver]*
 
 **Theano:**
-> "I am Theano. Apprentice of the Pythia — the Oracle of the sanctuary of Demeter."
+> "I am Theano. An oracle apprentice from Demeter's sanctuary."
 
 > "I was sent here three days ago, following a vision."
 
@@ -765,7 +761,7 @@
 > "Apollo speaks to many. But few hear him as clearly as you seem to."
 
 **Option B: "Why were you sent here?"**
-> **Theano:** "The Pythia saw a disturbance. A stirring in the cosmic order."
+> **Theano:** "Our priestesses saw a disturbance. A stirring in the cosmic order."
 > "She sent me to investigate — and to help, if I could."
 > "I think you are the disturbance she saw."
 
@@ -952,7 +948,7 @@
 | `first_combat_complete` | Tutorial combat finished |
 | `apollo_vision_complete` | Received vision from Apollo |
 | `memory_flash_learned` | Memory Flash skill acquired |
-| `lyra_joined` | Theano has joined the party |
+| `theano_joined` | Theano has joined the party |
 | `chapter1_complete` | Chapter 1 finished, ready for Chapter 2 |
 
 ## Skills Learned
@@ -968,7 +964,7 @@
 | Father's Compass | Key item — reveals hidden paths | Mother |
 | Healing Herb x3 | Restores 30 HP | Epimenides |
 | Ancient Coin x2 | Currency | Temple exploration |
-| Shadow Essence | Crafting material | Corrupted Shade |
+| Shadow Essence | Crafting material | Mormo (Empowered) |
 | Faded Scroll | Lore item | Priest's quarters |
 | Demeter's Balm x2 | Restores 50 HP | Theano |
 | Father's Cloak | +3 Defense | Mother |
@@ -984,11 +980,11 @@
 
 | Enemy | HP | XP | Notes |
 |-------|-----|-----|-------|
-| Temple Spirit | 35 | 12 | Basic enemy, tutorial fight |
-| Memory Wisp | 20 | 8 | Low HP, skill tutorial |
-| Corrupted Shade | 28 | 15 | Mini-boss, guards inner temple |
+| Eidolon | 25 | 8 | Basic enemy, tutorial fight |
+| Oneiros | 20 | 10 | Low HP, skill tutorial |
+| Mormo (Empowered) | 80 | 50 | Mini-boss, guards inner temple |
 
 ## Transitions
 
 **Previous**: Prologue — The Chorus of Ruin  
-**Next**: Chapter 2 — The Call of Memory (Well of Mnemosyne, Hécate's guidance)
+**Next**: Chapter 2 — The Call of Memory (Well of Mnemosyne, Hecate's guidance)

@@ -1,16 +1,16 @@
 # Chapter 3: The Memory of Light
 
-> *The journey east brings Alkmaeon and Theano to the ruins of Apollo's eastern shrine — a place where light once conquered darkness. Here they meet Brasidas, a mysterious shadow-touched traveler with secrets of his own. Together, they must brave the corrupted sanctuary and claim the first Shard of Destiny.*
+> *The journey across the Aegean brings Alkmaeon and Theano to Delos, Apollo's sacred island. Here they meet Brasidas, a battle-worn Spartan with secrets of his own. Together, they must brave the corrupted sanctuary and claim the first Shard of Destiny.*
 
 **Prerequisites**: Chapter 2 complete (`chapter2_complete` flag set)  
 **Party**: Alkmaeon, Theano (Brasidas joins mid-chapter)
 
 ---
 
-## Scene 3.1: The Eastern Road
+## Scene 3.1: The Road to Delos
 
 **Type**: Travel / World-building  
-**Location**: Mountain passes heading east  
+**Location**: Aegean coast and sea route to Delos  
 **Time**: Three days after leaving the Well  
 **Audio**: Open road ambience, distant civilization
 
@@ -20,11 +20,11 @@
 
 *[Brief travel sequence — days passing]*
 
-> Three days east.
+> Three days east, toward the coast.
 
-> The mountains give way to rolling hills. The wild country yields to signs of civilization.
+> The mountains give way to rolling hills, then to salt air and white stone harbors.
 
-> Roads become more traveled. You pass merchant caravans and pilgrim bands.
+> You take passage on a small boat bound for Delos, sharing the deck with pilgrims and traders.
 
 > And always, the Red Moon hangs in the sky — larger each night.
 
@@ -33,12 +33,12 @@
 ### Travel Dialogue: The World Beyond
 
 **Theano:**
-> "We're entering the Eastern Provinces. Apollo's influence is strongest here."
+> "We're reaching the Cyclades. Delos is Apollo's birthplace — his influence is strongest there."
 
 > "Or it was, once. Before the great forgetting."
 
 **Theano:**
-> "A thousand years ago, temples to Apollo dotted these hills."
+> "A thousand years ago, temples to Apollo dotted these islands."
 
 > "Oracles, healing sanctuaries, places of prophecy."
 
@@ -57,7 +57,7 @@
 > "But the Shards are different. They're memory — preserved even when the world forgets."
 
 **Option C: "Do you still have faith?"**
-> **Theano:** "I serve at Delphi. Faith isn't optional."
+> **Theano:** "I serve at Demeter's sanctuary. Faith isn't optional."
 > *[She pauses]*
 > "But I'll admit... before I met you, I sometimes wondered if the gods were truly listening."
 > "Now I know they are. I just wish they'd speak more clearly."
@@ -68,16 +68,16 @@
 
 *[The party encounters a group of frightened travelers]*
 
-> A group of peasants huddles by the roadside, their faces drawn with fear.
+> A group of pilgrims huddles by the roadside, their faces drawn with fear.
 
-> They've been traveling west — away from the Eastern Shrine.
+> They've been traveling west — away from Delos.
 
 ---
 
 **Refugee Elder:**
-> "Turn back, travelers. The shrine is cursed."
+> "Turn back, travelers. The sanctuary is cursed."
 
-> "We lived in the village at its base for generations."
+> "We lived by the harbor on Delos for generations."
 
 > "Three nights ago, the light went out."
 
@@ -110,16 +110,16 @@
 **Theano:**
 > "The eternal flame. I've read about it."
 
-> "Apollo lit it himself when the shrine was built."
+> "Apollo lit it himself when the sanctuary was built."
 
 > "If it's gone out... something is very wrong."
 
 ---
 
-## Scene 3.2: The Shrine Village
+## Scene 3.2: The Delian Harbor
 
 **Type**: Exploration / Investigation  
-**Location**: The village at the base of Apollo's Eastern Shrine  
+**Location**: The harbor settlement on Delos beneath Apollo's sanctuary  
 **Time**: Late afternoon  
 **Audio**: Eerie silence, wind through empty streets
 
@@ -127,13 +127,13 @@
 
 ### Arrival
 
-> The village is abandoned.
+> The harbor is abandoned.
 
-> Doors hang open. Belongings litter the streets.
+> Doors hang open. Belongings litter the quays.
 
 > Everyone fled — or was taken.
 
-> Above the village, on the hillside, the shrine looms.
+> Above the harbor, on the terraced hill, the sanctuary looms.
 
 > Once, golden light would have spilled from its windows.
 
@@ -141,7 +141,7 @@
 
 ---
 
-### Village Exploration
+### Harbor Exploration
 
 **Examine: Abandoned Market**
 > *Stalls overturned. Goods scattered.*
@@ -152,7 +152,7 @@
 > *The offering bowl is full — but the sacred flame has died.*
 > *Someone scratched words into the stone: "HE RETURNS"*
 
-**Examine: Village Well**
+**Examine: Harbor Cistern**
 > *The water is black. Corrupted.*
 > *You wouldn't drink from this for anything.*
 
@@ -170,9 +170,9 @@
 
 ---
 
-> A young man. Lean, sharp-featured, dressed in traveling blacks.
+> A young man. Lean, sharp-featured, wrapped in a travel-stained cloak over a battered Spartan cuirass.
 
-> Twin daggers hang at his belt. His eyes are dark — and somehow darker around the edges, as if shadow clings to him.
+> A spear and a weathered shield rest at his side. His eyes are dark — and somehow darker around the edges, as if shadow clings to him.
 
 > He raises his hands in a gesture of peace.
 
@@ -186,7 +186,7 @@
 ### Dialogue: Brasidas Introduction
 
 **Brasidas:**
-> "Name's Brasidas. Treasure hunter. Explorer of places better left unexplored."
+> "Name's Brasidas. Spartan veteran. Explorer of places better left undisturbed."
 
 > "And currently, the only living person stupid enough to still be here."
 
@@ -213,7 +213,7 @@
 
 **Option C: "Why are you still here?"**
 > **Brasidas:** "I was inside when it happened. Barely made it out."
-> "Lost my partner to those shadow-things."
+> "Lost my wife to those shadow-things."
 > "I've been waiting. Watching. Trying to figure out how to go back in."
 > "Alone, I can't do it. But maybe..."
 
@@ -239,7 +239,7 @@
 > "Instead I'm offering help. That's got to count for something."
 > **Theano:** "He has a point, Alkmaeon. We need every advantage we can get."
 
-**Option C: "What happened to your partner?"**
+**Option C: "What happened to your wife?"**
 > *[Brasidas's expression darkens]*
 > **Brasidas:** "The shadows took her. Dragged her into the inner sanctum."
 > "I tried to follow. Almost died."
@@ -277,7 +277,7 @@
 **Party Member: Brasidas**
 - Class: Spartan Warrior
 - Role: DPS / Scout
-- Starting Skills: Basic Attack, Defend, Shadow Strike
+- Starting Skills: Basic Attack, Defend, Shield Bash
 - Stats: High Speed, High Attack, High Luck, Lower Defense
 
 ---
@@ -285,7 +285,7 @@
 ## Scene 3.3: The Shrine Entrance
 
 **Type**: Dungeon introduction  
-**Location**: Eastern Shrine of Apollo — Outer Court  
+**Location**: Sanctuary of Apollo on Delos — Outer Court  
 **Audio**: Unsettling silence, occasional whispers at edge of hearing
 
 ---
@@ -340,7 +340,7 @@
 **Shadow Spawn** (HP: 32, Speed: 12)
 - Weakness: Light element
 - Resist: Shadow element
-- Uses: Basic Attack, Draining Touch (steals HP)
+- Uses: Basic Attack, Shadow Grasp
 
 **Brasidas (Combat):**
 > "There! Hit them before they scatter!"
@@ -359,7 +359,7 @@
 ## Scene 3.4: The Shrine Interior
 
 **Type**: Dungeon exploration  
-**Location**: Eastern Shrine — Multiple areas  
+**Location**: Delos Sanctuary — Multiple areas  
 **Structure**: Three wings to explore, each with puzzles and encounters
 
 ---
@@ -503,7 +503,7 @@
 > *Most are illegible, but one phrase survives: "When light fails, memory remains."*
 
 **Examine: Intact Codex**
-> ***Found: Codex of the Eastern Shrine***
+> ***Found: Codex of Delos***
 > *A history of this place. Records of priests, prophecies, miracles.*
 > *One entry catches your eye: "The Shard of Light was entrusted to our keeping by Apollo himself. It must never fall to shadow."*
 
@@ -572,7 +572,7 @@
 ***Boss: Ink Horror***
 
 **Ink Horror** (HP: 75, High Magic)
-- Uses: Draining Word (magic damage + MP drain), Prophecy of Doom (debuffs party)
+- Uses: Wave of Despair (magic damage), Crushing Sorrow (debuffs party)
 - Weakness: Light, Fire
 - Immune: Shadow
 
@@ -601,7 +601,7 @@
 ## Scene 3.5: The Inner Sanctum
 
 **Type**: Major story event / Boss fight  
-**Location**: Eastern Shrine — Inner Sanctum  
+**Location**: Delos Sanctuary — Inner Sanctum  
 **Audio**: Building tension, divine resonance
 
 ---
@@ -679,7 +679,7 @@
 
 **Phase 1: Shadow Form** (100%-50% HP)
 - High evasion in darkness
-- Uses: Shadow Bolt, Corrupting Touch, Summon Shadow Spawn
+- Uses: Shadow Claw, Corrupted Scream, Summon Shades
 - Weakness: Light
 
 **Transition at 50%:**
@@ -691,7 +691,7 @@
 
 **Phase 2: Desperate Darkness** (50%-0% HP)
 - Lower evasion, higher damage
-- Uses: Typhon's Whisper (party-wide shadow damage), Consume Light (nullifies light attacks for one turn)
+- Uses: Corrupted Scream (party-wide shadow damage), Corrupted Light (disrupts Light attacks)
 - New weakness: Fire
 
 **Battle Dialogue:**
@@ -898,7 +898,7 @@
 **Arete's Spirit:**
 > "The darkness... is gone. I can rest now."
 
-> "Find what you're looking for, Cas. Don't let the shadows take you too."
+> "Find what you're looking for, Brasidas. Don't let the shadows take you too."
 
 *[She fades — truly gone this time]*
 
@@ -907,7 +907,7 @@
 *[Brasidas stands in silence for a moment]*
 
 **Brasidas:**
-> "...She was my partner. Treasure hunter, like me."
+> "...She was my wife. I was away at war when she died."
 
 > "We came here looking for gold. Found something else instead."
 
@@ -933,14 +933,14 @@
 ## Scene 3.7: Departure
 
 **Type**: Chapter resolution  
-**Location**: Shrine Village → Road  
+**Location**: Delian Harbor → Road  
 **Time**: Dawn — the shrine blazes with restored light
 
 ---
 
 ### The Shrine Reborn
 
-> Dawn breaks over the Eastern Shrine.
+> Dawn breaks over the Delian Sanctuary.
 
 > For the first time in days, golden light pours from its windows.
 
@@ -953,12 +953,12 @@
 **Theano:**
 > "One Shard claimed. Two more to find."
 
-> "The Memory of Silence lies to the west. The Memory of Ruin to the north."
+> "The Memory of Silence lies to the west, at the Necromanteion. The Memory of Ruin to the north."
 
 **Brasidas:**
-> "West is closer. But the rumors about that place..."
+> "West is closer. But the rumors about the Necromanteion..."
 
-> "They say the oracles there went silent generations ago."
+> "They say the oracle of the dead went silent generations ago."
 
 > "No one knows why."
 
@@ -1010,7 +1010,7 @@
 
 > The road west stretches before you.
 
-> Behind, the Eastern Shrine shines like a beacon — a light against the darkness.
+> Behind, the Delian Sanctuary shines like a beacon — a light against the darkness.
 
 > Ahead, unknown trials await.
 
@@ -1033,13 +1033,13 @@
 
 | Flag | Description |
 |------|-------------|
-| `shrine_village_reached` | Arrived at the Eastern Shrine |
-| `castor_joined` | Brasidas joins the party |
+| `delos_reached` | Arrived at the Delian Sanctuary |
+| `brasidas_joined` | Brasidas joins the party |
 | `treasury_flame_lit` | First secondary flame restored |
 | `library_flame_lit` | Second secondary flame restored |
 | `corrupted_priest_defeated` | Boss defeated |
 | `shard_of_light_acquired` | First Shard claimed |
-| `mira_freed` | Brasidas's partner's spirit released |
+| `arete_freed` | Brasidas's wife's spirit released |
 | `chapter3_complete` | Chapter 3 finished |
 
 ## Skills Learned
@@ -1054,7 +1054,7 @@
 |------|--------|--------|
 | Sun Pendant | +5 Magic, minor Light resistance | Treasury |
 | Guardian's Fragment | Crafting material | Gilded Specter |
-| Codex of the Eastern Shrine | Lore item | Library |
+| Codex of Delos | Lore item | Library |
 | Scroll of Forgotten Prophecy | Lore item | Ink Horror |
 | High Priest's Vestments | +10 Magic, +10 Defense | Boss |
 | Shard of Light | +10 Magic, Light damage +25% | Story reward |
@@ -1079,7 +1079,7 @@
 ## Transitions
 
 **Previous**: Chapter 2 — The Call of Memory  
-**Next**: Chapter 4 — The Memory of Silence (Western shrine, the cost of divine indifference)
+**Next**: Chapter 4 — The Memory of Silence (Necromanteion, the cost of divine indifference)
 
 ---
 

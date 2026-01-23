@@ -421,6 +421,175 @@
           "earth": 0.5
         },
         "chapters": [5, 6]
+      },
+      {
+        "id": "shadow_spawn",
+        "display_name": "Shadow Spawn",
+        "description": "Shadow-eaten remnants of temple guardians, given violent form by corruption.",
+        "sprite_path": "res://assets/sprites/enemies/common/mormolykeia_spritesheet.png",
+        "tier": 2,
+        "level": 3,
+        "max_hp": 32,
+        "attack": 9,
+        "defense": 4,
+        "magic": 10,
+        "speed": 12,
+        "skills": ["basic_attack", "shadow_grasp"],
+        "experience_reward": 14,
+        "currency_reward": 10,
+        "element_modifiers": {
+          "light": 1.5,
+          "shadow": 0.5
+        },
+        "chapters": [3]
+      },
+      {
+        "id": "hollow_one",
+        "display_name": "Hollow One",
+        "description": "A once-human spirit hollowed out by silence and forgetting.",
+        "sprite_path": "res://assets/sprites/enemies/common/eurynomos_spritesheet.png",
+        "tier": 3,
+        "level": 4,
+        "max_hp": 28,
+        "attack": 8,
+        "defense": 4,
+        "magic": 6,
+        "speed": 4,
+        "skills": ["shadow_grasp", "terrifying_wail"],
+        "experience_reward": 10,
+        "currency_reward": 6,
+        "element_modifiers": {
+          "light": 1.5,
+          "fire": 1.2,
+          "shadow": 0.7
+        },
+        "chapters": [4]
+      },
+      {
+        "id": "silence_eater",
+        "display_name": "Silence Eater",
+        "description": "A void-like predator that feeds on sound and memory.",
+        "sprite_path": "res://assets/sprites/enemies/common/oizys_spritesheet.png",
+        "tier": 3,
+        "level": 5,
+        "max_hp": 45,
+        "attack": 12,
+        "defense": 6,
+        "magic": 14,
+        "speed": 12,
+        "skills": ["shadow_grasp", "wave_of_despair"],
+        "experience_reward": 18,
+        "currency_reward": 12,
+        "element_modifiers": {
+          "light": 2.0,
+          "shadow": 0.5
+        },
+        "chapters": [4]
+      },
+      {
+        "id": "greater_silence",
+        "display_name": "Greater Silence",
+        "description": "A merged silence entity, dense with forgotten voices.",
+        "sprite_path": "res://assets/sprites/enemies/common/achlys_spritesheet.png",
+        "tier": 4,
+        "level": 6,
+        "max_hp": 80,
+        "attack": 14,
+        "defense": 8,
+        "magic": 16,
+        "speed": 10,
+        "skills": ["wave_of_despair", "crushing_sorrow"],
+        "experience_reward": 35,
+        "currency_reward": 22,
+        "element_modifiers": {
+          "light": 2.0,
+          "shadow": 0.5
+        },
+        "chapters": [4]
+      },
+      {
+        "id": "storm_wolf",
+        "display_name": "Storm Wolf",
+        "description": "A lightning-touched wolf driven mad by Typhon's unrest.",
+        "sprite_path": "res://assets/sprites/enemies/common/satyr_spritesheet.png",
+        "tier": 4,
+        "level": 6,
+        "max_hp": 45,
+        "attack": 14,
+        "defense": 6,
+        "magic": 4,
+        "speed": 12,
+        "skills": ["headbutt", "battle_fury"],
+        "experience_reward": 16,
+        "currency_reward": 10,
+        "element_modifiers": {
+          "light": 1.2,
+          "earth": 1.2
+        },
+        "chapters": [5]
+      },
+      {
+        "id": "twisted_earth",
+        "display_name": "Twisted Earth",
+        "description": "Animated stone and soil corrupted by chaotic energy.",
+        "sprite_path": "res://assets/sprites/enemies/common/corrupted_oread_spritesheet.png",
+        "tier": 4,
+        "level": 6,
+        "max_hp": 60,
+        "attack": 16,
+        "defense": 12,
+        "magic": 6,
+        "speed": 6,
+        "skills": ["boulder_smash", "earthshaker"],
+        "experience_reward": 20,
+        "currency_reward": 14,
+        "element_modifiers": {
+          "light": 1.3,
+          "earth": 0.5
+        },
+        "chapters": [5]
+      },
+      {
+        "id": "lightning_elemental",
+        "display_name": "Lightning Elemental",
+        "description": "A crackling entity of storm and wrath.",
+        "sprite_path": "res://assets/sprites/enemies/common/anemoi_thuellai_spritesheet.png",
+        "tier": 4,
+        "level": 6,
+        "max_hp": 50,
+        "attack": 10,
+        "defense": 6,
+        "magic": 18,
+        "speed": 14,
+        "skills": ["lightning_strike", "storm_surge"],
+        "experience_reward": 22,
+        "currency_reward": 16,
+        "element_modifiers": {
+          "earth": 1.5,
+          "fire": 0.7
+        },
+        "chapters": [5]
+      },
+      {
+        "id": "memory_guardian",
+        "display_name": "Memory Guardian",
+        "description": "A lingering temple guardian made of light and remembrance.",
+        "sprite_path": "res://assets/sprites/enemies/common/eidolon_spritesheet.png",
+        "tier": 4,
+        "level": 8,
+        "max_hp": 55,
+        "attack": 16,
+        "defense": 14,
+        "magic": 12,
+        "speed": 8,
+        "skills": ["basic_attack"],
+        "experience_reward": 0,
+        "currency_reward": 0,
+        "element_modifiers": {
+          "light": 0.5,
+          "shadow": 1.5
+        },
+        "chapters": [6]
       }
     ],
     "bosses": [
@@ -469,6 +638,72 @@
         "phases": 2
       },
       {
+        "id": "gilded_specter",
+        "display_name": "Gilded Specter",
+        "description": "A corrupted guardian of Apollo's treasury, gold veined with shadow.",
+        "sprite_path": "res://assets/sprites/enemies/common/ker_spritesheet.png",
+        "boss_type": "mini_boss",
+        "chapter": 3,
+        "level": 4,
+        "max_hp": 85,
+        "attack": 14,
+        "defense": 10,
+        "magic": 6,
+        "speed": 8,
+        "skills": ["basic_attack", "shadow_claw"],
+        "experience_reward": 30,
+        "currency_reward": 25,
+        "element_modifiers": {
+          "light": 1.5,
+          "shadow": 0.7
+        },
+        "phases": 2
+      },
+      {
+        "id": "ink_horror",
+        "display_name": "Ink Horror",
+        "description": "A creature of corrupted prophecy, formed from burned scrolls and shadow.",
+        "sprite_path": "res://assets/sprites/enemies/common/oizys_spritesheet.png",
+        "boss_type": "mini_boss",
+        "chapter": 3,
+        "level": 4,
+        "max_hp": 75,
+        "attack": 10,
+        "defense": 6,
+        "magic": 16,
+        "speed": 9,
+        "skills": ["wave_of_despair", "crushing_sorrow"],
+        "experience_reward": 28,
+        "currency_reward": 22,
+        "element_modifiers": {
+          "light": 1.5,
+          "shadow": 0.7
+        },
+        "phases": 1
+      },
+      {
+        "id": "corrupted_high_priest",
+        "display_name": "Corrupted High Priest",
+        "description": "Apollo's high priest, consumed by shadow and forced to guard the shard.",
+        "sprite_path": "res://assets/sprites/enemies/bosses/corrupted_apollo_spritesheet.png",
+        "boss_type": "chapter_boss",
+        "chapter": 3,
+        "level": 5,
+        "max_hp": 150,
+        "attack": 18,
+        "defense": 12,
+        "magic": 14,
+        "speed": 10,
+        "skills": ["shadow_claw", "corrupted_scream", "summon_shades", "corrupted_light"],
+        "experience_reward": 100,
+        "currency_reward": 75,
+        "element_modifiers": {
+          "light": 1.5,
+          "shadow": 0.5
+        },
+        "phases": 2
+      },
+      {
         "id": "melinoe",
         "display_name": "Melinoe",
         "description": "Goddess of nightmares and madness, daughter of Persephone. Half her body is pale as bone, half dark as night.",
@@ -491,6 +726,28 @@
         "phases": 2
       },
       {
+        "id": "unspoken",
+        "display_name": "The Unspoken",
+        "description": "Silence given form, born from unanswered prayers and forgotten voices.",
+        "sprite_path": "res://assets/sprites/enemies/bosses/melinoe_spritesheet.png",
+        "boss_type": "chapter_boss",
+        "chapter": 4,
+        "level": 6,
+        "max_hp": 180,
+        "attack": 14,
+        "defense": 12,
+        "magic": 20,
+        "speed": 10,
+        "skills": ["terrifying_wail", "crushing_sorrow", "wave_of_despair", "maddening_touch"],
+        "experience_reward": 120,
+        "currency_reward": 80,
+        "element_modifiers": {
+          "light": 1.8,
+          "shadow": 0.5
+        },
+        "phases": 3
+      },
+      {
         "id": "echidna",
         "display_name": "Echidna",
         "description": "The Mother of Monsters, mate of Typhon. Half woman, half serpent. She guards her husband's dreaming prison.",
@@ -511,6 +768,28 @@
           "fire": 1.2
         },
         "phases": 2
+      },
+      {
+        "id": "echo_of_typhon",
+        "display_name": "Echo of Typhon",
+        "description": "A fragment of Typhon's dreaming rage given temporary form.",
+        "sprite_path": "res://assets/sprites/enemies/bosses/typhon_spritesheet.png",
+        "boss_type": "chapter_boss",
+        "chapter": 5,
+        "level": 7,
+        "max_hp": 220,
+        "attack": 22,
+        "defense": 14,
+        "magic": 18,
+        "speed": 10,
+        "skills": ["primordial_roar", "storm_of_chaos", "world_shaker"],
+        "experience_reward": 150,
+        "currency_reward": 100,
+        "element_modifiers": {
+          "light": 1.5,
+          "shadow": 0.7
+        },
+        "phases": 3
       },
       {
         "id": "corrupted_apollo",

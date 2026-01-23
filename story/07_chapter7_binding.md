@@ -532,7 +532,7 @@
 
 ---
 
-**Hécate:**
+**Hecate:**
 > "Defiance. Interesting."
 
 > "You would let the world fall rather than sacrifice yourself?"
@@ -807,7 +807,7 @@
 *[The party gathers — discussing the future]*
 
 **Theano:**
-> "The Pythia will want a report. The events here... they've changed everything."
+> "My order will want a report. The events here... they've changed everything."
 
 > "The oracles are speaking again. Faith is returning."
 
@@ -829,7 +829,7 @@
 > "Carrying cosmic destiny and all — that's a lot of target on your head."
 
 **Theano:**
-> "I'll visit when I can. Delphi needs me, but..."
+> "I'll visit when I can. Demeter's sanctuary needs me, but..."
 
 > "This village. These people. You."
 
@@ -867,7 +867,7 @@
 
 > Apollo nods, understanding at last.
 
-> And Hécate watches from her crossroads, torch in hand.
+> And Hecate watches from her crossroads, torch in hand.
 
 > Wondering what path this strange mortal will walk next.
 
@@ -996,7 +996,7 @@
 | Character | Level | Ending Notes |
 |-----------|-------|--------------|
 | Alkmaeon | 10+ | Transcends or remains mortal |
-| Theano | 9 | Returns to Delphi, forever changed |
+| Theano | 9 | Returns to Demeter's sanctuary, forever changed |
 | Brasidas | 9 | Finds purpose and belonging |
 
 ## Thematic Resolution
@@ -1029,7 +1029,7 @@ The post-credits scene sets up potential sequel hooks while honoring the closure
 
 **Act I** (Chapters 1-2): Alkmaeon's awakening, first visions, meets Theano, discovers his calling
 
-**Act II** (Chapter 2): The Well of Mnemosyne, Hécate's guidance, the three paths revealed
+**Act II** (Chapter 2): The Well of Mnemosyne, Hecate's guidance, the three paths revealed
 
 **Act III** (Chapters 3-5): Gathering the Shards — Light, Silence, Ruin — each with its truth
 

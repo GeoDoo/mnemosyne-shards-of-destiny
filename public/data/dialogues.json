@@ -1,0 +1,93 @@
+{
+  "village": {
+    "npcs": {
+      "epimenides": {
+        "name": "Epimenides",
+        "type": "elder",
+        "position": { "x": 0.22, "y": 0.78 },
+        "dialogue": [
+          { "speaker": "Epimenides", "text": "Ah, Alkmaeon... I knew you would come." },
+          { "speaker": "Alkmaeon", "text": "You know my name? How?" },
+          { "speaker": "Epimenides", "text": "I have watched you since you were a child. Your eyes... they see things others cannot." },
+          { "speaker": "Alkmaeon", "text": "The dreams... the visions of golden light..." },
+          { "speaker": "Epimenides", "text": "Yes. The Temple of Apollo on the hill calls to you. It has been sealed for twenty years." },
+          { "speaker": "Epimenides", "text": "Dark spirits now guard its halls. But within lies the truth of your past." },
+          { "speaker": "Alkmaeon", "text": "My past? What do you mean?" },
+          { "speaker": "Epimenides", "text": "That is not for me to say. You must discover it yourself." },
+          { "speaker": "Epimenides", "text": "When you are ready, venture toward the Temple of Apollo. But be warned..." },
+          { "speaker": "Epimenides", "text": "The Eidolons that lurk there will not let you pass easily." }
+        ]
+      },
+      "merchant": {
+        "name": "Merchant",
+        "type": "merchant",
+        "position": { "x": 0.78, "y": 0.76 },
+        "dialogue": [
+          { "speaker": "Merchant", "text": "Welcome, traveler! Fresh fruits from the orchards!" },
+          { "speaker": "Merchant", "text": "Hmm, you look like you're heading somewhere dangerous." },
+          { "speaker": "Alkmaeon", "text": "The Temple of Apollo ruins. Do you know anything about them?" },
+          { "speaker": "Merchant", "text": "The Temple of Apollo? *shudders* Stay away from that cursed place." },
+          { "speaker": "Merchant", "text": "My brother went there three moons ago. He never returned." },
+          { "speaker": "Merchant", "text": "They say shadows walk those halls now. Spirits of the forgotten." }
+        ]
+      }
+    },
+    "examinables": {
+      "fruit_basket": {
+        "name": "Fruit Basket",
+        "position": { "x": 0.12, "y": 0.85 },
+        "dialogue": [
+          { "speaker": "", "text": "A basket filled with fresh apples and grapes." },
+          { "speaker": "", "text": "The harvest has been good this year." }
+        ]
+      },
+      "pottery": {
+        "name": "Pottery",
+        "position": { "x": 0.88, "y": 0.82 },
+        "dialogue": [
+          { "speaker": "", "text": "Beautifully crafted amphorae." },
+          { "speaker": "", "text": "The craftsmanship here rivals that of Athens itself." }
+        ]
+      },
+      "village_path": {
+        "name": "Village Path",
+        "position": { "x": 0.5, "y": 0.72 },
+        "dialogue": [
+          { "speaker": "", "text": "The main road through Thespiae." },
+          { "speaker": "", "text": "To the north lies the ancient Temple of Apollo." },
+          { "speaker": "", "text": "Strange lights have been seen there at night..." }
+        ]
+      }
+    }
+  },
+  "temple": {
+    "npcs": {},
+    "examinables": {
+      "altar": {
+        "name": "Ancient Altar",
+        "position": { "x": 0.5, "y": 0.4 },
+        "dialogue": [
+          { "speaker": "", "text": "A crumbling altar dedicated to Apollo." },
+          { "speaker": "", "text": "Faded inscriptions speak of prophecy and memory." },
+          { "speaker": "", "text": "You feel a strange warmth emanating from the stone..." }
+        ]
+      }
+    }
+  },
+  "battle": {
+    "eidolon": {
+      "intro": [
+        "An Eidolon materializes from the shadows!",
+        "A spirit of the forgotten dead..."
+      ],
+      "victory": [
+        "The Eidolon dissolves into mist.",
+        "A faint whisper echoes: 'Remember us...'"
+      ],
+      "defeat": [
+        "Darkness consumes you...",
+        "But this is not the end."
+      ]
+    }
+  }
+}

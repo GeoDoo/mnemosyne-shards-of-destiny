@@ -10,7 +10,7 @@
 
 Before the age of men, before the memory of mortals, the world trembled beneath the coils of **Typhon**, born of Gaia's fury. Lightning clashed with storm, and the heavens burned. Zeus cast him down, burying him beneath the roots of the earth, yet chaos does not die — it only sleeps.
 
-To guard against his return, the gods wove the **Order of Destiny**, a harmony of fate, law, and remembrance. At its heart stood **Mnemosyne**, keeper of cosmic memory, whose knowledge preserved the shape of the world. At its borders walked **Hécate**, torch in hand, guiding souls, dreams, and visions across the thresholds between life, death, and truth.
+To guard against his return, the gods wove the **Order of Destiny**, a harmony of fate, law, and remembrance. At its heart stood **Mnemosyne**, keeper of cosmic memory, whose knowledge preserved the shape of the world. At its borders walked **Hecate**, torch in hand, guiding souls, dreams, and visions across the thresholds between life, death, and truth.
 
 Yet nothing eternal remains unbroken.
 
@@ -30,7 +30,7 @@ As he steps across the threshold, the air trembles. A vision seizes him:
 * A memory not his own — a war between light and storm.
 * A shattered crystal scattering into radiant fragments.
 
-For a moment, he sees a figure: a veiled woman bearing a torch — **Hécate**, standing between worlds, watching him.
+For a moment, he sees a figure: a veiled woman bearing a torch — **Hecate**, standing between worlds, watching him.
 
 The boy collapses. When he awakens, the temple is silent again — but he is changed.
 
@@ -56,7 +56,7 @@ Here, his visions sharpen. He learns — not through words, but through flashes 
 * Typhon's prison weakens with each celestial alignment.
 * If the Shard is not restored, chaos will break free.
 
-Hécate appears to him again, not as an enemy, but as a guide at the crossroads. She gives no clear answers — only signs, paths, and warnings.
+Hecate appears to him again, not as an enemy, but as a guide at the crossroads. She gives no clear answers — only signs, paths, and warnings.
 
 She points him east, toward a distant shrine where another fragment of the Shard slumbers.
 
@@ -103,7 +103,7 @@ He is a living vessel of **Mnemosyne's memory**, born at the edge of the world t
 
 Typhon stirs beneath the earth, his thunderous heartbeat shaking the land.
 
-Hécate stands before the boy at a final crossroads:
+Hecate stands before the boy at a final crossroads:
 
 * Turn back, live as a mortal, and let destiny fracture.
 * Or step forward, become more than human, and bind the Shard anew.
@@ -135,7 +135,7 @@ When dawn breaks, the Red Moon is gone.
 The boy remains — but changed.
 Half mortal, half vessel of cosmic memory.
 
-Hécate bows, her torch dimming as the threshold closes.
+Hecate bows, her torch dimming as the threshold closes.
 
 The Chorus speaks one final line:
 
@@ -152,14 +152,14 @@ The Chorus speaks one final line:
 | **Memory vs. Oblivion** | Mnemosyne's domain | What is lost when we forget? |
 | **Order vs. Chaos** | Apollo vs. Typhon | Can harmony be restored, or only maintained? |
 | **Mortality vs. Divinity** | The boy's transformation | What does it cost to become more than human? |
-| **Fate vs. Choice** | Hécate's crossroads | Do we choose our destiny, or does it choose us? |
+| **Fate vs. Choice** | Hecate's crossroads | Do we choose our destiny, or does it choose us? |
 
 ### The Three Divine Forces
 
 | Deity | Role | Symbol |
 |-------|------|--------|
 | **Mnemosyne** | Keeper of cosmic memory, source of the Shards | The Well, the Mirror |
-| **Hécate** | Guide at thresholds, watcher between worlds | The Torch, the Crossroads |
+| **Hecate** | Guide at thresholds, watcher between worlds | The Torch, the Crossroads |
 | **Apollo** | God of light, prophecy, and harmony | The Lyre, the Temple |
 
 ### The Antagonist
@@ -174,7 +174,7 @@ The Chorus speaks one final line:
 |-----|--------------|--------------|------------|
 | Prologue | Opening cinematic | — | — |
 | Act I | Chapter 1 | Village + Temple of Apollo | First vision |
-| Act II | Chapter 2 | Well of Mnemosyne | Hécate encounter |
+| Act II | Chapter 2 | Well of Mnemosyne | Hecate encounter |
 | Act III | Chapters 3-5 | Three shrine dungeons | Memory of Light, Silence, Ruin |
 | Act IV | Chapter 6 | Typhon's Sanctum | The Revelation |
 | Act V | Final Chapter | Temple of Apollo (return) | Final binding |

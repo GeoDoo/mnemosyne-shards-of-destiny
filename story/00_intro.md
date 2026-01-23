@@ -68,7 +68,7 @@
 
 *[Illustration: Hecate at a crossroads, torch in hand]*
 
-> At its borders walked Hécate...
+> At its borders walked Hecate...
 
 > Torch in hand.
 
@@ -309,13 +309,13 @@
 ### Location: Village Shrine
 
 **Description:**
-> *A small stone shrine dedicated to Apollo and Hécate.*
+> *A small stone shrine dedicated to Apollo and Hecate.*
 > *Villagers leave offerings here — flowers, bread, small coins.*
 
 **Examine Shrine:**
 > *Two carved figures stand side by side.*
 > *Apollo, holding a lyre, his face serene.*
-> *Hécate, bearing twin torches, her face hidden in shadow.*
+> *Hecate, bearing twin torches, her face hidden in shadow.*
 
 > *Something about her image makes you uneasy.*
 > *As if she's looking back at you.*
@@ -336,7 +336,7 @@
 > *Shelves line the walls, filled with texts you cannot read.*
 > *Maps of places you've never heard of.*
 
-*[ELDER THERON sits by the fire, waiting]*
+*[EPIMENIDES sits by the fire, waiting]*
 
 ---
 
@@ -437,7 +437,7 @@
 
 > "Trust what you see. Even if it seems impossible."
 
-*[Story flag set: `theron_quest_given`]*
+*[Story flag set: `epimenides_quest_given`]*
 
 ---
 
@@ -552,7 +552,7 @@
 
 > A veiled woman. Twin torches.
 
-> Hécate.
+> Hecate.
 
 > She turns toward you.
 
@@ -652,7 +652,7 @@
 
 ---
 
-*[ELDER THERON approaches]*
+*[EPIMENIDES approaches]*
 
 **Epimenides:**
 > "Alkmaeon. You've returned."
@@ -683,7 +683,7 @@
 > "If the temple showed you that... then you are more important than I feared."
 
 **Option B: "I saw a woman with torches. Watching me."**
-> **Epimenides:** "Hécate. The goddess of crossroads."
+> **Epimenides:** "Hecate. The goddess of crossroads."
 > "If she has taken notice of you... your path is no longer your own."
 
 **Option C: "I don't know. It was too fast."**
@@ -742,7 +742,7 @@
 
 > The visions return — stronger, clearer.
 
-> You see the temple whole. You see Apollo. You see Hécate at the crossroads.
+> You see the temple whole. You see Apollo. You see Hecate at the crossroads.
 
 > And beneath it all, you feel something stirring.
 
@@ -768,7 +768,7 @@
 
 | Flag | Description |
 |------|-------------|
-| `theron_quest_given` | Epimenides has sent Alkmaeon to the temple |
+| `epimenides_quest_given` | Epimenides has sent Alkmaeon to the temple |
 | `first_vision_complete` | Alkmaeon has experienced his first divine vision |
 | `red_moon_witnessed` | The Red Moon has risen; prologue complete |
 

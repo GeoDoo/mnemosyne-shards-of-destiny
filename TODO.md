@@ -17,7 +17,7 @@
 - [x] Migrate from Godot to Phaser.js
 - [x] Set up Vite build system
 - [x] Create project structure
-- [x] Configure game settings (540x960 mobile portrait)
+- [x] Configure game settings (1920x1080, scalable)
 
 ---
 
@@ -30,12 +30,12 @@
 
 ---
 
-## Phase 3: Systems ✅ COMPLETE
+## Phase 3: Systems ⬜ IN PROGRESS
 
-- [x] DialogueSystem (typewriter effect, portraits)
 - [x] CombatSystem (damage calculation, turn order)
 - [x] Game state management (registry)
 - [x] Save/Load (localStorage)
+- [ ] DialogueSystem (branching, typewriter effect, portraits)
 
 ---
 
@@ -90,9 +90,7 @@ src/
 │   ├── MainMenuScene.js
 │   ├── VillageScene.js
 │   └── BattleScene.js
-├── entities/         # Game objects (future)
 └── systems/          # Game systems
-    ├── DialogueSystem.js
     └── CombatSystem.js
 
 public/

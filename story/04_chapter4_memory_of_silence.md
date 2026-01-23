@@ -1,6 +1,6 @@
 # Chapter 4: The Memory of Silence
 
-> *The western road leads to the Oracle's Rest — a place where prophecy died and the gods stopped answering. Here, the party confronts an uncomfortable truth: the divine are not always benevolent. Sometimes they simply... forget. The Memory of Silence teaches that mortals must bear the weight of fate alone.*
+> *The western road leads to the Necromanteion on the Acheron — a place where prophecy died and the gods stopped answering. Here, the party confronts an uncomfortable truth: the divine are not always benevolent. Sometimes they simply... forget. The Memory of Silence teaches that mortals must bear the weight of fate alone.*
 
 **Prerequisites**: Chapter 3 complete (`chapter3_complete` flag set)  
 **Party**: Alkmaeon, Theano, Brasidas
@@ -10,8 +10,8 @@
 ## Scene 4.1: The Western Passage
 
 **Type**: Travel / Character development  
-**Location**: The Cracked Plains — western badlands  
-**Time**: One week after leaving the Eastern Shrine  
+**Location**: The Acheron Valley — western Epirus  
+**Time**: One week after leaving Delos  
 **Audio**: Wind through dead grass, distant thunder, emptiness
 
 ---
@@ -34,11 +34,11 @@
 ---
 
 **Theano:**
-> "The Cracked Plains. I've read about them."
+> "The Acheron Valley. I've read about it."
 
 > "A thousand years ago, this was fertile farmland."
 
-> "Then the Oracle's Rest went silent. And the land died with it."
+> "Then the Necromanteion went silent. And the land died with it."
 
 *[Player choice]*
 
@@ -48,7 +48,7 @@
 > "Either way, they're connected."
 
 **Option B: "What happened to the oracle?"**
-> **Theano:** "No one knows. One day, the Pythia of the West simply... stopped speaking."
+> **Theano:** "No one knows. One day, the oracle here simply... stopped speaking."
 > "Pilgrims came seeking guidance. Received nothing."
 > "Eventually, they stopped coming at all."
 
@@ -65,7 +65,7 @@
 > "So, Theano. You serve Apollo, right?"
 
 **Theano:**
-> "I serve at Delphi. Apollo's priestess, yes."
+> "I serve at Demeter's sanctuary. Priestess of the harvest, yes."
 
 **Brasidas:**
 > "And this place — where the gods stopped talking — doesn't that... worry you?"
@@ -138,7 +138,7 @@
 
 **Hollow One** (HP: 28, Low Speed)
 - Weakness: Light, Fire
-- Uses: Grasping Reach (drains HP), Mournful Wail (chance to cause Sorrow debuff)
+- Uses: Shadow Grasp (drains HP), Terrifying Wail (chance to cause Despair debuff)
 - Passive: Dies in one hit to healing spells
 
 **After Combat:**
@@ -155,10 +155,10 @@
 
 ---
 
-## Scene 4.2: The Oracle's Rest
+## Scene 4.2: The Necromanteion
 
 **Type**: Exploration / Atmosphere  
-**Location**: The Oracle's Rest — exterior  
+**Location**: The Necromanteion — exterior  
 **Time**: Late afternoon, overcast  
 **Audio**: Silence. True, oppressive silence.
 
@@ -166,7 +166,7 @@
 
 ### First Sight
 
-> The Oracle's Rest rises from the dead plains like a monument to loss.
+> The Necromanteion rises from the dead plains like a monument to loss.
 
 > Once, it must have been beautiful — white marble, golden domes.
 
@@ -217,14 +217,14 @@
 
 > The great doors stand open — but the interior is dark.
 
-> Not shadow-dark, like the Eastern Shrine.
+> Not shadow-dark, like Delos.
 
 > This is the darkness of absence. Of nothing.
 
 **Theano:**
 > "This is different from before."
 
-> "At Apollo's shrine, darkness invaded. This..."
+> "At the sanctuary on Delos, darkness invaded. This..."
 
 > "This is what happens when light simply... leaves."
 
@@ -233,7 +233,7 @@
 ## Scene 4.3: The Temple of Silence
 
 **Type**: Dungeon exploration  
-**Location**: The Oracle's Rest — Interior  
+**Location**: The Necromanteion — Interior  
 **Structure**: Linear progression through increasingly silent areas
 
 ---
@@ -337,7 +337,7 @@
 **Silence Eater** (HP: 45, High Speed)
 - Weakness: Light (double damage)
 - Immune: Shadow, Status effects
-- Uses: Devouring Quiet (damages + silences target for 2 turns), Null Zone (negates party buffs)
+- Uses: Shadow Grasp (damages + slows target), Wave of Despair (negates party buffs)
 - Special: If both attack same target, they merge into Greater Silence
 
 **Greater Silence** (if merged, HP: 80)
@@ -363,7 +363,7 @@
 > Into the earth. Into the heart of silence.
 
 **Theano:**
-> "The Pythia's Chamber. Where the oracle communed with Apollo."
+> "The Oracle's Chamber. Where the priests communed with the dead."
 
 > "If the Shard is anywhere, it's there."
 
@@ -375,10 +375,10 @@
 
 ---
 
-## Scene 4.4: The Pythia's Chamber
+## Scene 4.4: The Oracle's Chamber
 
 **Type**: Story revelation / Boss encounter  
-**Location**: The deepest chamber of the Oracle's Rest  
+**Location**: The deepest chamber of the Necromanteion  
 **Audio**: Complete silence — even the music stops
 
 ---
@@ -387,9 +387,9 @@
 
 > The chamber is circular. Ancient.
 
-> Fumes once rose from a crack in the floor — Apollo's breath, they said.
+> Fumes once rose from a crack in the floor — Hades' breath, they said.
 
-> The Pythia would breathe them in and speak the future.
+> The oracle would breathe them in and speak for the dead.
 
 > Now the crack is sealed. The fumes are gone.
 
@@ -399,7 +399,7 @@
 
 ---
 
-> She was the last Pythia.
+> She was the last oracle.
 
 > She sits frozen, eyes open, mouth agape mid-prophecy.
 
@@ -415,9 +415,9 @@
 
 ### The Truth Reveals Itself
 
-*[The Pythia's eyes focus — she is still alive, somehow]*
+*[The oracle's eyes focus — she is still alive, somehow]*
 
-**Last Pythia:**
+**Last Oracle:**
 > *[Her voice is a whisper, barely audible even in the silence]*
 
 > "At... last."
@@ -427,7 +427,7 @@
 **Theano:**
 > "By the gods... she's still alive. After all this time."
 
-**Last Pythia:**
+**Last Oracle:**
 > "Not... alive. Not dead."
 
 > "Waiting. Between."
@@ -438,7 +438,7 @@
 
 ---
 
-**Last Pythia:**
+**Last Oracle:**
 > "They stopped... answering."
 
 > "The gods. Apollo."
@@ -450,19 +450,19 @@
 *[Player choice]*
 
 **Option A: "Why did they stop?"**
-> **Last Pythia:** "They... forgot."
+> **Last Oracle:** "They... forgot."
 > "Not forgot us. Forgot... to care."
 > "Mortals are so small. So brief."
 > "Gods see ages. Empires. Stars."
 > "We are... dust."
 
 **Option B: "We're here to help. To take the Shard."**
-> **Last Pythia:** "Take it. Please."
+> **Last Oracle:** "Take it. Please."
 > "End... this vigil."
 > "Let me finally... rest."
 
 **Option C: "You've been waiting a thousand years?"**
-> **Last Pythia:** "Waiting. Yes."
+> **Last Oracle:** "Waiting. Yes."
 > "For someone to... remember."
 > "Memory is all we have... when the gods look away."
 
@@ -505,7 +505,7 @@
 
 **Phase 1: First Layer (HP Bar 1 — 60 HP)**
 - Shrouded in silence — physical attacks deal reduced damage
-- Uses: Voiceless Scream (party-wide damage), Forgotten Touch (causes Despair debuff)
+- Uses: Terrifying Wail (party-wide damage), Crushing Sorrow (causes Despair debuff)
 - Strategy: Use Light attacks to crack the layer
 
 **Transition:**
@@ -514,7 +514,7 @@
 
 **Phase 2: Second Layer (HP Bar 2 — 60 HP)**
 - More aggressive — faster attacks
-- Uses: Silence Zone (disables skills for one party member), Memory Drain (steals buffs)
+- Uses: Wave of Despair (disables buffs), Shadow Grasp (steals momentum)
 - Summons: Forgotten Whispers (weak adds that heal The Unspoken if not killed)
 - Strategy: Kill adds quickly, keep pressure
 
@@ -524,9 +524,9 @@
 
 **Phase 3: Core (HP Bar 3 — 60 HP)**
 - Desperation mode — lower defense, higher damage
-- Uses: Accumulated Silence (massive damage, charges for one turn first), Final Forgetting (attempt to erase one party member's existence — must be interrupted)
+- Uses: Crushing Sorrow (massive damage, charges for one turn first), Maddening Touch (attempt to erase one party member's existence — must be interrupted)
 - Vulnerability: Light damage now deals triple
-- Strategy: Burst damage when it charges; interrupt Final Forgetting at all costs
+- Strategy: Burst damage when it charges; interrupt Maddening Touch at all costs
 
 **Battle Dialogue:**
 
@@ -550,7 +550,7 @@
 **Final Blow:**
 > *Light floods the chamber — your light, amplified by the Shard of Light.*
 > *The Unspoken screams — and finally, for the first time in a thousand years...*
-> *Sound returns to the Oracle's Rest.*
+> *Sound returns to the Necromanteion.*
 
 ---
 
@@ -702,11 +702,11 @@
 
 ---
 
-### The Last Pythia's Release
+### The Last Oracle's Release
 
-*[The Pythia, finally free of the Shard's grip, slumps on her throne]*
+*[The oracle, finally free of the Shard's grip, slumps on her throne]*
 
-**Last Pythia:**
+**Last Oracle:**
 > "You did it."
 
 > "The silence... is broken."
@@ -715,14 +715,14 @@
 
 *[Her voice grows stronger — clearer]*
 
-**Last Pythia:**
+**Last Oracle:**
 > "Listen. Before I go."
 
 > "One final prophecy. The last I will ever speak."
 
 ---
 
-**Last Pythia:**
+**Last Oracle:**
 > "The three Shards, gathered in the vessel's hand."
 
 > "The crossroads queen, who sees all paths unwinding."
@@ -737,7 +737,7 @@
 
 *[She smiles — peaceful at last]*
 
-**Last Pythia:**
+**Last Oracle:**
 > "Thank you, vessel. Remember me."
 
 > "Remember all of us who waited."
@@ -789,7 +789,7 @@
 ## Scene 4.6: Departure and Doubt
 
 **Type**: Chapter resolution / Party conflict  
-**Location**: Oracle's Rest — Exterior  
+**Location**: Necromanteion — Exterior  
 **Time**: Night — the stars are visible for the first time in this region
 
 ---
@@ -798,7 +798,7 @@
 
 > Outside, the sky has cleared.
 
-> For the first time in centuries, stars shine over the Cracked Plains.
+> For the first time in centuries, stars shine over the Acheron Valley.
 
 > The silence is broken. Life might return here — someday.
 
@@ -808,7 +808,7 @@
 
 ### Theano's Crisis
 
-*[LYRA stands apart from the group, staring at the sky]*
+*[THEANO stands apart from the group, staring at the sky]*
 
 **Brasidas:**
 > "She's been like that for an hour."
@@ -870,7 +870,7 @@
 
 ### Brasidas's Reflection
 
-*[CASTOR approaches as Theano walks away]*
+*[BRASIDAS approaches as Theano walks away]*
 
 **Brasidas:**
 > "That was heavy. The whole thing."
@@ -889,7 +889,7 @@
 *[He shakes his head]*
 
 **Brasidas:**
-> "I've never believed in much. Too cynical, Mira always said."
+> "I've never believed in much. Too cynical, Arete always said."
 
 > "But now I wonder if she had the right idea."
 
@@ -924,7 +924,7 @@
 
 > The party sets out north.
 
-> Behind them, the Oracle's Rest begins to change.
+> Behind them, the Necromanteion begins to change.
 
 > The silence is broken. The stars shine.
 
@@ -947,12 +947,12 @@
 
 | Flag | Description |
 |------|-------------|
-| `cracked_plains_crossed` | Traveled through the dead lands |
-| `oracles_rest_reached` | Arrived at the silent temple |
-| `last_pythia_met` | Encountered the trapped oracle |
+| `acheron_valley_crossed` | Traveled through the Acheron Valley |
+| `necromanteion_reached` | Arrived at the Necromanteion |
+| `last_oracle_met` | Encountered the trapped oracle |
 | `unspoken_defeated` | Boss defeated |
 | `shard_of_silence_acquired` | Second Shard claimed |
-| `lyras_faith_shaken` | Theano's character development trigger |
+| `theano_faith_shaken` | Theano's character development trigger |
 | `chapter4_complete` | Chapter 4 finished |
 
 ## Items Received
@@ -990,7 +990,7 @@
 ## Transitions
 
 **Previous**: Chapter 3 — The Memory of Light  
-**Next**: Chapter 5 — The Memory of Ruin (Typhon's echo, the final Shard)
+**Next**: Chapter 5 — The Memory of Ruin (Mount Olympus, Typhon's echo)
 
 ---
 
@@ -1002,6 +1002,6 @@ This is the emotional low point of Act III — deliberately somber and philosoph
 2. **Challenge the party's beliefs**: Especially Theano's faith
 3. **Prepare for Chapter 5**: After silence comes chaos
 4. **Deepen themes**: The Shards aren't just power-ups — each carries difficult truths
-5. **The Pythia's prophecy**: Foreshadows the choice in Act IV/V
+5. **The oracle's prophecy**: Foreshadows the choice in Act IV/V
 
 The boss fight against The Unspoken should feel different — more like breaking through layers of accumulated grief than fighting a monster.

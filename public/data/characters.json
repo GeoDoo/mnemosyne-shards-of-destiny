@@ -26,7 +26,7 @@
       },
       "starting_skills": ["basic_attack", "defend"],
       "learnable_skills": [
-        {"skill_id": "memory_flash", "level": 1, "note": "Learned through story at Delphi"},
+        {"skill_id": "memory_flash", "level": 1, "note": "Learned through story at the Temple of Apollo"},
         {"skill_id": "shard_recall", "level": 8},
         {"skill_id": "heal", "level": 5}
       ]

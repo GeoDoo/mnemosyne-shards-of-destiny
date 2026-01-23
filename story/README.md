@@ -29,10 +29,10 @@ story/
 | Act | Title | Game Mapping |
 |-----|-------|--------------|
 | **Prologue** | The Chorus of Ruin | Opening cinematic |
-| **Act I** | The Boy and the Ruins | Chapter 1: Thespiae + Delphi |
+| **Act I** | The Boy and the Ruins | Chapter 1: Thespiae + Temple of Apollo |
 | **Act II** | The Call of Memory | Chapter 2: Lebadeia |
 | **Act III** | The Trial of the Shards | Chapters 3-5: Delos, Necromanteion, Olympus |
-| **Act IV** | The Revelation | Chapter 6: Return to Delphi |
+| **Act IV** | The Revelation | Chapter 6: Return to Thespiae (Temple of Apollo) |
 | **Act V** | The Binding of Fate | Chapter 7: Final confrontation |
 
 ---
@@ -52,7 +52,7 @@ story/
 | Location | Chapter | Mythological Significance |
 |----------|---------|---------------------------|
 | **Thespiae** (Boeotia, foot of Mt. Helicon) | Start | Ancient city sacred to Eros; near the Muses' mountain |
-| **Delphi** | Ch 1, 6, 7 | Apollo's sanctuary, home of the Pythia |
+| **Delphi** | Planned | Apollo's sanctuary, home of the Pythia |
 | **Lebadeia** | Ch 2 | Oracle of Trophonios; springs of Lethe and Mnemosyne |
 | **Delos** | Ch 3 | Sacred island, Apollo's birthplace |
 | **Necromanteion** (Acheron River) | Ch 4 | Oracle of the Dead, entrance to underworld |
@@ -92,7 +92,7 @@ story/
 | Memory vs. Oblivion | Mnemosyne | What is lost when we forget? |
 | Order vs. Chaos | Apollo vs. Typhon | Can harmony be restored? |
 | Mortality vs. Divinity | The boy's transformation | What does it cost to transcend? |
-| Fate vs. Choice | Hécate's crossroads | Do we choose destiny? |
+| Fate vs. Choice | Hecate's crossroads | Do we choose destiny? |
 
 ---
 
@@ -101,7 +101,7 @@ story/
 | Deity | Role | Symbol |
 |-------|------|--------|
 | **Mnemosyne** | Keeper of cosmic memory | The Well, the Mirror |
-| **Hécate** | Guide at thresholds | The Torch, the Crossroads |
+| **Hecate** | Guide at thresholds | The Torch, the Crossroads |
 | **Apollo** | God of light and prophecy | The Lyre, the Temple |
 | **Typhon** | Primordial chaos, buried storm | The Earthquake, the Red Moon |
 

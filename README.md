@@ -1,12 +1,12 @@
 # Mnemosyne: Shards of Destiny
 
-A turn-based JRPG built with Godot 4, set in ancient Greece where a young hero uncovers divine memories and faces monsters from authentic Greek mythology.
+A turn-based JRPG built with Phaser 3 and Vite, set in ancient Greece where a young hero uncovers divine memories and faces monsters from authentic Greek mythology.
 
 ## Story
 
 *In the village of Thespiae, at the foot of Mount Helicon, a young man named Alkmaeon begins to experience visions — fragments of divine memory that blaze across his mind whenever he visits the nearby ruins of a Temple of Apollo. As the Red Moon rises and Typhon stirs beneath the earth, Alkmaeon must journey across Greece to recover the scattered Shards of Destiny before the Father of Monsters breaks free and plunges the world into chaos.*
 
-*Guided by Hecate at the crossroads and haunted by echoes of Mnemosyne, he will travel from Delphi to Delos, from the springs of Lebadeia to the Necromanteion at the Acheron River — the very entrance to the underworld.*
+*Guided by Hecate at the crossroads and haunted by echoes of Mnemosyne, he will travel from Lebadeia to Delos, from the Necromanteion at the Acheron River to the heights of Mount Olympus — the very entrance to the underworld.*
 
 ## Features
 
@@ -20,7 +20,7 @@ A turn-based JRPG built with Godot 4, set in ancient Greece where a young hero u
 ### Combat System
 - Turn order based on Speed stat
 - Attack, Skills, Defend, and Items commands
-- Elemental affinities (Light, Shadow, Fire)
+- Elemental affinities (Light, Shadow, Fire, Water, Earth)
 - Status effects and critical hits
 - XP and leveling progression
 
@@ -57,53 +57,46 @@ A turn-based JRPG built with Godot 4, set in ancient Greece where a young hero u
 ## Getting Started
 
 ### Requirements
-- [Godot 4.2+](https://godotengine.org/download)
+- Node.js 18+
+- npm
 
 ### Running the Project
-1. Clone or download this repository
-2. Open Godot 4
-3. Click "Import" and select the `project.godot` file
-4. Press F5 or click the Play button to run
+```bash
+npm install
+npm run dev
+```
 
-### Mobile Export
-1. Configure Android/iOS export templates in Godot
-2. Go to Project > Export
-3. Add Android or iOS preset
-4. Configure signing and build
+### Building for Production
+```bash
+npm run build
+npm run preview
+```
 
 ## Project Structure
 
 ```
 mnemosyne-shards-of-destiny/
-├── assets/           # Sprites, portraits, audio
-│   ├── sprites/      # Character and enemy sprites
-│   └── portraits/    # Dialogue portraits (48x48)
-├── data/             # JSON data files
-│   ├── characters.json
-│   ├── enemies.json
-│   └── skills.json
-├── scenes/           # Godot scene files (.tscn)
-│   ├── main/         # Main menu
-│   ├── exploration/  # Village, Temple
-│   ├── combat/       # Battle scene
-│   └── ui/           # UI components
-├── scripts/          # GDScript files
-│   ├── autoload/     # Singleton managers
-│   ├── combat/       # Battle system
-│   ├── exploration/  # Player, NPCs, interactions
-│   └── ui/           # UI controllers
-├── story/            # Narrative scripts (Markdown)
+├── public/
+│   ├── assets/        # Sprites, portraits, tilesets, UI
+│   └── data/          # JSON data files
+├── src/
+│   ├── main.js        # Entry point
+│   ├── config.js      # Phaser configuration
+│   ├── scenes/        # Game scenes
+│   └── systems/       # Game systems
+├── story/             # Narrative scripts (Markdown)
 │   ├── 00_intro.md through 07_chapter7_binding.md
-│   └── README.md     # Story bible
-└── project.godot
+│   └── README.md      # Story bible
+├── index.html
+└── vite.config.js
 ```
 
 ## Controls
 
 ### Keyboard
 - **WASD / Arrow Keys**: Move
-- **E**: Interact
-- **Escape**: Menu
+- **Space**: Interact / advance dialogue
+- **B**: Quick travel to the Temple of Apollo (debug)
 
 ### Touch (Mobile)
 - **Virtual Joystick**: Move

@@ -1,6 +1,6 @@
 # Chapter 5: The Memory of Ruin
 
-> *The final Shard awaits in the storm-scarred valley where Typhon's power bleeds into the world. Here, at the edge of chaos, Alkmaeon confronts the most dangerous truth: the memory of what came before order. Before gods. Before meaning. And in that primal darkness, he begins to question who — or what — he truly is.*
+> *The final Shard awaits on the storm-scarred slopes of Mount Olympus, where Typhon's power bleeds into the world. Here, at the edge of chaos, Alkmaeon confronts the most dangerous truth: the memory of what came before order. Before gods. Before meaning. And in that primal darkness, he begins to question who — or what — he truly is.*
 
 **Prerequisites**: Chapter 4 complete (`chapter4_complete` flag set)  
 **Party**: Alkmaeon, Theano, Brasidas
@@ -10,7 +10,7 @@
 ## Scene 5.1: Into the Storm
 
 **Type**: Travel / Atmosphere  
-**Location**: Northern Reaches — approaching the Storm Valley  
+**Location**: Mount Olympus — approaching the storm-scarred valley  
 **Time**: Indeterminate — the sky is perpetually dark here  
 **Audio**: Distant thunder, howling wind, earth tremors
 
@@ -32,7 +32,7 @@
 > "I've been to a lot of bad places. This might be the worst."
 
 **Theano:**
-> "We're approaching the prison. The roots of the mountains where Zeus bound Typhon."
+> "We're approaching the prison beneath Mount Olympus, where Zeus bound Typhon."
 
 > "His power seeps through the cracks. Corrupts everything it touches."
 
@@ -91,12 +91,12 @@
 
 **Storm Wolf** (HP: 45, High Speed)
 - Lightning-touched wolves, driven mad by Typhon's energy
-- Uses: Thunder Bite, Pack Howl (summons more wolves)
+- Uses: Headbutt, Battle Fury (buffs allies)
 - Weakness: None — resistant to Lightning
 
 **Twisted Earth** (HP: 60, High Defense)
 - Animated stone and soil, corrupted by chaotic energy
-- Uses: Quake Stomp, Stone Rain
+- Uses: Boulder Smash, Earthshaker
 - Weakness: Light
 
 **Combat Encounter:**
@@ -121,10 +121,10 @@
 
 ---
 
-## Scene 5.2: The Storm Valley
+## Scene 5.2: The Storm Valley of Olympus
 
 **Type**: Major area / Dungeon approach  
-**Location**: The Storm-Scarred Valley  
+**Location**: The storm-scarred valley on Mount Olympus  
 **Audio**: Constant thunder, cracking earth, whispers in the wind
 
 ---
@@ -221,7 +221,7 @@
 ***Combat: Lightning Elemental x2***
 
 **Lightning Elemental** (HP: 50, Very High Speed)
-- Uses: Chain Lightning (hits multiple targets), Overcharge (self-buff then powerful strike)
+- Uses: Lightning Strike (hits multiple targets), Storm Surge (self-buff then powerful strike)
 - Weakness: Earth (not available to party — must use raw damage)
 - Special: Reflects Lightning damage
 
@@ -245,7 +245,7 @@
 ## Scene 5.3: The Breach
 
 **Type**: Major dungeon / Story climax  
-**Location**: The center of the Storm Valley  
+**Location**: The center of the Olympus storm valley  
 **Audio**: Reality-warping distortion, Typhon's heartbeat
 
 ---
@@ -653,7 +653,7 @@
 
 **Phase 1: Storm Form** (100%-60% HP)
 - Highly mobile, hard to hit
-- Uses: Thunder Roar (party-wide lightning), Chaos Claw (high single damage), Storm Surge (random targeting)
+- Uses: Primordial Roar (party-wide damage), Storm of Chaos (random targeting), World Shaker
 - Strategy: Consistent damage, keep healed
 
 **Phase 2: Dragon Heads** (60%-30% HP)
@@ -666,7 +666,7 @@
 
 **Phase 3: Desperate Chaos** (30%-0% HP)
 - Heads regenerate, body becomes unstable
-- Uses: Primordial Scream (massive damage, charges for 2 turns), Chaos Unbound (random effects on all combatants)
+- Uses: Primordial Roar (massive damage, charges for 2 turns), Storm of Chaos (random effects on all combatants)
 - Vulnerability: The Shards — using them together amplifies damage massively
 - Strategy: Alkmaeon must use both Shard powers in sequence for "Memory Burst" attack
 
@@ -837,7 +837,7 @@
 ## Scene 5.7: The Path Forward
 
 **Type**: Chapter resolution / Setup for Act IV  
-**Location**: Storm Valley — edge  
+**Location**: Mount Olympus — storm valley edge  
 **Time**: Unclear — the sky is beginning to clear  
 **Audio**: Returning calm, distant birdsong
 
@@ -857,11 +857,11 @@
 **Theano:**
 > "The gathering is complete. But what now?"
 
-> "Hécate said we need to restore the Order. But how?"
+> "Hecate said we need to restore the Order. But how?"
 
 ---
 
-### Hécate's Summons
+### Hecate's Summons
 
 *[A familiar presence makes itself known]*
 
@@ -869,9 +869,9 @@
 
 > A crossroads appears where none should exist.
 
-> And there, between the paths — Hécate.
+> And there, between the paths — Hecate.
 
-**Hécate:**
+**Hecate:**
 > "Well done, vessel."
 
 > "You have gathered the fragments. Faced the truths."
@@ -882,7 +882,7 @@
 
 ---
 
-**Hécate:**
+**Hecate:**
 > "Return to where your journey began."
 
 > "The Temple of Apollo. Where you first awakened."
@@ -894,23 +894,23 @@
 *[Player choice]*
 
 **Option A: "What truth?"**
-> **Hécate:** "If I told you, it would not be truth. It would be information."
+> **Hecate:** "If I told you, it would not be truth. It would be information."
 > "Truth must be experienced. Discovered."
 > "You will understand soon enough."
 
 **Option B: "And then what? How do I restore the Order?"**
-> **Hécate:** "That depends on what you learn."
+> **Hecate:** "That depends on what you learn."
 > "The restoration... is not what you imagine."
 > "Be prepared for everything to change."
 
 **Option C: "Will I survive this?"**
-> **Hécate:** "That is not the right question."
+> **Hecate:** "That is not the right question."
 > "The right question is: will what survives still be you?"
 > "...I do not know the answer."
 
 ---
 
-**Hécate:**
+**Hecate:**
 > "Go now. The Red Moon approaches its zenith."
 
 > "You have days at most."
@@ -919,7 +919,7 @@
 
 *[She hesitates — an unusual display of emotion]*
 
-**Hécate:**
+**Hecate:**
 > "Whatever happens next... know that you chose well."
 
 > "Not because you chose correctly. No one can know that."
@@ -997,7 +997,7 @@
 
 | Flag | Description |
 |------|-------------|
-| `storm_valley_reached` | Entered Typhon's territory |
+| `olympus_reached` | Entered Typhon's territory on Mount Olympus |
 | `typhon_encountered` | Spoke with the Buried One |
 | `echo_of_typhon_defeated` | Beat the chapter boss |
 | `shard_of_ruin_acquired` | Third Shard claimed |
