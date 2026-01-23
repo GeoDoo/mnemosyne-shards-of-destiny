@@ -1,6 +1,10 @@
 import Phaser from 'phaser';
 import House, { HouseColors } from '../assets/House.js';
 
+// Performance: Squared distance avoids expensive sqrt() in update loop
+const distSq = (x1, y1, x2, y2) => (x2 - x1) ** 2 + (y2 - y1) ** 2;
+const INTERACT_DIST_SQ = 6400; // 80^2
+
 export default class VillageScene extends Phaser.Scene {
   constructor() {
     super({ key: 'VillageScene' });
@@ -685,21 +689,22 @@ export default class VillageScene extends Phaser.Scene {
     else {
       this.nearestInteractable = null;
       let nearest = null;
-      let nearestDist = 80;
+      let nearestDistSq = INTERACT_DIST_SQ;
 
-      // Check NPCs
-      for (const npc of this.npcs) {
-        const dist = Phaser.Math.Distance.Between(this.player.x, this.player.y, npc.x, npc.y);
-        if (dist < nearestDist) {
+      // Check NPCs - using squared distance (avoids sqrt)
+      for (let i = 0; i < this.npcs.length; i++) {
+        const npc = this.npcs[i];
+        const d = distSq(this.player.x, this.player.y, npc.x, npc.y);
+        if (d < nearestDistSq) {
           nearest = npc;
-          nearestDist = dist;
+          nearestDistSq = d;
         }
       }
       
       // Check well
       if (this.wellInteractable) {
-        const dist = Phaser.Math.Distance.Between(this.player.x, this.player.y, this.wellInteractable.x, this.wellInteractable.y);
-        if (dist < nearestDist) {
+        const d = distSq(this.player.x, this.player.y, this.wellInteractable.x, this.wellInteractable.y);
+        if (d < nearestDistSq) {
           nearest = this.wellInteractable;
         }
       }
@@ -732,9 +737,20 @@ export default class VillageScene extends Phaser.Scene {
   }
 
   sortDepth() {
-    const objects = [this.player, ...this.npcs.map(n => n.container)];
-    objects.sort((a, b) => a.y - b.y);
-    objects.forEach((obj, i) => obj.setDepth(50 + i));
+    // Performance: Reuse cached array to avoid GC allocation every frame
+    if (!this._depthList) this._depthList = [];
+    const list = this._depthList;
+    list.length = 0;
+    
+    list.push(this.player);
+    for (let i = 0; i < this.npcs.length; i++) {
+      list.push(this.npcs[i].container);
+    }
+    
+    list.sort((a, b) => a.y - b.y);
+    for (let i = 0; i < list.length; i++) {
+      list[i].setDepth(50 + i);
+    }
   }
 
   startDialogue(obj) {
