@@ -20,7 +20,7 @@
 
 ### Props
 - [x] Forge, anvil, amphora, flower pots, torches
-- [ ] Storage items (barrels, crates, chests, sacks)
+- [x] Storage items (barrels, crates, chests, sacks)
 - [ ] Furniture (benches, tables, chairs, beds)
 - [ ] Decorations (statues, columns, urns, banners)
 - [ ] Utility items (campfire, cooking pot, weapon rack, ladder)
