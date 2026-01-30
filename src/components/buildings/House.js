@@ -48,6 +48,56 @@ export const HouseColors = {
 
 // Preset building configurations
 export const BuildingPresets = {
+  // Home variants
+  cottage: {
+    width: 140,
+    height: 100,
+    wallColor: HouseColors.wall.cream,
+    wallHighlightColor: 0xf8f0e0,
+    roofColor: HouseColors.roof.terracotta,
+    roofHighlightColor: HouseColors.roof.terracottaLight,
+    doorColor: HouseColors.door.darkWood,
+    doorHighlightColor: HouseColors.door.lightWood,
+    windows: [{ side: 'left', hasShutters: true, shutterColor: 0x4466aa }],
+    decorations: [],
+    buildingType: 'home'
+  },
+  
+  house: {
+    width: 180,
+    height: 140,
+    wallColor: HouseColors.wall.tan,
+    wallHighlightColor: 0xf0e8d8,
+    roofColor: HouseColors.roof.terracotta,
+    roofHighlightColor: HouseColors.roof.terracottaLight,
+    doorColor: HouseColors.door.darkWood,
+    doorHighlightColor: HouseColors.door.lightWood,
+    windows: [
+      { side: 'left', hasShutters: true, shutterColor: 0x4466aa },
+      { side: 'right', hasShutters: true, shutterColor: 0x4466aa }
+    ],
+    decorations: ['flowerPot'],
+    buildingType: 'home'
+  },
+  
+  villa: {
+    width: 260,
+    height: 180,
+    wallColor: HouseColors.wall.marble,
+    wallHighlightColor: 0xffffff,
+    roofColor: HouseColors.roof.terracotta,
+    roofHighlightColor: HouseColors.roof.terracottaLight,
+    doorColor: HouseColors.door.oak,
+    doorHighlightColor: 0x9b7b5a,
+    trim: HouseColors.trim.gold,
+    windows: [
+      { side: 'left', hasShutters: true, shutterColor: 0x6b4c38 },
+      { side: 'right', hasShutters: true, shutterColor: 0x6b4c38 }
+    ],
+    decorations: ['flowerPot', { type: 'tree' }],
+    buildingType: 'home'
+  },
+
   inn: {
     width: 260,
     height: 180,
@@ -144,7 +194,20 @@ export const BuildingPresets = {
   }
 };
 
-// Factory functions
+// Factory functions - Home variants
+export function createCottage(scene, x, y, options = {}) {
+  return new House(scene, { x, y, ...BuildingPresets.cottage, ...options });
+}
+
+export function createHouse(scene, x, y, options = {}) {
+  return new House(scene, { x, y, ...BuildingPresets.house, ...options });
+}
+
+export function createVilla(scene, x, y, options = {}) {
+  return new House(scene, { x, y, ...BuildingPresets.villa, ...options });
+}
+
+// Factory functions - Commercial
 export function createInn(scene, x, y, options = {}) {
   return new House(scene, { x, y, ...BuildingPresets.inn, ...options });
 }

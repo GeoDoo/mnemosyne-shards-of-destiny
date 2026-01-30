@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { House, HouseColors, BuildingPresets, createInn, createShop, createSmith, createTemple } from '../components';
+import { House, HouseColors, BuildingPresets, createCottage, createHouse, createVilla, createInn, createShop, createSmith, createTemple } from '../components';
 
 /**
  * AssetGalleryScene - A storybook-style catalog view for previewing game assets
@@ -64,13 +64,17 @@ export default class AssetGalleryScene extends Phaser.Scene {
     const startY = 400;
     const rowHeight = 550;
     
-    // Define building variants - ESSENTIALS ONLY
+    // Define building variants
     const variants = [
+      // Home variants
+      { label: 'COTTAGE', description: 'Simple dwelling for common folk', config: BuildingPresets.cottage },
+      { label: 'HOUSE', description: 'Standard family residence', config: BuildingPresets.house },
+      { label: 'VILLA', description: 'Wealthy residence with garden', config: BuildingPresets.villa },
+      // Commercial
       { label: 'INN', description: 'Rest and recover HP/MP', config: BuildingPresets.inn },
       { label: 'SHOP', description: 'Buy and sell items', config: BuildingPresets.shop },
-      { label: 'SMITH', description: 'Buy and sell weapons & armor', config: BuildingPresets.smith },
-      { label: 'Small House', description: 'Basic residential building', config: { width: 160, height: 120, windows: [{ side: 'left' }] } },
-      { label: 'Large Villa', description: 'Wealthy residence with garden', config: { width: 240, height: 180, wallColor: HouseColors.wall.white, trim: HouseColors.trim.gold, windows: [{ side: 'left', hasShutters: true, shutterColor: 0x4466aa }, { side: 'right', hasShutters: true, shutterColor: 0x4466aa }], decorations: ['flowerPot', 'amphora', 'hangingPlant', { type: 'tree', x: -140 }, { type: 'tree', x: 140 }] } },
+      { label: 'SMITH', description: 'Weapons and armor', config: BuildingPresets.smith },
+      // Temples
       { label: 'Temple of Apollo', description: 'God of light and prophecy', config: BuildingPresets.temple.apollo },
       { label: 'Temple of Mnemosyne', description: 'Keeper of cosmic memory', config: BuildingPresets.temple.mnemosyne },
       { label: 'Temple of Hecate', description: 'Guide at thresholds', config: BuildingPresets.temple.hecate }

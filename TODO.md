@@ -6,7 +6,7 @@
 - [x] House base component (walls, roof, doors, windows)
 - [x] Inn, Shop, Smith presets
 - [x] Temple presets (Apollo, Mnemosyne, Hecate)
-- [ ] Home variants (small cottage, medium house, large villa)
+- [x] Home variants (small cottage, medium house, large villa)
 - [ ] Civic buildings (barracks, guard post, oracle/shrine)
 - [ ] Market stalls and vendor carts
 
