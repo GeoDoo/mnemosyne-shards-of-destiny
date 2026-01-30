@@ -11,7 +11,7 @@
 - [x] Market stalls and vendor carts
 
 ### Environment
-- [ ] Tree variants (cypress, olive, oak, dead tree)
+- [x] Tree variants (cypress, olive, oak, dead tree)
 - [ ] Rocks/boulders (small, medium, large clusters)
 - [x] Well component with variants (village, sacred, ruined)
 - [ ] Water features (fountain, pond, stream edge)
