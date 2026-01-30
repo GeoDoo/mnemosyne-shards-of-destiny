@@ -16,7 +16,7 @@
 - [x] Well component with variants (village, sacred, ruined)
 - [x] Water features (fountain, pond, stream edge)
 - [x] Paths/roads (dirt, stone, marble tiles)
-- [ ] Barriers (fences, walls, gates, bridges)
+- [x] Barriers (fences, walls, gates, bridges)
 
 ### Props
 - [x] Forge, anvil, amphora, flower pots, torches
