@@ -15,7 +15,7 @@
 - [x] Rocks/boulders (small, medium, large clusters)
 - [x] Well component with variants (village, sacred, ruined)
 - [x] Water features (fountain, pond, stream edge)
-- [ ] Paths/roads (dirt, stone, marble tiles)
+- [x] Paths/roads (dirt, stone, marble tiles)
 - [ ] Barriers (fences, walls, gates, bridges)
 
 ### Props
