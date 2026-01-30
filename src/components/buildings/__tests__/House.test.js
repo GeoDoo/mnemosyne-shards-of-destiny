@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { BuildingPresets, createCottage, createHouse, createVilla, createBarracks, createGuardPost, createOracle } from '../House.js';
+import { BuildingPresets, createCottage, createHouse, createVilla, createBarracks, createGuardPost, createOracle, createMarketStall, createVendorCart } from '../House.js';
 
 describe('Home variant presets', () => {
   it('has cottage preset with small dimensions', () => {
@@ -67,5 +67,29 @@ describe('Civic building factory functions', () => {
 
   it('exports createOracle factory', () => {
     expect(typeof createOracle).toBe('function');
+  });
+});
+
+describe('Market presets', () => {
+  it('has marketStall preset with market buildingType', () => {
+    expect(BuildingPresets.marketStall).toBeDefined();
+    expect(BuildingPresets.marketStall.buildingType).toBe('market');
+    expect(BuildingPresets.marketStall.width).toBeLessThanOrEqual(160);
+  });
+
+  it('has vendorCart preset with compact dimensions', () => {
+    expect(BuildingPresets.vendorCart).toBeDefined();
+    expect(BuildingPresets.vendorCart.buildingType).toBe('market');
+    expect(BuildingPresets.vendorCart.width).toBeLessThanOrEqual(120);
+  });
+});
+
+describe('Market factory functions', () => {
+  it('exports createMarketStall factory', () => {
+    expect(typeof createMarketStall).toBe('function');
+  });
+
+  it('exports createVendorCart factory', () => {
+    expect(typeof createVendorCart).toBe('function');
   });
 });

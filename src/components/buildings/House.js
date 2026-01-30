@@ -144,6 +144,36 @@ export const BuildingPresets = {
     buildingType: 'civic'
   },
 
+  // Market structures
+  marketStall: {
+    width: 140,
+    height: 80,
+    wallColor: 0xc9a868,
+    wallHighlightColor: 0xd9b878,
+    roofColor: 0xaa4444,
+    roofHighlightColor: 0xbb5555,
+    doorColor: 0x8b6b4a,
+    doorHighlightColor: 0x9b7b5a,
+    doorPosition: 'center',
+    windows: [],
+    decorations: ['amphora'],
+    buildingType: 'market'
+  },
+  
+  vendorCart: {
+    width: 100,
+    height: 60,
+    wallColor: 0xb08050,
+    wallHighlightColor: 0xc09060,
+    roofColor: 0x6b8b4a,
+    roofHighlightColor: 0x7b9b5a,
+    doorColor: 0x6b4c38,
+    doorHighlightColor: 0x7b5c48,
+    windows: [],
+    decorations: [],
+    buildingType: 'market'
+  },
+
   inn: {
     width: 260,
     height: 180,
@@ -264,6 +294,15 @@ export function createGuardPost(scene, x, y, options = {}) {
 
 export function createOracle(scene, x, y, options = {}) {
   return new House(scene, { x, y, ...BuildingPresets.oracle, ...options });
+}
+
+// Factory functions - Market
+export function createMarketStall(scene, x, y, options = {}) {
+  return new House(scene, { x, y, ...BuildingPresets.marketStall, ...options });
+}
+
+export function createVendorCart(scene, x, y, options = {}) {
+  return new House(scene, { x, y, ...BuildingPresets.vendorCart, ...options });
 }
 
 // Factory functions - Commercial

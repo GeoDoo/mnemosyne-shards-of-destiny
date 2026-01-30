@@ -74,6 +74,9 @@ export default class AssetGalleryScene extends Phaser.Scene {
       { label: 'BARRACKS', description: 'Military training and quarters', config: BuildingPresets.barracks },
       { label: 'GUARD POST', description: 'Watch tower for sentries', config: BuildingPresets.guardPost },
       { label: 'ORACLE', description: 'Shrine for prophecy and divination', config: BuildingPresets.oracle },
+      // Market
+      { label: 'MARKET STALL', description: 'Open-air goods stand', config: BuildingPresets.marketStall },
+      { label: 'VENDOR CART', description: 'Mobile merchant cart', config: BuildingPresets.vendorCart },
       // Commercial
       { label: 'INN', description: 'Rest and recover HP/MP', config: BuildingPresets.inn },
       { label: 'SHOP', description: 'Buy and sell items', config: BuildingPresets.shop },

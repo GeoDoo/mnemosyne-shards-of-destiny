@@ -8,7 +8,7 @@
 - [x] Temple presets (Apollo, Mnemosyne, Hecate)
 - [x] Home variants (small cottage, medium house, large villa)
 - [x] Civic buildings (barracks, guard post, oracle/shrine)
-- [ ] Market stalls and vendor carts
+- [x] Market stalls and vendor carts
 
 ### Environment
 - [ ] Tree variants (cypress, olive, oak, dead tree)
