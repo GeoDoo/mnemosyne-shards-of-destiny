@@ -7,7 +7,7 @@
 - [x] Inn, Shop, Smith presets
 - [x] Temple presets (Apollo, Mnemosyne, Hecate)
 - [x] Home variants (small cottage, medium house, large villa)
-- [ ] Civic buildings (barracks, guard post, oracle/shrine)
+- [x] Civic buildings (barracks, guard post, oracle/shrine)
 - [ ] Market stalls and vendor carts
 
 ### Environment

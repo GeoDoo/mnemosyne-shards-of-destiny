@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { House, HouseColors, BuildingPresets, createCottage, createHouse, createVilla, createInn, createShop, createSmith, createTemple } from '../components';
+import { House, BuildingPresets } from '../components';
 
 /**
  * AssetGalleryScene - A storybook-style catalog view for previewing game assets
@@ -70,6 +70,10 @@ export default class AssetGalleryScene extends Phaser.Scene {
       { label: 'COTTAGE', description: 'Simple dwelling for common folk', config: BuildingPresets.cottage },
       { label: 'HOUSE', description: 'Standard family residence', config: BuildingPresets.house },
       { label: 'VILLA', description: 'Wealthy residence with garden', config: BuildingPresets.villa },
+      // Civic
+      { label: 'BARRACKS', description: 'Military training and quarters', config: BuildingPresets.barracks },
+      { label: 'GUARD POST', description: 'Watch tower for sentries', config: BuildingPresets.guardPost },
+      { label: 'ORACLE', description: 'Shrine for prophecy and divination', config: BuildingPresets.oracle },
       // Commercial
       { label: 'INN', description: 'Rest and recover HP/MP', config: BuildingPresets.inn },
       { label: 'SHOP', description: 'Buy and sell items', config: BuildingPresets.shop },

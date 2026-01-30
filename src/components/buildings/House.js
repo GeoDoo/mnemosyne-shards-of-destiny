@@ -98,6 +98,52 @@ export const BuildingPresets = {
     buildingType: 'home'
   },
 
+  // Civic buildings
+  barracks: {
+    width: 220,
+    height: 160,
+    wallColor: 0xb0a090,
+    wallHighlightColor: 0xc0b0a0,
+    roofColor: HouseColors.roof.dark,
+    roofHighlightColor: 0x4a4a5a,
+    doorColor: HouseColors.door.iron,
+    doorHighlightColor: 0x5a5a6a,
+    windows: [
+      { side: 'left', hasShutters: true, shutterColor: 0x3a3a4a },
+      { side: 'right', hasShutters: true, shutterColor: 0x3a3a4a }
+    ],
+    decorations: [{ type: 'sign', symbol: 'hammer' }],
+    buildingType: 'civic'
+  },
+  
+  guardPost: {
+    width: 120,
+    height: 100,
+    wallColor: 0xc0b8a8,
+    wallHighlightColor: 0xd0c8b8,
+    roofColor: HouseColors.roof.terracotta,
+    roofHighlightColor: HouseColors.roof.terracottaLight,
+    doorColor: HouseColors.door.darkWood,
+    doorHighlightColor: HouseColors.door.lightWood,
+    windows: [{ side: 'right' }],
+    decorations: ['torch'],
+    buildingType: 'civic'
+  },
+  
+  oracle: {
+    width: 180,
+    height: 150,
+    wallColor: HouseColors.wall.marble,
+    wallHighlightColor: 0xffffff,
+    roofColor: 0x6a6a8a,
+    roofHighlightColor: 0x7a7a9a,
+    doorColor: 0x5a5a7a,
+    trim: 0x8888bb,
+    windows: [],
+    decorations: ['columns', 'amphora'],
+    buildingType: 'civic'
+  },
+
   inn: {
     width: 260,
     height: 180,
@@ -205,6 +251,19 @@ export function createHouse(scene, x, y, options = {}) {
 
 export function createVilla(scene, x, y, options = {}) {
   return new House(scene, { x, y, ...BuildingPresets.villa, ...options });
+}
+
+// Factory functions - Civic
+export function createBarracks(scene, x, y, options = {}) {
+  return new House(scene, { x, y, ...BuildingPresets.barracks, ...options });
+}
+
+export function createGuardPost(scene, x, y, options = {}) {
+  return new House(scene, { x, y, ...BuildingPresets.guardPost, ...options });
+}
+
+export function createOracle(scene, x, y, options = {}) {
+  return new House(scene, { x, y, ...BuildingPresets.oracle, ...options });
 }
 
 // Factory functions - Commercial

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { BuildingPresets, createCottage, createHouse, createVilla } from '../House.js';
+import { BuildingPresets, createCottage, createHouse, createVilla, createBarracks, createGuardPost, createOracle } from '../House.js';
 
 describe('Home variant presets', () => {
   it('has cottage preset with small dimensions', () => {
@@ -34,5 +34,38 @@ describe('Home variant factory functions', () => {
 
   it('exports createVilla factory', () => {
     expect(typeof createVilla).toBe('function');
+  });
+});
+
+describe('Civic building presets', () => {
+  it('has barracks preset with military buildingType', () => {
+    expect(BuildingPresets.barracks).toBeDefined();
+    expect(BuildingPresets.barracks.buildingType).toBe('civic');
+    expect(BuildingPresets.barracks.width).toBeGreaterThanOrEqual(200);
+  });
+
+  it('has guardPost preset with compact dimensions', () => {
+    expect(BuildingPresets.guardPost).toBeDefined();
+    expect(BuildingPresets.guardPost.buildingType).toBe('civic');
+    expect(BuildingPresets.guardPost.width).toBeLessThanOrEqual(160);
+  });
+
+  it('has oracle preset with sacred styling', () => {
+    expect(BuildingPresets.oracle).toBeDefined();
+    expect(BuildingPresets.oracle.buildingType).toBe('civic');
+  });
+});
+
+describe('Civic building factory functions', () => {
+  it('exports createBarracks factory', () => {
+    expect(typeof createBarracks).toBe('function');
+  });
+
+  it('exports createGuardPost factory', () => {
+    expect(typeof createGuardPost).toBe('function');
+  });
+
+  it('exports createOracle factory', () => {
+    expect(typeof createOracle).toBe('function');
   });
 });
