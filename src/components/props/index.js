@@ -3,3 +3,4 @@ export { default as Barrel } from './Barrel.js';
 export { default as MarketStall, StallPresets, createFruitStall, createPotteryStall } from './MarketStall.js';
 export { default as Storage, StoragePresets, createBarrel, createCrate, createChest, createSack } from './Storage.js';
 export { default as Furniture, FurniturePresets, createBench, createTable, createChair, createBed } from './Furniture.js';
+export { default as Decoration, DecorationPresets, createStatue, createColumn, createUrn, createBanner } from './Decoration.js';
