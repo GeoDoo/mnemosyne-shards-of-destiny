@@ -23,7 +23,7 @@
 - [x] Storage items (barrels, crates, chests, sacks)
 - [x] Furniture (benches, tables, chairs, beds)
 - [x] Decorations (statues, columns, urns, banners)
-- [ ] Utility items (campfire, cooking pot, weapon rack, ladder)
+- [x] Utility items (campfire, cooking pot, weapon rack, ladder)
 
 ### Characters
 - [ ] Modular player character system
